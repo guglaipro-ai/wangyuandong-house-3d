@@ -2,7 +2,7 @@
   "uri": "house.glb",
   "mimeType": "model/gltf-binary",
   "validatorVersion": "2.0.0-dev.3.10",
-  "validatedAt": "2026-09-09T07:53:27.699Z",
+  "validatedAt": "2026-09-09T13:34:20.768Z",
   "issues": {
     "numErrors": 0,
     "numWarnings": 0,
@@ -19,18 +19,18 @@
         "pointer": "/buffers/0",
         "mimeType": "application/gltf-buffer",
         "storage": "glb",
-        "byteLength": 302352
+        "byteLength": 543096
       }
     ],
     "animationCount": 0,
-    "materialCount": 12,
+    "materialCount": 13,
     "hasMorphTargets": false,
     "hasSkins": false,
     "hasTextures": false,
     "hasDefaultScene": true,
-    "drawCallCount": 61,
-    "totalVertexCount": 10484,
-    "totalTriangleCount": 15888,
+    "drawCallCount": 70,
+    "totalVertexCount": 18334,
+    "totalTriangleCount": 28680,
     "maxUVs": 0,
     "maxInfluences": 0,
     "maxAttributes": 1

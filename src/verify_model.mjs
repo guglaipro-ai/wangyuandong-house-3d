@@ -1,3 +1,4 @@
+import {saveScreenshot} from './save_screenshot.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
@@ -17,14 +18,14 @@ await page.goto(pathToFileURL(path.resolve('output/住宅3D檢視器.html')).hre
 await page.waitForFunction(()=>window.houseViewer?.gltf,{timeout:60000});
 await page.waitForTimeout(900);
 fs.mkdirSync('output/previews',{recursive:true});
-await page.screenshot({path:'output/previews/exterior.png'});
+await saveScreenshot(page,'output/previews/exterior.png');
 const base=await page.evaluate(()=>({status:document.querySelector('#status').textContent,groups:['SITE','FLOOR_1','FLOOR_2','FLOOR_3','FLOOR_4','ROOF'].map(n=>({name:n,visible:window.houseViewer.gltf.scene.getObjectByName(n)?.visible})),perspective:window.houseViewer.camera.isPerspectiveCamera,rooms:window.houseViewer.gltf.scene.getObjectsByProperty('type','Object3D').filter(x=>x.name.startsWith('ROOM_')).length}));
 const tests=[];
 for(const [i,word] of ['一','二','三','四'].entries()){
  await page.getByRole('button',{name:`只看${word}樓`,exact:true}).click();
  await page.waitForTimeout(350);
  tests.push(await page.evaluate(()=>({visible:['FLOOR_1','FLOOR_2','FLOOR_3','FLOOR_4','ROOF'].filter(n=>window.houseViewer.gltf.scene.getObjectByName(n).visible),labels:[...document.querySelectorAll('.hv-room-label')].filter(e=>e.style.display==='block').length,clippedMeshes:window.houseViewer.gltf.scene.getObjectsByProperty('type','Mesh').filter(m=>m.material.clippingPlanes?.length).length})));
- await page.screenshot({path:`output/previews/floor-${i+1}.png`});
+ await saveScreenshot(page,`output/previews/floor-${i+1}.png`);
 }
 await page.getByRole('button',{name:'顯示全部',exact:true}).click();
 await page.locator('#hv-grp-ROOF').uncheck();
@@ -37,7 +38,7 @@ await page.mouse.move(430,360);await page.mouse.down();await page.mouse.move(560
 const rotated=await page.evaluate(()=>window.houseViewer.camera.position.toArray());
 await page.setViewportSize({width:412,height:915});
 await page.getByRole('button',{name:'重設視角',exact:true}).click();
-await page.waitForTimeout(500);await page.screenshot({path:'output/previews/mobile-layout.png'});
+await page.waitForTimeout(500);await saveScreenshot(page,'output/previews/mobile-layout.png');
 const mobile=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,width:innerWidth,canvas:[document.querySelector('#canvas').clientWidth,document.querySelector('#canvas').clientHeight]}));
 const cdp=await context.newCDPSession(page);
 const touchBefore=await page.evaluate(()=>window.houseViewer.camera.position.toArray());

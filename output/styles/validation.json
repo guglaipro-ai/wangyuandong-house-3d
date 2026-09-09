@@ -1,25 +1,25 @@
 {
   "models": {
     "bohemian": {
-      "bytes": 779068,
+      "bytes": 1026124,
       "errors": 0,
       "warnings": 0,
       "messages": []
     },
     "industrial": {
-      "bytes": 714772,
+      "bytes": 961828,
       "errors": 0,
       "warnings": 0,
       "messages": []
     },
     "eclectic": {
-      "bytes": 682240,
+      "bytes": 929296,
       "errors": 0,
       "warnings": 0,
       "messages": []
     },
     "wabisabi": {
-      "bytes": 569860,
+      "bytes": 816916,
       "errors": 0,
       "warnings": 0,
       "messages": []

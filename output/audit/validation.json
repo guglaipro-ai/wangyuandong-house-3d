@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "atLeast100ActualComponentRows": true,
+    "uniqueIds": true,
+    "everyRowHasBuiltGeometry": true,
+    "modelHashMatches": true,
+    "fourCorrectElevatorEntrances": true,
+    "missingWindowsAdded": true,
+    "storageCorrected": true,
+    "falseThirdFloorDoorRemoved": true,
+    "wetThresholdsMatchDrawing": true,
+    "finiteGeometry": true,
+    "nineHandrailsAndWaists": true,
+    "elevenSanitaryFixtures": true,
+    "W5LaminatedGlass16mm": true,
+    "shaftOverhead4070mm": true
+  },
+  "passed": true,
+  "roofShaftSurfaceHeights": [
+    15.77,
+    15.97
+  ],
+  "physicalAndroidTested": false,
+  "notCadOrConstructionCertification": true
+}

@@ -1,3 +1,4 @@
+import {saveScreenshot} from './save_screenshot.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
@@ -28,21 +29,21 @@ try {
   });
   report.views.push(state);
   if(style==='original')continue;
-  await page.screenshot({path:`output/previews/${style}-floor2.png`});
+  await saveScreenshot(page,`output/previews/${style}-floor2.png`);
   await page.getByRole('button',{name:'二樓室內視角',exact:true}).click();
   await page.waitForTimeout(350);
-  await page.screenshot({path:`output/previews/${style}-interior.png`});
+  await saveScreenshot(page,`output/previews/${style}-interior.png`);
  }
  await page.setViewportSize({width:412,height:915});
  await page.locator('#hv-style').selectOption('bohemian');
  await page.waitForFunction(()=>window.houseViewer?.style==='bohemian');
- await page.screenshot({path:'output/previews/styles-mobile.png'});
+ await saveScreenshot(page,'output/previews/styles-mobile.png');
  report.mobile=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,selectorEnabled:!document.querySelector('#hv-style').disabled}));
  await page.setViewportSize({width:1280,height:900});
  for(const [i,word] of ['一','二','三','四'].entries()){
   await page.getByRole('button',{name:`只看${word}樓`,exact:true}).click();
   await page.waitForTimeout(150);
-  await page.screenshot({path:`output/previews/furnished-floor-${i+1}.png`});
+  await saveScreenshot(page,`output/previews/furnished-floor-${i+1}.png`);
   const visible=await page.evaluate(()=>['FLOOR_1','FLOOR_2','FLOOR_3','FLOOR_4','ROOF'].filter(n=>window.houseViewer.gltf.scene.getObjectByName(n).visible));
   if(visible.join()!==`FLOOR_${i+1}`)report.errors.push('Floor isolation failed');
  }

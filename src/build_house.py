@@ -9,6 +9,9 @@ import numpy as np
 import trimesh
 from shapely.geometry import Polygon, box as rect, LineString
 from shapely.ops import unary_union
+from audit_details import Audit, opening_detail, WALL_ZH
+from audit_fixtures import add_fixtures
+audit=Audit(ROOT)
 
 OUT=ROOT/'output'; OUT.mkdir(exist_ok=True)
 scene=trimesh.Scene(base_frame='WORLD')
@@ -17,7 +20,7 @@ for name,color in {'wall':[224,223,215,255], 'slab':[197,194,181,255],
  'metal':[48,53,54,255], 'glass':[128,176,186,88], 'door':[159,136,111,255],
  'tile':[210,204,189,255], 'wet':[177,199,195,255], 'terrace':[173,178,170,255],
  'porch':[193,191,180,255], 'white':[240,239,228,255], 'grass':[124,145,112,255],
- 'ground':[196,192,177,255], 'road':[105,113,117,255]}.items():
+ 'ground':[196,192,177,255], 'road':[105,113,117,255], 'ceramic':[244,245,242,255]}.items():
  materials[name]=trimesh.visual.material.PBRMaterial(name=name,baseColorFactor=color,
   metallicFactor=.35 if name=='metal' else 0,roughnessFactor=.28 if name=='glass' else .78,
   alphaMode='BLEND' if name=='glass' else 'OPAQUE',doubleSided=name=='glass')
@@ -34,6 +37,7 @@ def mesh_add(mesh,name,parent,mat,kind):
  global serial
  if len(mesh.faces)==0:return
  serial+=1; mesh.apply_transform(T)
+ audit.component(name,mesh)
  mesh.visual=trimesh.visual.TextureVisuals(material=materials[mat])
  scene.add_geometry(mesh,node_name=f'{name}_{serial}',geom_name=f'g{serial}',parent_node_name=parent,metadata={'kind':kind})
 def extr(poly,z,h,name,parent,mat='wall',kind='wall'):
@@ -54,17 +58,33 @@ def outline(poly,z,h,t,name,parent,mat='wall',kind='wall'):
  pts=list(poly.exterior.coords)
  for a,b in zip(pts,pts[1:]):bar(a,b,z,h,t,name,parent,mat,kind)
 
+def rod3(a,b,r,name,parent,mat='metal',kind='railing'):
+ a=np.asarray(a);b=np.asarray(b);m=trimesh.creation.cylinder(r,np.linalg.norm(b-a),sections=10)
+ m.apply_transform(trimesh.geometry.align_vectors([0,0,1],b-a));m.apply_translation((a+b)/2);mesh_add(m,name,parent,mat,kind)
+
+def stair_waist(x,y,dx,dy,count,rise,zz,parent):
+ # Vertical-thickness sloping prism beneath the treads; nominal 12 cm per p23.
+ if dx:
+  start=np.array([x,y,zz]);end=np.array([x-count*.24,y,zz+count*rise]);cross=np.array([0,1.13,0])
+ else:
+  start=np.array([x,y,zz]);end=np.array([x,y+dy*count*.24,zz+count*rise]);cross=np.array([1.13,0,0])
+ corners=[start,end,end+cross,start+cross];verts=np.array(corners+[v+[0,0,-.12] for v in corners])
+ faces=[[0,1,2],[0,2,3],[4,6,5],[4,7,6],[0,4,5],[0,5,1],[1,5,6],[1,6,2],[2,6,7],[2,7,3],[3,7,4],[3,4,0]]
+ m=trimesh.Trimesh(vertices=verts,faces=faces,process=False)
+ if m.volume<0:m.invert()
+ mesh_add(m,'stair_waist',parent,'slab','stair')
+
 BASE={1:.6,2:4.8,3:8.4,4:11.7}; HEIGHT={1:4.2,2:3.6,3:3.3,4:3.1}
 WIN={
  'W1a':(.6,.5,2),'W1b':(.8,.6,1.7),'W1c':(.8,1,1.1),'W1d':(1,1.3,1.1),
- 'W1e':(1,1.35,1.1),'W1f':(1.4,.5,3),'W1g':(1.4,1.4,1.1),'W1h':(1.45,1.4,1.1),'W1i':(1.2,.4,1),
+ 'W1e':(1,1.35,1.1),'W1f':(1.4,.5,3),'W1g':(1.4,1.4,1.1),'W1h':(1.45,1.4,1.1),'W1i':(1.2,.4,1.1),
  'W2':(3,1.65,1.1),'W3a':(2.1,1.4,1.1),'W3b':(3.2,1.85,1.1),'W3c':(2.1,1.35,1.1),
  'W4a':(.5,.9,1.9),'W4b':(.5,.9,2.5),'W4c':(.5,1.1,1.45),'W4d':(.4,1.2,.3),
  'W4e':(.8,1.4,1.1),'W4f':(.8,1.85,1.1),'W5':(4,2.4,.6),'W6a':(.6,1.4,1.1),'W6b':(.7,1.85,1.1),
  'D1':(1.65,2.1,0),'D2a':(1.3,2.5,0),'D2b':(1.2,2.4,0),'D3a':(.8,2.1,0),'D3b':(.9,2.1,0),
- 'D3c':(.9,2.1,0),'D3d':(1.1,2.1,0),'D4a':(1.1,2.1,0),'D4b':(1.1,2.3,0),'D4c':(1.1,2.35,0),
+ 'D3c':(.9,2.1,.1),'D3d':(1.1,2.1,0),'D4a':(1.1,2.1,0),'D4b':(1.1,2.3,0),'D4c':(1.1,2.35,0),
  'D5a':(.9,2.1,.1),'D5b':(1,2.1,.1),'D6':(.9,2.1,0),
- 'DW1':(1.56,2.1,.1),'DW2':(2,2.1,.1),'DW3':(2.6,2.1,.1),'DW4':(3.6,2.1,.1),'SD1':(1.8,3.4,0)}
+ 'DW1':(1.56,2.1,.1),'DW2':(2,2.1,.1),'DW3':(2.6,2.1,.1),'DW4':(3.6,2.1,.1),'SD1':(1.8,3.4,0),'LIFT':(.8,2,0)}
 def wall(f,a,b,opens=(),t=.18,h=None,name='wall'):
  parent=f'FLOOR_{f}';z=BASE[f];h=h or HEIGHT[f]-.20
  a=np.array(a,float);b=np.array(b,float);L=np.linalg.norm(b-a);u=(b-a)/L
@@ -72,7 +92,10 @@ def wall(f,a,b,opens=(),t=.18,h=None,name='wall'):
   if e-s>.0001 and hh>.0001:bar(a+u*s,a+u*e,zz,hh,tt,label,parent,mat,kind)
  cuts=[]
  for center,code in opens:
-  w,oh,sill=WIN[code];lo=center-w/2;hi=center+w/2
+  w,oh,sill=WIN[code]
+  wet_offset={(2,'bed1_wc'):.10,(3,'wc_door'):.10}.get((f,name),0)
+  if code.startswith('D3'):sill+=wet_offset
+  lo=center-w/2;hi=center+w/2
   if lo<-.03 or hi>L+.03:raise ValueError((f,a,b,center,code,L))
   if sill+oh>h+.01:raise ValueError(('height',f,code))
   cuts.append((max(0,lo),min(L,hi),sill,oh,code))
@@ -80,35 +103,39 @@ def wall(f,a,b,opens=(),t=.18,h=None,name='wall'):
  for lo,hi,sill,oh,code in cuts:
   if lo<cursor-.01:raise ValueError(('overlap',f,code))
   piece(cursor,lo,z,h);piece(lo,hi,z,sill);piece(lo,hi,z+sill+oh,h-sill-oh)
-  # Opening remains a real hole. Frames are separate small members.
-  kind='door' if code.startswith(('D','S')) else 'window';zz=z+sill;fw=.05
-  piece(lo,hi,zz,fw,'metal',kind,.06,code+'_sill')
-  piece(lo,hi,zz+oh-fw,fw,'metal',kind,.06,code+'_head')
-  piece(lo,lo+fw,zz,oh,'metal',kind,.06,code+'_jamb')
-  piece(hi-fw,hi,zz,oh,'metal',kind,.06,code+'_jamb')
-  glass=code.startswith(('W','DW'))
-  if glass:
-   n=1 if code.startswith(('W4','W5','W6')) else (4 if code in ('DW3','DW4') else 3 if code.startswith(('W2','W3')) else 2)
-   for j in range(1,n):
-    c=lo+(hi-lo)*j/n;piece(c-fw/2,c+fw/2,zz+fw,oh-2*fw,'metal',kind,.06,code+'_mullion')
-   piece(lo+fw,hi-fw,zz+fw,oh-2*fw,'glass',kind,.008,code+'_glass')
-  elif code=='SD1':
-   # roller shutter shown half open so circulation is readable
-   piece(lo+fw,hi-fw,zz+1.9,oh-1.9-fw,'metal',kind,.035,code+'_shutter')
-  else:
-   # 55 degree open door leaf, opening dimensions still exact
-   hinge=a+u*(lo+fw);ang=math.radians(55);rot=np.array([[math.cos(ang),-math.sin(ang)],[math.sin(ang),math.cos(ang)]])
-   leafend=hinge+rot@u*(hi-lo-2*fw)
-   bar(hinge,leafend,zz+fw,oh-2*fw,.04,code+'_open_leaf',parent,'door',kind)
+  center=(lo+hi)/2
+  descriptions={'D1':('單片門','45+120 cm 子母雙扇門與雙扇把手'),
+   'D2':('平板門','防爆鋼木門內框／面板與把手'), 'D3':('平板門','塑鋼門下部通風百葉與把手'),
+   'D4':('無分格平板門','依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意'), 'D5':('木色平板門','卡控門金屬門扇與把手'),
+   'D6':('實心門片','49×176 cm 百葉區與通風門把手'),
+   'SD1':('無捲箱的平板','60 cm 捲箱與分段捲簾；保留半開姿態'),
+   'LIFT':('衛浴门框80×210 cm及85×200 cm封板','電梯80×200 cm雙片滑門；移除重疊封板'),
+   'W1':('單層連續玻璃與中梃','雙扇獨立框、玻璃、軌道與窗把手'),
+   'W2':('等分三扇、連續玻璃','中央較寬三扇分格、獨立玻璃與軌道'),
+   'W3':('等分三扇、連續玻璃','中央較寬三扇分格；W3b採10 mm玻璃'),
+   'W4':('僅外框直接嵌玻璃','固定窗內側壓框與分型玻璃厚度'),
+   'W5':('8 mm單片玻璃','8+8 mm膠合玻璃厚度與內側壓框'),
+   'W6':('當作固定窗','單開推射窗獨立框、鉸鏈及把手'),
+   'DW':('單片連續玻璃與等深中梃','分扇框／玻璃、錯層滑軌及把手；DW2/4採10 mm玻璃')}
+  typ=next(k for k in ['LIFT','SD1','D1','D2','D3','D4','D5','D6','DW','W1','W2','W3','W4','W5','W6'] if code.startswith(k))
+  before,after=descriptions[typ]
+  if code.startswith('D3') and (f,name) in {(2,'bed1_wc'),(3,'wc_door')}:
+   after+=f'；門底依衛浴完成面抬高{sill*100:.0f} cm，避免門片穿入地坪'
+  before=audit.opening_before(f,name,code,a+u*center,before)
+  row=audit.begin(f'opening_{f}_{name}_{center:.3f}','門窗／入口',f'{f}F {WALL_ZH.get(name,name)} {code}（沿牆{center:.2f}m）',[18] if code=='LIFT' else [6 if f==1 else 7,19],before,after)
+  opening_detail(a,u,lo,hi,z+sill,oh,code,parent,piece,bar,box,mesh_add,materials)
+  audit.end()
   manifest['openings'].append({'floor':f,'code':code,'wall':name,'width':round(hi-lo,4),'height':oh,'sill':sill,
-    'center':[round(v,3) for v in (a+u*(lo+hi)/2)],'source_pages':[6 if f==1 else 7,19],
-    'position_basis':'calibrated plan tracing; see model notes'})
+    'center':[round(v,3) for v in (a+u*(lo+hi)/2)],'source_pages':[18] if code=='LIFT' else [6 if f==1 else 7,19],
+    'position_basis':'calibrated plan tracing; see model notes','audit_id':row['id'],'construction':after})
   cursor=hi
  piece(cursor,L,z,h)
 
-def room(f,key,label,poly,wet=False):
+def room(f,key,label,poly,wet=False,raise_by=0):
  par=f'FLOOR_{f}';p=Polygon(poly) if isinstance(poly,list) else poly
- extr(p,BASE[f]+.003,.008,key+'_floor',par,'wet' if wet else 'tile','floor_finish')
+ if raise_by:audit.begin(f'wet_level_{f}_{key}','標高',f'{f}F {label}地坪',[7],'與一般樓面齊平',f'依平面標高升高{raise_by*100:.0f} cm','明確標高')
+ extr(p,BASE[f]+.003,.008+raise_by,key+'_floor',par,'wet' if wet else 'tile','floor_finish')
+ if raise_by:audit.end()
  c=p.representative_point();group(f'ROOM_{f}_{key}',par,{'label':label,'floor':f,'kind':'room'},(c.x,c.y,BASE[f]+.05))
  manifest['floors'][str(f)]['rooms'].append(label)
 
@@ -133,19 +160,22 @@ wall(1,(0,0),(0,16.62),[(2.2,'W1f'),(8.1,'W1f'),(10.3,'W1f'),(13.4,'W1f')],name=
 wall(1,(0,16.62),(6.53,16.62),[(3.4,'W5')],name='front_feature_window')
 wall(1,(6.53,12.05),(6.53,16.62),[(1.9,'D2a')],name='front_entry')
 wall(1,(6.53,12.05),(12.45,12.05),[(3.5,'W2')],name='right_living_front')
-wall(1,(12.45,5.9),(12.45,12.05),[(1.5,'W1b'),(4.9,'D2b')],name='right_living_side')
+wall(1,(12.45,5.9),(12.45,12.05),[(1.0,'W1b'),(2.6,'W1b'),(4.9,'D2b')],name='right_living_side')
 wall(1,(11.88,0),(11.88,5.9),[(2,'W1f'),(4.65,'D1')],name='core_entry')
 wall(1,(11.88,5.9),(12.45,5.9),name='step')
-wall(1,(6.53,5.9),(6.53,12.05),[(2.3,'SD1')],name='living_partition')
-wall(1,(6.53,5.9),(11.88,5.9),[],name='core_front')
+audit.begin('shutter_relocation','格局', '1F 捲門及兩客廳分隔',[6,20],'捲門設於兩客廳中段分隔牆','移至樓梯廳西側入口；原洞補回實牆','平面位置對照')
+wall(1,(6.53,5.9),(6.53,12.05),[],name='living_partition')
+wall(1,(8.18,5.9),(11.88,5.9),[],name='core_front')
+audit.end()
+wall(1,(8.18,3.60),(8.18,5.9),[(1.15,'SD1')],name='stair_lobby_west')
 wall(1,(8.62,5.9),(8.62,7.55),[(.8,'D3a')],t=.15,name='wc_b_entry')
 wall(1,(8.62,7.55),(12.45,7.55),[],t=.15,name='wc_b_front')
 wall(1,(6.65,0),(6.65,3.55),[(2.5,'D3a')],t=.15,name='wc_a_side')
-wall(1,(4.9,0),(4.9,1.2),[],t=.15,name='wc_a_return')
-wall(1,(4.9,1.2),(6.65,1.2),[(.85,'D3b')],t=.15,name='wc_a_door')
-room(1,'LIVING_W','客廳（西側）',rect(.12,.15,6.4,16.45).difference(rect(4.75,0,6.55,1.4)))
+audit.begin('storage_space','格局','1F 樓梯下方儲藏室',[6,20],'誤標成客廳西北角廁所，並以兩面假隔牆佔用客廳','移除假隔牆；恢復客廳地坪；儲藏室標示移至樓梯下方','圖面明示「儲藏室」')
+room(1,'LIVING_W','客廳（西側）',rect(.12,.15,6.4,16.45))
+room(1,'STORAGE','儲藏室（樓梯下方）',rect(6.75,.15,8.08,3.45))
+audit.end()
 room(1,'LIVING_E','客廳（東側）',rect(6.65,7.68,12.32,11.92))
-room(1,'WC_A','廁所 A',rect(4.99,.12,6.53,1.10),True)
 room(1,'WC_B','廁所 B',rect(8.72,6.0,12.3,7.43),True)
 room(1,'LOBBY','樓梯間／電梯',rect(6.8,4.1,11.72,5.77))
 
@@ -158,7 +188,7 @@ wall(2,(0,16.62),(6.53,16.62),[(1.45,'W4f'),(4.3,'W3b')],name='bed3_front')
 wall(2,(6.53,12.1),(6.53,16.62),[(.6,'D6')],name='bed3_balcony_entry')
 wall(2,(6.53,12.1),(14.36,12.1),[(4,'DW4'),(7,'W6b')],name='living_balcony')
 wall(2,(14.36,0),(14.36,12.1),[(2.55,'W1h'),(8.3,'W3a')],name='right_dining_living')
-wall(2,(4.85,.52),(4.85,5.90),[(4.6,'D3b')],t=.15,name='bed1_wc')
+wall(2,(4.85,.52),(4.85,5.90),[(2.95,'D3b')],t=.15,name='bed1_wc')
 wall(2,(4.85,1.65),(6.65,1.65),[],t=.15,name='wc_a_back')
 wall(2,(4.85,4.20),(6.65,4.20),[],t=.15,name='wc_a_front')
 wall(2,(6.65,.52),(6.65,5.90),[(4.65,'D2b')],name='stair_west')
@@ -168,11 +198,11 @@ wall(2,(3.5,5.9),(3.5,8.15),[(.7,'D3d')],t=.15,name='wc_b_door')
 wall(2,(4.85,5.9),(4.85,12.1),[(2.6,'D4a')],t=.15,name='bed2_east')
 wall(2,(0,12.1),(4.85,12.1),[],t=.15,name='bed2_front')
 wall(2,(6.53,5.9),(6.53,12.1),[(5.3,'D4a')],name='hall_living')
-wall(2,(6.65,5.9),(11.88,5.9),[],name='stair_front')
+wall(2,(6.65,5.9),(11.88,5.9),[(.85,'W4e')],name='stair_front')
 wall(2,(11.88,0),(11.88,5.9),[(3.9,'DW1')],name='dining_stair')
 wall(2,(11.88,5.9),(14.36,5.9),[(1.25,'D4a')],name='dining_front')
 room(2,'BED1','臥室一',rect(.12,.66,4.73,5.77));room(2,'BED2','臥室二',rect(.12,8.27,4.73,11.98))
-room(2,'BED3','臥室三',rect(.12,12.23,6.4,16.49));room(2,'WC_A','廁所 A',rect(4.96,1.77,6.52,4.07),True)
+room(2,'BED3','臥室三',rect(.12,12.23,6.4,16.49));room(2,'WC_A','廁所 A',rect(4.96,1.77,6.52,4.07),True,.10)
 room(2,'WC_B','廁所 B',rect(.12,6.03,3.38,8.03),True)
 room(2,'LIVING','客廳',rect(6.66,6.03,14.23,11.97));room(2,'DINING','餐廳',rect(12.01,.14,14.23,5.77))
 room(2,'HALL','走道',rect(4.99,6.02,6.39,11.94));room(2,'STAIR','樓梯間',rect(6.83,4.1,11.72,5.76))
@@ -193,12 +223,14 @@ wall(3,(4.85,.52),(4.85,4.0),[],t=.15,name='bed1_wc')
 wall(3,(4.85,1.65),(6.65,1.65),[],t=.15,name='wc_back')
 wall(3,(4.85,4.0),(6.65,4.0),[(.88,'D3b')],t=.15,name='wc_door')
 wall(3,(6.65,.52),(6.65,5.9),[(4.68,'D4a')],name='stair_west')
-wall(3,(6.65,5.9),(11.88,5.9),[(2.3,'DW1')],name='stair_front')
+audit.begin('remove_false_stair_front_door','格局','3F 樓梯廳南側牆',[7,20],'虛設一樘DW1通往起居室','依平面恢復實牆；保留西側D4a及東側DW1出入口','平面開口對照')
+wall(3,(6.65,5.9),(11.88,5.9),[],name='stair_front')
+audit.end()
 wall(3,(0,7.90),(4.85,7.90),[(4.2,'D4a')],t=.15,name='bed2_back')
 wall(3,(4.85,7.90),(4.85,11.75),[(2.6,'D6')],t=.15,name='bed2_east')
 wall(3,(0,11.75),(4.85,11.75),[],t=.15,name='bed2_front')
 room(3,'BED1','臥室一',rect(.12,.66,4.72,3.88));room(3,'BED2','臥室二',rect(.12,8.02,4.72,11.62))
-room(3,'BED3','臥室三',rect(.12,11.88,4.72,14.95));room(3,'WC','廁所',rect(4.99,1.78,6.52,3.87),True)
+room(3,'BED3','臥室三',rect(.12,11.88,4.72,14.95));room(3,'WC','廁所',rect(4.99,1.78,6.52,3.87),True,.10)
 room(3,'LIVING','起居室',Polygon([(.12,4.13),(6.5,4.13),(6.5,6.02),(12.3,6.02),(12.3,9.69),(4.99,9.69),(4.99,7.77),(.12,7.77)]))
 room(3,'STAIR','樓梯間',rect(6.82,4.12,11.74,5.78))
 
@@ -214,9 +246,7 @@ room(4,'BED','臥室',rect(10.54,.13,12.3,5.77));room(4,'STAIR','樓梯間',rect
 for f in range(1,5):
  par=f'FLOOR_{f}';z=BASE[f];h=HEIGHT[f]-.20
  for a,b in [((8.18,1.55),(10.23,1.55)),((8.18,1.55),(8.18,3.60)),((10.23,1.55),(10.23,3.60))]:bar(a,b,z,h,.20,'elevator_shaft',par,kind='wall')
- wall(f,(8.18,3.60),(10.23,3.60),[(1.025,'D3a')],t=.20,name='elevator_door')
- # Replace wooden open door with metal sliding entrance in postprocessing below.
- box(8.78,3.61,z,.85,.045,2.0,'lift_closed_door',par,'metal','door')
+ wall(f,(8.18,3.60),(10.23,3.60),[(1.025,'LIFT')],t=.20,name='elevator_door')
  group(f'ROOM_{f}_ELEVATOR',par,{'label':'電梯','kind':'room','floor':f},(9.205,2.6,z+.05))
 
 # Staircase around the central shaft. Each riser closes exactly at the next FL.
@@ -226,6 +256,7 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
  # right run climbs toward back, back run crosses left, left run descends in plan to upper landing.
  flights=[((10.37,1.25+counts[0]*.24),(0,-1),counts[0]),((10.37,.12),(-1,0),counts[1]),((6.88,1.25),(0,1),counts[2])]
  for k,((x,y),(dx,dy),count) in enumerate(flights):
+  start_n=n
   for j in range(count):
    n+=1;top=base+n*rise
    if dx:xx=x+dx*j*.24-.24;yy=y;w=.24;d=1.13
@@ -236,6 +267,13 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
    top=base+(n-count+j+1)*rise
    px=x+dx*j*.24+(0 if dx else .04);py=y+dy*j*.24+(1.09 if dx else 0)
    box(px,py,top,.035,.035,.9,'stair_baluster',par,'metal','railing')
+  audit.begin(f'stair_rail_{f}_{k}','樓梯扶手',f'{f}→{f+1}F 第{k+1}梯段扶手',[13,15,20],'僅孤立立柱，沒有連續握持橫桿','補建沿梯段坡度連續扶手','剖面與梯段圖示；細部截面為概念假設')
+  def rail_point(j):return [x+dx*j*.24+(0 if dx else .0575),y+dy*j*.24+(1.1075 if dx else .0175),base+(start_n+j+1)*rise+.9]
+  rod3(rail_point(0),rail_point(count-1),.025,'stair_continuous_handrail',par)
+  audit.end()
+  audit.begin(f'stair_waist_{f}_{k}','樓梯斜板',f'{f}→{f+1}F 第{k+1}梯段底板',[13,15,23],'只有逐階塊體、未建斜底板','補建連續斜向梯板底面','剖面構造；斜板厚度12 cm概念採用，未含配筋')
+  stair_waist(x,y,dx,dy,count,rise,base+start_n*rise,par)
+  audit.end()
  # clear turning landings and upper access, assigned to this stair group.
  box(10.37,.12,base+counts[0]*rise-.14,1.13,1.13,.14,'stair_landing',par,'tile','stair')
  box(6.88,.12,base+sum(counts[:2])*rise-.14,10.37-counts[1]*.24-6.88,1.13,.14,'stair_landing',par,'tile','stair')
@@ -244,6 +282,7 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
  box(10.37,1.25+counts[0]*.24,base-.14,1.13,4.10-(1.25+counts[0]*.24),.14,'stair_bottom_landing',par,'tile','stair')
 
 # Visible columns at grid intersections; no hidden reinforcement.
+add_fixtures(globals())
 for f in range(1,5):
  z=BASE[f];par=f'FLOOR_{f}'
  points=[(.12,.65),(6.65,.12),(11.88,.12),(.12,5.90),(6.65,5.90),(12.20,5.90),(.12,12.0),(6.65,12.0),(.12,15.95),(6.65,15.95)]
@@ -283,10 +322,15 @@ room(4,'TERRACE','露台',rect(.20,6.15,12.25,11.9))
 
 group('ROOF',extra={'kind':'roof','base':14.8})
 roof=rect(6.55,-.10,12.55,6.0)
-extr(roof,14.6,.2,'roof_slab','ROOF','slab','slab')
-extr(roof.buffer(-.16),14.8,.012,'roof_finish','ROOF','terrace','floor_finish')
+audit.begin('roof_shaft_hole','電梯頂部', 'RF 電梯井穿越屋頂板',[17,18],'14.60m屋頂板封住井道，淨高不足','屋頂板及面層留出1.85×1.85m井道開口','第18頁頂層井道1850 mm與OH4070 mm')
+extr(roof.difference(shaft),14.6,.2,'roof_slab','ROOF','slab','slab')
+extr(roof.buffer(-.16).difference(shaft),14.8,.012,'roof_finish','ROOF','terrace','floor_finish')
+audit.end()
 outline(roof,14.8,1.2,.15,'roof_parapet','ROOF',kind='parapet')
-box(8.13,1.5,14.8,2.15,2.15,1.17,'elevator_overrun','ROOF','wall','wall')
+audit.begin('overrun_hollow','電梯頂部','RF 電梯突出井道',[17,18],'2.15m實心方塊，內部完全填實','改為1.85m淨空、20cm井壁的中空井道；頂板下緣15.77m','11.70m+4.070m=15.770m；井道1850+2×200mm')
+extr(rect(8.08,1.45,10.33,3.70).difference(shaft),14.8,.97,'elevator_overrun_wall','ROOF','wall','wall')
+box(8.08,1.45,15.77,2.25,2.25,.20,'elevator_overrun_cap','ROOF','slab','slab')
+audit.end()
 
 # Horizontal elevation bands and modest window hoods. Shapes retained, fine trim inferred.
 for f in (2,3,4):
@@ -356,4 +400,5 @@ blob=struct.pack('<III',0x46546c67,2,20+len(js)+len(binary))+struct.pack('<II',l
 (OUT/'house.glb').write_bytes(blob)
 manifest['glb_bytes']=len(blob);manifest['sha256']=hashlib.sha256(blob).hexdigest()
 (OUT/'model-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
+audit.export(manifest)
 print(json.dumps({k:manifest[k] for k in ['nodes','meshes','triangles','bounds','glb_bytes','sha256']}))

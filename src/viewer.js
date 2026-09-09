@@ -16,6 +16,7 @@ const FLOOR_GROUPS = ['FLOOR_1', 'FLOOR_2', 'FLOOR_3', 'FLOOR_4'];
 const CLIPPABLE_KINDS = new Set(['wall', 'door', 'window', 'column']);
 const CUTAWAY_OFFSET = 1.25; // 樓層底部往上 1.25 公尺
 const PIXEL_RATIO_CAP = 1.5;
+const MODEL_REVISION = __MODEL_REVISION__;
 const STYLE_NAMES = {original:'原始空屋',bohemian:'波西米亞',industrial:'工業 Loft',eclectic:'折衷混搭',wabisabi:'侘寂'};
 let activeStyle='original';
 let styleSelect=null;
@@ -212,7 +213,7 @@ async function loadModel(style='original') {
   try {
     if(dataEl?.textContent?.trim())buffer=base64ToArrayBuffer(dataEl.textContent);
     else{
-      const response=await fetch('styles/'+style+'.glb');
+      const response=await fetch('styles/'+style+'.glb?v='+MODEL_REVISION);
       if(!response.ok)throw new Error('HTTP '+response.status);
       buffer=await response.arrayBuffer();
     }
@@ -306,7 +307,7 @@ function onModelLoaded(result) {
   setStatus(STYLE_NAMES[activeStyle]+' · '+(activeStyle==='original'?'原建築配置':'家具與材質配置提案'));
   window.houseViewer = { scene, camera, controls, gltf, render: renderOnce, style:activeStyle };
   const link=document.getElementById('download');
-  if(link){const embed=document.getElementById(activeStyle==='original'?'model-data':'model-'+activeStyle);link.href=embed?'data:model/gltf-binary;base64,'+embed.textContent.trim():'styles/'+activeStyle+'.glb';link.download=activeStyle==='original'?'house.glb':'house-'+activeStyle+'.glb';}
+  if(link){const embed=document.getElementById(activeStyle==='original'?'model-data':'model-'+activeStyle);link.href=embed?'data:model/gltf-binary;base64,'+embed.textContent.trim():'styles/'+activeStyle+'.glb?v='+MODEL_REVISION;link.download=activeStyle==='original'?'house.glb':'house-'+activeStyle+'.glb';}
   if(replacement && activeStyle!=='original')soloFloor('FLOOR_2');
   else if(replacement)showAll();
   requestRender();
@@ -397,6 +398,9 @@ function buildUI() {
     showRoomLabels=false;labelToggle.checked=false;updateLabels();
     camera.position.set(.27,6.4,2.5);controls.target.set(3.12,5.85,-.8);controls.update();requestRender();
   }));
+  const auditLink=el('a',{href:'audit/index.html?v='+MODEL_REVISION,text:'查看 101 處圖面修正清單'});
+  auditLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
+  styleSection.appendChild(auditLink);
   controlsEl.appendChild(styleSection);
 
   // --- 群組顯示 ---

@@ -1,3 +1,5 @@
 node_modules/
 .deps/
 tmp/
+__pycache__/
+*.pyc

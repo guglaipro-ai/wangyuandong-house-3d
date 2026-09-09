@@ -177,7 +177,8 @@ class Scheme:
     if 'indices' in p:tree['bufferViews'][tree['accessors'][p['indices']]['bufferView']]['target']=34963
   js=json.dumps(tree,ensure_ascii=False,separators=(',',':')).encode();js+=b' '*((-len(js))%4)
   blob=struct.pack('<III',0x46546c67,2,20+len(js)+len(binary))+struct.pack('<II',len(js),0x4e4f534a)+js+binary
-  (OUT/f'{self.key}.glb').write_bytes(blob)
+  target=OUT/f'{self.key}.glb';temporary=target.with_suffix('.glb.tmp')
+  temporary.write_bytes(blob);temporary.replace(target)
   return dict(label=self.p['label'],bytes=len(blob),sha256=hashlib.sha256(blob).hexdigest(),furnitureCount=sum(i['major'] for i in self.items),itemCount=len(self.items),items=self.items)
 
 if __name__=='__main__':

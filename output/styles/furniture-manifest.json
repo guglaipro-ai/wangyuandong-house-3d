@@ -4,8 +4,8 @@
   "styles": {
     "bohemian": {
       "label": "波西米亞",
-      "bytes": 779068,
-      "sha256": "6fdfbf62c75f3b72c92369f0654443006ccaaea6fda6a29a28c488c32e0b195b",
+      "bytes": 1026124,
+      "sha256": "d4a89dd672adb696ea9849b85cf4c65717b900ac20e803102b7d59b4acac754d",
       "furnitureCount": 38,
       "itemCount": 62,
       "items": [
@@ -1067,8 +1067,8 @@
     },
     "industrial": {
       "label": "工業 Loft",
-      "bytes": 714772,
-      "sha256": "e2af02885cd6cb03030c92a94c75efa94345670b4eee2aae6c63226eaf2588b7",
+      "bytes": 961828,
+      "sha256": "7249136d9f2f7066772dadf8d7faf77b9f5d838cabf372e8534d379b6e27f488",
       "furnitureCount": 39,
       "itemCount": 64,
       "items": [
@@ -2164,8 +2164,8 @@
     },
     "eclectic": {
       "label": "折衷混搭",
-      "bytes": 682240,
-      "sha256": "f44846843ccfce927f65e1f62d0028ea7cb3b84045437d297ee1506e7d7e9e3b",
+      "bytes": 929296,
+      "sha256": "1353d13ea21a0096ac742017c6dff47d3169be66a458c0db93ddc09a3402804f",
       "furnitureCount": 38,
       "itemCount": 62,
       "items": [
@@ -3227,8 +3227,8 @@
     },
     "wabisabi": {
       "label": "侘寂",
-      "bytes": 569860,
-      "sha256": "76983acc443499f2e0b3647958b24db4d12fc9efc9431e8c186d9f249d3f3c9e",
+      "bytes": 816916,
+      "sha256": "43d030b9ca7dc0ff394597a069fe83e4818e59d5fc4034bb58e5a7b4e80cc5d9",
       "furnitureCount": 38,
       "itemCount": 57,
       "items": [

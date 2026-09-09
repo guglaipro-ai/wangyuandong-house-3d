@@ -9,8 +9,8 @@
       "height_to_next": 4.2,
       "rooms": [
         "客廳（西側）",
-        "儲藏室（樓梯下方）",
         "客廳（東側）",
+        "廁所 A",
         "廁所 B",
         "樓梯間／電梯"
       ],
@@ -72,9 +72,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A001",
-      "construction": "卡控門金屬門扇與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -91,9 +89,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A002",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -110,9 +106,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A003",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -129,9 +123,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A004",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -148,9 +140,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A005",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -167,9 +157,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A006",
-      "construction": "8+8 mm膠合玻璃厚度與內側壓框"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -186,9 +174,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A007",
-      "construction": "防爆鋼木門內框／面板與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -205,9 +191,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A008",
-      "construction": "中央較寬三扇分格、獨立玻璃與軌道"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -218,34 +202,13 @@
       "sill": 1.7,
       "center": [
         12.45,
-        6.9
+        7.4
       ],
       "source_pages": [
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A009",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
-    },
-    {
-      "floor": 1,
-      "code": "W1b",
-      "wall": "right_living_side",
-      "width": 0.8,
-      "height": 0.6,
-      "sill": 1.7,
-      "center": [
-        12.45,
-        8.5
-      ],
-      "source_pages": [
-        6,
-        19
-      ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A010",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -262,9 +225,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A011",
-      "construction": "防爆鋼木門內框／面板與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -281,9 +242,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A012",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -300,28 +259,24 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A013",
-      "construction": "45+120 cm 子母雙扇門與雙扇把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
       "code": "SD1",
-      "wall": "stair_lobby_west",
+      "wall": "living_partition",
       "width": 1.8,
       "height": 3.4,
       "sill": 0,
       "center": [
-        8.18,
-        4.75
+        6.53,
+        8.2
       ],
       "source_pages": [
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A015",
-      "construction": "60 cm 捲箱與分段捲簾；保留半開姿態"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -338,9 +293,7 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A016",
-      "construction": "塑鋼門下部通風百葉與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
@@ -357,9 +310,24 @@
         6,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A017",
-      "construction": "塑鋼門下部通風百葉與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
+    },
+    {
+      "floor": 1,
+      "code": "D3b",
+      "wall": "wc_a_door",
+      "width": 0.9,
+      "height": 2.1,
+      "sill": 0,
+      "center": [
+        5.75,
+        1.2
+      ],
+      "source_pages": [
+        6,
+        19
+      ],
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -376,9 +344,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A019",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -395,9 +361,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A020",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -414,9 +378,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A021",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -433,9 +395,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A022",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -452,9 +412,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A023",
-      "construction": "單開推射窗獨立框、鉸鏈及把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -471,9 +429,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A024",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -490,9 +446,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A025",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -509,9 +463,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A026",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -528,9 +480,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A027",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -547,9 +497,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A028",
-      "construction": "49×176 cm 百葉區與通風門把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -566,9 +514,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A029",
-      "construction": "分扇框／玻璃、錯層滑軌及把手；DW2/4採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -585,9 +531,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A030",
-      "construction": "單開推射窗獨立框、鉸鏈及把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -604,9 +548,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A031",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -623,9 +565,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A032",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -633,18 +573,16 @@
       "wall": "bed1_wc",
       "width": 0.9,
       "height": 2.1,
-      "sill": 0.1,
+      "sill": 0,
       "center": [
         4.85,
-        3.47
+        5.12
       ],
       "source_pages": [
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A033",
-      "construction": "塑鋼門下部通風百葉與把手；門底依衛浴完成面抬高10 cm，避免門片穿入地坪"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -661,9 +599,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A034",
-      "construction": "防爆鋼木門內框／面板與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -680,9 +616,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A035",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -699,9 +633,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A036",
-      "construction": "塑鋼門下部通風百葉與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -718,9 +650,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A037",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -737,28 +667,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A038",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
-    },
-    {
-      "floor": 2,
-      "code": "W4e",
-      "wall": "stair_front",
-      "width": 0.8,
-      "height": 1.4,
-      "sill": 1.1,
-      "center": [
-        7.5,
-        5.9
-      ],
-      "source_pages": [
-        7,
-        19
-      ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A039",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -775,9 +684,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A040",
-      "construction": "分扇框／玻璃、錯層滑軌及把手；DW2/4採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
@@ -794,9 +701,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A041",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -813,9 +718,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A043",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -832,9 +735,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A044",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -851,9 +752,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A045",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -870,9 +769,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A046",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -889,9 +786,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A047",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -908,9 +803,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A048",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -927,9 +820,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A049",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -946,9 +837,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A050",
-      "construction": "分扇框／玻璃、錯層滑軌及把手；DW2/4採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -965,9 +854,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A051",
-      "construction": "分扇框／玻璃、錯層滑軌及把手；DW2/4採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -984,9 +871,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A052",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -1003,9 +888,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A053",
-      "construction": "分扇框／玻璃、錯層滑軌及把手；DW2/4採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -1022,9 +905,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A054",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -1032,7 +913,7 @@
       "wall": "wc_door",
       "width": 0.9,
       "height": 2.1,
-      "sill": 0.1,
+      "sill": 0,
       "center": [
         5.73,
         4.0
@@ -1041,9 +922,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A055",
-      "construction": "塑鋼門下部通風百葉與把手；門底依衛浴完成面抬高10 cm，避免門片穿入地坪"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -1060,9 +939,24 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A056",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
+    },
+    {
+      "floor": 3,
+      "code": "DW1",
+      "wall": "stair_front",
+      "width": 1.56,
+      "height": 2.1,
+      "sill": 0.1,
+      "center": [
+        8.95,
+        5.9
+      ],
+      "source_pages": [
+        7,
+        19
+      ],
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -1079,9 +973,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A058",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
@@ -1098,9 +990,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A059",
-      "construction": "49×176 cm 百葉區與通風門把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
@@ -1117,9 +1007,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A061",
-      "construction": "固定窗內側壓框與分型玻璃厚度"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
@@ -1136,9 +1024,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A062",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
@@ -1155,9 +1041,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A063",
-      "construction": "雙扇獨立框、玻璃、軌道與窗把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
@@ -1174,9 +1058,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A064",
-      "construction": "卡控門金屬門扇與把手"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
@@ -1193,9 +1075,7 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A065",
-      "construction": "中央較寬三扇分格；W3b採10 mm玻璃"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
@@ -1212,87 +1092,81 @@
         7,
         19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A066",
-      "construction": "依圖重建上下兩分格、中橫框及把手；嵌板沿用木質示意"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 1,
-      "code": "LIFT",
+      "code": "D3a",
       "wall": "elevator_door",
       "width": 0.8,
-      "height": 2,
+      "height": 2.1,
       "sill": 0,
       "center": [
         9.205,
         3.6
       ],
       "source_pages": [
-        18
+        6,
+        19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A067",
-      "construction": "電梯80×200 cm雙片滑門；移除重疊封板"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 2,
-      "code": "LIFT",
+      "code": "D3a",
       "wall": "elevator_door",
       "width": 0.8,
-      "height": 2,
+      "height": 2.1,
       "sill": 0,
       "center": [
         9.205,
         3.6
       ],
       "source_pages": [
-        18
+        7,
+        19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A068",
-      "construction": "電梯80×200 cm雙片滑門；移除重疊封板"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 3,
-      "code": "LIFT",
+      "code": "D3a",
       "wall": "elevator_door",
       "width": 0.8,
-      "height": 2,
+      "height": 2.1,
       "sill": 0,
       "center": [
         9.205,
         3.6
       ],
       "source_pages": [
-        18
+        7,
+        19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A069",
-      "construction": "電梯80×200 cm雙片滑門；移除重疊封板"
+      "position_basis": "calibrated plan tracing; see model notes"
     },
     {
       "floor": 4,
-      "code": "LIFT",
+      "code": "D3a",
       "wall": "elevator_door",
       "width": 0.8,
-      "height": 2,
+      "height": 2.1,
       "sill": 0,
       "center": [
         9.205,
         3.6
       ],
       "source_pages": [
-        18
+        7,
+        19
       ],
-      "position_basis": "calibrated plan tracing; see model notes",
-      "audit_id": "A070",
-      "construction": "電梯80×200 cm雙片滑門；移除重疊封板"
+      "position_basis": "calibrated plan tracing; see model notes"
     }
   ],
   "approximation": "Plan line tracing calibrated to dimension strings; no CAD or site survey. Fine profiles and colors approved by user.",
-  "nodes": 104,
-  "meshes": 70,
-  "triangles": 28680,
+  "nodes": 95,
+  "meshes": 61,
+  "triangles": 15888,
   "bounds": [
     [
       -9.18,
@@ -1305,6 +1179,6 @@
       14.7
     ]
   ],
-  "glb_bytes": 592580,
-  "sha256": "dca2f883ae27978dd339ed290abb9f380e60c1668cf781e22f803cc70111657a"
+  "glb_bytes": 345932,
+  "sha256": "43c2ce0f4a6940588cbe72c93a978294dad2f3ef7e258e1456decfa0cb31f281"
 }
