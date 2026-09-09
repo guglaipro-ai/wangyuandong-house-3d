@@ -7,6 +7,8 @@ sys.path.insert(0,str(ROOT/'.deps'))
 import numpy as np
 import trimesh as tm
 from shapely.geometry import box as rect, Polygon
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+import furniture_detail as fd
 OUT=ROOT/'output/styles';OUT.mkdir(exist_ok=True)
 T=np.array([[1,0,0,-7.18],[0,0,1,0],[0,1,0,-8.3],[0,0,0,1]])
 BASE={1:.6,2:4.8,3:8.4,4:11.7}
@@ -35,9 +37,13 @@ class Scheme:
    m=tm.creation.box([w,d,h]);m.apply_translation([x+w/2,y+d/2,z+h/2])
   self.mesh(m,mat,kind)
  def cyl(self,x,y,z,r,h,mat='wood',kind='furniture'):
-  m=tm.creation.cylinder(r,h,sections=12);m.apply_translation([x,y,z+h/2]);self.mesh(m,mat,kind)
+  m=tm.creation.cylinder(r,h,sections=24);m.apply_translation([x,y,z+h/2]);self.mesh(m,mat,kind)
+ def soft(self,x,y,z,w,d,h,mat='fabric',kind='furniture',rounding=.4):
+  m=fd.cushion((w,d,h),rounding=rounding);m.apply_translation([x+w/2,y+d/2,z+h/2]);self.mesh(m,mat,kind)
+ def drape(self,x,y,z,w,d,h,mat='fabric',kind='furniture',folds=3):
+  m=fd.puffy_slab(w,d,h,folds=folds);m.apply_translation([x+w/2,y+d/2,z]);self.mesh(m,mat,kind)
  def rod(self,a,b,r=.015,mat='metal',kind='furniture'):
-  a=np.array(a);b=np.array(b);m=tm.creation.cylinder(r,np.linalg.norm(b-a),sections=8)
+  a=np.array(a);b=np.array(b);m=tm.creation.cylinder(r,np.linalg.norm(b-a),sections=12)
   m.apply_transform(tm.geometry.align_vectors([0,0,1],b-a));m.apply_translation((a+b)/2);self.mesh(m,mat,kind)
  def item(self,name,x,y,w,d,major=True):
   self.items.append(dict(name=name,floor=self.floor,room=self.room,footprint=[x,y,x+w,y+d],size_m=[w,d],major=major,approximate=True))
@@ -49,17 +55,17 @@ class Scheme:
   self.item('低座沙發' if low else '三人沙發',x,y,w,d)
   self.legs(x,y,z,w,d,.18,'metal' if self.key=='industrial' else 'wood')
   self.box(x,y,z+.14,w,d,.19,'wood',rounded=.06)
-  self.box(x+.02,y,z+seat,w-.04,.17,.42,'fabric',rounded=.06)
-  for i in range(3):self.box(x+.14+i*(w-.28)/3,y+.18,z+seat-.05,(w-.34)/3,d-.23,.15,'fabric',rounded=.08)
-  for xx in [x,x+w-.13]:self.box(xx,y+.12,z+.28,.13,d-.16,.3,'fabric',rounded=.04)
+  self.soft(x+.02,y,z+seat,w-.04,.2,.44,'fabric',rounding=.42)
+  for i in range(3):self.soft(x+.14+i*(w-.28)/3,y+.17,z+seat-.05,(w-.34)/3,d-.22,.17,'fabric',rounding=.55)
+  for xx in [x,x+w-.13]:self.soft(xx,y+.12,z+.24,.15,d-.16,.34,'fabric',rounding=.45)
   n=1 if low else 3
-  for i in range(n):self.box(x+.26+i*(w-.7)/max(n,1),y+.19,z+seat+.08,.32,.18,.29,'light' if i%2 else 'accent',rounded=.07)
+  for i in range(n):self.soft(x+.26+i*(w-.7)/max(n,1),y+.19,z+seat+.08,.32,.2,.3,'light' if i%2 else 'accent',rounding=.6)
  def chair(self,x,y,turn=False):
   z=BASE[self.floor]+.03;w=.65;d=.68;self.item('休閒單椅',x,y,w,d)
   self.legs(x,y,z,w,d,.42,'metal' if self.key=='industrial' else 'wood')
-  self.box(x,y,z+.4,w,d,.12,'accent',rounded=.11 if self.key=='eclectic' else .05)
+  self.soft(x,y,z+.4,w,d,.13,'accent',rounding=.4)
   by=y+d-.13 if turn else y
-  self.box(x,by,z+.46,w,.13,.42,'accent',rounded=.06)
+  self.soft(x,by,z+.46,w,.14,.44,'accent',rounding=.4)
   for xx in [x+.025,x+w-.065]:self.box(xx,y+.05,z+.64,.04,d-.1,.045,'wood')
   if self.key=='bohemian':
    for i in range(8):self.rod([x+.06+i*.074,by+.075,z+.51],[x+.06+i*.074,by+.075,z+.85],.014,'light')
@@ -95,7 +101,11 @@ class Scheme:
    a=i*2.4;end=[x+math.cos(a)*.24,y+math.sin(a)*.24,z+.6+(i%3)*.14]
    self.rod([x,y,z+.2],end,.009,'wood','decor')
    if not dry:
-    m=tm.creation.icosphere(subdivisions=1,radius=1);m.apply_scale([.14,.065,.055]);m.apply_translation(end);self.mesh(m,'green','decor')
+    for k in range(3):
+     lf=fd.leaf(length=.15,width=.05,droop=.55)
+     lf.apply_transform(tm.transformations.rotation_matrix(.5,[0,1,0]))
+     lf.apply_transform(tm.transformations.rotation_matrix(a+k*2.1,[0,0,1]))
+     lf.apply_translation(end);self.mesh(lf,'green','decor')
  def art(self,x,y,w=1,h=.7):
   z=BASE[self.floor]+1.25;self.item('原創幾何畫作',x,y,w,.08,False)
   self.box(x,y,z,w,.065,h,'metal' if self.key=='eclectic' else 'wood','decor')
@@ -113,10 +123,10 @@ class Scheme:
  def bed(self,x,y,w=1.5,d=2):
   z=BASE[self.floor]+.03;self.item('床組',x,y,w,d)
   self.box(x,y,z,w,d,.23,'wood',rounded=.04)
-  self.box(x+.02,y+.03,z+.23,w-.04,d-.05,.2,'light',rounded=.06)
+  self.soft(x+.02,y+.03,z+.23,w-.04,d-.05,.22,'light',rounding=.24)
   self.box(x,y,z+.12,w,.09,.75,'wood',rounded=.025)
-  self.box(x+.025,y+.62,z+.431,w-.05,d-.68,.035,'fabric',rounded=.04)
-  for i in range(1 if w<1.1 else 2):self.box(x+.1+i*w/2,y+.15,z+.44,w*.38,.34,.1,'white',rounded=.09)
+  self.drape(x+.02,y+.5,z+.4,w-.04,d-.55,.11,'fabric')
+  for i in range(1 if w<1.1 else 2):self.soft(x+.1+i*w/2,y+.15,z+.45,w*.38,.34,.14,'white',rounding=.58)
   if w>1.1:self.table(x+w+.12,y+.12,.38,.4,.4,name='床邊桌')
  def desk(self,x,y,w=1.4,d=.65):
   self.table(x,y,w,d,.75,name='創作／書寫桌');self.chair(x+(w-.65)/2,y+d+.15,True)

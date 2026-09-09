@@ -4,6 +4,7 @@
     "uniqueIds": true,
     "everyRowHasBuiltGeometry": true,
     "modelHashMatches": true,
+    "materialOnlyArchitectureBridge": true,
     "fourCorrectElevatorEntrances": true,
     "missingWindowsAdded": true,
     "storageCorrected": true,

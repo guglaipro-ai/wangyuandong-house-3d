@@ -1,0 +1,113 @@
+{
+  "house.glb": {
+    "bytes": 3187768,
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  "surroundings.glb": {
+    "bytes": 15832864,
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  "styles/bohemian.glb": {
+    "bytes": 10888420,
+    "errors": 0,
+    "warnings": 0,
+    "messages": [
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+        "severity": 2,
+        "pointer": "/meshes/83/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+        "severity": 2,
+        "pointer": "/meshes/112/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+        "severity": 2,
+        "pointer": "/meshes/97/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+        "severity": 2,
+        "pointer": "/meshes/121/primitives/0/indices"
+      }
+    ]
+  },
+  "styles/industrial.glb": {
+    "bytes": 10822476,
+    "errors": 0,
+    "warnings": 0,
+    "messages": [
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+        "severity": 2,
+        "pointer": "/meshes/84/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+        "severity": 2,
+        "pointer": "/meshes/116/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+        "severity": 2,
+        "pointer": "/meshes/100/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+        "severity": 2,
+        "pointer": "/meshes/126/primitives/0/indices"
+      }
+    ]
+  },
+  "styles/eclectic.glb": {
+    "bytes": 10312824,
+    "errors": 0,
+    "warnings": 0,
+    "messages": [
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+        "severity": 2,
+        "pointer": "/meshes/85/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+        "severity": 2,
+        "pointer": "/meshes/118/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+        "severity": 2,
+        "pointer": "/meshes/101/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+        "severity": 2,
+        "pointer": "/meshes/128/primitives/0/indices"
+      }
+    ]
+  },
+  "styles/wabisabi.glb": {
+    "bytes": 9587756,
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  }
+}

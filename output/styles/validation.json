@@ -1,25 +1,100 @@
 {
   "models": {
     "bohemian": {
-      "bytes": 1026124,
+      "bytes": 10888420,
       "errors": 0,
       "warnings": 0,
-      "messages": []
+      "messages": [
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/83/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/112/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/97/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/121/primitives/0/indices"
+        }
+      ]
     },
     "industrial": {
-      "bytes": 961828,
+      "bytes": 10822476,
       "errors": 0,
       "warnings": 0,
-      "messages": []
+      "messages": [
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/84/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/116/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/100/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/126/primitives/0/indices"
+        }
+      ]
     },
     "eclectic": {
-      "bytes": 929296,
+      "bytes": 10312824,
       "errors": 0,
       "warnings": 0,
-      "messages": []
+      "messages": [
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/85/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/118/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/101/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/128/primitives/0/indices"
+        }
+      ]
     },
     "wabisabi": {
-      "bytes": 816916,
+      "bytes": 9587756,
       "errors": 0,
       "warnings": 0,
       "messages": []
@@ -28,145 +103,81 @@
   "views": [
     {
       "style": "bohemian",
-      "furnitureMeshes": 19,
-      "groups": [
-        {
-          "name": "FLOOR_1",
-          "present": true
-        },
-        {
-          "name": "FLOOR_2",
-          "present": true
-        },
-        {
-          "name": "FLOOR_3",
-          "present": true
-        },
-        {
-          "name": "FLOOR_4",
-          "present": true
-        },
-        {
-          "name": "ROOF",
-          "present": true
-        }
-      ],
-      "labels": 27
+      "maps": 88,
+      "normals": 88,
+      "shadowed": 122,
+      "quality": "high",
+      "assets": {
+        "sky": "ready",
+        "surroundings": "ready"
+      },
+      "contextVisible": true,
+      "ambientOcclusion": true,
+      "shadows": true,
+      "drawCalls": 305,
+      "triangles": 1975107
     },
     {
       "style": "industrial",
-      "furnitureMeshes": 23,
-      "groups": [
-        {
-          "name": "FLOOR_1",
-          "present": true
-        },
-        {
-          "name": "FLOOR_2",
-          "present": true
-        },
-        {
-          "name": "FLOOR_3",
-          "present": true
-        },
-        {
-          "name": "FLOOR_4",
-          "present": true
-        },
-        {
-          "name": "ROOF",
-          "present": true
-        }
-      ],
-      "labels": 27
+      "maps": 89,
+      "normals": 89,
+      "shadowed": 127,
+      "quality": "high",
+      "assets": {
+        "sky": "ready",
+        "surroundings": "ready"
+      },
+      "contextVisible": true,
+      "ambientOcclusion": true,
+      "shadows": true,
+      "drawCalls": 311,
+      "triangles": 1965243
     },
     {
       "style": "eclectic",
-      "furnitureMeshes": 23,
-      "groups": [
-        {
-          "name": "FLOOR_1",
-          "present": true
-        },
-        {
-          "name": "FLOOR_2",
-          "present": true
-        },
-        {
-          "name": "FLOOR_3",
-          "present": true
-        },
-        {
-          "name": "FLOOR_4",
-          "present": true
-        },
-        {
-          "name": "ROOF",
-          "present": true
-        }
-      ],
-      "labels": 27
+      "maps": 88,
+      "normals": 88,
+      "shadowed": 129,
+      "quality": "high",
+      "assets": {
+        "sky": "ready",
+        "surroundings": "ready"
+      },
+      "contextVisible": true,
+      "ambientOcclusion": true,
+      "shadows": true,
+      "drawCalls": 317,
+      "triangles": 1962507
     },
     {
       "style": "wabisabi",
-      "furnitureMeshes": 18,
-      "groups": [
-        {
-          "name": "FLOOR_1",
-          "present": true
-        },
-        {
-          "name": "FLOOR_2",
-          "present": true
-        },
-        {
-          "name": "FLOOR_3",
-          "present": true
-        },
-        {
-          "name": "FLOOR_4",
-          "present": true
-        },
-        {
-          "name": "ROOF",
-          "present": true
-        }
-      ],
-      "labels": 27
-    },
-    {
-      "style": "original",
-      "furnitureMeshes": 0,
-      "groups": [
-        {
-          "name": "FLOOR_1",
-          "present": true
-        },
-        {
-          "name": "FLOOR_2",
-          "present": true
-        },
-        {
-          "name": "FLOOR_3",
-          "present": true
-        },
-        {
-          "name": "FLOOR_4",
-          "present": true
-        },
-        {
-          "name": "ROOF",
-          "present": true
-        }
-      ],
-      "labels": 27
+      "maps": 78,
+      "normals": 78,
+      "shadowed": 111,
+      "quality": "high",
+      "assets": {
+        "sky": "ready",
+        "surroundings": "ready"
+      },
+      "contextVisible": true,
+      "ambientOcclusion": true,
+      "shadows": true,
+      "drawCalls": 285,
+      "triangles": 1924155
     }
   ],
   "errors": [],
-  "physicalAndroidTested": false,
   "mobile": {
     "width": 412,
     "scrollWidth": 412,
-    "selectorEnabled": true
-  }
+    "quality": "balanced",
+    "selectorEnabled": true,
+    "assets": {
+      "sky": "ready",
+      "surroundings": "ready"
+    }
+  },
+  "physicalAndroidTested": false,
+  "passed": true,
+  "source": "realism/viewer-validation.json"
 }

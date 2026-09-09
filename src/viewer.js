@@ -6,6 +6,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { installRealism } from './realistic_render.js';
 
 // ---------------------------------------------------------------------------
 // 常數
@@ -73,8 +74,23 @@ function webglAvailable() {
 // ---------------------------------------------------------------------------
 // 主要狀態
 // ---------------------------------------------------------------------------
-let renderer, scene, camera, controls, gltf;
+let renderer, scene, camera, controls, gltf, realism;
+let lastMotion=0, finalFramePending=false;
 let rootModel = null;
+let interiorPreview=null;
+function clearInteriorPreview(){
+ if(!interiorPreview)return;
+ scene.remove(interiorPreview);interiorPreview.traverse(o=>{if(o.isMesh){o.geometry.dispose();o.material.dispose();}if(o.isLight)o.dispose?.();});interiorPreview=null;
+}
+function showInteriorCeiling(){
+ clearInteriorPreview();interiorPreview=new THREE.Group();interiorPreview.name='INTERIOR_CEILING_PREVIEW';
+ groupObjects.FLOOR_3?.traverse(o=>{if(o.isMesh&&o.userData.kind==='slab'){
+  const ceiling=new THREE.Mesh(o.geometry.clone(),o.material.clone());ceiling.applyMatrix4(o.matrixWorld);ceiling.castShadow=true;ceiling.receiveShadow=true;interiorPreview.add(ceiling);
+ }});
+ // Warm art light under the modeled track; concept lighting, not electrical design.
+ const artLight=new THREE.SpotLight(0xffe3ba,28,8,.88,.72,2);artLight.position.set(2.5,7.38,-1.78);artLight.target.position.set(2.5,6.2,-2.22);artLight.castShadow=true;artLight.shadow.mapSize.set(512,512);artLight.shadow.normalBias=.012;
+ interiorPreview.add(artLight,artLight.target);scene.add(interiorPreview);requestRender();
+}
 const groupObjects = {}; // name -> Object3D
 let roomLabelDefs = []; // { object, el, worldPos, floorName }
 let labelLayer = null; // HTML overlay 容器
@@ -138,7 +154,7 @@ function init() {
   // 中性暖色背景
   scene.background = new THREE.Color(0xf3ede2);
 
-  camera = new THREE.PerspectiveCamera(50, getAspect(), 0.1, 5000);
+  camera = new THREE.PerspectiveCamera(50, getAspect(), 0.1, 800);
   camera.position.set(18, 14, 22);
 
   controls = new OrbitControls(camera, renderer.domElement);
@@ -153,21 +169,9 @@ function init() {
     ONE: THREE.TOUCH.ROTATE,
     TWO: THREE.TOUCH.DOLLY_PAN,
   };
-  controls.addEventListener('change', requestRender);
+  controls.addEventListener('change', ()=>{lastMotion=performance.now();finalFramePending=true;requestRender();});
 
-  // 燈光（唯一允許建立的物件類型）
-  const hemiLight = new THREE.HemisphereLight(0xfff4e2, 0x5b5349, 0.9);
-  hemiLight.position.set(0, 50, 0);
-  scene.add(hemiLight);
-
-  const dirLight = new THREE.DirectionalLight(0xfff1dc, 1.1);
-  dirLight.position.set(30, 45, 20);
-  dirLight.castShadow = false;
-  scene.add(dirLight);
-
-  const dirLight2 = new THREE.DirectionalLight(0xdfe6ef, 0.35);
-  dirLight2.position.set(-25, 20, -18);
-  scene.add(dirLight2);
+  realism=installRealism(renderer,scene,camera,requestRender,MODEL_REVISION);
 
   buildUI();
   buildLabelLayer();
@@ -187,7 +191,7 @@ function init() {
   onResize();
   animate();
 
-  window.houseViewer = { scene, camera, controls, gltf: null, render: renderOnce };
+  window.houseViewer = { scene, camera, controls, gltf: null, render: renderOnce, realism };
 }
 
 function getContainer() {
@@ -245,10 +249,12 @@ async function loadModel(style='original') {
 }
 
 function onModelLoaded(result) {
+  clearInteriorPreview();
   const replacement=!!rootModel;
   if(rootModel){
     scene.remove(rootModel);
-    rootModel.traverse(o=>{if(o.isMesh){o.geometry?.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m?.dispose());}});
+    const disposedTextures=new Set();
+    rootModel.traverse(o=>{if(o.isMesh){o.geometry?.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>{for(const value of Object.values(m||{}))if(value?.isTexture&&!disposedTextures.has(value)){value.dispose();disposedTextures.add(value);}m?.dispose();});}});
     if(labelLayer)labelLayer.innerHTML='';
     GROUP_NAMES.forEach(n=>delete groupObjects[n]);
   }
@@ -264,6 +270,7 @@ function onModelLoaded(result) {
   rootModel.traverse(o => {
     if (o.isMesh && o.material) o.material = Array.isArray(o.material) ? o.material.map(m=>m.clone()) : o.material.clone();
   });
+  realism.prepare(rootModel);
 
   // 蒐集群組
   rootModel.updateWorldMatrix(true, true);
@@ -305,7 +312,7 @@ function onModelLoaded(result) {
   applyClipping();
 
   setStatus(STYLE_NAMES[activeStyle]+' · '+(activeStyle==='original'?'原建築配置':'家具與材質配置提案'));
-  window.houseViewer = { scene, camera, controls, gltf, render: renderOnce, style:activeStyle };
+  window.houseViewer = { scene, camera, controls, gltf, render: renderOnce, style:activeStyle, realism };
   const link=document.getElementById('download');
   if(link){const embed=document.getElementById(activeStyle==='original'?'model-data':'model-'+activeStyle);link.href=embed?'data:model/gltf-binary;base64,'+embed.textContent.trim():'styles/'+activeStyle+'.glb?v='+MODEL_REVISION;link.download=activeStyle==='original'?'house.glb':'house-'+activeStyle+'.glb';}
   if(replacement && activeStyle!=='original')soloFloor('FLOOR_2');
@@ -397,11 +404,29 @@ function buildUI() {
     cutawayEnabled=false;sectionEnabled=false;cutawayToggle.checked=false;sectionToggle.checked=false;applyClipping();
     showRoomLabels=false;labelToggle.checked=false;updateLabels();
     camera.position.set(.27,6.4,2.5);controls.target.set(3.12,5.85,-.8);controls.update();requestRender();
+    showInteriorCeiling();
   }));
   const auditLink=el('a',{href:'audit/index.html?v='+MODEL_REVISION,text:'查看 101 處圖面修正清單'});
   auditLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
   styleSection.appendChild(auditLink);
   controlsEl.appendChild(styleSection);
+
+  const visual=el('div',{class:'hv-section'},[el('h3',{text:'光線與周邊'})]);
+  const quality=el('select',{id:'hv-quality','aria-label':'畫面品質'});
+  [['high','細緻光影'],['balanced','手機流暢']].forEach(([value,text])=>quality.appendChild(el('option',{value,text})));
+  quality.value=realism.quality;quality.addEventListener('change',()=>{realism.setQuality(quality.value);onResize();});visual.appendChild(quality);
+  const context=el('input',{type:'checkbox',id:'hv-context'});context.checked=true;
+  context.addEventListener('change',()=>realism.setContext(context.checked));
+  visual.appendChild(el('label',{class:'hv-row'},[context,el('span',{text:'顯示基地周邊（近似重建）'})]));
+  const daylight=el('select',{id:'hv-daylight','aria-label':'日光情境'});
+  [['sun','晴日日光'],['soft','柔和日光'],['warm','暖色日光']].forEach(([value,text])=>daylight.appendChild(el('option',{value,text})));
+  daylight.addEventListener('change',()=>realism.daylight(daylight.value));visual.appendChild(daylight);
+  visual.appendChild(el('a',{href:'realism/index.html',target:'_blank',rel:'noopener',text:'實景來源與重建範圍'}));
+  visual.lastChild.style.cssText='display:block;color:#31594e;font-size:12px;padding:8px 0';
+  visual.appendChild(makeButton('看街道與周邊',()=>{showAll();context.checked=true;realism.setContext(true);camera.position.set(42,24,58);controls.target.set(0,5,0);controls.update();requestRender();}));
+  const streetview=el('a',{href:'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=23.1782064,120.257168',target:'_blank',rel:'noopener',text:'對照現場街景（2026／6）'});
+  streetview.style.cssText='display:block;color:#31594e;font-size:12px;padding:6px 0';visual.appendChild(streetview);
+  controlsEl.appendChild(visual);
 
   // --- 群組顯示 ---
   const groupSection = el('div', { class: 'hv-section' }, [
@@ -415,6 +440,7 @@ function buildUI() {
     const cb = el('input', { type: 'checkbox', id: 'hv-grp-' + name });
     cb.checked = true;
     cb.addEventListener('change', () => {
+      clearInteriorPreview();
       const obj = groupObjects[name];
       if (obj) obj.visible = cb.checked;
       updateLabels();
@@ -520,6 +546,7 @@ function makeButton(label, onClick) {
 // 檢視操作
 // ---------------------------------------------------------------------------
 function showAll() {
+  clearInteriorPreview();
   cutawayEnabled=false;sectionEnabled=false;cutawayToggle.checked=false;sectionToggle.checked=false;
   applyClipping();frameModel();
   soloFloorForLabels = null;
@@ -533,6 +560,7 @@ function showAll() {
 }
 
 function soloFloor(floorName) {
+  clearInteriorPreview();
   soloFloorForLabels = null;
   GROUP_NAMES.forEach((name) => {
     const visible = name === floorName || name === 'SITE';
@@ -552,6 +580,7 @@ function soloFloor(floorName) {
 // 剖面 / 裁切
 // ---------------------------------------------------------------------------
 function applyClipping() {
+  if(cutawayEnabled||sectionEnabled)clearInteriorPreview();
   if (!rootModel) return;
 
   const base = floorBaseY[cutawayFloor] != null ? floorBaseY[cutawayFloor] : 0;
@@ -703,8 +732,9 @@ function onResize() {
   const parent = getContainer();
   const w = parent.clientWidth || window.innerWidth;
   const h = parent.clientHeight || window.innerHeight;
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, PIXEL_RATIO_CAP));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, realism?.quality==='high'?2:1.25));
   renderer.setSize(w, h, false);
+  realism?.resize(w,h);
   camera.aspect = w / Math.max(1, h);
   camera.updateProjectionMatrix();
   requestRender();
@@ -715,13 +745,15 @@ function onResize() {
 // ---------------------------------------------------------------------------
 function renderOnce() {
   if (!renderer || !scene || !camera) return;
-  renderer.render(scene, camera);
+  realism.setClipping(cutawayEnabled||sectionEnabled);
+  realism.draw(performance.now()-lastMotion<240);
   projectLabels();
 }
 
 function animate() {
   requestAnimationFrame(animate);
   const changed = controls && controls.update();
+  if(finalFramePending&&performance.now()-lastMotion>=250){needsRender=true;finalFramePending=false;}
   if (needsRender || changed) {
     renderOnce();
     needsRender = false;

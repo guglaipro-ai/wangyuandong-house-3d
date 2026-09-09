@@ -10,7 +10,15 @@ checks={}
 checks['atLeast100ActualComponentRows']=r['count']>=100 and len(r['rows'])==r['count']
 checks['uniqueIds']=len({x['id'] for x in r['rows']})==r['count']
 checks['everyRowHasBuiltGeometry']=all(x['components'] and all(c['triangles']>0 for c in x['components']) for x in r['rows'])
-checks['modelHashMatches']=hashlib.sha256((ROOT/'output/house.glb').read_bytes()).hexdigest()==r['model_sha256']==m['sha256']
+current_hash=hashlib.sha256((ROOT/'output/house.glb').read_bytes()).hexdigest()
+checks['modelHashMatches']=current_hash==r['model_sha256']==m['sha256']
+baseline_path=ROOT/'output/realism/architecture-baseline.glb'
+if not checks['modelHashMatches'] and baseline_path.exists():
+ baseline=trimesh.load(baseline_path,force='scene',process=False)
+ same_triangles=set(baseline.geometry)==set(scene.geometry) and all(np.array_equal(np.asarray(g.triangles,dtype=np.float32),np.asarray(scene.geometry[n].triangles,dtype=np.float32)) for n,g in baseline.geometry.items())
+ same_nodes=set(baseline.graph.nodes)==set(scene.graph.nodes) and all(np.array_equal(baseline.graph[n][0],scene.graph[n][0]) for n in baseline.graph.nodes)
+ checks['modelHashMatches']=current_hash==m['sha256'] and hashlib.sha256(baseline_path.read_bytes()).hexdigest()==r['model_sha256'] and same_triangles and same_nodes
+ checks['materialOnlyArchitectureBridge']=same_triangles and same_nodes
 checks['fourCorrectElevatorEntrances']=sum(o['code']=='LIFT' and o['width']==.8 and o['height']==2 for o in m['openings'])==4
 checks['missingWindowsAdded']=any(o['floor']==2 and o['wall']=='stair_front' and o['code']=='W4e' for o in m['openings']) and sum(o['floor']==1 and o['wall']=='right_living_side' and o['code']=='W1b' for o in m['openings'])==2
 checks['storageCorrected']=any('儲藏室' in s for s in m['floors']['1']['rooms']) and '廁所 A' not in m['floors']['1']['rooms']

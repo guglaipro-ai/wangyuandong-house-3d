@@ -1,0 +1,618 @@
+{
+  "site_pin": [
+    23.178193459074407,
+    120.25725453748464
+  ],
+  "date": "2026-09-10 UTC+8",
+  "north_reference": "PDF window schedule: plan left=NE, rear=SE, right=SW, front=NW; rotation fitted to four user map-click corners",
+  "alignment": {
+    "source": "User-provided four NLSC map-click coordinates, 2026-09-10",
+    "datum": "WGS84",
+    "input_dms": [
+      [
+        "120-15-26.1",
+        "23-10-42.0"
+      ],
+      [
+        "120-15-26.7",
+        "23-10-41.5"
+      ],
+      [
+        "120-15-26.3",
+        "23-10-41.0"
+      ],
+      [
+        "120-15-25.8",
+        "23-10-41.4"
+      ]
+    ],
+    "corners_lon_lat": [
+      [
+        120.25725,
+        23.178333333333335
+      ],
+      [
+        120.25741666666667,
+        23.178194444444447
+      ],
+      [
+        120.25730555555556,
+        23.178055555555556
+      ],
+      [
+        120.25716666666666,
+        23.17816666666667
+      ]
+    ],
+    "corners_model_xz": [
+      [
+        -9.887561434808104,
+        13.220862831926858
+      ],
+      [
+        -8.645502470028111,
+        -9.766065561899484
+      ],
+      [
+        10.524080300275482,
+        -10.692772210317372
+      ],
+      [
+        9.888983604560735,
+        8.137974940289997
+      ]
+    ],
+    "method": "Least-squares rigid alignment to existing approximate site outline. Rotation and translation only; building not scaled or deformed.",
+    "model_xz_to_east_north_matrix": [
+      [
+        -0.6306687714168658,
+        -0.7760521250273986
+      ],
+      [
+        -0.7760521250273985,
+        0.6306687714168658
+      ]
+    ],
+    "origin_east_north_metres": [
+      3.5599618818026983,
+      -0.44051710322335874
+    ],
+    "corner_residual_metres": [
+      0.521733839760848,
+      0.7299932837407853,
+      0.8719245950435904,
+      1.7219695771197316
+    ],
+    "rms_residual_metres": 1.0642518637317588,
+    "coordinate_resolution": "0.1 arcsecond (~3 m); map-click positions, NOT survey measurements",
+    "limitation": "The four clicked corners and existing approximate site outline do not exactly coincide. Preserve the PDF house dimensions; residual mismatch is reported rather than deforming the house."
+  },
+  "source_imagery": "NLSC PHOTO2 mosaic carries NLSC 2023 mark; Google Street View observed June 2026, imagery not copied into the model",
+  "reference_license": "https://maps.nlsc.gov.tw/pro/use_clause.jsp",
+  "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=23.1782064,120.257168",
+  "map": "https://maps.nlsc.gov.tw/",
+  "features": [
+    {
+      "label": "道路／巷道",
+      "type": "road",
+      "source": "NLSC PHOTO2 2023; widths visually estimated",
+      "source_pixels": [
+        [
+          272,
+          251
+        ],
+        [
+          354,
+          288
+        ],
+        [
+          396,
+          315
+        ],
+        [
+          474,
+          377
+        ],
+        [
+          620,
+          490
+        ]
+      ],
+      "estimated_width_m": 7.2
+    },
+    {
+      "label": "道路／巷道",
+      "type": "road",
+      "source": "NLSC PHOTO2 2023; widths visually estimated",
+      "source_pixels": [
+        [
+          402,
+          316
+        ],
+        [
+          419,
+          273
+        ],
+        [
+          433,
+          232
+        ],
+        [
+          466,
+          191
+        ],
+        [
+          508,
+          160
+        ]
+      ],
+      "estimated_width_m": 4.4
+    },
+    {
+      "label": "道路／巷道",
+      "type": "road",
+      "source": "NLSC PHOTO2 2023; widths visually estimated",
+      "source_pixels": [
+        [
+          455,
+          344
+        ],
+        [
+          480,
+          280
+        ],
+        [
+          516,
+          242
+        ],
+        [
+          547,
+          215
+        ]
+      ],
+      "estimated_width_m": 4.2
+    },
+    {
+      "label": "道路／巷道",
+      "type": "road",
+      "source": "NLSC PHOTO2 2023; widths visually estimated",
+      "source_pixels": [
+        [
+          355,
+          287
+        ],
+        [
+          332,
+          233
+        ],
+        [
+          351,
+          199
+        ],
+        [
+          385,
+          164
+        ]
+      ],
+      "estimated_width_m": 3.5
+    },
+    {
+      "label": "龍泉巖",
+      "type": "temple",
+      "source": "NLSC PHOTO2 2023; Google Street View June 2026",
+      "confidence": "approximate massing, tiled roofs and front court; detailed dragons and stone sculptures not reproduced",
+      "estimated_height_m": 10
+    },
+    {
+      "label": "北側紅瓦平房",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          438,
+          236
+        ],
+        [
+          460,
+          255
+        ],
+        [
+          449,
+          268
+        ],
+        [
+          426,
+          247
+        ]
+      ],
+      "estimated_floors": 1,
+      "estimated_height_m": 3.05,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東側白色舊住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          459,
+          276
+        ],
+        [
+          471,
+          283
+        ],
+        [
+          461,
+          300
+        ],
+        [
+          450,
+          291
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "南側白色三層住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          418,
+          283
+        ],
+        [
+          440,
+          295
+        ],
+        [
+          425,
+          317
+        ],
+        [
+          406,
+          304
+        ]
+      ],
+      "estimated_floors": 3,
+      "estimated_height_m": 9.149999999999999,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "北巷白色住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          407,
+          198
+        ],
+        [
+          421,
+          209
+        ],
+        [
+          410,
+          225
+        ],
+        [
+          398,
+          213
+        ]
+      ],
+      "estimated_floors": 3,
+      "estimated_height_m": 9.149999999999999,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東南側低層住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          478,
+          295
+        ],
+        [
+          492,
+          307
+        ],
+        [
+          481,
+          324
+        ],
+        [
+          467,
+          310
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東南側住宅群一",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          465,
+          327
+        ],
+        [
+          485,
+          341
+        ],
+        [
+          470,
+          361
+        ],
+        [
+          451,
+          346
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東南側住宅群二",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          481,
+          351
+        ],
+        [
+          502,
+          366
+        ],
+        [
+          489,
+          383
+        ],
+        [
+          470,
+          370
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東側住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          491,
+          215
+        ],
+        [
+          504,
+          225
+        ],
+        [
+          487,
+          247
+        ],
+        [
+          474,
+          237
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東北住宅一",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          478,
+          174
+        ],
+        [
+          493,
+          186
+        ],
+        [
+          473,
+          210
+        ],
+        [
+          460,
+          199
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "北側低層住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          433,
+          160
+        ],
+        [
+          449,
+          173
+        ],
+        [
+          435,
+          191
+        ],
+        [
+          420,
+          179
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東北住宅二",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          510,
+          133
+        ],
+        [
+          529,
+          148
+        ],
+        [
+          514,
+          168
+        ],
+        [
+          495,
+          152
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "道路南側鐵皮農舍",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          346,
+          316
+        ],
+        [
+          365,
+          318
+        ],
+        [
+          365,
+          342
+        ],
+        [
+          347,
+          340
+        ]
+      ],
+      "estimated_floors": 1,
+      "estimated_height_m": 3.05,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "道路西側低層住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          269,
+          266
+        ],
+        [
+          285,
+          267
+        ],
+        [
+          285,
+          299
+        ],
+        [
+          267,
+          299
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "路口南側建物",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          408,
+          375
+        ],
+        [
+          431,
+          386
+        ],
+        [
+          422,
+          410
+        ],
+        [
+          402,
+          399
+        ]
+      ],
+      "estimated_floors": 2,
+      "estimated_height_m": 6.1,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "東南側中層住宅",
+      "type": "neighbor",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "footprint_source_pixels": [
+        [
+          570,
+          392
+        ],
+        [
+          591,
+          406
+        ],
+        [
+          575,
+          430
+        ],
+        [
+          554,
+          415
+        ]
+      ],
+      "estimated_floors": 4,
+      "estimated_height_m": 12.2,
+      "confidence": "approximate; openings and fine profiles schematic"
+    },
+    {
+      "label": "果園與道路樹木",
+      "type": "vegetation",
+      "source": "NLSC PHOTO2 2023 and June 2026 Street View",
+      "confidence": "approximate canopy distribution; species and individual tree positions not surveyed"
+    },
+    {
+      "label": "路燈電桿與架空線",
+      "type": "utilities",
+      "source": "June 2026 Street View",
+      "confidence": "approximate; not utility survey"
+    }
+  ],
+  "model": {
+    "file": "surroundings.glb",
+    "input_sha256": "406ffdf84e557c9bf0a53f5a7ef9bbc228ff2a4c10293849f23bd0b862f14fc0",
+    "sha256": "064ef7705e9e9a957f9c3d06a35c0dcebeaa1e4b58b361f5b536814d346aa14a",
+    "bytes": 15832864,
+    "texturedMeshBatches": 8,
+    "tangentMeshBatches": 8,
+    "trianglePositionsUnchanged": true
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "credit": "Powered by Poly Haven",
+  "license_url": "https://polyhaven.com/license",
+  "date": "2026-09-10 UTC+8",
+  "assets": [
+    {
+      "asset": "white_plaster_02",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_diff_1k.jpg",
+      "source_md5": "7b10c2686bcfd76d1f309a20fd06b57e",
+      "file": "assets/plaster-color.jpg",
+      "sha256": "f8f81dbe7fd858e7525df0a23b066b1bea47271a5ce9194991d658acc2338071",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "white_plaster_02",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_nor_gl_1k.jpg",
+      "source_md5": "55fc03203ebf1dc703a380fde93ff502",
+      "file": "assets/plaster-normal.jpg",
+      "sha256": "6f0969c0e3860596fc3dc58d13c09db9f62bd4e2bf0145d432e2e6016d4a2b79",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "white_plaster_02",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_plaster_02/white_plaster_02_rough_1k.jpg",
+      "source_md5": "8b28f263360b8c4ddbdc4f7c650c4eeb",
+      "file": "assets/plaster-roughness.jpg",
+      "sha256": "80adbb5f7e93ec8d919342ddfc2a620d1e072e784485c81a1130817a7c340914",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "oak_veneer_01",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_diff_1k.jpg",
+      "source_md5": "39a99df4e328d62d74f3122722a64a95",
+      "file": "assets/wood-color.jpg",
+      "sha256": "fa3ea5116194d66f6d9cf708b6f11c64d8965bd417ca61efce4df4d841ddc263",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "oak_veneer_01",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_nor_gl_1k.jpg",
+      "source_md5": "d05406f5fdaf51f0d7b115b35d9af1b7",
+      "file": "assets/wood-normal.jpg",
+      "sha256": "bd4e2a9bbc7bd4101295cc74945ac24abcd1b79533719dab8862fbe489481941",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "oak_veneer_01",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_rough_1k.jpg",
+      "source_md5": "a19b44176a078b9ae93314133848c9aa",
+      "file": "assets/wood-roughness.jpg",
+      "sha256": "5463dd080fdd2f8bab4ee7c8906c11c011308d0bfae27baefb4ba806d118ad58",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "denim_fabric",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/denim_fabric/denim_fabric_diff_1k.jpg",
+      "source_md5": "3835b5e277dd99784bfe68d985da14ae",
+      "file": "assets/linen-color.jpg",
+      "sha256": "3382a47cbdee7b30577f2216cfe0f85b84d002cc65bb1dc68234be05a32dac8e",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "denim_fabric",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/denim_fabric/denim_fabric_nor_gl_1k.jpg",
+      "source_md5": "9008fe723671f9cb3e6d0889eab9adb0",
+      "file": "assets/linen-normal.jpg",
+      "sha256": "6083e9f874b09089aa2b7b8bfc825f745e2d9a67ebfcbd3b6ddba763d67f8b3e",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "denim_fabric",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/denim_fabric/denim_fabric_rough_1k.jpg",
+      "source_md5": "7eebb4a6185f2e6805976bc356dd1b41",
+      "file": "assets/linen-roughness.jpg",
+      "sha256": "f6fc5866b05ff3f837fb95e76dda1b28cc4d7e1b72a06fac7816e60b81275bfc",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "leather_white",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leather_white/leather_white_diff_1k.jpg",
+      "source_md5": "a580e1c45d806a56d89331f9a549ecb2",
+      "file": "assets/leather-color.jpg",
+      "sha256": "64fdf0b76dfabceff2c8e177718a0c8e3bba9161de865f9c8c8f35e0e693480b",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "leather_white",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leather_white/leather_white_nor_gl_1k.jpg",
+      "source_md5": "4226eb91e17693722f3368cd41a3b1c9",
+      "file": "assets/leather-normal.jpg",
+      "sha256": "d7ed95a028adf9e109dad74003af0578b2d101bcd48b41ccac096640b4db8aa0",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "leather_white",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leather_white/leather_white_rough_1k.jpg",
+      "source_md5": "db1052bac557bb6b03fdde325a853af4",
+      "file": "assets/leather-roughness.jpg",
+      "sha256": "a22342505eddad2093f02c5f418f82439fc08668e524534ac0cf665b2efbd416",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "concrete_floor",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor/concrete_floor_diff_1k.jpg",
+      "source_md5": "99b94da291a4f038fa6af93c3993cbec",
+      "file": "assets/concrete-color.jpg",
+      "sha256": "792ed8b2bebc46c90efb4dedad7fbbaf5c1b13044edaa7418c44daec80aa16a1",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "concrete_floor",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor/concrete_floor_nor_gl_1k.jpg",
+      "source_md5": "d77c5c5de3f58adcb00f93caeb4c5a73",
+      "file": "assets/concrete-normal.jpg",
+      "sha256": "f399728157a1ad076d0d4c33452dad6870602ff5fad936dce5a594494ece64d1",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "concrete_floor",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor/concrete_floor_rough_1k.jpg",
+      "source_md5": "5d9bd1bfd18e5d32a3217e8275dd8271",
+      "file": "assets/concrete-roughness.jpg",
+      "sha256": "3a785d9b45e30b5a189c078b1a87d1bf27b003e18ce1954d24f4292858e98078",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "asphalt_02",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+      "source_md5": "fa19772d4817754c3efab708c651f5a8",
+      "file": "assets/asphalt-color.jpg",
+      "sha256": "faa078d206d7a9ccaa2dcd146ade5312a9daf3a1da7ed154f395eb31e4a4300f",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "asphalt_02",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+      "source_md5": "338da8de636ea36133170578cac82e8e",
+      "file": "assets/asphalt-normal.jpg",
+      "sha256": "59cdd52ece21741a0c044d7a0fbfac005799c8f35b9d326ae9cd5735d942a1a0",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "asphalt_02",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_rough_1k.jpg",
+      "source_md5": "ec80a2929797c1b3ffc121c4f665585a",
+      "file": "assets/asphalt-roughness.jpg",
+      "sha256": "1f2f945c8758269dd2bf7bfbe0a185ca16d44c578ababf45789cfaf54affa719",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "sparse_grass",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_diff_1k.jpg",
+      "source_md5": "5d0aba796e1b5882555161c16b10ee9d",
+      "file": "assets/grass-color.jpg",
+      "sha256": "09ab88ccae6c3c94499fbac97427f1e81e47e5432da3e085a8750258e52cfd44",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "sparse_grass",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_nor_gl_1k.jpg",
+      "source_md5": "3307e6ce47413c6b4e85885d4b8ae932",
+      "file": "assets/grass-normal.jpg",
+      "sha256": "5053b7ba6936a187f88ddcad6049225fcb9a6e4f3314525680e673180a669334",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "sparse_grass",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_rough_1k.jpg",
+      "source_md5": "acf2fd7e352e7635f67f24ecda01e485",
+      "file": "assets/grass-roughness.jpg",
+      "sha256": "485b0aa38f98f8f5b36d02a19cc7673f704d2a7e17536316d855f0e30c769097",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "red_brick",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick/red_brick_diff_1k.jpg",
+      "source_md5": "269e69449755abd1ede473e634b670e7",
+      "file": "assets/brick-color.jpg",
+      "sha256": "54dc87c2386e95e8993e32acefe558385765f722c02658ba9abd7abf9dd6ea2d",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "red_brick",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick/red_brick_nor_gl_1k.jpg",
+      "source_md5": "3a49f27fb909b2db794f60bf1ce6659f",
+      "file": "assets/brick-normal.jpg",
+      "sha256": "a795096ad4c5c7f37709dba61c4a6c26c03b1e65d31590cee732ef3a10640296",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "red_brick",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick/red_brick_rough_1k.jpg",
+      "source_md5": "7ffbf7a7d2e0cff0a9c5f8848f9fada2",
+      "file": "assets/brick-roughness.jpg",
+      "sha256": "e75ae7eb87c7acf32d92bd94511cf12bea06d7d706a992fe333920897a63338b",
+      "license": "CC0",
+      "processing": "resized; albedo neutralized for palette tint; normal strength reduced"
+    },
+    {
+      "asset": "kloofendal_48d_partly_cloudy_puresky",
+      "file": "assets/daylight.hdr",
+      "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "license": "CC0",
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+      "note": "Generic sky for illumination only; NOT a photograph at the Taiwan site"
+    }
+  ]
+}

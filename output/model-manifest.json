@@ -1305,6 +1305,9 @@
       14.7
     ]
   ],
-  "glb_bytes": 592580,
-  "sha256": "dca2f883ae27978dd339ed290abb9f380e60c1668cf781e22f803cc70111657a"
+  "glb_bytes": 3187768,
+  "sha256": "515cef58b6cf63e7e8a5ace47f5165c2fcd1786d285f61fd0b1a634e86a75c19",
+  "bytes": 3187768,
+  "render_revision": "2026-09-10-pbr",
+  "tangentMeshBatches": 47
 }
