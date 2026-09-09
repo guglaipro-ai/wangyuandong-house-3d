@@ -1,0 +1,34 @@
+{
+  "bohemian": {
+    "originalGeometryUnchanged": true,
+    "originalNodesUnchanged": true,
+    "geometryMismatches": [],
+    "nodeMismatches": [],
+    "addedMeshBatches": 52,
+    "sha256": "6fdfbf62c75f3b72c92369f0654443006ccaaea6fda6a29a28c488c32e0b195b"
+  },
+  "industrial": {
+    "originalGeometryUnchanged": true,
+    "originalNodesUnchanged": true,
+    "geometryMismatches": [],
+    "nodeMismatches": [],
+    "addedMeshBatches": 57,
+    "sha256": "e2af02885cd6cb03030c92a94c75efa94345670b4eee2aae6c63226eaf2588b7"
+  },
+  "eclectic": {
+    "originalGeometryUnchanged": true,
+    "originalNodesUnchanged": true,
+    "geometryMismatches": [],
+    "nodeMismatches": [],
+    "addedMeshBatches": 59,
+    "sha256": "f44846843ccfce927f65e1f62d0028ea7cb3b84045437d297ee1506e7d7e9e3b"
+  },
+  "wabisabi": {
+    "originalGeometryUnchanged": true,
+    "originalNodesUnchanged": true,
+    "geometryMismatches": [],
+    "nodeMismatches": [],
+    "addedMeshBatches": 41,
+    "sha256": "76983acc443499f2e0b3647958b24db4d12fc9efc9431e8c186d9f249d3f3c9e"
+  }
+}

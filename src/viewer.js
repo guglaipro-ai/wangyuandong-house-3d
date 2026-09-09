@@ -16,6 +16,10 @@ const FLOOR_GROUPS = ['FLOOR_1', 'FLOOR_2', 'FLOOR_3', 'FLOOR_4'];
 const CLIPPABLE_KINDS = new Set(['wall', 'door', 'window', 'column']);
 const CUTAWAY_OFFSET = 1.25; // 樓層底部往上 1.25 公尺
 const PIXEL_RATIO_CAP = 1.5;
+const STYLE_NAMES = {original:'原始空屋',bohemian:'波西米亞',industrial:'工業 Loft',eclectic:'折衷混搭',wabisabi:'侘寂'};
+let activeStyle='original';
+let styleSelect=null;
+let pendingStyle='original';
 
 // ---------------------------------------------------------------------------
 // DOM 參照
@@ -34,6 +38,7 @@ function setStatus(msg, isError) {
 
 function fatal(msg, err) {
   setStatus(msg, true);
+  if(styleSelect){styleSelect.disabled=false;styleSelect.value=activeStyle;}
   if (err) console.error(err);
 }
 
@@ -198,18 +203,21 @@ function getAspect() {
 // ---------------------------------------------------------------------------
 // 模型載入
 // ---------------------------------------------------------------------------
-function loadModel() {
-  const dataEl = document.getElementById('model-data');
-  if (!dataEl || !dataEl.textContent || !dataEl.textContent.trim()) {
-    fatal('找不到內嵌模型資料 (#model-data)。');
-    return;
-  }
-
+async function loadModel(style='original') {
+  pendingStyle=style;
+  if(styleSelect)styleSelect.disabled=true;
+  setStatus('正在載入'+STYLE_NAMES[style]+'…');
+  const dataEl = document.getElementById(style==='original'?'model-data':'model-'+style);
   let buffer;
   try {
-    buffer = base64ToArrayBuffer(dataEl.textContent);
+    if(dataEl?.textContent?.trim())buffer=base64ToArrayBuffer(dataEl.textContent);
+    else{
+      const response=await fetch('styles/'+style+'.glb');
+      if(!response.ok)throw new Error('HTTP '+response.status);
+      buffer=await response.arrayBuffer();
+    }
   } catch (e) {
-    fatal('模型資料解碼失敗 (base64 無效)。', e);
+    fatal('方案載入失敗，請確認網路後重新選取。', e);
     return;
   }
 
@@ -236,6 +244,15 @@ function loadModel() {
 }
 
 function onModelLoaded(result) {
+  const replacement=!!rootModel;
+  if(rootModel){
+    scene.remove(rootModel);
+    rootModel.traverse(o=>{if(o.isMesh){o.geometry?.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m?.dispose());}});
+    if(labelLayer)labelLayer.innerHTML='';
+    GROUP_NAMES.forEach(n=>delete groupObjects[n]);
+  }
+  activeStyle=pendingStyle;
+  if(styleSelect){styleSelect.value=activeStyle;styleSelect.disabled=false;}
   gltf = result;
   rootModel = result.scene || (result.scenes && result.scenes[0]);
   if (!rootModel) {
@@ -286,8 +303,12 @@ function onModelLoaded(result) {
   // 套用初始剖面/裁面狀態
   applyClipping();
 
-  setStatus('模型載入完成。共 ' + roomLabelDefs.length + ' 個房間標籤。');
-  window.houseViewer = { scene, camera, controls, gltf, render: renderOnce };
+  setStatus(STYLE_NAMES[activeStyle]+' · '+(activeStyle==='original'?'原建築配置':'家具與材質配置提案'));
+  window.houseViewer = { scene, camera, controls, gltf, render: renderOnce, style:activeStyle };
+  const link=document.getElementById('download');
+  if(link){const embed=document.getElementById(activeStyle==='original'?'model-data':'model-'+activeStyle);link.href=embed?'data:model/gltf-binary;base64,'+embed.textContent.trim():'styles/'+activeStyle+'.glb';link.download=activeStyle==='original'?'house.glb':'house-'+activeStyle+'.glb';}
+  if(replacement && activeStyle!=='original')soloFloor('FLOOR_2');
+  else if(replacement)showAll();
   requestRender();
 }
 
@@ -365,11 +386,24 @@ let labelToggle = null;
 
 function buildUI() {
   controlsEl.innerHTML = '';
+  const styleSection=el('div',{class:'hv-section hv-style'},[el('h3',{text:'風格與家具 · 3D 切換'})]);
+  styleSelect=el('select',{id:'hv-style','aria-label':'風格與家具方案'});
+  Object.entries(STYLE_NAMES).forEach(([value,text])=>styleSelect.appendChild(el('option',{value,text})));
+  styleSelect.addEventListener('change',()=>loadModel(styleSelect.value));
+  styleSection.appendChild(styleSelect);
+  styleSection.appendChild(makeButton('二樓室內視角',()=>{
+    soloFloor('FLOOR_2');
+    cutawayEnabled=false;sectionEnabled=false;cutawayToggle.checked=false;sectionToggle.checked=false;applyClipping();
+    showRoomLabels=false;labelToggle.checked=false;updateLabels();
+    camera.position.set(.27,6.4,2.5);controls.target.set(3.12,5.85,-.8);controls.update();requestRender();
+  }));
+  controlsEl.appendChild(styleSection);
 
   // --- 群組顯示 ---
   const groupSection = el('div', { class: 'hv-section' }, [
     el('h3', { text: '樓層與區塊顯示' }),
   ]);
+  groupSection.classList.add('hv-groups');
   const groupLabelZh = {
     SITE: '基地', FLOOR_1: '一樓', FLOOR_2: '二樓', FLOOR_3: '三樓', FLOOR_4: '四樓', ROOF: '屋頂',
   };

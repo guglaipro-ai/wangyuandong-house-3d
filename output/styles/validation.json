@@ -1,0 +1,172 @@
+{
+  "models": {
+    "bohemian": {
+      "bytes": 779068,
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "industrial": {
+      "bytes": 714772,
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "eclectic": {
+      "bytes": 682240,
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "wabisabi": {
+      "bytes": 569860,
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  },
+  "views": [
+    {
+      "style": "bohemian",
+      "furnitureMeshes": 19,
+      "groups": [
+        {
+          "name": "FLOOR_1",
+          "present": true
+        },
+        {
+          "name": "FLOOR_2",
+          "present": true
+        },
+        {
+          "name": "FLOOR_3",
+          "present": true
+        },
+        {
+          "name": "FLOOR_4",
+          "present": true
+        },
+        {
+          "name": "ROOF",
+          "present": true
+        }
+      ],
+      "labels": 27
+    },
+    {
+      "style": "industrial",
+      "furnitureMeshes": 23,
+      "groups": [
+        {
+          "name": "FLOOR_1",
+          "present": true
+        },
+        {
+          "name": "FLOOR_2",
+          "present": true
+        },
+        {
+          "name": "FLOOR_3",
+          "present": true
+        },
+        {
+          "name": "FLOOR_4",
+          "present": true
+        },
+        {
+          "name": "ROOF",
+          "present": true
+        }
+      ],
+      "labels": 27
+    },
+    {
+      "style": "eclectic",
+      "furnitureMeshes": 23,
+      "groups": [
+        {
+          "name": "FLOOR_1",
+          "present": true
+        },
+        {
+          "name": "FLOOR_2",
+          "present": true
+        },
+        {
+          "name": "FLOOR_3",
+          "present": true
+        },
+        {
+          "name": "FLOOR_4",
+          "present": true
+        },
+        {
+          "name": "ROOF",
+          "present": true
+        }
+      ],
+      "labels": 27
+    },
+    {
+      "style": "wabisabi",
+      "furnitureMeshes": 18,
+      "groups": [
+        {
+          "name": "FLOOR_1",
+          "present": true
+        },
+        {
+          "name": "FLOOR_2",
+          "present": true
+        },
+        {
+          "name": "FLOOR_3",
+          "present": true
+        },
+        {
+          "name": "FLOOR_4",
+          "present": true
+        },
+        {
+          "name": "ROOF",
+          "present": true
+        }
+      ],
+      "labels": 27
+    },
+    {
+      "style": "original",
+      "furnitureMeshes": 0,
+      "groups": [
+        {
+          "name": "FLOOR_1",
+          "present": true
+        },
+        {
+          "name": "FLOOR_2",
+          "present": true
+        },
+        {
+          "name": "FLOOR_3",
+          "present": true
+        },
+        {
+          "name": "FLOOR_4",
+          "present": true
+        },
+        {
+          "name": "ROOF",
+          "present": true
+        }
+      ],
+      "labels": 27
+    }
+  ],
+  "errors": [],
+  "physicalAndroidTested": false,
+  "mobile": {
+    "width": 412,
+    "scrollWidth": 412,
+    "selectorEnabled": true
+  }
+}
