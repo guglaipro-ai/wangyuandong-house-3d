@@ -1,0 +1,38 @@
+{
+  "uri": "house.glb",
+  "mimeType": "model/gltf-binary",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "validatedAt": "2026-09-09T01:10:49.338Z",
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "https://github.com/mikedh/trimesh",
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "glb",
+        "byteLength": 302352
+      }
+    ],
+    "animationCount": 0,
+    "materialCount": 12,
+    "hasMorphTargets": false,
+    "hasSkins": false,
+    "hasTextures": false,
+    "hasDefaultScene": true,
+    "drawCallCount": 61,
+    "totalVertexCount": 10484,
+    "totalTriangleCount": 15888,
+    "maxUVs": 0,
+    "maxInfluences": 0,
+    "maxAttributes": 1
+  }
+}

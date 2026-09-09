@@ -1,0 +1,82 @@
+{
+  "glbErrors": 0,
+  "glbWarnings": 0,
+  "glbHints": 0,
+  "base": {
+    "status": "模型載入完成。共 27 個房間標籤。",
+    "groups": [
+      {
+        "name": "SITE",
+        "visible": true
+      },
+      {
+        "name": "FLOOR_1",
+        "visible": true
+      },
+      {
+        "name": "FLOOR_2",
+        "visible": true
+      },
+      {
+        "name": "FLOOR_3",
+        "visible": true
+      },
+      {
+        "name": "FLOOR_4",
+        "visible": true
+      },
+      {
+        "name": "ROOF",
+        "visible": true
+      }
+    ],
+    "perspective": true,
+    "rooms": 27
+  },
+  "floorTests": [
+    {
+      "visible": [
+        "FLOOR_1"
+      ],
+      "labels": 6,
+      "clippedMeshes": 27
+    },
+    {
+      "visible": [
+        "FLOOR_2"
+      ],
+      "labels": 10,
+      "clippedMeshes": 27
+    },
+    {
+      "visible": [
+        "FLOOR_3"
+      ],
+      "labels": 7,
+      "clippedMeshes": 27
+    },
+    {
+      "visible": [
+        "FLOOR_4"
+      ],
+      "labels": 4,
+      "clippedMeshes": 27
+    }
+  ],
+  "roofHidden": true,
+  "zoomChanged": true,
+  "rotationChanged": true,
+  "touchRotationChanged": true,
+  "pinchZoomChanged": true,
+  "mobile": {
+    "scrollWidth": 412,
+    "width": 412,
+    "canvas": [
+      412,
+      525
+    ]
+  },
+  "errors": [],
+  "externalNetworkRequests": [],
+  "androidPhysicalDeviceTested": false
+}

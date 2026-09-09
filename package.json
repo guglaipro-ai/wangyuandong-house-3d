@@ -1,0 +1,7 @@
+{
+	"dependencies": {
+		"three": "^0.185.1",
+		"esbuild": "^0.28.2",
+		"gltf-validator": "2.0.0-dev.3.10"
+	}
+}
