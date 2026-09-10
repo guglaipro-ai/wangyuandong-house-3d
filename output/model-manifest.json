@@ -8,9 +8,9 @@
       "base": 0.6,
       "height_to_next": 4.2,
       "rooms": [
-        "客廳（西側）",
+        "展覽空間／教室（西側）",
         "儲藏室（樓梯下方）",
-        "客廳（東側）",
+        "Lobby 大廳（東側）",
         "廁所 B",
         "樓梯間／電梯"
       ],
@@ -25,8 +25,8 @@
         "臥室三",
         "廁所 A",
         "廁所 B",
-        "客廳",
-        "餐廳",
+        "客廳兼餐廳",
+        "廚房",
         "走道",
         "樓梯間"
       ],
@@ -38,7 +38,7 @@
       "rooms": [
         "臥室一",
         "臥室二",
-        "臥室三",
+        "佛廳／祭祀空間",
         "廁所",
         "起居室",
         "樓梯間"
@@ -49,7 +49,7 @@
       "base": 11.7,
       "height_to_next": 3.1,
       "rooms": [
-        "臥室",
+        "儲藏間",
         "樓梯間",
         "露台"
       ],
@@ -1290,24 +1290,23 @@
     }
   ],
   "approximation": "Plan line tracing calibrated to dimension strings; no CAD or site survey. Fine profiles and colors approved by user.",
-  "nodes": 104,
-  "meshes": 70,
-  "triangles": 28680,
+  "nodes": 103,
+  "meshes": 69,
+  "triangles": 28476,
   "bounds": [
     [
-      -9.18,
+      -9.08,
       -0.18,
       -10.5
     ],
     [
-      10.82,
+      10.02,
       16.0,
-      14.7
+      11.7
     ]
   ],
-  "glb_bytes": 3187768,
-  "sha256": "515cef58b6cf63e7e8a5ace47f5165c2fcd1786d285f61fd0b1a634e86a75c19",
-  "bytes": 3187768,
-  "render_revision": "2026-09-10-pbr",
-  "tangentMeshBatches": 47
+  "glb_bytes": 2658996,
+  "sha256": "f50631a30a0d8d134cae6ff35f434ebbab12c898f87bc4176dbc84b130e881f6",
+  "bytes": 2658996,
+  "render_revision": "2026-09-10-pbr"
 }

@@ -19543,7 +19543,7 @@
     },
     {
       "id": "A089",
-      "key": "fixture_1_廁所B_洗手盆",
+      "key": "fixture_1_廁所B_洗手盆_9.12",
       "category": "衛浴設備",
       "location": "1F 廁所B 洗手盆",
       "pdf_pages": [
@@ -19643,7 +19643,7 @@
     },
     {
       "id": "A090",
-      "key": "fixture_1_廁所B_小便斗",
+      "key": "fixture_1_廁所B_小便斗_10.3",
       "category": "衛浴設備",
       "location": "1F 廁所B 小便斗",
       "pdf_pages": [
@@ -19709,7 +19709,7 @@
     },
     {
       "id": "A091",
-      "key": "fixture_1_廁所B_坐式便器",
+      "key": "fixture_1_廁所B_坐式便器_11.35",
       "category": "衛浴設備",
       "location": "1F 廁所B 坐式便器",
       "pdf_pages": [
@@ -19792,7 +19792,7 @@
     },
     {
       "id": "A092",
-      "key": "fixture_2_廁所A_坐式便器",
+      "key": "fixture_2_廁所A_坐式便器_6.32",
       "category": "衛浴設備",
       "location": "2F 廁所A 坐式便器",
       "pdf_pages": [
@@ -19875,7 +19875,7 @@
     },
     {
       "id": "A093",
-      "key": "fixture_2_廁所A_洗手盆",
+      "key": "fixture_2_廁所A_洗手盆_6.32",
       "category": "衛浴設備",
       "location": "2F 廁所A 洗手盆",
       "pdf_pages": [
@@ -19975,7 +19975,7 @@
     },
     {
       "id": "A094",
-      "key": "fixture_2_廁所B_洗手盆",
+      "key": "fixture_2_廁所B_洗手盆_1.84",
       "category": "衛浴設備",
       "location": "2F 廁所B 洗手盆",
       "pdf_pages": [
@@ -20075,7 +20075,7 @@
     },
     {
       "id": "A095",
-      "key": "fixture_2_廁所B_小便斗",
+      "key": "fixture_2_廁所B_小便斗_0.83",
       "category": "衛浴設備",
       "location": "2F 廁所B 小便斗",
       "pdf_pages": [
@@ -20141,90 +20141,73 @@
     },
     {
       "id": "A096",
-      "key": "fixture_2_廁所B_坐式便器",
+      "key": "fixture_2_廁所B_小便斗_2.84",
       "category": "衛浴設備",
-      "location": "2F 廁所B 坐式便器",
+      "location": "2F 廁所B 小便斗",
       "pdf_pages": [
         7,
         20
       ],
-      "before": "原模型缺少圖示衛浴設備",
-      "after": "補建坐式便器可見三維外形，位於約(2.84,7.88)m",
-      "basis": "平面符號及配置；產品尺寸／曲面為概念近似",
+      "before": "靠門設備原為坐式便器",
+      "after": "補建小便斗可見三維外形，位於約(2.84,7.88)m",
+      "basis": "2026-09-10 使用者明確指定靠門處改為小便斗；優先於原圖示",
       "components": [
         {
-          "name": "wc_pedestal",
-          "triangles": 92,
-          "world_bounds": [
-            [
-              -4.5,
-              4.811999999999999,
-              -0.9600000000000009
-            ],
-            [
-              -4.18,
-              5.052,
-              -0.4800000000000004
-            ]
-          ],
-          "geometry_sha256": "5615d36852f6b094ddf9d6ad5c10be9bd8a42d20353ce31b0533557d801d10be"
-        },
-        {
-          "name": "wc_bowl_rim",
-          "triangles": 192,
-          "world_bounds": [
-            [
-              -4.57,
-              5.052,
-              -1.0500000000000007
-            ],
-            [
-              -4.109999999999999,
-              5.202,
-              -0.4300000000000006
-            ]
-          ],
-          "geometry_sha256": "fbbb8596c17195b4033f84971346f36fc7276ebec303d5933371419f6258da47"
-        },
-        {
-          "name": "wc_seat",
-          "triangles": 192,
-          "world_bounds": [
-            [
-              -4.5600000000000005,
-              5.201999999999999,
-              -1.040000000000001
-            ],
-            [
-              -4.119999999999999,
-              5.226999999999999,
-              -0.4400000000000004
-            ]
-          ],
-          "geometry_sha256": "3e9aaed5fafb76c189e127e0cb55e2d387c10f7d5c60ef0dbdb4bcaecd6c74ca"
-        },
-        {
-          "name": "wc_tank",
+          "name": "urinal_back",
           "triangles": 12,
           "world_bounds": [
             [
-              -4.5600000000000005,
-              5.092,
-              -0.5600000000000005
+              -4.52,
+              5.161999999999999,
+              -0.5000000000000009
             ],
             [
-              -4.119999999999999,
-              5.502,
+              -4.16,
+              5.7219999999999995,
               -0.3800000000000008
             ]
           ],
-          "geometry_sha256": "dd37a23b7983fb12f4bfeac25a9917b25fccc45fca557079a92cac5af3868bd6"
+          "geometry_sha256": "4f9dbc8919ad94afb52a5872c0f74096856e913e441a950d8041fa046e1b225e"
+        },
+        {
+          "name": "urinal_bowl",
+          "triangles": 192,
+          "world_bounds": [
+            [
+              -4.529999999999999,
+              5.191999999999999,
+              -0.8000000000000007
+            ],
+            [
+              -4.15,
+              5.411999999999999,
+              -0.33999999999999986
+            ]
+          ],
+          "geometry_sha256": "b3e3cd4c22e0c153e1c007cfe270330689271574711cc2d630f8482068f5cc16"
+        },
+        {
+          "name": "urinal_base",
+          "triangles": 92,
+          "world_bounds": [
+            [
+              -4.529999999999999,
+              5.172,
+              -0.8000000000000007
+            ],
+            [
+              -4.15,
+              5.202,
+              -0.33999999999999986
+            ]
+          ],
+          "geometry_sha256": "d527c1308ae20527ba9c4268572ed814c75a56f37d18b335714ce1be7a477f07"
         }
       ]
     },
     {
       "id": "A097",
-      "key": "fixture_3_廁所_坐式便器",
+      "key": "fixture_3_廁所_坐式便器_6.32",
       "category": "衛浴設備",
       "location": "3F 廁所 坐式便器",
       "pdf_pages": [
@@ -20307,7 +20290,7 @@
     },
     {
       "id": "A098",
-      "key": "fixture_3_廁所_洗手盆",
+      "key": "fixture_3_廁所_洗手盆_6.3",
       "category": "衛浴設備",
       "location": "3F 廁所 洗手盆",
       "pdf_pages": [
@@ -20407,7 +20390,7 @@
     },
     {
       "id": "A099",
-      "key": "fixture_3_廁所_小便斗",
+      "key": "fixture_3_廁所_小便斗_5.11",
       "category": "衛浴設備",
       "location": "3F 廁所 小便斗",
       "pdf_pages": [
@@ -20571,7 +20554,7 @@
     }
   ],
   "source": "王源東住宅新建工程(請照) (1).pdf",
-  "model_sha256": "dca2f883ae27978dd339ed290abb9f380e60c1668cf781e22f803cc70111657a",
+  "model_sha256": "04baab2a897d7bee081d860a53fac80d7c83592c180ebc096932832caff0132d",
   "source_evidence": {
     "file": "王源東住宅新建工程(請照) (1).pdf",
     "sha256": "4a2dad5b2583f22eb069338e20eba7aeabd4f6e3e8d3c93eaf4c94113894eebd",

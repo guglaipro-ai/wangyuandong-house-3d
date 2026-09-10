@@ -172,10 +172,10 @@ wall(1,(8.62,5.9),(8.62,7.55),[(.8,'D3a')],t=.15,name='wc_b_entry')
 wall(1,(8.62,7.55),(12.45,7.55),[],t=.15,name='wc_b_front')
 wall(1,(6.65,0),(6.65,3.55),[(2.5,'D3a')],t=.15,name='wc_a_side')
 audit.begin('storage_space','格局','1F 樓梯下方儲藏室',[6,20],'誤標成客廳西北角廁所，並以兩面假隔牆佔用客廳','移除假隔牆；恢復客廳地坪；儲藏室標示移至樓梯下方','圖面明示「儲藏室」')
-room(1,'LIVING_W','客廳（西側）',rect(.12,.15,6.4,16.45))
+room(1,'LIVING_W','展覽空間／教室（西側）',rect(.12,.15,6.4,16.45))
 room(1,'STORAGE','儲藏室（樓梯下方）',rect(6.75,.15,8.08,3.45))
 audit.end()
-room(1,'LIVING_E','客廳（東側）',rect(6.65,7.68,12.32,11.92))
+room(1,'LIVING_E','Lobby 大廳（東側）',rect(6.65,7.68,12.32,11.92))
 room(1,'WC_B','廁所 B',rect(8.72,6.0,12.3,7.43),True)
 room(1,'LOBBY','樓梯間／電梯',rect(6.8,4.1,11.72,5.77))
 
@@ -204,7 +204,7 @@ wall(2,(11.88,5.9),(14.36,5.9),[(1.25,'D4a')],name='dining_front')
 room(2,'BED1','臥室一',rect(.12,.66,4.73,5.77));room(2,'BED2','臥室二',rect(.12,8.27,4.73,11.98))
 room(2,'BED3','臥室三',rect(.12,12.23,6.4,16.49));room(2,'WC_A','廁所 A',rect(4.96,1.77,6.52,4.07),True,.10)
 room(2,'WC_B','廁所 B',rect(.12,6.03,3.38,8.03),True)
-room(2,'LIVING','客廳',rect(6.66,6.03,14.23,11.97));room(2,'DINING','餐廳',rect(12.01,.14,14.23,5.77))
+room(2,'LIVING','客廳兼餐廳',rect(6.66,6.03,14.23,11.97));room(2,'DINING','廚房',rect(12.01,.14,14.23,5.77))
 room(2,'HALL','走道',rect(4.99,6.02,6.39,11.94));room(2,'STAIR','樓梯間',rect(6.83,4.1,11.72,5.76))
 
 # 3F: smaller enclosed living space and a long eastern balcony.
@@ -230,7 +230,7 @@ wall(3,(0,7.90),(4.85,7.90),[(4.2,'D4a')],t=.15,name='bed2_back')
 wall(3,(4.85,7.90),(4.85,11.75),[(2.6,'D6')],t=.15,name='bed2_east')
 wall(3,(0,11.75),(4.85,11.75),[],t=.15,name='bed2_front')
 room(3,'BED1','臥室一',rect(.12,.66,4.72,3.88));room(3,'BED2','臥室二',rect(.12,8.02,4.72,11.62))
-room(3,'BED3','臥室三',rect(.12,11.88,4.72,14.95));room(3,'WC','廁所',rect(4.99,1.78,6.52,3.87),True,.10)
+room(3,'BED3','佛廳／祭祀空間',rect(.12,11.88,4.72,14.95));room(3,'WC','廁所',rect(4.99,1.78,6.52,3.87),True,.10)
 room(3,'LIVING','起居室',Polygon([(.12,4.13),(6.5,4.13),(6.5,6.02),(12.3,6.02),(12.3,9.69),(4.99,9.69),(4.99,7.77),(.12,7.77)]))
 room(3,'STAIR','樓梯間',rect(6.82,4.12,11.74,5.78))
 
@@ -240,7 +240,7 @@ wall(4,(6.65,0),(6.65,5.9),[(2.7,'W1c'),(5.15,'D5b')],name='terrace_door')
 wall(4,(12.45,0),(12.45,5.9),[],name='bed_east')
 wall(4,(6.65,5.9),(12.45,5.9),[(1.8,'W3c')],name='front')
 wall(4,(10.40,0),(10.40,5.9),[(5.0,'D4a')],name='bed_partition')
-room(4,'BED','臥室',rect(10.54,.13,12.3,5.77));room(4,'STAIR','樓梯間',rect(6.8,4.08,10.25,5.76))
+room(4,'BED','儲藏間',rect(10.54,.13,12.3,5.77));room(4,'STAIR','樓梯間',rect(6.8,4.08,10.25,5.76))
 
 # Elevator: shaft opening follows 1850 mm clear size, with a door at the front.
 for f in range(1,5):
@@ -348,7 +348,8 @@ for op in manifest['openings']:
 group('SITE',extra={'kind':'site'})
 site=Polygon([(-1.7,-1),(17,-2.2),(17.2,17.3),(-1.9,20)])
 extr(site,-.18,.18,'site_ground','SITE','ground','site')
-extr(Polygon([(-2,20),(18,17),(18,20),(-2,23)]),-.05,.05,'road_context','SITE','road','site')
+# The original symbolic road patch is superseded by georeferenced surroundings.
+# Keeping both roads caused the old patch to cut through neighboring houses.
 extr(rect(-1.4,.5,-.55,16.5),0,.02,'planting_strip','SITE','grass','site')
 porch=Polygon([(6.53,12.05),(12.45,12.05),(12.45,13.1),*arc(10.45,13.1,2,0,90)[1:],(6.53,15.1)])
 extr(porch,0,.55,'curved_entrance_porch','SITE','porch','site')
@@ -397,7 +398,7 @@ for mesh in tree['meshes']:
   if 'indices' in prim:tree['bufferViews'][tree['accessors'][prim['indices']]['bufferView']]['target']=34963
 js=json.dumps(tree,ensure_ascii=False,separators=(',',':')).encode('utf8');js+=b' '*((-len(js))%4)
 blob=struct.pack('<III',0x46546c67,2,20+len(js)+len(binary))+struct.pack('<II',len(js),0x4e4f534a)+js+binary
-(OUT/'house.glb').write_bytes(blob)
+temporary=OUT/'house.glb.tmp';temporary.write_bytes(blob);temporary.replace(OUT/'house.glb')
 manifest['glb_bytes']=len(blob);manifest['sha256']=hashlib.sha256(blob).hexdigest()
 (OUT/'model-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
 audit.export(manifest)

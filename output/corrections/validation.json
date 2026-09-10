@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-10 UTC+8",
+  "passed": true,
+  "checks": {
+    "north_house_overlap_m2": 0.0,
+    "road_building_overlap_m2": 0.0,
+    "legacy_symbolic_road_removed": true,
+    "near_door_urinal_components": [
+      "urinal_back",
+      "urinal_bowl",
+      "urinal_base"
+    ],
+    "styles": {
+      "bohemian": {
+        "labels": true,
+        "bed_count": 5,
+        "two_bed_headboards_positive_plan_y": true,
+        "furniture_count": 48
+      },
+      "industrial": {
+        "labels": true,
+        "bed_count": 5,
+        "two_bed_headboards_positive_plan_y": true,
+        "furniture_count": 48
+      },
+      "eclectic": {
+        "labels": true,
+        "bed_count": 5,
+        "two_bed_headboards_positive_plan_y": true,
+        "furniture_count": 48
+      },
+      "wabisabi": {
+        "labels": true,
+        "bed_count": 5,
+        "two_bed_headboards_positive_plan_y": true,
+        "furniture_count": 48
+      }
+    }
+  },
+  "neighbor_adjustments": [
+    {
+      "label": "北側紅瓦平房",
+      "distance_m": 5.499999999999999
+    },
+    {
+      "label": "南側白色三層住宅",
+      "distance_m": 3.75
+    },
+    {
+      "label": "北巷白色住宅",
+      "distance_m": 2.0
+    },
+    {
+      "label": "東南側低層住宅",
+      "distance_m": 4.0
+    },
+    {
+      "label": "東南側住宅群一",
+      "distance_m": 4.0
+    },
+    {
+      "label": "東南側住宅群二",
+      "distance_m": 4.25
+    },
+    {
+      "label": "東北住宅一",
+      "distance_m": 6.500000000000001
+    },
+    {
+      "label": "東北住宅二",
+      "distance_m": 4.0
+    }
+  ],
+  "basis": "Eleven explicit user changes take precedence over old PDF room names and the former near-door toilet. Context adjustments are approximate, not newly measured positions.",
+  "sha256": {
+    "house.glb": "f50631a30a0d8d134cae6ff35f434ebbab12c898f87bc4176dbc84b130e881f6",
+    "surroundings.glb": "cda113b1e32693b4874f7faec721af716452cca07f0f1c13a1a451cdfef9b287",
+    "styles/bohemian.glb": "d1717b5ac4efbb60a31bfb0da8444004b75b10a5bab041048f08e3c68b7c134c",
+    "styles/industrial.glb": "ead2011126871dde9ab29f4b0120696278e7256d5fa524e34e2e3e5675246147",
+    "styles/eclectic.glb": "085c711d3fd28c5ce84ed38f196a5ee3daddd67c25f8698f02b151d06c28422b",
+    "styles/wabisabi.glb": "d134ca203ad83c2dbcbae9e3155944df5ba4208550cb4d95d404349335e8ef2f"
+  }
+}

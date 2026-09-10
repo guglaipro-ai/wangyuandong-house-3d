@@ -4,10 +4,11 @@
   "files": [
     {
       "file": "house.glb",
-      "input_sha256": "dca2f883ae27978dd339ed290abb9f380e60c1668cf781e22f803cc70111657a",
-      "sha256": "515cef58b6cf63e7e8a5ace47f5165c2fcd1786d285f61fd0b1a634e86a75c19",
-      "bytes": 3187768,
-      "texturedMeshBatches": 47,
+      "input_sha256": "04baab2a897d7bee081d860a53fac80d7c83592c180ebc096932832caff0132d",
+      "sha256": "f50631a30a0d8d134cae6ff35f434ebbab12c898f87bc4176dbc84b130e881f6",
+      "bytes": 2658996,
+      "texturedMeshBatches": 46,
+      "tangentMeshBatches": 46,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -188,7 +189,7 @@
         },
         {
           "mesh": "FLOOR_2_fixture_ceramic",
-          "triangle_sha256": "c36a6fd93a913d8e4fd65b0b10d45c82b7622e4451cd0362bdfd874d19674d95"
+          "triangle_sha256": "71ebc9bfb81e423a01a8bcb582d1c4373e41a9fd2fd28a372a6e2de1424d9f54"
         },
         {
           "mesh": "FLOOR_2_fixture_metal",
@@ -277,10 +278,6 @@
         {
           "mesh": "SITE_site_ground",
           "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
-        },
-        {
-          "mesh": "SITE_site_road",
-          "triangle_sha256": "3a06854e3ec40858e7682b2111d6a9cbe3fa7e9d2bcc7344406f048bcf62818d"
         },
         {
           "mesh": "SITE_site_grass",
@@ -290,15 +287,15 @@
           "mesh": "SITE_site_porch",
           "triangle_sha256": "370d3593758b0b7f2c0d09b8b93314dea0e3b66a599d7c568cd48e9bdd8bfc39"
         }
-      ],
-      "tangentMeshBatches": 47
+      ]
     },
     {
       "file": "styles/bohemian.glb",
-      "input_sha256": "afc33a63714b36432544dae97e1a8589d0cd3906277545eac60020c606af2af9",
-      "sha256": "b3519c9126ad3d502cc8c3053f470ecff0fb551ecd314dde7e94a863d8976c63",
-      "bytes": 10888420,
-      "texturedMeshBatches": 88,
+      "input_sha256": "1960c2dd76a1c9b17dceb0473acd07e6339c646f482943e46928c7d665144b2b",
+      "sha256": "d1717b5ac4efbb60a31bfb0da8444004b75b10a5bab041048f08e3c68b7c134c",
+      "bytes": 10650256,
+      "texturedMeshBatches": 84,
+      "tangentMeshBatches": 84,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -479,7 +476,7 @@
         },
         {
           "mesh": "FLOOR_2_fixture_ceramic",
-          "triangle_sha256": "c36a6fd93a913d8e4fd65b0b10d45c82b7622e4451cd0362bdfd874d19674d95"
+          "triangle_sha256": "71ebc9bfb81e423a01a8bcb582d1c4373e41a9fd2fd28a372a6e2de1424d9f54"
         },
         {
           "mesh": "FLOOR_2_fixture_metal",
@@ -570,10 +567,6 @@
           "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
         },
         {
-          "mesh": "SITE_site_road",
-          "triangle_sha256": "3a06854e3ec40858e7682b2111d6a9cbe3fa7e9d2bcc7344406f048bcf62818d"
-        },
-        {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
         },
@@ -582,120 +575,124 @@
           "triangle_sha256": "370d3593758b0b7f2c0d09b8b93314dea0e3b66a599d7c568cd48e9bdd8bfc39"
         },
         {
-          "mesh": "STYLE_bohemian_1_decor_rug",
-          "triangle_sha256": "914503cf76e55f9d30a9e89958d97253999be3ff3c5f4f66281647c607d16d40"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_decor_light",
-          "triangle_sha256": "992e285ae25f268a071b585888802a763290bed591f45e5fc2db89aa7d92c084"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_decor_accent",
-          "triangle_sha256": "d0ae3607ce6cd8d4969b398b102187bf4174b5cd73679dd592cd232ca8ccded4"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_decor_fabric",
-          "triangle_sha256": "0c7464b973e52367759573901ec6c69f780f3084d9cf4d2f01234cc2f1610df5"
-        },
-        {
           "mesh": "STYLE_bohemian_1_furniture_wood",
-          "triangle_sha256": "bbb798c02c18bb781ca4270927b15fe6c632cc1873f518dd82e28826e3110c84"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_furniture_fabric",
-          "triangle_sha256": "0062c368874d950ce8a716a1e5ba59081d6912319a5adabd79b4e78b54005027"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_furniture_accent",
-          "triangle_sha256": "02a803b8d6aa85c95bb79358b23b7c026e0a797e942211ab06d325f3d8679aa1"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_furniture_light",
-          "triangle_sha256": "3700158c32015953f1ba9cc020c358d91d1dd41beffd0c2bf271f90130901e79"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_decor_wood",
-          "triangle_sha256": "3d6c505b605fafb65ea685bb70ab3748d59f78f04faee86e7b5db55b06827d8c"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_decor_white",
-          "triangle_sha256": "e94916cc1acf5ef73e8c34e9510cd456bc924cbab9d1ce9c8656f326366813d1"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_fixture_metal",
-          "triangle_sha256": "aeff441656b6375d288e38642a65e7ad9070c9f4351419d7d94773487937e3e7"
-        },
-        {
-          "mesh": "STYLE_bohemian_1_fixture_light",
-          "triangle_sha256": "b31d237e3a1044cc46bd18acd80e00c5f1e87fef7b61e3b7df93a1550ae60b48"
+          "triangle_sha256": "51986bd03f48d2b2cec6db8627d28c7abc82af0e1248b29ac466596ad35f328e"
         },
         {
           "mesh": "STYLE_bohemian_1_decor_clay",
-          "triangle_sha256": "379a2fc4daa9bd739237a7fd76bf13123f08c87dd2fb4872520cf7a21ad87f2d"
+          "triangle_sha256": "32ecc548ee23194b9774612ea78af12466fb16e1e63b06047f77bcc37a5ec19c"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_furniture_metal",
+          "triangle_sha256": "9c5335313bbd91e707bb95fe52287dfca473dd01b404eaf7f353ee29205f1fa2"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_decor_wood",
+          "triangle_sha256": "d6ad142b1339dfacebf2425547dee967ae818c81bfb3c0150891be7957632e2a"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_decor_white",
+          "triangle_sha256": "95b4c7784beae498823a97e8126164c6c9458422b58ed13641f4234c5aeedea7"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_decor_fabric",
+          "triangle_sha256": "bbf1da67616f8b7b29820ffb88d45696d1c4593fa73558a0761ae3b82ab7db24"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_decor_accent",
+          "triangle_sha256": "9934113a81c2c1a0e2b9f1890d28277002e9475fac01f724aeeb2040565f2c49"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_decor_light",
+          "triangle_sha256": "72e85f07f409a508b7066c9c5ab6e07a93ce9832b5b46bdc909e7bc461f1b6b0"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_fixture_metal",
+          "triangle_sha256": "c9bb86804d8f5b60bf89bd690add1b467e2544e8b6499b6bce48aa3ad4348700"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_fixture_light",
+          "triangle_sha256": "70a27a0490b1f7f81d54f4b977a79c662e154fd0982fd990692b8387a5654d8b"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_furniture_accent",
+          "triangle_sha256": "7055cc81fd968f1ad23a1548ccde3658b885ce77af3ff90ec3099d2ecb34c932"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_furniture_light",
+          "triangle_sha256": "303741cac77085d999300a1cdae5b83f6aedef4d1d3cd87e8f59de16ec8a619e"
         },
         {
           "mesh": "STYLE_bohemian_1_decor_green",
-          "triangle_sha256": "06424319645512fb81a99d3cd289c374759ef02183811922b0de4d5c935313b9"
+          "triangle_sha256": "31bb682874509fb92127241f1bb8a047a874e4fc835fdafc1d93511ebe061c03"
+        },
+        {
+          "mesh": "STYLE_bohemian_1_furniture_fabric",
+          "triangle_sha256": "854397e49bec68a66476edfd33f9263c0254a797b408a305f19fa102d2c8d236"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_rug",
-          "triangle_sha256": "3e1ee6d8f6cced89cc8717bcaee84af3e56b6e7ef6e0456a70c440ee6cffa828"
+          "triangle_sha256": "e8d6a0c6fe22164a9d71a4def66b31ebd9d3e561de3217637277ae44c3ba51ae"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_light",
-          "triangle_sha256": "17163fec6d949274b25c2bcd04c3f0e9aa8956a6d86f0023c2507d5f0c73f1dc"
+          "triangle_sha256": "6d7335fd2f0ff52e75097f544444c94b5ced9e1502a0aae0b17187a1a6b43fdc"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_accent",
-          "triangle_sha256": "3165450bfcf7aac6b7d9e41c62d370e97df77b17b8f3ac4cedeead79ffb4fe6a"
+          "triangle_sha256": "2cd9d1b9d94164eda7d69ca2c18a6e0d8e85e4ee1f9201abf2a453153e1eff4c"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_fabric",
-          "triangle_sha256": "042d74a1ab6e738086eb06e476ae99fdf1e1e01a103083bd17a3a08a934a7c1a"
+          "triangle_sha256": "7e7775a72690d552a5316323a8476a219ee2d043ef872d86bbe1b4615332ade6"
         },
         {
           "mesh": "STYLE_bohemian_2_furniture_wood",
-          "triangle_sha256": "938e59555836ae1504d8b6e423a795ac2c586086cd9d5b08d1486663c659f81b"
+          "triangle_sha256": "e06dc01ad2f36346e50ed1e686bc24bda82978dfa94dc09c7d5e5337f6eec029"
         },
         {
           "mesh": "STYLE_bohemian_2_furniture_fabric",
-          "triangle_sha256": "706cf86fd5ffb01b068daf6f76e81fd52d172cf9a6df69e93a99920f7573003d"
+          "triangle_sha256": "f84688746a1ef3d80b5580a05f573956880b4bd2213de2bfbbdbe71fb14a9a2e"
         },
         {
           "mesh": "STYLE_bohemian_2_furniture_accent",
-          "triangle_sha256": "b88679f010a3c539c3178384186655fa559753eb7359b1a3021c97f6d31ac513"
+          "triangle_sha256": "cf8a2afc04fe31fd4cf206667bef5cfbb31f71864ee5948551e410eb73dc93f2"
         },
         {
           "mesh": "STYLE_bohemian_2_furniture_light",
-          "triangle_sha256": "4d8e55e419a0e11ce92730b0ba19ce2295793f376c84ec9090f676f0fb7d9e0c"
+          "triangle_sha256": "f68fb7e515036c6488ffb3d2b61e3e4582d411135a43af7008f538bbc9f1ce37"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_wood",
-          "triangle_sha256": "f6cd38d9eb57261fd1c8ad0837658c1e46ed04fd81fbce903f950de341896f43"
+          "triangle_sha256": "9c787c9677a8590820ae92094fda955eed40aca55848a0328c2e36f64ddd9fd8"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_white",
-          "triangle_sha256": "918bf23b41eaebd9436ff09e1fcf1134ada9c209110cfd87d97c6bee7ed859c1"
+          "triangle_sha256": "a150501cdb0841caa0193f00fc7bdde4d5b4975ed7d72078fa3fabdc0a7cc9dc"
         },
         {
           "mesh": "STYLE_bohemian_2_fixture_metal",
-          "triangle_sha256": "5aef498a978605a88eed77ab9eb0ab195c1080db0ff588a1a91c44a42cabee69"
+          "triangle_sha256": "24a6067acbe18f66f91061d676e3c7c6f5a4fd73483db932755f34729d096c3f"
         },
         {
           "mesh": "STYLE_bohemian_2_fixture_light",
-          "triangle_sha256": "513f09fb62bad838fdef3571be9685ad9813669154fef90ca4f0d6db947fd44b"
+          "triangle_sha256": "58cefd9673dc0e1bbe620bd308a76a75660be689cdf7a37b7499fdcf7892582e"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_clay",
-          "triangle_sha256": "cdcdfdee7f6078875889cfb351bcd26fa56d75332ba2db6f982e8c061daa5500"
+          "triangle_sha256": "584f594a1685091d74cc3c23b856fdd11165f35c42b9c350d2cdb7104854f4d3"
         },
         {
           "mesh": "STYLE_bohemian_2_decor_green",
-          "triangle_sha256": "d7258e8d325a76b5eebf562fdc9a1f91b29dcc876acc7b6473eadc27c7dce815"
+          "triangle_sha256": "97d0638dfd7111c2e30cc8e5fa8ed10a513a47877aea7924eccd547086cd11c3"
+        },
+        {
+          "mesh": "STYLE_bohemian_2_furniture_metal",
+          "triangle_sha256": "2987ed1fcbe7e75cc7472b5014c24024b8682cd147b2cbdaf0356ccccadd4f5f"
         },
         {
           "mesh": "STYLE_bohemian_2_furniture_white",
-          "triangle_sha256": "598549ea68fb0c7d0264938fa52dbe9735728e908fdf891e8587480492c64a9a"
+          "triangle_sha256": "b9f31278d535f0f2363c8203102f529740eae6165954f2901fa836773578581d"
         },
         {
           "mesh": "STYLE_bohemian_3_decor_rug",
@@ -703,23 +700,23 @@
         },
         {
           "mesh": "STYLE_bohemian_3_decor_light",
-          "triangle_sha256": "a3c16db10abc36caf4739f50397d3b47071ec2c964d2f0fd83a86a3778b5e05e"
+          "triangle_sha256": "f2ad3e07cded1d0b4378e42bf00eba330e33538ff35d7a6cbe7f3a94a90fb306"
         },
         {
           "mesh": "STYLE_bohemian_3_decor_accent",
-          "triangle_sha256": "5787a486d3c69dea4899b59f3fa8a1cae2c98ff685491c70c902a092625860c5"
+          "triangle_sha256": "97fcc053c53ea5177a7dd9313a857793d3c18a21c12f3cf592a8c250a299ad6b"
         },
         {
           "mesh": "STYLE_bohemian_3_decor_fabric",
-          "triangle_sha256": "cb82f51a1dc47b992cb6fc8483eb1abe1312bd71c9b2da77132dbf0d76222ffc"
+          "triangle_sha256": "5f3642a634cf7e341a2208f0068d294b8cfd0d9791045ec2a4f3ddc97207e634"
         },
         {
           "mesh": "STYLE_bohemian_3_furniture_wood",
-          "triangle_sha256": "adc98a6c884c65655c7bffccbb2985bed268c0a2cd5eb427a58a6505596d7de3"
+          "triangle_sha256": "b6fa0bebb5a81dd6a7f47fee6d94bd62a25ea4acabf996e6a439549fc5a92408"
         },
         {
           "mesh": "STYLE_bohemian_3_furniture_fabric",
-          "triangle_sha256": "c825d0a50ca911ae99e60c5df9191767bfc446dce3648eeb08ae21399d779040"
+          "triangle_sha256": "091af0eddb560e47297804d70628426d35d419985a7ca612a40731b8305a7ae2"
         },
         {
           "mesh": "STYLE_bohemian_3_furniture_accent",
@@ -727,15 +724,15 @@
         },
         {
           "mesh": "STYLE_bohemian_3_furniture_light",
-          "triangle_sha256": "fdd4daae85c25dd0b9e3e60c0e40a2747d4c62ff8b7aa69d4958f45c158b6b98"
+          "triangle_sha256": "4b146b5e7677684063255775707556f17b316ed86756810a4c99efdf3d0a83d7"
         },
         {
           "mesh": "STYLE_bohemian_3_decor_wood",
-          "triangle_sha256": "60fb1d2139725293ccb37f43a3e786d7b28603d093d8a89a9dcd7d422cb467ff"
+          "triangle_sha256": "f01e0f901c8093db39f9e59f8e9d6155fa38ecfc5ac2a4862c523ef7f2430140"
         },
         {
           "mesh": "STYLE_bohemian_3_decor_white",
-          "triangle_sha256": "00f475002501f2ad7d78d5aa04d4f6439460d79e76f2959a36261fbd2b2c5f7a"
+          "triangle_sha256": "9fff72d95c71470e56dcaffc8f6ddaca32c6e5a1c6754df8a7fa14d552688d26"
         },
         {
           "mesh": "STYLE_bohemian_3_fixture_metal",
@@ -747,7 +744,7 @@
         },
         {
           "mesh": "STYLE_bohemian_3_decor_clay",
-          "triangle_sha256": "888a4c141b8ebc98a4bde0986a0435cf9336ccc6af70a98d941bd655e1558ecd"
+          "triangle_sha256": "8a9a19eb70ff6de6ed3008a1c103f76490058a76ff425388e6be5440d843a907"
         },
         {
           "mesh": "STYLE_bohemian_3_decor_green",
@@ -755,49 +752,49 @@
         },
         {
           "mesh": "STYLE_bohemian_3_furniture_white",
-          "triangle_sha256": "780632586ec889b4ef7cfb2128b854fa7062d9e25b2d9d52e5a42baf5828273b"
+          "triangle_sha256": "c50477b24f1c878e7027564ef004317dc27fcafda50a299147afdf0e9872753c"
+        },
+        {
+          "mesh": "STYLE_bohemian_3_decor_metal",
+          "triangle_sha256": "78d0ddde99deb6511de51392f0cd4f1bac26ee1723a51c12b66c747d0d883c6d"
+        },
+        {
+          "mesh": "STYLE_bohemian_4_furniture_metal",
+          "triangle_sha256": "63fe28d249e0dfa694560fd3f87ca5be8d5ac616929e09436c963d28bf40ca0b"
+        },
+        {
+          "mesh": "STYLE_bohemian_4_decor_clay",
+          "triangle_sha256": "2b24629b537c6c429aca535bd33bfe299196df6ca7197cd70dffa44272a46597"
+        },
+        {
+          "mesh": "STYLE_bohemian_4_decor_wood",
+          "triangle_sha256": "aef8a35c57f1378c40953c69de768295ff93bbd7fce7f5d4ff9263988bf02ab4"
         },
         {
           "mesh": "STYLE_bohemian_4_furniture_wood",
-          "triangle_sha256": "5953a5535432320384f3e32d326d7b640e6082c235ba1d3d8a505deaf6d89e5b"
-        },
-        {
-          "mesh": "STYLE_bohemian_4_furniture_light",
-          "triangle_sha256": "9af251edef2e0158b771f9d50c637f3c3bb5d59cd016ce65a558bee09de1e99a"
-        },
-        {
-          "mesh": "STYLE_bohemian_4_furniture_fabric",
-          "triangle_sha256": "0e762f6ef00e8d56a41dd6b6853c69497554a23a1bbc8185502dc46932dfa6d0"
-        },
-        {
-          "mesh": "STYLE_bohemian_4_furniture_white",
-          "triangle_sha256": "2a7f37a1cd6ed39b8569e5cc253805372a766b89bdef41a90bc5b25ad9a2b813"
+          "triangle_sha256": "d0b333aef92138b12f5c0ca250748711ffed9ce89e600045b3ce90341f2b12fe"
         },
         {
           "mesh": "STYLE_bohemian_4_furniture_accent",
           "triangle_sha256": "76260acced2ecadc39b7fc85815d103577769eecb27b26cdc0cd509672a3924a"
         },
         {
-          "mesh": "STYLE_bohemian_4_decor_clay",
-          "triangle_sha256": "3a8a2dd64118b4d386440821abb8de051034a9525e1e287e6b8f1a11def2b5a7"
-        },
-        {
-          "mesh": "STYLE_bohemian_4_decor_wood",
-          "triangle_sha256": "9812e13b3f7076d9a5574f0959cd0670ba8cb606272c2d137e98ead6a63d142f"
+          "mesh": "STYLE_bohemian_4_furniture_light",
+          "triangle_sha256": "e68bad4afc071abf40925152bbd049d7db7103a1e41a31aea2286709d63bc6ef"
         },
         {
           "mesh": "STYLE_bohemian_4_decor_green",
           "triangle_sha256": "24c97402d908439d5647cdbc7949553e2459b11909eb46179281c8e8fd637357"
         }
-      ],
-      "tangentMeshBatches": 88
+      ]
     },
     {
       "file": "styles/industrial.glb",
-      "input_sha256": "0341ef66303527ac9c8b740e2ea2e07d60d68359d3ebb150fd974a96c8103986",
-      "sha256": "a4d1b1ce351361b94b49f937a27670bf13da02288e580ee03115b1cd534f709c",
-      "bytes": 10822476,
-      "texturedMeshBatches": 89,
+      "input_sha256": "3e8eefc2da8b473256af48c2938766f7b2db0e9a11e424cc3b384315101a51ec",
+      "sha256": "ead2011126871dde9ab29f4b0120696278e7256d5fa524e34e2e3e5675246147",
+      "bytes": 10195512,
+      "texturedMeshBatches": 83,
+      "tangentMeshBatches": 83,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -978,7 +975,7 @@
         },
         {
           "mesh": "FLOOR_2_fixture_ceramic",
-          "triangle_sha256": "c36a6fd93a913d8e4fd65b0b10d45c82b7622e4451cd0362bdfd874d19674d95"
+          "triangle_sha256": "71ebc9bfb81e423a01a8bcb582d1c4373e41a9fd2fd28a372a6e2de1424d9f54"
         },
         {
           "mesh": "FLOOR_2_fixture_metal",
@@ -1069,10 +1066,6 @@
           "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
         },
         {
-          "mesh": "SITE_site_road",
-          "triangle_sha256": "3a06854e3ec40858e7682b2111d6a9cbe3fa7e9d2bcc7344406f048bcf62818d"
-        },
-        {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
         },
@@ -1081,132 +1074,124 @@
           "triangle_sha256": "370d3593758b0b7f2c0d09b8b93314dea0e3b66a599d7c568cd48e9bdd8bfc39"
         },
         {
-          "mesh": "STYLE_industrial_1_decor_rug",
-          "triangle_sha256": "914503cf76e55f9d30a9e89958d97253999be3ff3c5f4f66281647c607d16d40"
-        },
-        {
-          "mesh": "STYLE_industrial_1_furniture_metal",
-          "triangle_sha256": "07832f0385ac7876776b71572bbfc0c525305b1727b47341bd79b3c35833e154"
-        },
-        {
           "mesh": "STYLE_industrial_1_furniture_wood",
-          "triangle_sha256": "87f507fba2bc70c30aa8747410c8421e535ef25e98ac6273c90659417066e1f0"
-        },
-        {
-          "mesh": "STYLE_industrial_1_furniture_fabric",
-          "triangle_sha256": "0062c368874d950ce8a716a1e5ba59081d6912319a5adabd79b4e78b54005027"
-        },
-        {
-          "mesh": "STYLE_industrial_1_furniture_accent",
-          "triangle_sha256": "02a803b8d6aa85c95bb79358b23b7c026e0a797e942211ab06d325f3d8679aa1"
-        },
-        {
-          "mesh": "STYLE_industrial_1_furniture_light",
-          "triangle_sha256": "ce0e65ea29ae9f5c73827396a25f902ef2802b72958079a1551b8fb36ff8c38e"
-        },
-        {
-          "mesh": "STYLE_industrial_1_decor_wood",
-          "triangle_sha256": "3d6c505b605fafb65ea685bb70ab3748d59f78f04faee86e7b5db55b06827d8c"
-        },
-        {
-          "mesh": "STYLE_industrial_1_decor_white",
-          "triangle_sha256": "85818d5a3245e0e80c12265b59cab09a6b162ae94d79cd845e75c3504aeb243c"
-        },
-        {
-          "mesh": "STYLE_industrial_1_decor_fabric",
-          "triangle_sha256": "84090b0920d23b44b6dabae8ced5eb57b3256bd460b1c4f55d4a8b7b8a798b5d"
-        },
-        {
-          "mesh": "STYLE_industrial_1_decor_accent",
-          "triangle_sha256": "99ef3f9c39151d043fa784482ecf9f9408a2cee02c586b70eda67a294652b610"
-        },
-        {
-          "mesh": "STYLE_industrial_1_decor_light",
-          "triangle_sha256": "3c90a9ee881e3a166894b2ef8ed9cf1c3ee8d211bb351cf7813d45e8250eeb0e"
-        },
-        {
-          "mesh": "STYLE_industrial_1_fixture_metal",
-          "triangle_sha256": "aeff441656b6375d288e38642a65e7ad9070c9f4351419d7d94773487937e3e7"
-        },
-        {
-          "mesh": "STYLE_industrial_1_fixture_light",
-          "triangle_sha256": "b31d237e3a1044cc46bd18acd80e00c5f1e87fef7b61e3b7df93a1550ae60b48"
+          "triangle_sha256": "5e902f672609329c3effcaa76d86698052ab8f16fdc6a9a9e8963e1b26e14093"
         },
         {
           "mesh": "STYLE_industrial_1_decor_clay",
-          "triangle_sha256": "379a2fc4daa9bd739237a7fd76bf13123f08c87dd2fb4872520cf7a21ad87f2d"
+          "triangle_sha256": "32ecc548ee23194b9774612ea78af12466fb16e1e63b06047f77bcc37a5ec19c"
+        },
+        {
+          "mesh": "STYLE_industrial_1_furniture_metal",
+          "triangle_sha256": "63f91c0b8a0436e9c09439c2555696204650ac630607b7f8332261132a977edc"
+        },
+        {
+          "mesh": "STYLE_industrial_1_decor_wood",
+          "triangle_sha256": "d6ad142b1339dfacebf2425547dee967ae818c81bfb3c0150891be7957632e2a"
+        },
+        {
+          "mesh": "STYLE_industrial_1_decor_white",
+          "triangle_sha256": "95b4c7784beae498823a97e8126164c6c9458422b58ed13641f4234c5aeedea7"
+        },
+        {
+          "mesh": "STYLE_industrial_1_decor_fabric",
+          "triangle_sha256": "bbf1da67616f8b7b29820ffb88d45696d1c4593fa73558a0761ae3b82ab7db24"
+        },
+        {
+          "mesh": "STYLE_industrial_1_decor_accent",
+          "triangle_sha256": "9934113a81c2c1a0e2b9f1890d28277002e9475fac01f724aeeb2040565f2c49"
+        },
+        {
+          "mesh": "STYLE_industrial_1_decor_light",
+          "triangle_sha256": "72e85f07f409a508b7066c9c5ab6e07a93ce9832b5b46bdc909e7bc461f1b6b0"
+        },
+        {
+          "mesh": "STYLE_industrial_1_fixture_metal",
+          "triangle_sha256": "c9bb86804d8f5b60bf89bd690add1b467e2544e8b6499b6bce48aa3ad4348700"
+        },
+        {
+          "mesh": "STYLE_industrial_1_fixture_light",
+          "triangle_sha256": "70a27a0490b1f7f81d54f4b977a79c662e154fd0982fd990692b8387a5654d8b"
+        },
+        {
+          "mesh": "STYLE_industrial_1_furniture_accent",
+          "triangle_sha256": "7055cc81fd968f1ad23a1548ccde3658b885ce77af3ff90ec3099d2ecb34c932"
         },
         {
           "mesh": "STYLE_industrial_1_decor_green",
-          "triangle_sha256": "06424319645512fb81a99d3cd289c374759ef02183811922b0de4d5c935313b9"
+          "triangle_sha256": "31bb682874509fb92127241f1bb8a047a874e4fc835fdafc1d93511ebe061c03"
         },
         {
-          "mesh": "STYLE_industrial_1_decor_brick",
-          "triangle_sha256": "4d05c4f1e11524f2d5cd788fb105a68526f895e6f7553f601efce55e56959f6a"
+          "mesh": "STYLE_industrial_1_furniture_fabric",
+          "triangle_sha256": "854397e49bec68a66476edfd33f9263c0254a797b408a305f19fa102d2c8d236"
+        },
+        {
+          "mesh": "STYLE_industrial_1_furniture_light",
+          "triangle_sha256": "1d7a451f45b208c3840e379c827167b85a51beb1c3b085a327b5508ad54f355f"
         },
         {
           "mesh": "STYLE_industrial_2_decor_rug",
-          "triangle_sha256": "3e1ee6d8f6cced89cc8717bcaee84af3e56b6e7ef6e0456a70c440ee6cffa828"
+          "triangle_sha256": "e8d6a0c6fe22164a9d71a4def66b31ebd9d3e561de3217637277ae44c3ba51ae"
         },
         {
           "mesh": "STYLE_industrial_2_furniture_metal",
-          "triangle_sha256": "c643b873cab06483769d6e7e80ec796697a43cc04f03164e799387b76e3fe409"
+          "triangle_sha256": "ee76c79ecf8b99e9d3ac87a40279c0db27c00de44d1c574ae38ef0237b3dfc15"
         },
         {
           "mesh": "STYLE_industrial_2_furniture_wood",
-          "triangle_sha256": "629cbe4422d5cb67b7fbb1cfe44d60f89d0b79918fb798d7bc86e34ceb2ee5c0"
+          "triangle_sha256": "3ecd6e55466e0099bda9b7d9b4f21c9f1b594812bbf41be7ff0398b4d3ce1d84"
         },
         {
           "mesh": "STYLE_industrial_2_furniture_fabric",
-          "triangle_sha256": "706cf86fd5ffb01b068daf6f76e81fd52d172cf9a6df69e93a99920f7573003d"
+          "triangle_sha256": "f84688746a1ef3d80b5580a05f573956880b4bd2213de2bfbbdbe71fb14a9a2e"
         },
         {
           "mesh": "STYLE_industrial_2_furniture_accent",
-          "triangle_sha256": "b88679f010a3c539c3178384186655fa559753eb7359b1a3021c97f6d31ac513"
+          "triangle_sha256": "cf8a2afc04fe31fd4cf206667bef5cfbb31f71864ee5948551e410eb73dc93f2"
         },
         {
           "mesh": "STYLE_industrial_2_furniture_light",
-          "triangle_sha256": "04286c51ed8ec68a269eb6432c8d3c9f60f57404e47124ccc805f77b18ac1e2f"
+          "triangle_sha256": "bc1281ed20884d4b25f6c0296a2df77c793768455ee20a4ba4dd12f0a3e317bf"
         },
         {
           "mesh": "STYLE_industrial_2_decor_wood",
-          "triangle_sha256": "f6cd38d9eb57261fd1c8ad0837658c1e46ed04fd81fbce903f950de341896f43"
+          "triangle_sha256": "9c787c9677a8590820ae92094fda955eed40aca55848a0328c2e36f64ddd9fd8"
         },
         {
           "mesh": "STYLE_industrial_2_decor_white",
-          "triangle_sha256": "918bf23b41eaebd9436ff09e1fcf1134ada9c209110cfd87d97c6bee7ed859c1"
+          "triangle_sha256": "a150501cdb0841caa0193f00fc7bdde4d5b4975ed7d72078fa3fabdc0a7cc9dc"
         },
         {
           "mesh": "STYLE_industrial_2_decor_fabric",
-          "triangle_sha256": "bbec41b02743c5ad943af3b2635aa5c6e2f398463afa2478e49194b8098cf00c"
+          "triangle_sha256": "d699087985b521765fdb60ef28372c5920e01c23382b31dc10bf5531b592170f"
         },
         {
           "mesh": "STYLE_industrial_2_decor_accent",
-          "triangle_sha256": "c390ea3a3caedfab17d81958621b6daffe20171bac6f0ebfb71c43926d4081fb"
+          "triangle_sha256": "20fa8cc3384da136d0ea8e1453d478c5c8d17ba57d6a31914fc856ad2272ca81"
         },
         {
           "mesh": "STYLE_industrial_2_decor_light",
-          "triangle_sha256": "fe33f884947ff258b476614a7feafdb8006af7771e849aa1b5999b4cec8ef274"
+          "triangle_sha256": "bc0804b6dfbe67fb5cc42bc87f12460b68b80e5ca4a5742d678ec6b6a8791a7e"
         },
         {
           "mesh": "STYLE_industrial_2_fixture_metal",
-          "triangle_sha256": "5aef498a978605a88eed77ab9eb0ab195c1080db0ff588a1a91c44a42cabee69"
+          "triangle_sha256": "24a6067acbe18f66f91061d676e3c7c6f5a4fd73483db932755f34729d096c3f"
         },
         {
           "mesh": "STYLE_industrial_2_fixture_light",
-          "triangle_sha256": "513f09fb62bad838fdef3571be9685ad9813669154fef90ca4f0d6db947fd44b"
+          "triangle_sha256": "58cefd9673dc0e1bbe620bd308a76a75660be689cdf7a37b7499fdcf7892582e"
         },
         {
           "mesh": "STYLE_industrial_2_decor_clay",
-          "triangle_sha256": "cdcdfdee7f6078875889cfb351bcd26fa56d75332ba2db6f982e8c061daa5500"
+          "triangle_sha256": "584f594a1685091d74cc3c23b856fdd11165f35c42b9c350d2cdb7104854f4d3"
         },
         {
           "mesh": "STYLE_industrial_2_decor_green",
-          "triangle_sha256": "d7258e8d325a76b5eebf562fdc9a1f91b29dcc876acc7b6473eadc27c7dce815"
+          "triangle_sha256": "97d0638dfd7111c2e30cc8e5fa8ed10a513a47877aea7924eccd547086cd11c3"
         },
         {
           "mesh": "STYLE_industrial_2_furniture_white",
-          "triangle_sha256": "598549ea68fb0c7d0264938fa52dbe9735728e908fdf891e8587480492c64a9a"
+          "triangle_sha256": "b9f31278d535f0f2363c8203102f529740eae6165954f2901fa836773578581d"
         },
         {
           "mesh": "STYLE_industrial_3_decor_rug",
@@ -1214,15 +1199,15 @@
         },
         {
           "mesh": "STYLE_industrial_3_furniture_metal",
-          "triangle_sha256": "8d0f8297781897727b0a65f5e8a727d2439ed96d4af067cabaa3e5356d13d130"
+          "triangle_sha256": "428bc4894b1a35fb92c4161c6aba1996e9084bdca2d8c78abde27e6c10747b25"
         },
         {
           "mesh": "STYLE_industrial_3_furniture_wood",
-          "triangle_sha256": "e7155924ae37f8a163e738bcfd70e69e4e07f7afb2cc530c690f1f1f4728c9ac"
+          "triangle_sha256": "beb39bcff12a2e4d03b6a8fa010fdeebaa6689759014352b6e436095f19892c1"
         },
         {
           "mesh": "STYLE_industrial_3_furniture_fabric",
-          "triangle_sha256": "c825d0a50ca911ae99e60c5df9191767bfc446dce3648eeb08ae21399d779040"
+          "triangle_sha256": "091af0eddb560e47297804d70628426d35d419985a7ca612a40731b8305a7ae2"
         },
         {
           "mesh": "STYLE_industrial_3_furniture_accent",
@@ -1230,27 +1215,27 @@
         },
         {
           "mesh": "STYLE_industrial_3_furniture_light",
-          "triangle_sha256": "fdd4daae85c25dd0b9e3e60c0e40a2747d4c62ff8b7aa69d4958f45c158b6b98"
+          "triangle_sha256": "4b146b5e7677684063255775707556f17b316ed86756810a4c99efdf3d0a83d7"
         },
         {
           "mesh": "STYLE_industrial_3_decor_wood",
-          "triangle_sha256": "60fb1d2139725293ccb37f43a3e786d7b28603d093d8a89a9dcd7d422cb467ff"
+          "triangle_sha256": "f01e0f901c8093db39f9e59f8e9d6155fa38ecfc5ac2a4862c523ef7f2430140"
         },
         {
           "mesh": "STYLE_industrial_3_decor_white",
-          "triangle_sha256": "00f475002501f2ad7d78d5aa04d4f6439460d79e76f2959a36261fbd2b2c5f7a"
+          "triangle_sha256": "9fff72d95c71470e56dcaffc8f6ddaca32c6e5a1c6754df8a7fa14d552688d26"
         },
         {
           "mesh": "STYLE_industrial_3_decor_fabric",
-          "triangle_sha256": "050415a31c1d873f9919e04a5a3b987acf70a0d8b1aab62705bdabbf1344af58"
+          "triangle_sha256": "00d899358bc70aa7dd1609ea2c2eef9f4601fde715572e2c9128ae39d3575d59"
         },
         {
           "mesh": "STYLE_industrial_3_decor_accent",
-          "triangle_sha256": "68eff889ba3518108bf1d46e4b648beb84e5eaa034ce69c4debf162b0ac48fe7"
+          "triangle_sha256": "6e1da4de3651df8d17b9ebde6871238cb734b631fe3dea049d965ced06afd578"
         },
         {
           "mesh": "STYLE_industrial_3_decor_light",
-          "triangle_sha256": "fbeec141c7dc52f7c020d88b95d966b7d28fa51d6cd0a7223c43e20c7f72b958"
+          "triangle_sha256": "5d94adf67abb3fa07cf4361460f53d9e7744cc4142727ff534ef716254c729c5"
         },
         {
           "mesh": "STYLE_industrial_3_fixture_metal",
@@ -1262,7 +1247,7 @@
         },
         {
           "mesh": "STYLE_industrial_3_decor_clay",
-          "triangle_sha256": "888a4c141b8ebc98a4bde0986a0435cf9336ccc6af70a98d941bd655e1558ecd"
+          "triangle_sha256": "8a9a19eb70ff6de6ed3008a1c103f76490058a76ff425388e6be5440d843a907"
         },
         {
           "mesh": "STYLE_industrial_3_decor_green",
@@ -1270,53 +1255,45 @@
         },
         {
           "mesh": "STYLE_industrial_3_furniture_white",
-          "triangle_sha256": "780632586ec889b4ef7cfb2128b854fa7062d9e25b2d9d52e5a42baf5828273b"
+          "triangle_sha256": "c50477b24f1c878e7027564ef004317dc27fcafda50a299147afdf0e9872753c"
         },
         {
-          "mesh": "STYLE_industrial_4_furniture_wood",
-          "triangle_sha256": "7c84467113064b38393d6f94576a79a775faf9fbcd2b7afbe0b5db9081a4f0a0"
-        },
-        {
-          "mesh": "STYLE_industrial_4_furniture_light",
-          "triangle_sha256": "5e24e804c881a2530eb6d7e954653008d5bd341efa50f46c74fb4aeccd2619c7"
-        },
-        {
-          "mesh": "STYLE_industrial_4_furniture_fabric",
-          "triangle_sha256": "0e762f6ef00e8d56a41dd6b6853c69497554a23a1bbc8185502dc46932dfa6d0"
-        },
-        {
-          "mesh": "STYLE_industrial_4_furniture_white",
-          "triangle_sha256": "2a7f37a1cd6ed39b8569e5cc253805372a766b89bdef41a90bc5b25ad9a2b813"
+          "mesh": "STYLE_industrial_3_decor_metal",
+          "triangle_sha256": "78d0ddde99deb6511de51392f0cd4f1bac26ee1723a51c12b66c747d0d883c6d"
         },
         {
           "mesh": "STYLE_industrial_4_furniture_metal",
-          "triangle_sha256": "cc7575883a2f55a3dc45bdd220f9d7c1614114a5633e2215cf00e3e4c9e54a92"
+          "triangle_sha256": "33db3a816f602a4a66139bd5cd41249ef6e711910d65b8fd78b1f0617181b277"
+        },
+        {
+          "mesh": "STYLE_industrial_4_decor_clay",
+          "triangle_sha256": "2b24629b537c6c429aca535bd33bfe299196df6ca7197cd70dffa44272a46597"
+        },
+        {
+          "mesh": "STYLE_industrial_4_decor_wood",
+          "triangle_sha256": "aef8a35c57f1378c40953c69de768295ff93bbd7fce7f5d4ff9263988bf02ab4"
+        },
+        {
+          "mesh": "STYLE_industrial_4_furniture_wood",
+          "triangle_sha256": "18e1b18f71e49ea75f0dc43204ff01d18342fd3f44f20102a5b71d7e299b638a"
         },
         {
           "mesh": "STYLE_industrial_4_furniture_accent",
           "triangle_sha256": "76260acced2ecadc39b7fc85815d103577769eecb27b26cdc0cd509672a3924a"
         },
         {
-          "mesh": "STYLE_industrial_4_decor_clay",
-          "triangle_sha256": "3a8a2dd64118b4d386440821abb8de051034a9525e1e287e6b8f1a11def2b5a7"
-        },
-        {
-          "mesh": "STYLE_industrial_4_decor_wood",
-          "triangle_sha256": "9812e13b3f7076d9a5574f0959cd0670ba8cb606272c2d137e98ead6a63d142f"
-        },
-        {
           "mesh": "STYLE_industrial_4_decor_green",
           "triangle_sha256": "24c97402d908439d5647cdbc7949553e2459b11909eb46179281c8e8fd637357"
         }
-      ],
-      "tangentMeshBatches": 89
+      ]
     },
     {
       "file": "styles/eclectic.glb",
-      "input_sha256": "c4beb65db5da185a291c9ffb4c7dc74417ce37028dc8050c7bf09aabb9ed09e3",
-      "sha256": "cd22d37e91071e0f752289d7f315a584bfcbcafe7e4605f09f134e4c7f59308d",
-      "bytes": 10312824,
-      "texturedMeshBatches": 88,
+      "input_sha256": "7f9c05b8f942d1c42443384b8776301d7c8c8b276d4cdfc94f24af3f8613cf6d",
+      "sha256": "085c711d3fd28c5ce84ed38f196a5ee3daddd67c25f8698f02b151d06c28422b",
+      "bytes": 10021648,
+      "texturedMeshBatches": 84,
+      "tangentMeshBatches": 84,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -1497,7 +1474,7 @@
         },
         {
           "mesh": "FLOOR_2_fixture_ceramic",
-          "triangle_sha256": "c36a6fd93a913d8e4fd65b0b10d45c82b7622e4451cd0362bdfd874d19674d95"
+          "triangle_sha256": "71ebc9bfb81e423a01a8bcb582d1c4373e41a9fd2fd28a372a6e2de1424d9f54"
         },
         {
           "mesh": "FLOOR_2_fixture_metal",
@@ -1588,10 +1565,6 @@
           "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
         },
         {
-          "mesh": "SITE_site_road",
-          "triangle_sha256": "3a06854e3ec40858e7682b2111d6a9cbe3fa7e9d2bcc7344406f048bcf62818d"
-        },
-        {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
         },
@@ -1600,136 +1573,132 @@
           "triangle_sha256": "370d3593758b0b7f2c0d09b8b93314dea0e3b66a599d7c568cd48e9bdd8bfc39"
         },
         {
-          "mesh": "STYLE_eclectic_1_decor_rug",
-          "triangle_sha256": "914503cf76e55f9d30a9e89958d97253999be3ff3c5f4f66281647c607d16d40"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_decor_light",
-          "triangle_sha256": "992e285ae25f268a071b585888802a763290bed591f45e5fc2db89aa7d92c084"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_decor_accent",
-          "triangle_sha256": "d0ae3607ce6cd8d4969b398b102187bf4174b5cd73679dd592cd232ca8ccded4"
-        },
-        {
           "mesh": "STYLE_eclectic_1_furniture_wood",
-          "triangle_sha256": "29df538a99a7de9202ab06b04d159217b1f47f5e8cbf81ccad0c68e94d5d4454"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_furniture_fabric",
-          "triangle_sha256": "0062c368874d950ce8a716a1e5ba59081d6912319a5adabd79b4e78b54005027"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_furniture_accent",
-          "triangle_sha256": "02a803b8d6aa85c95bb79358b23b7c026e0a797e942211ab06d325f3d8679aa1"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_furniture_light",
-          "triangle_sha256": "577354496bc307f6aa2b8f53c4b6381d9ea5219f989df1be98ba04bc27101a2c"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_furniture_metal",
-          "triangle_sha256": "4f0eba554b89d7bcb6e3c56ffebeca0e927a930b66df5a853139ce2cf75aec9d"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_decor_metal",
-          "triangle_sha256": "6199948a81c0eea71a55f0413fcba97d0efac1ca100db53caa9435b4fef20194"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_decor_white",
-          "triangle_sha256": "e94916cc1acf5ef73e8c34e9510cd456bc924cbab9d1ce9c8656f326366813d1"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_decor_fabric",
-          "triangle_sha256": "84090b0920d23b44b6dabae8ced5eb57b3256bd460b1c4f55d4a8b7b8a798b5d"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_fixture_metal",
-          "triangle_sha256": "aeff441656b6375d288e38642a65e7ad9070c9f4351419d7d94773487937e3e7"
-        },
-        {
-          "mesh": "STYLE_eclectic_1_fixture_light",
-          "triangle_sha256": "b31d237e3a1044cc46bd18acd80e00c5f1e87fef7b61e3b7df93a1550ae60b48"
+          "triangle_sha256": "ba4eb378f2d6eb19d272067b48536fecb16d2970beefe814afd9428eb6bdd4b6"
         },
         {
           "mesh": "STYLE_eclectic_1_decor_clay",
-          "triangle_sha256": "379a2fc4daa9bd739237a7fd76bf13123f08c87dd2fb4872520cf7a21ad87f2d"
+          "triangle_sha256": "32ecc548ee23194b9774612ea78af12466fb16e1e63b06047f77bcc37a5ec19c"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_furniture_metal",
+          "triangle_sha256": "534e71e8ce011f587022f5b100d2fc2c99206350df9b738fc3f42294ce6c4879"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_decor_metal",
+          "triangle_sha256": "ffec39097d8233c9f2b91188e8b082274047bf11ff99a66197c9f03620160a18"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_decor_white",
+          "triangle_sha256": "95b4c7784beae498823a97e8126164c6c9458422b58ed13641f4234c5aeedea7"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_decor_fabric",
+          "triangle_sha256": "bbf1da67616f8b7b29820ffb88d45696d1c4593fa73558a0761ae3b82ab7db24"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_decor_accent",
+          "triangle_sha256": "9934113a81c2c1a0e2b9f1890d28277002e9475fac01f724aeeb2040565f2c49"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_decor_light",
+          "triangle_sha256": "72e85f07f409a508b7066c9c5ab6e07a93ce9832b5b46bdc909e7bc461f1b6b0"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_fixture_metal",
+          "triangle_sha256": "c9bb86804d8f5b60bf89bd690add1b467e2544e8b6499b6bce48aa3ad4348700"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_fixture_light",
+          "triangle_sha256": "70a27a0490b1f7f81d54f4b977a79c662e154fd0982fd990692b8387a5654d8b"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_furniture_accent",
+          "triangle_sha256": "7055cc81fd968f1ad23a1548ccde3658b885ce77af3ff90ec3099d2ecb34c932"
         },
         {
           "mesh": "STYLE_eclectic_1_decor_wood",
-          "triangle_sha256": "dc3a5e1ee4aa28e674783e7b276ad5f82094175491e60d99f1804161bd773934"
+          "triangle_sha256": "98d9b22e1eb426efd8dc43eccc286be23698e5fe65d41a133baa2c517526af22"
         },
         {
           "mesh": "STYLE_eclectic_1_decor_green",
-          "triangle_sha256": "06424319645512fb81a99d3cd289c374759ef02183811922b0de4d5c935313b9"
+          "triangle_sha256": "31bb682874509fb92127241f1bb8a047a874e4fc835fdafc1d93511ebe061c03"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_furniture_fabric",
+          "triangle_sha256": "854397e49bec68a66476edfd33f9263c0254a797b408a305f19fa102d2c8d236"
+        },
+        {
+          "mesh": "STYLE_eclectic_1_furniture_light",
+          "triangle_sha256": "1d7a451f45b208c3840e379c827167b85a51beb1c3b085a327b5508ad54f355f"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_rug",
-          "triangle_sha256": "3e1ee6d8f6cced89cc8717bcaee84af3e56b6e7ef6e0456a70c440ee6cffa828"
+          "triangle_sha256": "e8d6a0c6fe22164a9d71a4def66b31ebd9d3e561de3217637277ae44c3ba51ae"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_light",
-          "triangle_sha256": "17163fec6d949274b25c2bcd04c3f0e9aa8956a6d86f0023c2507d5f0c73f1dc"
+          "triangle_sha256": "6d7335fd2f0ff52e75097f544444c94b5ced9e1502a0aae0b17187a1a6b43fdc"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_accent",
-          "triangle_sha256": "3165450bfcf7aac6b7d9e41c62d370e97df77b17b8f3ac4cedeead79ffb4fe6a"
+          "triangle_sha256": "2cd9d1b9d94164eda7d69ca2c18a6e0d8e85e4ee1f9201abf2a453153e1eff4c"
         },
         {
           "mesh": "STYLE_eclectic_2_furniture_wood",
-          "triangle_sha256": "d0748e7be8e33393a7f932c51a9dfc93b33b1d8effa7cdb8db87675e739381b2"
+          "triangle_sha256": "bc2040073c835293dcb52fd4652e0442b28cf5d9f404c3c363be6b7ec1aa55da"
         },
         {
           "mesh": "STYLE_eclectic_2_furniture_fabric",
-          "triangle_sha256": "706cf86fd5ffb01b068daf6f76e81fd52d172cf9a6df69e93a99920f7573003d"
+          "triangle_sha256": "f84688746a1ef3d80b5580a05f573956880b4bd2213de2bfbbdbe71fb14a9a2e"
         },
         {
           "mesh": "STYLE_eclectic_2_furniture_accent",
-          "triangle_sha256": "b88679f010a3c539c3178384186655fa559753eb7359b1a3021c97f6d31ac513"
+          "triangle_sha256": "cf8a2afc04fe31fd4cf206667bef5cfbb31f71864ee5948551e410eb73dc93f2"
         },
         {
           "mesh": "STYLE_eclectic_2_furniture_light",
-          "triangle_sha256": "1127b976a242a1d8ec06a0e6178ca81401ad428cbfe0c0815270aff8523e44d8"
+          "triangle_sha256": "0eec8a05503856df92712299f2d1e54ebce7e3be8b29a3a76293bf8e6bd9df4c"
         },
         {
           "mesh": "STYLE_eclectic_2_furniture_metal",
-          "triangle_sha256": "c9accd22c10508d56de1464cf7b55a9a8592ba74d9944466149723dc86facba4"
+          "triangle_sha256": "d47e27474d5238cae26037c5640a67cfdaa2029be3c6d9bec876c573528cabb9"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_metal",
-          "triangle_sha256": "aec155bf8036a83eea175b62d33a5ce6dc2892b4dcde9521e1bf1e89b7e9967e"
+          "triangle_sha256": "4cc47d6a0e5266e2169b4244361ed94005b49d347259aa941268928ef922bbee"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_white",
-          "triangle_sha256": "918bf23b41eaebd9436ff09e1fcf1134ada9c209110cfd87d97c6bee7ed859c1"
+          "triangle_sha256": "a150501cdb0841caa0193f00fc7bdde4d5b4975ed7d72078fa3fabdc0a7cc9dc"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_fabric",
-          "triangle_sha256": "bbec41b02743c5ad943af3b2635aa5c6e2f398463afa2478e49194b8098cf00c"
+          "triangle_sha256": "d699087985b521765fdb60ef28372c5920e01c23382b31dc10bf5531b592170f"
         },
         {
           "mesh": "STYLE_eclectic_2_fixture_metal",
-          "triangle_sha256": "5aef498a978605a88eed77ab9eb0ab195c1080db0ff588a1a91c44a42cabee69"
+          "triangle_sha256": "24a6067acbe18f66f91061d676e3c7c6f5a4fd73483db932755f34729d096c3f"
         },
         {
           "mesh": "STYLE_eclectic_2_fixture_light",
-          "triangle_sha256": "513f09fb62bad838fdef3571be9685ad9813669154fef90ca4f0d6db947fd44b"
+          "triangle_sha256": "58cefd9673dc0e1bbe620bd308a76a75660be689cdf7a37b7499fdcf7892582e"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_clay",
-          "triangle_sha256": "cdcdfdee7f6078875889cfb351bcd26fa56d75332ba2db6f982e8c061daa5500"
+          "triangle_sha256": "584f594a1685091d74cc3c23b856fdd11165f35c42b9c350d2cdb7104854f4d3"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_wood",
-          "triangle_sha256": "059e8f6944e6f6070f199104660f5d6490c7f2eb8b53395872b88e9150d01309"
+          "triangle_sha256": "5f71270745280ee9fee25f10a9df0a944dd0c8a13be55bc514751b110b38529e"
         },
         {
           "mesh": "STYLE_eclectic_2_decor_green",
-          "triangle_sha256": "d7258e8d325a76b5eebf562fdc9a1f91b29dcc876acc7b6473eadc27c7dce815"
+          "triangle_sha256": "97d0638dfd7111c2e30cc8e5fa8ed10a513a47877aea7924eccd547086cd11c3"
         },
         {
           "mesh": "STYLE_eclectic_2_furniture_white",
-          "triangle_sha256": "598549ea68fb0c7d0264938fa52dbe9735728e908fdf891e8587480492c64a9a"
+          "triangle_sha256": "b9f31278d535f0f2363c8203102f529740eae6165954f2901fa836773578581d"
         },
         {
           "mesh": "STYLE_eclectic_3_decor_rug",
@@ -1737,19 +1706,19 @@
         },
         {
           "mesh": "STYLE_eclectic_3_decor_light",
-          "triangle_sha256": "a3c16db10abc36caf4739f50397d3b47071ec2c964d2f0fd83a86a3778b5e05e"
+          "triangle_sha256": "f2ad3e07cded1d0b4378e42bf00eba330e33538ff35d7a6cbe7f3a94a90fb306"
         },
         {
           "mesh": "STYLE_eclectic_3_decor_accent",
-          "triangle_sha256": "5787a486d3c69dea4899b59f3fa8a1cae2c98ff685491c70c902a092625860c5"
+          "triangle_sha256": "97fcc053c53ea5177a7dd9313a857793d3c18a21c12f3cf592a8c250a299ad6b"
         },
         {
           "mesh": "STYLE_eclectic_3_furniture_wood",
-          "triangle_sha256": "b9c6c80c456873961c8be1456fbe17333410ec0eb0096ce407bc170dcc1645a0"
+          "triangle_sha256": "620e2c55b940ba7dc16db766960639e40f666df6ff83a1c173bdb293dc0e433c"
         },
         {
           "mesh": "STYLE_eclectic_3_furniture_fabric",
-          "triangle_sha256": "c825d0a50ca911ae99e60c5df9191767bfc446dce3648eeb08ae21399d779040"
+          "triangle_sha256": "091af0eddb560e47297804d70628426d35d419985a7ca612a40731b8305a7ae2"
         },
         {
           "mesh": "STYLE_eclectic_3_furniture_accent",
@@ -1757,23 +1726,23 @@
         },
         {
           "mesh": "STYLE_eclectic_3_furniture_light",
-          "triangle_sha256": "8e19f6f6d7dab4a2072a3c7304f7696a995964685f448d6041589a0ec402abc6"
+          "triangle_sha256": "d6c1d2987f377d6067f3c04de7c64785b100d5bf776841be0c4a968c0557e462"
         },
         {
           "mesh": "STYLE_eclectic_3_furniture_metal",
-          "triangle_sha256": "a955b8efa1399e53b5a23e1e7fbb301b42e05974ccc50b837cd37e400d8db2b0"
+          "triangle_sha256": "17b7dea2cc790152cb1491247e4e5fd7cddd143a05086cfb2da4fc0eb2709379"
         },
         {
           "mesh": "STYLE_eclectic_3_decor_metal",
-          "triangle_sha256": "24e48fcc79e908f385795bdaa9c5e7e4187ed43f59c66df6064f6e5e827d5aba"
+          "triangle_sha256": "7ece69acd03cf6259d6554a9d9a7e8d02711f4576845d6a98ecc4d1c7df008a5"
         },
         {
           "mesh": "STYLE_eclectic_3_decor_white",
-          "triangle_sha256": "00f475002501f2ad7d78d5aa04d4f6439460d79e76f2959a36261fbd2b2c5f7a"
+          "triangle_sha256": "9fff72d95c71470e56dcaffc8f6ddaca32c6e5a1c6754df8a7fa14d552688d26"
         },
         {
           "mesh": "STYLE_eclectic_3_decor_fabric",
-          "triangle_sha256": "050415a31c1d873f9919e04a5a3b987acf70a0d8b1aab62705bdabbf1344af58"
+          "triangle_sha256": "00d899358bc70aa7dd1609ea2c2eef9f4601fde715572e2c9128ae39d3575d59"
         },
         {
           "mesh": "STYLE_eclectic_3_fixture_metal",
@@ -1785,7 +1754,7 @@
         },
         {
           "mesh": "STYLE_eclectic_3_decor_clay",
-          "triangle_sha256": "888a4c141b8ebc98a4bde0986a0435cf9336ccc6af70a98d941bd655e1558ecd"
+          "triangle_sha256": "8a9a19eb70ff6de6ed3008a1c103f76490058a76ff425388e6be5440d843a907"
         },
         {
           "mesh": "STYLE_eclectic_3_decor_wood",
@@ -1797,53 +1766,45 @@
         },
         {
           "mesh": "STYLE_eclectic_3_furniture_white",
-          "triangle_sha256": "780632586ec889b4ef7cfb2128b854fa7062d9e25b2d9d52e5a42baf5828273b"
-        },
-        {
-          "mesh": "STYLE_eclectic_4_furniture_wood",
-          "triangle_sha256": "74f9ee60ad43bf718d8bfbc20babcb0bf4850f59fbaea0330466eca252ca06fb"
-        },
-        {
-          "mesh": "STYLE_eclectic_4_furniture_light",
-          "triangle_sha256": "38f5e918279584a2a9b05dd2dac3f13c5f3d44d6750edd6a3de9f9fba53fe65c"
-        },
-        {
-          "mesh": "STYLE_eclectic_4_furniture_fabric",
-          "triangle_sha256": "0e762f6ef00e8d56a41dd6b6853c69497554a23a1bbc8185502dc46932dfa6d0"
-        },
-        {
-          "mesh": "STYLE_eclectic_4_furniture_white",
-          "triangle_sha256": "2a7f37a1cd6ed39b8569e5cc253805372a766b89bdef41a90bc5b25ad9a2b813"
+          "triangle_sha256": "c50477b24f1c878e7027564ef004317dc27fcafda50a299147afdf0e9872753c"
         },
         {
           "mesh": "STYLE_eclectic_4_furniture_metal",
-          "triangle_sha256": "829f6b1f0562beea2ab4b90b8f3d8ce0b6c83703fa0c338c539abbbea8157044"
+          "triangle_sha256": "044d29b5ac32491ddc2bcbb36a687bac78bb7b1096774d8f903c55e3307d7468"
+        },
+        {
+          "mesh": "STYLE_eclectic_4_decor_clay",
+          "triangle_sha256": "2b24629b537c6c429aca535bd33bfe299196df6ca7197cd70dffa44272a46597"
+        },
+        {
+          "mesh": "STYLE_eclectic_4_decor_wood",
+          "triangle_sha256": "aef8a35c57f1378c40953c69de768295ff93bbd7fce7f5d4ff9263988bf02ab4"
+        },
+        {
+          "mesh": "STYLE_eclectic_4_furniture_light",
+          "triangle_sha256": "23e0d576bb8a4fc6cd3374cfd81732644b66650331b4ffbd4fab60020659914d"
+        },
+        {
+          "mesh": "STYLE_eclectic_4_furniture_wood",
+          "triangle_sha256": "104a259dc03f7a94a0914c675772704e520ce7261d5264291d1bd89d32b1911b"
         },
         {
           "mesh": "STYLE_eclectic_4_furniture_accent",
           "triangle_sha256": "76260acced2ecadc39b7fc85815d103577769eecb27b26cdc0cd509672a3924a"
         },
         {
-          "mesh": "STYLE_eclectic_4_decor_clay",
-          "triangle_sha256": "3a8a2dd64118b4d386440821abb8de051034a9525e1e287e6b8f1a11def2b5a7"
-        },
-        {
-          "mesh": "STYLE_eclectic_4_decor_wood",
-          "triangle_sha256": "9812e13b3f7076d9a5574f0959cd0670ba8cb606272c2d137e98ead6a63d142f"
-        },
-        {
           "mesh": "STYLE_eclectic_4_decor_green",
           "triangle_sha256": "24c97402d908439d5647cdbc7949553e2459b11909eb46179281c8e8fd637357"
         }
-      ],
-      "tangentMeshBatches": 88
+      ]
     },
     {
       "file": "styles/wabisabi.glb",
-      "input_sha256": "6373533ead2044192a70a1dcf693f30efa3b03962362ec276c96ee9a26540f74",
-      "sha256": "8e042c03ca72e03eec5cb7093a6bedc9b5b4e98147874bdb7ee3ad9e70b7b53a",
-      "bytes": 9587756,
-      "texturedMeshBatches": 78,
+      "input_sha256": "0a240280e4859ea8d4d4b75ee6e67c537e8b515dbcf014f5da2586c550bbc63e",
+      "sha256": "d134ca203ad83c2dbcbae9e3155944df5ba4208550cb4d95d404349335e8ef2f",
+      "bytes": 9398548,
+      "texturedMeshBatches": 73,
+      "tangentMeshBatches": 73,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -2024,7 +1985,7 @@
         },
         {
           "mesh": "FLOOR_2_fixture_ceramic",
-          "triangle_sha256": "c36a6fd93a913d8e4fd65b0b10d45c82b7622e4451cd0362bdfd874d19674d95"
+          "triangle_sha256": "71ebc9bfb81e423a01a8bcb582d1c4373e41a9fd2fd28a372a6e2de1424d9f54"
         },
         {
           "mesh": "FLOOR_2_fixture_metal",
@@ -2115,10 +2076,6 @@
           "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
         },
         {
-          "mesh": "SITE_site_road",
-          "triangle_sha256": "3a06854e3ec40858e7682b2111d6a9cbe3fa7e9d2bcc7344406f048bcf62818d"
-        },
-        {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
         },
@@ -2127,80 +2084,84 @@
           "triangle_sha256": "370d3593758b0b7f2c0d09b8b93314dea0e3b66a599d7c568cd48e9bdd8bfc39"
         },
         {
-          "mesh": "STYLE_wabisabi_1_decor_rug",
-          "triangle_sha256": "914503cf76e55f9d30a9e89958d97253999be3ff3c5f4f66281647c607d16d40"
-        },
-        {
           "mesh": "STYLE_wabisabi_1_furniture_wood",
-          "triangle_sha256": "38b76bc263ad70582ecbaa012957c73f26dd0c4b2692f495ce8274c9a5eefec4"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_furniture_fabric",
-          "triangle_sha256": "2da189d7202caae2dc41278b860ec4a2fc232a9f2cfa7436c4eca7dc660e7952"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_furniture_accent",
-          "triangle_sha256": "b443ffd20c991a8d1f259947fa9196fb7547912fb485bdd30598535fd24cf429"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_decor_wood",
-          "triangle_sha256": "486addd01a4e02f5c4515e11b1c1f6b189daf3ae1b0fdb7f3dd4e2b707b779f4"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_decor_white",
-          "triangle_sha256": "512f438438c33a87ab40171835ae34ea958e8db0875d13d4f7c4a0df1942293d"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_decor_ink",
-          "triangle_sha256": "fb612a936391aea3ad1ac5685b725ad8e73e90d3641f88796e11463c2fd7ca9c"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_fixture_metal",
-          "triangle_sha256": "aeff441656b6375d288e38642a65e7ad9070c9f4351419d7d94773487937e3e7"
-        },
-        {
-          "mesh": "STYLE_wabisabi_1_fixture_light",
-          "triangle_sha256": "b31d237e3a1044cc46bd18acd80e00c5f1e87fef7b61e3b7df93a1550ae60b48"
+          "triangle_sha256": "cf172870965b98bb772805d39d540494670beca98e67cb94073dfd4e2c2c95b3"
         },
         {
           "mesh": "STYLE_wabisabi_1_decor_clay",
-          "triangle_sha256": "d13c4dd06cfc3959d175f802adff19d6beed9885e718ddf18e2d19d90e66f427"
+          "triangle_sha256": "32ecc548ee23194b9774612ea78af12466fb16e1e63b06047f77bcc37a5ec19c"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_furniture_metal",
+          "triangle_sha256": "9c5335313bbd91e707bb95fe52287dfca473dd01b404eaf7f353ee29205f1fa2"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_decor_wood",
+          "triangle_sha256": "d6ad142b1339dfacebf2425547dee967ae818c81bfb3c0150891be7957632e2a"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_decor_white",
+          "triangle_sha256": "95b4c7784beae498823a97e8126164c6c9458422b58ed13641f4234c5aeedea7"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_decor_ink",
+          "triangle_sha256": "1fa85dcc7bdfb8dfd17302a1534ea58cb54a3cfd56df0e1c86d7e850af9d6139"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_fixture_metal",
+          "triangle_sha256": "c9bb86804d8f5b60bf89bd690add1b467e2544e8b6499b6bce48aa3ad4348700"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_fixture_light",
+          "triangle_sha256": "70a27a0490b1f7f81d54f4b977a79c662e154fd0982fd990692b8387a5654d8b"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_furniture_accent",
+          "triangle_sha256": "bdb8246d902d1a0f7170aba07de73ec43b7dc9237d3cb776edf4e51844c0ac17"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_decor_green",
+          "triangle_sha256": "31bb682874509fb92127241f1bb8a047a874e4fc835fdafc1d93511ebe061c03"
+        },
+        {
+          "mesh": "STYLE_wabisabi_1_furniture_fabric",
+          "triangle_sha256": "14225888bb19a5e1cb005bcb51454d3a9872d019a76a2a0dc28455ce4bd83d51"
         },
         {
           "mesh": "STYLE_wabisabi_2_decor_rug",
-          "triangle_sha256": "3e1ee6d8f6cced89cc8717bcaee84af3e56b6e7ef6e0456a70c440ee6cffa828"
+          "triangle_sha256": "e8d6a0c6fe22164a9d71a4def66b31ebd9d3e561de3217637277ae44c3ba51ae"
         },
         {
           "mesh": "STYLE_wabisabi_2_furniture_wood",
-          "triangle_sha256": "9f84bda0b2c95981eaa65194c4a45b10ecbc0c95036f11a8c4252f5b407bcfa3"
+          "triangle_sha256": "9ea1a328ba8fafabdf0800e3282799202b9ce03c1027e9b21433b97279380d9e"
         },
         {
           "mesh": "STYLE_wabisabi_2_furniture_fabric",
-          "triangle_sha256": "ff96fba47ea14197fc3f96646bda2addf66462d979ca1441cfc500d92ffe619d"
+          "triangle_sha256": "637fd0d186e3e9e066521ef41b077b44e398c5e4cf67f693a15a5b662ad0a6ce"
         },
         {
           "mesh": "STYLE_wabisabi_2_furniture_accent",
-          "triangle_sha256": "d8f1bd5a2936e8d7f966f8c3b21163dea589f80f9eeea674e4ab1a4b2a365bd5"
+          "triangle_sha256": "588b3afd4875bbf37bdaeff349eaea135fea127d0516678f9f6a6bdcea6c9096"
         },
         {
           "mesh": "STYLE_wabisabi_2_decor_wood",
-          "triangle_sha256": "f7818bdaa6141d849596d9dbc43cb3f33dac2ef86f856411b5ddf2fcebebfe1b"
+          "triangle_sha256": "c3a0acecb56808fb48963b5e54f0e8d6a862c9a7cd082a2b8166e2ec5c7a6ba9"
         },
         {
           "mesh": "STYLE_wabisabi_2_decor_white",
-          "triangle_sha256": "92e266fe3cfdf969a22450dffbda0d0c532266e17f18fd6761f5d25eeed88f9a"
+          "triangle_sha256": "a36b276a0ecccb70d8643dc70775b68814e781eede763f0d082deca5f78be75e"
         },
         {
           "mesh": "STYLE_wabisabi_2_decor_ink",
-          "triangle_sha256": "edca21e0695ac9fc7f31c31f82f7223e2ba19b26d6d38cdedb5cbff105679457"
+          "triangle_sha256": "64a5035462c335d6ced01b2ba94f2da9ce2903050eef942667ab4a6d09904592"
         },
         {
           "mesh": "STYLE_wabisabi_2_fixture_metal",
-          "triangle_sha256": "5aef498a978605a88eed77ab9eb0ab195c1080db0ff588a1a91c44a42cabee69"
+          "triangle_sha256": "24a6067acbe18f66f91061d676e3c7c6f5a4fd73483db932755f34729d096c3f"
         },
         {
           "mesh": "STYLE_wabisabi_2_fixture_light",
-          "triangle_sha256": "513f09fb62bad838fdef3571be9685ad9813669154fef90ca4f0d6db947fd44b"
+          "triangle_sha256": "58cefd9673dc0e1bbe620bd308a76a75660be689cdf7a37b7499fdcf7892582e"
         },
         {
           "mesh": "STYLE_wabisabi_2_decor_clay",
@@ -2208,11 +2169,15 @@
         },
         {
           "mesh": "STYLE_wabisabi_2_furniture_light",
-          "triangle_sha256": "3d874cd672a30cff42fbcca501871debf02de8a73cb1e114904e635bf8405d2e"
+          "triangle_sha256": "645856f4fd4677c2b5a963c564b68ea34b88fb4fdc39ebe79d8412114b397de8"
+        },
+        {
+          "mesh": "STYLE_wabisabi_2_furniture_metal",
+          "triangle_sha256": "2987ed1fcbe7e75cc7472b5014c24024b8682cd147b2cbdaf0356ccccadd4f5f"
         },
         {
           "mesh": "STYLE_wabisabi_2_furniture_white",
-          "triangle_sha256": "598549ea68fb0c7d0264938fa52dbe9735728e908fdf891e8587480492c64a9a"
+          "triangle_sha256": "b9f31278d535f0f2363c8203102f529740eae6165954f2901fa836773578581d"
         },
         {
           "mesh": "STYLE_wabisabi_3_decor_rug",
@@ -2220,11 +2185,11 @@
         },
         {
           "mesh": "STYLE_wabisabi_3_furniture_wood",
-          "triangle_sha256": "82e3f1fbb80fa5f14f8130bb03f086c5711151b9f0c35521bac5d37b7a1edf42"
+          "triangle_sha256": "e482d93145bcd281554fe30e4515403d6c1bd835013f8303d6eb4ddcf95b31b6"
         },
         {
           "mesh": "STYLE_wabisabi_3_furniture_fabric",
-          "triangle_sha256": "5b4519140aca9574380bf25107a17682cc16868b461952e06218a5e3803e5ea3"
+          "triangle_sha256": "09b75e224f973960a748108741a142824ad53b369d041d422f7f7ddf0ed012e4"
         },
         {
           "mesh": "STYLE_wabisabi_3_furniture_accent",
@@ -2232,15 +2197,15 @@
         },
         {
           "mesh": "STYLE_wabisabi_3_decor_wood",
-          "triangle_sha256": "d244c53554f50079524e63647be59e12f3baf90bc9db0cb0e979617075fee5bd"
+          "triangle_sha256": "1be5befcd77d4a0d0907a36d78a9917c8c992476d723439246ac1652359ebd66"
         },
         {
           "mesh": "STYLE_wabisabi_3_decor_white",
-          "triangle_sha256": "42bc38530e825515f5e8c4b0fb3e86fefdadf452be6a323bc073c7cda0bda3c0"
+          "triangle_sha256": "af320d1f84e8e560f43daa7166d6567a6539e4f42fa5017016297a18eb8169bb"
         },
         {
           "mesh": "STYLE_wabisabi_3_decor_ink",
-          "triangle_sha256": "1811100169ccebe645f8db652cf66f20438d68471417fc01a83a5519f3eca349"
+          "triangle_sha256": "d8f7ef7202536557cd35a9f15bebe4eed45d3886d86f9430f8e91f25dc9514c0"
         },
         {
           "mesh": "STYLE_wabisabi_3_fixture_metal",
@@ -2252,46 +2217,41 @@
         },
         {
           "mesh": "STYLE_wabisabi_3_decor_clay",
-          "triangle_sha256": "9fbbdf67bc23c73ec0e15886212c15eb63fffd2646c7ed52d7b2bc657cde0fd3"
+          "triangle_sha256": "9223acd1856ad5430e3727e8f63ee8eb5da845064af359fdf7c997c6f83f38a1"
         },
         {
           "mesh": "STYLE_wabisabi_3_furniture_light",
-          "triangle_sha256": "73261026f5a435ff9c1bd002698178d82100bc0286380fa632da08e902733a9f"
+          "triangle_sha256": "2d0ea09451ae1e6cb458df8a5a584b797ef1ff2689c1f9db79bbbcbd8cea2806"
         },
         {
           "mesh": "STYLE_wabisabi_3_furniture_white",
-          "triangle_sha256": "780632586ec889b4ef7cfb2128b854fa7062d9e25b2d9d52e5a42baf5828273b"
+          "triangle_sha256": "c50477b24f1c878e7027564ef004317dc27fcafda50a299147afdf0e9872753c"
+        },
+        {
+          "mesh": "STYLE_wabisabi_3_decor_metal",
+          "triangle_sha256": "78d0ddde99deb6511de51392f0cd4f1bac26ee1723a51c12b66c747d0d883c6d"
+        },
+        {
+          "mesh": "STYLE_wabisabi_4_furniture_metal",
+          "triangle_sha256": "63fe28d249e0dfa694560fd3f87ca5be8d5ac616929e09436c963d28bf40ca0b"
+        },
+        {
+          "mesh": "STYLE_wabisabi_4_decor_clay",
+          "triangle_sha256": "df579a6e0199a8fc7df904063c6833a39939c9bed106a0210832710d79df44a5"
+        },
+        {
+          "mesh": "STYLE_wabisabi_4_decor_wood",
+          "triangle_sha256": "600defabcf51658f9e9b0facc4e7f0300b54f277af62e6124e9e1d9848e9fdc2"
         },
         {
           "mesh": "STYLE_wabisabi_4_furniture_wood",
-          "triangle_sha256": "5953a5535432320384f3e32d326d7b640e6082c235ba1d3d8a505deaf6d89e5b"
-        },
-        {
-          "mesh": "STYLE_wabisabi_4_furniture_light",
-          "triangle_sha256": "5e24e804c881a2530eb6d7e954653008d5bd341efa50f46c74fb4aeccd2619c7"
-        },
-        {
-          "mesh": "STYLE_wabisabi_4_furniture_fabric",
-          "triangle_sha256": "0e762f6ef00e8d56a41dd6b6853c69497554a23a1bbc8185502dc46932dfa6d0"
-        },
-        {
-          "mesh": "STYLE_wabisabi_4_furniture_white",
-          "triangle_sha256": "2a7f37a1cd6ed39b8569e5cc253805372a766b89bdef41a90bc5b25ad9a2b813"
+          "triangle_sha256": "d0b333aef92138b12f5c0ca250748711ffed9ce89e600045b3ce90341f2b12fe"
         },
         {
           "mesh": "STYLE_wabisabi_4_furniture_accent",
           "triangle_sha256": "76260acced2ecadc39b7fc85815d103577769eecb27b26cdc0cd509672a3924a"
-        },
-        {
-          "mesh": "STYLE_wabisabi_4_decor_clay",
-          "triangle_sha256": "97b1449041cdef1ecf3438deba3423a50e294d2598a5bc24c5fd603874ee9e20"
-        },
-        {
-          "mesh": "STYLE_wabisabi_4_decor_wood",
-          "triangle_sha256": "e320a1eaa8a463455b32e57194b43493409e0c7e3b3b3fcec17bdd7249ca89a7"
         }
-      ],
-      "tangentMeshBatches": 78
+      ]
     }
   ]
 }

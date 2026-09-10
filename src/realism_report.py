@@ -18,6 +18,7 @@ start=page.index('<h2>位置與方位</h2>');end=page.index('<h2>資料來源與
 coords=''.join('<tr><td>'+str(i+1)+'</td><td>'+f'{p[0]:.8f}'+'</td><td>'+f'{p[1]:.8f}'+'</td></tr>' for i,p in enumerate(location['corners_lon_lat']))
 paragraph='<h2>位置與方位</h2><p>已改用您提供的四個國土測繪圖資點選座標，以旋轉及平移將原模型基地對齊；建築尺寸沒有縮放或變形。四點與原模型近似基地輪廓的平均平方根誤差為 '+f'{location["rms_residual_metres"]:.2f}'+' 公尺，最大 '+f'{max(location["corner_residual_metres"]):.2f}'+' 公尺。輸入精度為 0.1 秒（約 3 公尺），不是測量成果，仍不足以證明產權界線。</p><table><tr><th>點</th><th>經度 WGS84</th><th>緯度 WGS84</th></tr>'+coords+'</table><p>方位另以請照圖採光檢討表核對：左側東北、後側東南、右側西南、正面西北。<a href="site-location.json">對位方法與誤差紀錄</a>。</p>'
 page=page[:start]+paragraph+page[end:]
+page=page.replace('<h2>周邊重建清單</h2>','<h2>本次用途與配置修正</h2><p><a href="../corrections/index.html">11 項修正及檢查清單</a>。房間用途與靠門小便斗依使用者最新指示優先於原圖名稱。移除舊示意道路，鄰房量體避開基地及道路；必要移位仍是近似調整，不代表新的實測位置。</p><h2>周邊重建清單</h2>')
 (OUT/'index.html').write_text(page,encoding='utf-8')
 notes='''# 實景化模型檢查補充（2026-09-10 台灣時間）
 

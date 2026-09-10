@@ -7,10 +7,12 @@ import sys,math,json,hashlib,struct,shutil
 from collections import defaultdict
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'.deps'))
 import numpy as np,trimesh as tm
-from shapely.geometry import Polygon,LineString,Point
+from shapely.geometry import Polygon,LineString,Point,MultiPoint,mapping
+from shapely.affinity import translate
+from shapely.ops import unary_union
 from PIL import Image
 from enhance_glb import run as texture_glb
-from site_location import to_model,EN,metadata as location_metadata
+from site_location import to_model,EN,MODEL,metadata as location_metadata
 OUT=ROOT/'output';(OUT/'realism').mkdir(exist_ok=True)
 M=.5489642909779521
 # NLSC mosaic pixel location of the supplied GPS pin. Four corners set the frame.
@@ -22,6 +24,8 @@ def points(p):return [xy(*v) for v in p]
 PAL={'wall':[217,211,197],'white':[225,225,219],'slab':[151,148,137],'brick':[135,69,47],'roof':[154,89,65],'roofdark':[88,87,75],'gold':[174,133,55],'metal':[61,68,67],'glass':[80,109,116],'wood':[102,80,57],'ground':[107,119,78],'road':[104,105,101],'porch':[174,169,155],'green':[72,93,44],'green2':[91,111,55],'green3':[58,80,40],'line':[224,222,196]}
 mats={k:tm.visual.material.PBRMaterial(name=k,baseColorFactor=v+[255],roughnessFactor=.8,metallicFactor=.5 if k in ['metal','gold'] else 0,doubleSided=k.startswith('green')) for k,v in PAL.items()}
 parts=defaultdict(list);features=[];rng=np.random.default_rng(20260910)
+site_protection=unary_union([Polygon(to_model(EN)),Polygon(MODEL)]).buffer(.35)
+neighbor_envelopes=[]
 def add(m,mat):parts[mat].append(m)
 def box(c,size,mat='wall'):
  m=tm.creation.box(size);m.apply_translation(c);add(m,mat)
@@ -66,7 +70,29 @@ def roof_rect(center,u,v,w,d,base,rise,temple=False):
     if last is not None:rod(last,now,.11,'gold',8)
     last=now
 def house(label,pixels,floors=2,roof=False,color='wall',tower=False):
- p=Polygon(points(pixels));extr(p,3.05*floors,mat=color)
+ original=Polygon(points(pixels))
+ # Use an envelope that includes the rectangular roof, eaves and window frames.
+ cc=np.array(original.exterior.coords)[:-1];uu=cc[1]-cc[0];ww=np.linalg.norm(uu);uu/=ww;vv=np.array([-uu[1],uu[0]])
+ center=np.array(original.centroid.coords[0]);dd=original.area/ww
+ envelope=original.buffer(.20)
+ if roof:
+  envelope=unary_union([envelope,Polygon([center+uu*s*(ww+.6)/2+vv*t*(dd+.6)/2 for s,t in [(-1,-1),(1,-1),(1,1),(-1,1)]])]).buffer(.12)
+ envelope=envelope.convex_hull.buffer(.03)
+ forbidden=unary_union([site_protection,road_reservation,*neighbor_envelopes,temple_built.buffer(.3)])
+ shift=np.zeros(2)
+ if envelope.intersects(forbidden):
+  found=False
+  for radius in np.arange(.25,35,.25):
+   for angle in np.linspace(0,math.tau,96,endpoint=False):
+    candidate=np.array([math.cos(angle),math.sin(angle)])*radius
+    if not translate(envelope,*candidate).intersects(forbidden):
+     shift=candidate;found=True;break
+   if found:break
+  if not found:raise ValueError('No non-overlapping approximate placement: '+label)
+ p=translate(original,*shift);envelope=translate(envelope,*shift)
+ neighbor_envelopes.append(envelope)
+ starts={k:len(v) for k,v in parts.items()}
+ extr(p,3.05*floors,mat=color)
  coords=np.array(p.exterior.coords)[:-1];height=3.05*floors
  # Generic openings represent the observed building type; their exact layout is unmeasured.
  for i in range(len(coords)):
@@ -86,23 +112,28 @@ def house(label,pixels,floors=2,roof=False,color='wall',tower=False):
   if tower:
    c=np.array(p.centroid.coords[0]);box([c[0],height+.7,c[1]],[2.2,1.4,2.5],'white')
    rod([c[0],height+1.4,c[1]],[c[0],height+2.5,c[1]],.65,'metal',20)
- features.append(dict(label=label,type='neighbor',source='NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance',footprint_source_pixels=pixels,estimated_floors=floors,estimated_height_m=height,confidence='approximate; openings and fine profiles schematic'))
+ built=MultiPoint(np.concatenate([m.vertices[:,[0,2]] for k,meshes in parts.items() for m in meshes[starts.get(k,0):]])).convex_hull
+ assert built.difference(envelope).area<1e-6,label
+ features.append(dict(label=label,type='neighbor',source='NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance',footprint_source_pixels=pixels,footprint_model_xz=mapping(p),built_envelope_xz=mapping(built),placement_shift_model_metres=shift.tolist(),placement_shift_distance_m=float(np.linalg.norm(shift)),placement_note='Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.',estimated_floors=floors,estimated_height_m=height,confidence='approximate; openings and fine profiles schematic'))
 
 # Continuous ground and the actual NW-SE village road / NE-SW lane pattern.
 box([0,-.35,0],[430,.3,430],'ground')
 roads=[([(272,251),(354,288),(396,315),(474,377),(620,490)],7.2), ([(402,316),(419,273),(433,232),(466,191),(508,160)],4.4), ([(455,344),(480,280),(516,242),(547,215)],4.2), ([(355,287),(332,233),(351,199),(385,164)],3.5)]
-for coords,width in roads:
- p=LineString(points(coords)).buffer(width/2,join_style=2);extr(p,.06,-.14,'road')
- features.append(dict(label='道路／巷道',type='road',source='NLSC PHOTO2 2023; widths visually estimated',source_pixels=coords,estimated_width_m=width))
- # A narrow gutter follows each side of the lane.
- for side in [-1,1]:
-  line=LineString(points(coords)).parallel_offset(width/2,side='left' if side==1 else 'right')
-  extr(line.buffer(.13),.08,-.11,'slab')
+road_reservation=unary_union([LineString(points(coords)).buffer(width/2+.3,join_style=2) for coords,width in roads])
+def render_roads():
+ exclusion=unary_union([site_protection,temple_built,*neighbor_envelopes])
+ for coords,width in roads:
+  p=LineString(points(coords)).buffer(width/2,join_style=2).difference(exclusion);extr(p,.06,-.14,'road')
+  features.append(dict(label='道路／巷道',type='road',source='NLSC PHOTO2 2023; widths visually estimated',source_pixels=coords,estimated_width_m=width,built_footprint_xz=mapping(p)))
+  for side in [-1,1]:
+   line=LineString(points(coords)).parallel_offset(width/2,side='left' if side==1 else 'right')
+   extr(line.buffer(.13).difference(exclusion),.08,-.11,'slab')
 # Front court; no invented street labels, people, signs or vehicles.
-extr(Polygon(points([(355,252),(414,256),(397,307),(347,284)])),.15,-.11,'porch')
+extr(Polygon(points([(355,252),(414,256),(397,307),(347,284)])).difference(road_reservation).difference(site_protection),.15,-.11,'porch')
 
 # Temple volume / roof tiers. Ornamental sculpture is deliberately not invented.
 temple=Polygon(points([(354,210),(399,206),(405,253),(354,258)]))
+temple_starts={k:len(v) for k,v in parts.items()}
 cx=np.array(temple.centroid.coords[0]);u=xy(399,206)-xy(354,210);u/=np.linalg.norm(u);v=np.array([-u[1],u[0]])
 front=cx+v*13
 front_opening=LineString([front-u*10,front+u*10]).buffer(3.0)
@@ -115,7 +146,8 @@ for off in [-8,-4,0,4,8]:
  c=cx+u*off+v*13;rod([c[0],.4,c[1]],[c[0],5.0,c[1]],.22,'slab',18)
 for i in range(5):
  c=cx+v*(14+i*.32);localbox(c,u,v,[0,.5-i*.10,0],[24,.18,.35],'slab')
-features.append(dict(label='龍泉巖',type='temple',source='NLSC PHOTO2 2023; Google Street View June 2026',confidence='approximate massing, tiled roofs and front court; detailed dragons and stone sculptures not reproduced',estimated_height_m=10))
+temple_built=MultiPoint(np.concatenate([m.vertices[:,[0,2]] for k,meshes in parts.items() for m in meshes[temple_starts.get(k,0):]])).convex_hull
+features.append(dict(label='龍泉巖',type='temple',built_envelope_xz=mapping(temple_built),source='NLSC PHOTO2 2023; Google Street View June 2026',confidence='approximate massing, tiled roofs and front court; detailed dragons and stone sculptures not reproduced',estimated_height_m=10))
 
 house('北側紅瓦平房',[(438,236),(460,255),(449,268),(426,247)],1,True,'brick')
 house('東側白色舊住宅',[(459,276),(471,283),(461,300),(450,291)],2,False,'white',True)
@@ -132,6 +164,7 @@ house('道路南側鐵皮農舍',[(346,316),(365,318),(365,342),(347,340)],1,Tru
 house('道路西側低層住宅',[(269,266),(285,267),(285,299),(267,299)],2,True)
 house('路口南側建物',[(408,375),(431,386),(422,410),(402,399)],2,True,'white')
 house('東南側中層住宅',[(570,392),(591,406),(575,430),(554,415)],4,False,'white',True)
+render_roads()
 
 # South neighbor's low block wall, visible from the vacant site.
 extr(LineString(points([(414,281),(442,293),(429,317)])).buffer(.12),1.55,.05,'slab')

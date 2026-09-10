@@ -2,19 +2,19 @@
   "date": "2026-09-10 UTC+8",
   "models": {
     "house.glb": {
-      "bytes": 3187768,
+      "bytes": 2658996,
       "errors": 0,
       "warnings": 0,
       "messages": []
     },
     "surroundings.glb": {
-      "bytes": 15832864,
+      "bytes": 15839364,
       "errors": 0,
       "warnings": 0,
       "messages": []
     },
     "styles/bohemian.glb": {
-      "bytes": 10888420,
+      "bytes": 10650256,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -22,13 +22,44 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
-          "pointer": "/meshes/83/primitives/0/indices"
+          "pointer": "/meshes/81/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
           "pointer": "/meshes/112/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/96/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/121/primitives/0/indices"
+        }
+      ]
+    },
+    "styles/industrial.glb": {
+      "bytes": 10195512,
+      "errors": 0,
+      "warnings": 0,
+      "messages": [
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/80/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/113/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
@@ -44,8 +75,8 @@
         }
       ]
     },
-    "styles/industrial.glb": {
-      "bytes": 10822476,
+    "styles/eclectic.glb": {
+      "bytes": 10021648,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -53,7 +84,7 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
-          "pointer": "/meshes/84/primitives/0/indices"
+          "pointer": "/meshes/81/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
@@ -65,18 +96,18 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
           "severity": 2,
-          "pointer": "/meshes/100/primitives/0/indices"
+          "pointer": "/meshes/99/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
           "severity": 2,
-          "pointer": "/meshes/126/primitives/0/indices"
+          "pointer": "/meshes/124/primitives/0/indices"
         }
       ]
     },
-    "styles/eclectic.glb": {
-      "bytes": 10312824,
+    "styles/wabisabi.glb": {
+      "bytes": 9398548,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -84,40 +115,16 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
-          "pointer": "/meshes/85/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
-          "severity": 2,
-          "pointer": "/meshes/118/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
-          "severity": 2,
-          "pointer": "/meshes/101/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
-          "severity": 2,
-          "pointer": "/meshes/128/primitives/0/indices"
+          "pointer": "/meshes/78/primitives/0/indices"
         }
       ]
-    },
-    "styles/wabisabi.glb": {
-      "bytes": 9587756,
-      "errors": 0,
-      "warnings": 0,
-      "messages": []
     }
   },
   "views": [
     {
       "style": "bohemian",
-      "maps": 88,
-      "normals": 88,
+      "maps": 84,
+      "normals": 84,
       "shadowed": 122,
       "quality": "high",
       "assets": {
@@ -127,14 +134,14 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 305,
-      "triangles": 1975107
+      "drawCalls": 303,
+      "triangles": 1983591
     },
     {
       "style": "industrial",
-      "maps": 89,
-      "normals": 89,
-      "shadowed": 127,
+      "maps": 83,
+      "normals": 83,
+      "shadowed": 122,
       "quality": "high",
       "assets": {
         "sky": "ready",
@@ -143,14 +150,14 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 311,
-      "triangles": 1965243
+      "drawCalls": 303,
+      "triangles": 1971423
     },
     {
       "style": "eclectic",
-      "maps": 88,
-      "normals": 88,
-      "shadowed": 129,
+      "maps": 84,
+      "normals": 84,
+      "shadowed": 125,
       "quality": "high",
       "assets": {
         "sky": "ready",
@@ -159,13 +166,13 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 317,
-      "triangles": 1962507
+      "drawCalls": 309,
+      "triangles": 1968687
     },
     {
       "style": "wabisabi",
-      "maps": 78,
-      "normals": 78,
+      "maps": 73,
+      "normals": 73,
       "shadowed": 111,
       "quality": "high",
       "assets": {
@@ -175,8 +182,8 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 285,
-      "triangles": 1924155
+      "drawCalls": 283,
+      "triangles": 1930335
     }
   ],
   "errors": [],

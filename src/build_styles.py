@@ -45,8 +45,8 @@ class Scheme:
  def rod(self,a,b,r=.015,mat='metal',kind='furniture'):
   a=np.array(a);b=np.array(b);m=tm.creation.cylinder(r,np.linalg.norm(b-a),sections=12)
   m.apply_transform(tm.geometry.align_vectors([0,0,1],b-a));m.apply_translation((a+b)/2);self.mesh(m,mat,kind)
- def item(self,name,x,y,w,d,major=True):
-  self.items.append(dict(name=name,floor=self.floor,room=self.room,footprint=[x,y,x+w,y+d],size_m=[w,d],major=major,approximate=True))
+ def item(self,name,x,y,w,d,major=True,**meta):
+  self.items.append(dict(name=name,floor=self.floor,room=self.room,footprint=[x,y,x+w,y+d],size_m=[w,d],major=major,approximate=True,**meta))
  def legs(self,x,y,z,w,d,h,mat='wood'):
   for xx in [x+.07,x+w-.07]:
    for yy in [y+.07,y+d-.07]:self.rod([xx,yy,z],[xx,yy,z+h],.027,mat)
@@ -120,14 +120,25 @@ class Scheme:
    xx=x+.2+i*(w-.4)/2
    self.cyl(xx,y+.02,z-.15,.055,.15,'metal','fixture')
    self.cyl(xx,y+.02,z-.155,.05,.008,'light','fixture')
- def bed(self,x,y,w=1.5,d=2):
-  z=BASE[self.floor]+.03;self.item('床組',x,y,w,d)
+ def bed(self,x,y,w=1.5,d=2,head_high=False,head_dir=None,head_target=None):
+  z=BASE[self.floor]+.03
+  meta=dict(head_side=('+y' if head_high else '-y'),headboard_y=(y+d-.09 if head_high else y))
+  if head_dir:meta['head_direction']=head_dir
+  if head_target:meta['head_target']=head_target
+  self.item('床組',x,y,w,d,**meta)
   self.box(x,y,z,w,d,.23,'wood',rounded=.04)
   self.soft(x+.02,y+.03,z+.23,w-.04,d-.05,.22,'light',rounding=.24)
-  self.box(x,y,z+.12,w,.09,.75,'wood',rounded=.025)
-  self.drape(x+.02,y+.5,z+.4,w-.04,d-.55,.11,'fabric')
-  for i in range(1 if w<1.1 else 2):self.soft(x+.1+i*w/2,y+.15,z+.45,w*.38,.34,.14,'white',rounding=.58)
-  if w>1.1:self.table(x+w+.12,y+.12,.38,.4,.4,name='床邊桌')
+  # Headboard, pillows and duvet flip to whichever short edge is the head.
+  hb=y+d-.09 if head_high else y
+  self.box(x,hb,z+.12,w,.09,.75,'wood',rounded=.025)
+  if head_high:
+   self.drape(x+.02,y+.03,z+.4,w-.04,d-.55,.11,'fabric')
+   for i in range(1 if w<1.1 else 2):self.soft(x+.1+i*w/2,y+d-.49,z+.45,w*.38,.34,.14,'white',rounding=.58)
+   if w>1.1:self.table(x+w+.12,y+d-.52,.38,.4,.4,name='床邊桌')
+  else:
+   self.drape(x+.02,y+.5,z+.4,w-.04,d-.55,.11,'fabric')
+   for i in range(1 if w<1.1 else 2):self.soft(x+.1+i*w/2,y+.15,z+.45,w*.38,.34,.14,'white',rounding=.58)
+   if w>1.1:self.table(x+w+.12,y+.12,.38,.4,.4,name='床邊桌')
  def desk(self,x,y,w=1.4,d=.65):
   self.table(x,y,w,d,.75,name='創作／書寫桌');self.chair(x+(w-.65)/2,y+d+.15,True)
   z=BASE[self.floor]+.8;self.box(x+.12,y+.1,z,.38,.3,.025,'white','decor')
@@ -135,7 +146,7 @@ class Scheme:
   self.cyl(x,y,z,.09,.2,'clay','decor')
   self.cyl(x,y,z+.2,.045,.1,'clay','decor')
  def lounge(self,floor,x,y,compact=False):
-  self.floor=floor;self.room='客廳／起居室'
+  self.floor=floor;self.room='客廳兼餐廳' if floor==2 else '起居室'
   w=2.1 if compact else 2.4
   self.rug(x-.1,y+.3,w+1.4,2.0 if compact else 2.9)
   self.sofa(x,y,w,.85 if compact else .9)
@@ -145,33 +156,91 @@ class Scheme:
   if self.key!='wabisabi':self.plant(x+w+.45,y+.35)
   self.vase(x+.9,y+1.58,BASE[floor]+(.405 if self.key=='wabisabi' else .475))
  def populate(self):
-  self.lounge(1,1.0,12.65)
-  self.floor=1;self.room='創作區';self.desk(.8,2.0,1.9,.75);self.art(.8,1.78,1.5,.9);self.track(.8,2.3)
-  if self.key=='industrial':
-   z=BASE[1]+.03
-   for a,b in [([3.7,3,z],[3.95,3.15,z+1.65]),([4.2,3,z],[3.95,3.15,z+1.65]),([3.95,3.8,z],[3.95,3.15,z+1.65])]:self.rod(a,b,.028,'wood')
-   self.box(3.6,3.18,z+.75,.7,.045,.8,'white','decor');self.item('畫架',3.6,3,.7,.8)
-   for row in range(7):
-    for col in range(5):self.box(.6+col*.22+(row%2)*.1,7.1,BASE[1]+.06+row*.1,.21,.1,.09,'brick','decor')
-   self.item('低矮磚色展示台',.6,7.1,1.2,.1,False)
-  self.room='展覽區';self.art(.7,7.3,1.4,.9)
-  self.floor=1;self.room='東側會客區';self.table(8.0,8.4,2.1,.9,.74,name='會客桌')
-  for xx in [8.05,9.3]:self.chair(xx,7.55);self.chair(xx,9.48,True)
-  self.lounge(2,8.6,6.4)
-  self.floor=2;self.room='客廳創作角';self.desk(6.95,7.4,1.35,.6)
-  self.room='餐廳';self.table(12.725,1.7,.75,1.4,.74,name='二人餐桌');self.chair(12.775,.85);self.chair(12.775,3.3,True)
-  for x,y,w,room in [(1,1.5,1.6,'臥室一'),(1,8.6,1.5,'臥室二'),(1.2,12.6,1.8,'臥室三')]:
-   self.room=room;self.bed(x,y,w);self.art(x,y-.12,1,.55)
+  # ===================== 1F =====================
+  # West room -> exhibition gallery + classroom (residential lounge removed).
+  self.floor=1;self.room='展覽空間／教室（西側）'
+  z1=BASE[1]+.03
+  for i,py in enumerate([1.35,3.55,5.75]):
+   self.box(.45,py,z1,.55,.55,1.02,'metal' if i%2 else 'wood','furniture',rounded=.03)
+   self.vase(.725,py+.275,z1+1.02)
+   self.item('展示台座',.45,py,.55,.55)
+  self.art(.35,.2,1.6,.9);self.art(2.95,.2,1.6,.9);self.art(.35,15.9,1.6,.9)
+  self.track(.6,.45,2.4);self.track(3.2,.45,2.4)
+  # Teaching tables + chairs, two rows, central aisle x~2.3 kept clear (>1 m).
+  for ty in [9.4,12.0]:
+   for c in range(2):
+    tx=.4+c*3.05
+    self.table(tx,ty,1.5,.7,.74,name='教學桌')
+    self.chair(tx+.42,ty-.75);self.chair(tx+.42,ty+.78,True)
+  self.plant(5.7,15.4)
+  # East room -> lobby: reception counter + compact waiting seating.
+  self.floor=1;self.room='Lobby 大廳（東側）'
+  self.box(9.0,11.2,z1,2.6,.6,1.05,'wood','furniture',rounded=.04)
+  self.item('接待櫃台',9.0,11.2,2.6,.6)
+  self.cyl(10.3,10.85,z1,.19,.44,'metal');self.item('櫃台高椅',10.11,10.66,.38,.38,False)
+  self.sofa(7.0,8.0,2.0,.82)
+  self.table(7.55,8.95,.8,.55,.4,name='候客茶几')
+  # ===================== 2F =====================
+  self.lounge(2,8.6,6.4,True)
+  self.floor=2;self.room='客廳兼餐廳／創作角';self.desk(6.95,7.4,1.35,.6)
+  # Combined living/dining: dining set on the east side, passage y10.3..11.9 kept clear.
+  self.room='客廳兼餐廳／用餐區';self.table(12.0,7.8,1.5,.9,.74,name='餐桌')
+  for xx in [12.15,13.0]:self.chair(xx,7.0);self.chair(xx,8.85,True)
+  # Narrow 2F dining -> kitchen (real counter / sink / hob / fridge).
+  self.floor=2;self.room='廚房';zk=BASE[2]+.03
+  self.box(12.05,.18,zk,2.1,.6,.70,'wood','furniture',rounded=.02)
+  # Countertop opening and recessed basin are visible, not a sink buried in a solid box.
+  top=rect(12.05,.18,14.15,.78).difference(rect(12.40,.34,12.80,.62))
+  slab=tm.creation.extrude_polygon(top,.04,engine='earcut');slab.apply_translation([0,0,zk+.86]);self.mesh(slab,'light')
+  self.box(13.63,.18,zk,.6,4.3,.9,'wood','furniture',rounded=.02)   # east counter run
+  self.item('廚房檯面（L形）',12.05,.18,2.18,4.5)
+  self.box(12.05,.18,zk+1.5,2.0,.32,.7,'wood','furniture',rounded=.02);self.item('吊櫃',12.05,.18,2.0,.32,False)
+  rim=rect(12.32,.30,12.84,.66).difference(rect(12.40,.34,12.80,.62))
+  basin=tm.creation.extrude_polygon(rim,.18,engine='earcut');basin.apply_translation([0,0,zk+.73]);self.mesh(basin,'metal')
+  self.box(12.40,.34,zk+.72,.4,.28,.02,'metal','furniture');self.item('水槽',12.32,.30,.52,.36,False)
+  self.rod([12.62,.30,zk+.9],[12.62,.30,zk+1.06],.015,'metal');self.rod([12.62,.30,zk+1.06],[12.74,.30,zk+1.02],.015,'metal')
+  for gx,gy in [(13.8,1.05),(14.05,1.05),(13.8,1.5),(14.05,1.5)]:self.cyl(gx,gy,zk+.9,.07,.02,'metal','furniture')
+  self.item('爐具（四口爐）',13.68,.9,.55,.75,False)
+  self.box(13.66,.66,zk+1.7,.55,.55,.28,'metal','fixture');self.item('抽油煙機',13.66,.66,.55,.55,False)
+  self.box(12.05,1.08,zk,.72,.7,1.85,'metal','furniture',rounded=.03);self.item('冰箱',12.05,1.08,.72,.7)
+  # west door x11.88 y3.12..4.68 and front door y5.9 left clear.
+  # ---- 2F bedrooms ----
+  self.floor=2
+  self.room='臥室一';self.bed(1,3.65,1.6,2,head_high=True,head_dir='+plan_y (toward 廁所 B)',head_target='廁所 B 隔牆 y≈5.9');self.art(1,.9,1,.55)
+  self.room='臥室二';self.bed(1,8.6,1.5,2);self.art(1,8.48,1,.55)
+  self.room='臥室三';self.bed(1.2,12.6,1.8,2);self.art(1.2,12.48,1,.55)
+  # ===================== 3F =====================
   self.lounge(3,8.2,6.35,True)
   self.floor=3
-  for y,room in [(1.0,'臥室一'),(8.3,'臥室二'),(12.1,'臥室三')]:self.room=room;self.bed(1,y);self.art(1,y-.12,1,.55)
-  self.floor=4;self.room='臥室';self.bed(10.7,1.2,.95);self.table(10.65,4.25,1.2,.55,.75,name='書桌')
-  # Small stool fits behind desk, entry strip from y=5 remains clear.
-  self.cyl(11.25,3.85,BASE[4]+.03,.19,.42,'wood');self.item('書桌凳',11.06,3.66,.38,.38)
+  self.room='臥室一';self.bed(1,1.75,1.5,2,head_high=True,head_dir='+plan_y (toward 臥室二)',head_target='臥室二 側，床頭近 y≈3.88');self.art(1,.8,1,.55)
+  self.room='臥室二';self.bed(1,8.3);self.art(1,8.18,1,.55)
+  # 臥室三 -> worship hall (no bed; no invented deity).
+  self.room='佛廳／祭祀空間';za=BASE[3]+.03
+  self.box(.9,14.15,za,2.9,.7,.9,'wood','furniture',rounded=.03);self.item('神桌／供奉檯',.9,14.15,2.9,.7)
+  self.box(1.35,14.4,za+.9,2.0,.35,.55,'wood','furniture',rounded=.03);self.item('佛龕（無造像）',1.35,14.4,2.0,.35,False)
+  self.table(1.5,13.15,1.7,.6,.5,name='供桌')
+  self.cyl(2.3,13.45,za+.5,.12,.14,'metal','decor');self.cyl(2.3,13.45,za+.64,.09,.05,'metal','decor');self.item('香爐',2.15,13.3,.3,.3,False)
+  for vx in [1.75,2.9]:self.vase(vx,13.45,za+.5)
+  self.item('供品（水果／花）',1.6,13.2,1.5,.5,False)
+  for i in range(2):
+   self.soft(1.35+i*1.15,12.25,za,.6,.55,.12,'fabric',rounding=.5);self.item('拜墊',1.35+i*1.15,12.25,.6,.55,False)
+  # ===================== 4F =====================
+  # Bedroom -> storage room (shelving + boxes; entry strip from y=4.4 kept clear).
+  self.floor=4;self.room='儲藏間';zs=BASE[4]+.03
+  for wx in [10.58,11.88]:
+   for px in [wx,wx+.39]:
+    for py in [.2,4.17]:self.box(px,py,zs,.03,.03,1.7,'metal','furniture')
+   self.box(wx,.2,zs,.42,4.0,.05,'metal','furniture')
+   for lv in range(4):self.box(wx,.2,zs+.05+lv*.5,.42,4.0,.03,'metal','furniture')
+   for r in range(4):
+    for cc in range(3):
+     self.box(wx+.05,.35+r*.92,zs+.09+cc*.5,.32,.8,.4,'wood' if (r+cc)%2 else 'clay','decor')
+   self.item('層架',wx,.2,.42,4.0)
+  self.item('收納紙箱',10.58,.2,1.72,4.0,False)
   self.room='露台';self.table(1.8,7.5,.9,.9,.65,True,name='露台圓桌');self.chair(1.9,6.5);self.chair(1.9,8.6,True)
   self.plant(.9,7,self.key=='wabisabi')
   if self.key!='wabisabi':
-   self.plant(4.6,9.5);self.floor=2;self.room='客廳';self.plant(13.6,9.5)
+   self.plant(4.6,9.5);self.floor=2;self.room='客廳／餐廳';self.plant(13.65,9.6)
  def export(self):
   scene=tm.load(ROOT/'output/house.glb',force='scene',process=False)
   for name,g in scene.geometry.items():

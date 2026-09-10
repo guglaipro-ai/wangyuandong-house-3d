@@ -68,4 +68,6 @@ try{
 }finally{await browser.close();}
 report.passed=!report.errors.length&&Object.values(report.models).every(x=>x.errors===0)&&report.views.every(x=>x.maps>45&&x.normals>45)&&report.contextHide&&report.roofHidden&&report.orbitAndZoom&&report.touchRotation&&report.mobile.scrollWidth===report.mobile.width&&report.offline.externalRequests.length===0;
 fs.writeFileSync('output/realism/viewer-validation.json',JSON.stringify(report,null,2));console.log(JSON.stringify({...report,models:Object.fromEntries(Object.entries(report.models).map(([k,v])=>[k,{errors:v.errors,warnings:v.warnings}]))}));
+fs.writeFileSync('output/viewer-validation.json',JSON.stringify(report,null,2));
+fs.writeFileSync('output/styles/validation.json',JSON.stringify({date:report.date,models:Object.fromEntries(styles.map(s=>[s,report.models[`styles/${s}.glb`]])),views:report.views,passed:report.passed,physicalAndroidTested:false},null,2));
 if(!report.passed)process.exitCode=1;

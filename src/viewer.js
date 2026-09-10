@@ -409,6 +409,9 @@ function buildUI() {
   const auditLink=el('a',{href:'audit/index.html?v='+MODEL_REVISION,text:'查看 101 處圖面修正清單'});
   auditLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
   styleSection.appendChild(auditLink);
+  const updatesLink=el('a',{href:'corrections/index.html?v='+MODEL_REVISION,text:'查看本次 11 項用途與配置修正'});
+  updatesLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
+  styleSection.appendChild(updatesLink);
   controlsEl.appendChild(styleSection);
 
   const visual=el('div',{class:'hv-section'},[el('h3',{text:'光線與周邊'})]);
