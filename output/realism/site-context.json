@@ -333,7 +333,7 @@
     {
       "label": "北側紅瓦平房",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           438,
@@ -357,24 +357,24 @@
         "coordinates": [
           [
             [
-              -19.941481012146827,
-              5.19457886756243
+              -18.756169023093083,
+              7.764400114452336
             ],
             [
-              -19.463729793913956,
-              -10.756047097057866
+              -18.27841780486021,
+              -8.186225850167961
             ],
             [
-              -10.117045050034417,
-              -10.570563400960626
+              -8.931733060980672,
+              -8.000742154070721
             ],
             [
-              -11.100631442479685,
-              6.49851673812286
+              -9.915319453425942,
+              9.068337985012766
             ],
             [
-              -19.941481012146827,
-              5.19457886756243
+              -18.756169023093083,
+              7.764400114452336
             ]
           ]
         ]
@@ -384,110 +384,112 @@
         "coordinates": [
           [
             [
-              -19.87075888232674,
-              -10.898332186881998
+              -18.685446893272996,
+              -8.328510939992093
             ],
             [
-              -19.886993102241288,
-              -10.683293907080827
+              -18.701681113187544,
+              -8.113472660190922
             ],
             [
-              -19.927709398120587,
-              -9.323903535167787
+              -18.742397409066843,
+              -6.754082288277883
             ],
             [
-              -20.029500137818832,
-              -5.9254276053851935
+              -18.844188148765088,
+              -3.3556063584952884
             ],
             [
-              -20.243260691185146,
-              1.2113718471582575
+              -19.108844071980524,
+              5.480431058939461
             ],
             [
-              -20.355230504853214,
-              4.949695369919112
+              -19.16991851579947,
+              7.5195166168090175
             ],
             [
-              -20.37558865279286,
-              5.629390555875631
+              -19.190276663739116,
+              8.199211802765536
             ],
             [
-              -20.37689288125395,
-              5.67437134498146
+              -19.19158089220021,
+              8.244192591871366
             ],
             [
-              -20.36777740073216,
-              5.6970056132763505
+              -19.182465411678415,
+              8.266826860166256
             ],
             [
-              -11.11011569749969,
-              6.562821084062428
+              -9.924803708445946,
+              9.132642330952335
             ],
             [
-              -10.329806138548278,
-              5.9976617135279655
+              -9.144494149494534,
+              8.567482960417871
             ],
             [
-              -10.319386429565391,
-              5.9753151927170265
+              -9.134074440511647,
+              8.545136439606932
             ],
             [
-              -10.309207355595564,
-              5.635467599738767
+              -9.113716292571997,
+              7.865441253650413
             ],
             [
-              -10.288849207655915,
-              4.955772413782249
+              -9.011925552873752,
+              4.466965323867818
             ],
             [
-              -10.237953837806792,
-              3.2565344488909513
+              -8.879597591266034,
+              0.04894661515044376
             ],
             [
-              -9.89186532283276,
-              -8.298283712369873
+              -8.66583703789972,
+              -7.087852837393006
             ],
             [
-              -9.830790879013815,
-              -10.337369270239432
+              -8.645478889960074,
+              -7.767548023349526
             ],
             [
-              -9.829486650552722,
-              -10.382350059345262
+              -8.644174661498981,
+              -7.812528812455356
             ],
             [
-              -9.832787620142858,
-              -10.597676086630383
+              -8.647475631089115,
+              -8.027854839740478
             ],
             [
-              -10.11575538773682,
-              -10.635550605633224
+              -8.930443398683076,
+              -8.065729358743319
             ],
             [
-              -12.42584421831251,
-              -10.761409757601655
+              -11.240532229258767,
+              -8.19158851071175
             ],
             [
-              -17.09918659025228,
-              -10.854151605650276
+              -15.913874601198538,
+              -8.284330358760371
             ],
             [
-              -17.14917674769274,
-              -10.855143653571504
+              -15.963864758638998,
+              -8.2853224066816
             ],
             [
-              -19.87075888232674,
-              -10.898332186881998
+              -18.685446893272996,
+              -8.328510939992093
             ]
           ]
         ]
       },
+      "house_clearance_m": 1.1403529344534715,
+      "close_neighbor": true,
       "placement_shift_model_metres": [
-        -4.932800078429786,
-        -2.4325877962045057
+        -3.747488089376042,
+        0.13723345068540008
       ],
-      "placement_shift_distance_m": 5.499999999999999,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_shift_distance_m": 3.7500000000003095,
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 1,
       "estimated_height_m": 3.05,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -495,7 +497,7 @@
     {
       "label": "東側白色舊住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           459,
@@ -519,24 +521,24 @@
         "coordinates": [
           [
             [
-              -5.238192084411796,
-              -15.167941730074475
+              -5.127042335517065,
+              -9.669064959922348
             ],
             [
-              -6.410593371682154,
-              -22.70374302960523
+              -6.299443622787423,
+              -17.204866259453105
             ],
             [
-              4.293976355564985,
-              -24.32914277785677
+              4.4051261044597165,
+              -18.830266007704644
             ],
             [
-              4.268113198737351,
-              -16.526937113018025
+              4.379262947632082,
+              -11.0280603428659
             ],
             [
-              -5.238192084411796,
-              -15.167941730074475
+              -5.127042335517065,
+              -9.669064959922348
             ]
           ]
         ]
@@ -546,86 +548,88 @@
         "coordinates": [
           [
             [
-              4.394362717475172,
-              -24.445531836213334
+              4.505512466369903,
+              -18.946655066061208
             ],
             [
-              2.5128305548637,
-              -24.205352651204965
+              2.6239803037584313,
+              -18.70647588105284
             ],
             [
-              2.463397172883181,
-              -24.19784660391174
+              2.5745469217779124,
+              -18.698969833759612
             ],
             [
-              -1.0553593542186814,
-              -23.66355273512112
+              -0.9442096053239499,
+              -18.164675964968993
             ],
             [
-              -4.67298264528158,
-              -23.114246771744046
+              -4.561832896386849,
+              -17.61537000159192
             ],
             [
-              -6.524833716277684,
-              -22.787542810334457
+              -6.413683967382953,
+              -17.28866604018233
             ],
             [
-              -6.2646126647885625,
-              -20.822204945302317
+              -6.153462915893831,
+              -15.323328175150193
             ],
             [
-              -5.678412021153384,
-              -17.05430429553694
+              -5.5672622722586524,
+              -11.555427525384816
             ],
             [
-              -5.670725611247997,
-              -17.004898636926146
+              -5.559575862353266,
+              -11.506021866774022
             ],
             [
-              -5.321819198235908,
-              -15.054969955931725
+              -5.210669449341177,
+              -9.556093185779599
             ],
             [
-              -3.658036080464951,
-              -15.247362334514422
+              -3.54688633157022,
+              -9.748485564362296
             ],
             [
-              2.6795007749678117,
-              -16.153359256476786
+              2.790650523862543,
+              -10.654482486324662
             ],
             [
-              2.728997555626304,
-              -16.16043518075882
+              2.8401473045210355,
+              -10.661558410606697
             ],
             [
-              4.367826145024341,
-              -16.440175132036583
+              4.478975893919072,
+              -10.941298361884456
             ],
             [
-              4.419495320459186,
-              -18.45200801568455
+              4.530645069353916,
+              -12.953131245532425
             ],
             [
-              4.432426898873002,
-              -22.35311084810392
+              4.543576647767734,
+              -16.854234077951798
             ],
             [
-              4.432592640560959,
-              -22.403110573400095
+              4.543742389455691,
+              -16.904233803247973
             ],
             [
-              4.394362717475172,
-              -24.445531836213334
+              4.505512466369903,
+              -18.946655066061208
             ]
           ]
         ]
       },
+      "house_clearance_m": 1.1019929748425665,
+      "close_neighbor": true,
       "placement_shift_model_metres": [
-        0.0,
-        0.0
+        0.11114974889473153,
+        5.498876770152127
       ],
-      "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_shift_distance_m": 5.499999999999823,
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -633,7 +637,7 @@
     {
       "label": "南側白色三層住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           418,
@@ -657,24 +661,24 @@
         "coordinates": [
           [
             [
-              12.42825550111122,
-              -3.842341317144283
+              10.184298159734054,
+              0.604813137238103
             ],
             [
-              9.923832387300898,
-              -17.36946483716501
+              7.6798750459237315,
+              -12.922310382782625
             ],
             [
-              24.48959981215001,
-              -18.595813237242535
+              22.245642470772843,
+              -14.148658782860148
             ],
             [
-              25.529354116554345,
-              -6.00054979601181
+              23.285396775177176,
+              -1.553395341629424
             ],
             [
-              12.42825550111122,
-              -3.842341317144283
+              10.184298159734054,
+              0.604813137238103
             ]
           ]
         ]
@@ -684,90 +688,96 @@
         "coordinates": [
           [
             [
-              24.581020240234437,
-              -18.703864081866108
+              22.33706289885727,
+              -14.25670962748372
             ],
             [
-              22.681625673466787,
-              -18.589105905409752
+              20.43766833208962,
+              -14.141951451027364
             ],
             [
-              22.631801952055184,
-              -18.584911053243243
+              16.796226475877344,
+              -13.835364351007984
             ],
             [
-              11.707476383418353,
-              -17.665149753185098
+              9.51334276345279,
+              -13.222190150969222
             ],
             [
-              9.80539948188483,
-              -17.459847316485
+              9.463519042041186,
+              -13.21799529880271
             ],
             [
-              10.089757076377289,
-              -15.676759811630916
+              7.5614421405076655,
+              -13.012692862102615
             ],
             [
-              11.34196863328245,
-              -8.913198051620551
+              7.845799735000122,
+              -11.229605357248529
             ],
             [
-              11.968074411735032,
-              -5.531417171615368
+              9.098011291905284,
+              -4.466043597238165
             ],
             [
-              11.977176767175715,
-              -5.482252681122417
+              9.724117070357865,
+              -1.0842627172329824
             ],
             [
-              12.347774310533714,
-              -3.727735457398542
+              9.733219425798548,
+              -1.0350982267400315
             ],
             [
-              14.06479419924236,
-              -3.964982088867071
+              10.103816969156547,
+              0.7194189969838439
             ],
             [
-              14.114129262751947,
-              -3.9731092967827757
+              11.820836857865194,
+              0.4821723655153149
             ],
             [
-              23.8906181608247,
-              -5.583638448017716
+              15.096111511725976,
+              -0.05737975420156708
             ],
             [
-              23.93995322433429,
-              -5.591765655933421
+              21.69599588295712,
+              -1.1446112015510352
             ],
             [
-              25.63660218322237,
-              -5.916869501106961
+              23.3926448418452,
+              -1.4697150467245756
             ],
             [
-              25.502626961533622,
-              -8.08677446817613
+              23.258669620156454,
+              -3.6396200137937447
             ],
             [
-              24.809457425264064,
-              -16.483616762329948
+              22.912084852021675,
+              -7.8380411608706515
             ],
             [
-              24.805343857072568,
-              -16.533447260588883
+              22.565500083886896,
+              -12.036462307947557
             ],
             [
-              24.581020240234437,
-              -18.703864081866108
+              22.5613865156954,
+              -12.086292806206496
+            ],
+            [
+              22.33706289885727,
+              -14.25670962748372
             ]
           ]
         ]
       },
+      "house_clearance_m": 1.0995041812292932,
+      "close_neighbor": true,
       "placement_shift_model_metres": [
-        0.48947322082519223,
-        -3.7179182301517892
+        -1.7544841205519737,
+        0.7292362242305966
       ],
-      "placement_shift_distance_m": 3.75,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_shift_distance_m": 1.899999999999771,
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 3,
       "estimated_height_m": 9.149999999999999,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -775,7 +785,7 @@
     {
       "label": "北巷白色住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           407,
@@ -900,12 +910,14 @@
           ]
         ]
       },
+      "house_clearance_m": 14.320966937343304,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         -1.7320508075688776,
         -0.9999999999999994
       ],
       "placement_shift_distance_m": 2.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 3,
       "estimated_height_m": 9.149999999999999,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -913,7 +925,7 @@
     {
       "label": "東南側低層住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           478,
@@ -1058,12 +1070,14 @@
           ]
         ]
       },
+      "house_clearance_m": 24.77095634575382,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         -1.7691547608760054,
         -3.587490966130753
       ],
       "placement_shift_distance_m": 4.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1071,7 +1085,7 @@
     {
       "label": "東南側住宅群一",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           465,
@@ -1192,12 +1206,14 @@
           ]
         ]
       },
+      "house_clearance_m": 30.941814821168958,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         -1.035276180410086,
         -3.8637033051562724
       ],
       "placement_shift_distance_m": 4.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1205,7 +1221,7 @@
     {
       "label": "東南側住宅群二",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           481,
@@ -1338,12 +1354,14 @@
           ]
         ]
       },
+      "house_clearance_m": 46.01917630531602,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         -2.8022197141752936,
         -3.195319181785653
       ],
       "placement_shift_distance_m": 4.25,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1351,7 +1369,7 @@
     {
       "label": "東側住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           491,
@@ -1480,12 +1498,14 @@
           ]
         ]
       },
+      "house_clearance_m": 19.44149371986417,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.0,
         0.0
       ],
       "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1493,7 +1513,7 @@
     {
       "label": "東北住宅一",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           478,
@@ -1614,12 +1634,14 @@
           ]
         ]
       },
+      "house_clearance_m": 29.635326398781284,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.8484202494303332,
         -6.444391598929768
       ],
       "placement_shift_distance_m": 6.500000000000001,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1627,7 +1649,7 @@
     {
       "label": "北側低層住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           433,
@@ -1760,12 +1782,14 @@
           ]
         ]
       },
+      "house_clearance_m": 29.948115628835655,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.0,
         0.0
       ],
       "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1773,7 +1797,7 @@
     {
       "label": "東北住宅二",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           510,
@@ -1910,12 +1934,14 @@
           ]
         ]
       },
+      "house_clearance_m": 66.5464977737633,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         -3.991435692954414,
         0.26161251692057425
       ],
       "placement_shift_distance_m": 4.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -1923,7 +1949,7 @@
     {
       "label": "道路南側鐵皮農舍",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           346,
@@ -2036,12 +2062,14 @@
           ]
         ]
       },
+      "house_clearance_m": 37.59429605513448,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.0,
         0.0
       ],
       "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 1,
       "estimated_height_m": 3.05,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -2049,7 +2077,7 @@
     {
       "label": "道路西側低層住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           269,
@@ -2202,12 +2230,14 @@
           ]
         ]
       },
+      "house_clearance_m": 71.93564734387449,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.0,
         0.0
       ],
       "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -2215,7 +2245,7 @@
     {
       "label": "路口南側建物",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           408,
@@ -2324,12 +2354,14 @@
           ]
         ]
       },
+      "house_clearance_m": 51.08900465748758,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.0,
         0.0
       ],
       "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 2,
       "estimated_height_m": 6.1,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -2337,7 +2369,7 @@
     {
       "label": "東南側中層住宅",
       "type": "neighbor",
-      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance",
+      "source": "NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency",
       "footprint_source_pixels": [
         [
           570,
@@ -2474,12 +2506,14 @@
           ]
         ]
       },
+      "house_clearance_m": 93.8955902058378,
+      "close_neighbor": false,
       "placement_shift_model_metres": [
         0.0,
         0.0
       ],
       "placement_shift_distance_m": 0.0,
-      "placement_note": "Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.",
+      "placement_note": "Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.",
       "estimated_floors": 4,
       "estimated_height_m": 12.2,
       "confidence": "approximate; openings and fine profiles schematic"
@@ -2996,8 +3030,12 @@
                 11.707190663319615
               ],
               [
-                -9.897727019777045,
-                6.9220592200955515
+                -10.032009769951616,
+                9.407245552079123
+              ],
+              [
+                -15.086155890883179,
+                8.835793278985626
               ],
               [
                 -15.379514548753312,
@@ -3140,8 +3178,140 @@
                 -6.830959307778093
               ],
               [
-                10.52729182354103,
-                -0.40452234889022215
+                23.278557119283064,
+                -4.431875267063915
+              ],
+              [
+                23.514617067168288,
+                -1.5723177553102996
+              ],
+              [
+                23.51470272893518,
+                -1.570830481056246
+              ],
+              [
+                23.515351966693583,
+                -1.5509840327830382
+              ],
+              [
+                23.515301447707177,
+                -1.548005901531167
+              ],
+              [
+                23.51397945396656,
+                -1.5281928918840229
+              ],
+              [
+                23.51363386381922,
+                -1.5252344488185852
+              ],
+              [
+                23.510353670232647,
+                -1.5056501860353544
+              ],
+              [
+                23.50971641560533,
+                -1.5027405942321326
+              ],
+              [
+                23.504510356928627,
+                -1.4835781316611891
+              ],
+              [
+                23.50358771960692,
+                -1.480746072640983
+              ],
+              [
+                23.496507114956394,
+                -1.4621943057032767
+              ],
+              [
+                23.49530818990732,
+                -1.459467696701585
+              ],
+              [
+                23.486422836877665,
+                -1.4417095008397727
+              ],
+              [
+                23.484959442595375,
+                -1.4391152196106187
+              ],
+              [
+                23.474356929224648,
+                -1.422325647580588
+              ],
+              [
+                23.472643491228723,
+                -1.4198892674469694
+              ],
+              [
+                23.460428332592627,
+                -1.4042338237220844
+              ],
+              [
+                23.458481741227416,
+                -1.4019793614850338
+              ],
+              [
+                23.44477434917406,
+                -1.3876123707833008
+              ],
+              [
+                23.442613793110862,
+                -1.385562049974466
+              ],
+              [
+                23.42754928929189,
+                -1.3726251359909787
+              ],
+              [
+                23.42519606637514,
+                -1.3707991678024602
+              ],
+              [
+                23.40892295027383,
+                -1.359419857143136
+              ],
+              [
+                23.40640025757603,
+                -1.357836241194161
+              ],
+              [
+                23.38907894266246,
+                -1.3481267062726006
+              ],
+              [
+                23.386411647817265,
+                -1.3468010531768964
+              ],
+              [
+                23.368212880260405,
+                -1.3388570064663496
+              ],
+              [
+                23.365427276328035,
+                -1.3378023839493496
+              ],
+              [
+                23.346530451852498,
+                -1.3317021344897895
+              ],
+              [
+                23.343653998133952,
+                -1.3309289385725487
+              ],
+              [
+                23.324245393613122,
+                -1.3267326200333969
+              ],
+              [
+                23.322781931589418,
+                -1.326454049485327
+              ],
+              [
+                10.487070915220263,
+                0.7880358235369935
               ],
               [
                 10.369993582164698,
@@ -3795,15 +3965,65 @@
     {
       "label": "路燈電桿與架空線",
       "type": "utilities",
-      "source": "June 2026 Street View",
-      "confidence": "approximate; not utility survey"
+      "poles": [
+        {
+          "center_model_xz": [
+            11.566160660039372,
+            4.175239670928222
+          ],
+          "radius_m": 0.1,
+          "road_edge_distance_m": 0.2800000000000006,
+          "source_pixel": [
+            411,
+            277
+          ]
+        },
+        {
+          "center_model_xz": [
+            27.902648271787342,
+            -0.9844679761122199
+          ],
+          "radius_m": 0.1,
+          "road_edge_distance_m": 0.2800000000000013,
+          "source_pixel": [
+            402,
+            307
+          ]
+        },
+        {
+          "center_model_xz": [
+            -9.773142824988271,
+            9.805916581733172
+          ],
+          "radius_m": 0.1,
+          "road_edge_distance_m": 0.27999999999999936,
+          "source_pixel": [
+            427,
+            243
+          ]
+        },
+        {
+          "center_model_xz": [
+            -24.743285235708253,
+            13.668119212158375
+          ],
+          "radius_m": 0.1,
+          "road_edge_distance_m": 0.2800000000000001,
+          "source_pixel": [
+            444,
+            218
+          ]
+        }
+      ],
+      "source": "June 2026 Street View; user confirms poles at road edge",
+      "confidence": "pole centers snapped 0.28 m outside rendered asphalt edge, clear of buildings; approximate, not utility survey"
     }
   ],
   "model": {
     "file": "surroundings.glb",
-    "input_sha256": "697a3427326799fe855df6204fafe57a9e4c74b3489c733e6082ca7d301e14ef",
-    "sha256": "cda113b1e32693b4874f7faec721af716452cca07f0f1c13a1a451cdfef9b287",
-    "bytes": 15839364,
+    "input_sha256": "584082a7b7c66ea340fdc52d5d33e1989a9ec29629878e026787ef14aab0b0e9",
+    "sha256": "9a35bb0edd1585ffc9e0e795699ddc47f25ed6c7d83e0ceb5b1ff0ae0b5da585",
+    "bytes": 15857648,
     "texturedMeshBatches": 8,
     "tangentMeshBatches": 8,
     "trianglePositionsUnchanged": true

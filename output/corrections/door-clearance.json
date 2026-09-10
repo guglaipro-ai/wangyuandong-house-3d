@@ -1,0 +1,1379 @@
+{
+  "scope": "Actual exported furniture triangles, door frontage 1.2 m on both sides and hinged 0..90 degree sweep; flat rugs under 6 cm and fixtures above 2.05 m excluded. Concept clearance, not code compliance.",
+  "door_count": 31,
+  "styles": {
+    "bohemian": [
+      {
+        "floor": 1,
+        "code": "D5a",
+        "wall": "back_left",
+        "center": [
+          4.7,
+          0.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2a",
+        "wall": "front_entry",
+        "center": [
+          6.53,
+          13.95
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2b",
+        "wall": "right_living_side",
+        "center": [
+          12.45,
+          10.8
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D1",
+        "wall": "core_entry",
+        "center": [
+          11.88,
+          4.65
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "SD1",
+        "wall": "stair_lobby_west",
+        "center": [
+          8.18,
+          4.75
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_b_entry",
+        "center": [
+          8.62,
+          6.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_a_side",
+        "center": [
+          6.65,
+          2.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D6",
+        "wall": "bed3_balcony_entry",
+        "center": [
+          6.53,
+          12.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW4",
+        "wall": "living_balcony",
+        "center": [
+          10.53,
+          12.1
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3b",
+        "wall": "bed1_wc",
+        "center": [
+          4.85,
+          3.47
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D2b",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.17
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.25,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3d",
+        "wall": "wc_b_door",
+        "center": [
+          3.5,
+          6.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          8.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "hall_living",
+        "center": [
+          6.53,
+          11.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW1",
+        "wall": "dining_stair",
+        "center": [
+          11.88,
+          3.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "dining_front",
+        "center": [
+          13.13,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW2",
+        "wall": "bed3_balcony",
+        "center": [
+          4.85,
+          13.4
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW3",
+        "wall": "living_balcony",
+        "center": [
+          9.45,
+          9.82
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW1",
+        "wall": "stair_east",
+        "center": [
+          11.88,
+          4.85
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.2,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D3b",
+        "wall": "wc_door",
+        "center": [
+          5.73,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed2_back",
+        "center": [
+          4.2,
+          7.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D6",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          10.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D5b",
+        "wall": "terrace_door",
+        "center": [
+          6.65,
+          5.15
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D4a",
+        "wall": "bed_partition",
+        "center": [
+          10.4,
+          5.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      }
+    ],
+    "industrial": [
+      {
+        "floor": 1,
+        "code": "D5a",
+        "wall": "back_left",
+        "center": [
+          4.7,
+          0.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2a",
+        "wall": "front_entry",
+        "center": [
+          6.53,
+          13.95
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2b",
+        "wall": "right_living_side",
+        "center": [
+          12.45,
+          10.8
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D1",
+        "wall": "core_entry",
+        "center": [
+          11.88,
+          4.65
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "SD1",
+        "wall": "stair_lobby_west",
+        "center": [
+          8.18,
+          4.75
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_b_entry",
+        "center": [
+          8.62,
+          6.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_a_side",
+        "center": [
+          6.65,
+          2.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D6",
+        "wall": "bed3_balcony_entry",
+        "center": [
+          6.53,
+          12.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW4",
+        "wall": "living_balcony",
+        "center": [
+          10.53,
+          12.1
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3b",
+        "wall": "bed1_wc",
+        "center": [
+          4.85,
+          3.47
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D2b",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.17
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.25,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3d",
+        "wall": "wc_b_door",
+        "center": [
+          3.5,
+          6.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          8.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "hall_living",
+        "center": [
+          6.53,
+          11.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW1",
+        "wall": "dining_stair",
+        "center": [
+          11.88,
+          3.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "dining_front",
+        "center": [
+          13.13,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW2",
+        "wall": "bed3_balcony",
+        "center": [
+          4.85,
+          13.4
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW3",
+        "wall": "living_balcony",
+        "center": [
+          9.45,
+          9.82
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW1",
+        "wall": "stair_east",
+        "center": [
+          11.88,
+          4.85
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.2,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D3b",
+        "wall": "wc_door",
+        "center": [
+          5.73,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed2_back",
+        "center": [
+          4.2,
+          7.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D6",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          10.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D5b",
+        "wall": "terrace_door",
+        "center": [
+          6.65,
+          5.15
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D4a",
+        "wall": "bed_partition",
+        "center": [
+          10.4,
+          5.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      }
+    ],
+    "eclectic": [
+      {
+        "floor": 1,
+        "code": "D5a",
+        "wall": "back_left",
+        "center": [
+          4.7,
+          0.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2a",
+        "wall": "front_entry",
+        "center": [
+          6.53,
+          13.95
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2b",
+        "wall": "right_living_side",
+        "center": [
+          12.45,
+          10.8
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D1",
+        "wall": "core_entry",
+        "center": [
+          11.88,
+          4.65
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "SD1",
+        "wall": "stair_lobby_west",
+        "center": [
+          8.18,
+          4.75
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_b_entry",
+        "center": [
+          8.62,
+          6.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_a_side",
+        "center": [
+          6.65,
+          2.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D6",
+        "wall": "bed3_balcony_entry",
+        "center": [
+          6.53,
+          12.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW4",
+        "wall": "living_balcony",
+        "center": [
+          10.53,
+          12.1
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3b",
+        "wall": "bed1_wc",
+        "center": [
+          4.85,
+          3.47
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D2b",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.17
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.25,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3d",
+        "wall": "wc_b_door",
+        "center": [
+          3.5,
+          6.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          8.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "hall_living",
+        "center": [
+          6.53,
+          11.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW1",
+        "wall": "dining_stair",
+        "center": [
+          11.88,
+          3.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "dining_front",
+        "center": [
+          13.13,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW2",
+        "wall": "bed3_balcony",
+        "center": [
+          4.85,
+          13.4
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW3",
+        "wall": "living_balcony",
+        "center": [
+          9.45,
+          9.82
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW1",
+        "wall": "stair_east",
+        "center": [
+          11.88,
+          4.85
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.2,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D3b",
+        "wall": "wc_door",
+        "center": [
+          5.73,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed2_back",
+        "center": [
+          4.2,
+          7.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D6",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          10.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D5b",
+        "wall": "terrace_door",
+        "center": [
+          6.65,
+          5.15
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D4a",
+        "wall": "bed_partition",
+        "center": [
+          10.4,
+          5.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      }
+    ],
+    "wabisabi": [
+      {
+        "floor": 1,
+        "code": "D5a",
+        "wall": "back_left",
+        "center": [
+          4.7,
+          0.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2a",
+        "wall": "front_entry",
+        "center": [
+          6.53,
+          13.95
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D2b",
+        "wall": "right_living_side",
+        "center": [
+          12.45,
+          10.8
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D1",
+        "wall": "core_entry",
+        "center": [
+          11.88,
+          4.65
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "SD1",
+        "wall": "stair_lobby_west",
+        "center": [
+          8.18,
+          4.75
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_b_entry",
+        "center": [
+          8.62,
+          6.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "D3a",
+        "wall": "wc_a_side",
+        "center": [
+          6.65,
+          2.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D6",
+        "wall": "bed3_balcony_entry",
+        "center": [
+          6.53,
+          12.7
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW4",
+        "wall": "living_balcony",
+        "center": [
+          10.53,
+          12.1
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3b",
+        "wall": "bed1_wc",
+        "center": [
+          4.85,
+          3.47
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D2b",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.17
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.25,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D3d",
+        "wall": "wc_b_door",
+        "center": [
+          3.5,
+          6.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          8.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "hall_living",
+        "center": [
+          6.53,
+          11.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "DW1",
+        "wall": "dining_stair",
+        "center": [
+          11.88,
+          3.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "D4a",
+        "wall": "dining_front",
+        "center": [
+          13.13,
+          5.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW2",
+        "wall": "bed3_balcony",
+        "center": [
+          4.85,
+          13.4
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW3",
+        "wall": "living_balcony",
+        "center": [
+          9.45,
+          9.82
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "DW1",
+        "wall": "stair_east",
+        "center": [
+          11.88,
+          4.85
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed1_front",
+        "center": [
+          4.2,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D3b",
+        "wall": "wc_door",
+        "center": [
+          5.73,
+          4.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "stair_west",
+        "center": [
+          6.65,
+          5.2
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D4a",
+        "wall": "bed2_back",
+        "center": [
+          4.2,
+          7.9
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "D6",
+        "wall": "bed2_east",
+        "center": [
+          4.85,
+          10.5
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D5b",
+        "wall": "terrace_door",
+        "center": [
+          6.65,
+          5.15
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "D4a",
+        "wall": "bed_partition",
+        "center": [
+          10.4,
+          5.0
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 1,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 2,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 3,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      },
+      {
+        "floor": 4,
+        "code": "LIFT",
+        "wall": "elevator_door",
+        "center": [
+          9.205,
+          3.6
+        ],
+        "overlap_m2": 0.0,
+        "collision_bounds_plan": null
+      }
+    ]
+  },
+  "passed": true
+}

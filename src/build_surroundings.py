@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'.deps'))
 import numpy as np,trimesh as tm
 from shapely.geometry import Polygon,LineString,Point,MultiPoint,mapping
 from shapely.affinity import translate
-from shapely.ops import unary_union
+from shapely.ops import unary_union,nearest_points
 from PIL import Image
 from enhance_glb import run as texture_glb
 from site_location import to_model,EN,MODEL,metadata as location_metadata
@@ -26,6 +26,10 @@ mats={k:tm.visual.material.PBRMaterial(name=k,baseColorFactor=v+[255],roughnessF
 parts=defaultdict(list);features=[];rng=np.random.default_rng(20260910)
 site_protection=unary_union([Polygon(to_model(EN)),Polygon(MODEL)]).buffer(.35)
 neighbor_envelopes=[]
+base_scene=tm.load(OUT/'realism/architecture-baseline.glb',force='scene',process=False)
+house_envelope=MultiPoint(np.concatenate([g.vertices[:,[0,2]] for n,g in base_scene.geometry.items() if n.startswith(('FLOOR_','ROOF_'))])).convex_hull
+near_labels={'北側紅瓦平房','東側白色舊住宅','南側白色三層住宅'}
+road_surfaces=[]
 def add(m,mat):parts[mat].append(m)
 def box(c,size,mat='wall'):
  m=tm.creation.box(size);m.apply_translation(c);add(m,mat)
@@ -78,9 +82,22 @@ def house(label,pixels,floors=2,roof=False,color='wall',tower=False):
  if roof:
   envelope=unary_union([envelope,Polygon([center+uu*s*(ww+.6)/2+vv*t*(dd+.6)/2 for s,t in [(-1,-1),(1,-1),(1,1),(-1,1)]])]).buffer(.12)
  envelope=envelope.convex_hull.buffer(.03)
- forbidden=unary_union([site_protection,road_reservation,*neighbor_envelopes,temple_built.buffer(.3)])
+ # User confirms close neighbors on three sides. Prioritize that relationship;
+ # the old broad inferred plot buffer must not push these buildings far away.
+ close_neighbor=label in near_labels
+ forbidden=unary_union([house_envelope.buffer(.85) if close_neighbor else site_protection,*neighbor_envelopes,temple_built.buffer(.3)]+([] if close_neighbor else [road_reservation]))
  shift=np.zeros(2)
- if envelope.intersects(forbidden):
+ if close_neighbor:
+  direction=np.array(original.centroid.coords[0])-np.array(house_envelope.centroid.coords[0]);direction/=np.linalg.norm(direction)
+  choices=[]
+  for distance in np.arange(-18,18.01,.05):
+   candidate=direction*distance;placed=translate(envelope,*candidate)
+   if not placed.intersects(forbidden):choices.append((abs(placed.distance(house_envelope)-1.0),abs(distance),candidate))
+  if not choices:raise ValueError('No close placement for '+label)
+  shift=min(choices,key=lambda c:(c[0],c[1]))[2]
+  envelope_test=translate(envelope,*shift)
+ else:envelope_test=envelope
+ if envelope_test.intersects(forbidden):
   found=False
   for radius in np.arange(.25,35,.25):
    for angle in np.linspace(0,math.tau,96,endpoint=False):
@@ -114,7 +131,7 @@ def house(label,pixels,floors=2,roof=False,color='wall',tower=False):
    rod([c[0],height+1.4,c[1]],[c[0],height+2.5,c[1]],.65,'metal',20)
  built=MultiPoint(np.concatenate([m.vertices[:,[0,2]] for k,meshes in parts.items() for m in meshes[starts.get(k,0):]])).convex_hull
  assert built.difference(envelope).area<1e-6,label
- features.append(dict(label=label,type='neighbor',source='NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance',footprint_source_pixels=pixels,footprint_model_xz=mapping(p),built_envelope_xz=mapping(built),placement_shift_model_metres=shift.tolist(),placement_shift_distance_m=float(np.linalg.norm(shift)),placement_note='Approximate massing repositioned to clear clicked site, road widths and other buildings; not a newly surveyed location.',estimated_floors=floors,estimated_height_m=height,confidence='approximate; openings and fine profiles schematic'))
+ features.append(dict(label=label,type='neighbor',source='NLSC PHOTO2 2023 footprint + Google Street View June 2026 appearance; user confirms close three-sided adjacency',footprint_source_pixels=pixels,footprint_model_xz=mapping(p),built_envelope_xz=mapping(built),house_clearance_m=float(built.distance(house_envelope)),close_neighbor=close_neighbor,placement_shift_model_metres=shift.tolist(),placement_shift_distance_m=float(np.linalg.norm(shift)),placement_note='Three nearest neighbors follow user-confirmed adjacency; about 1 m conceptual envelope clearance, not a surveyed separation. Other buildings retain approximate aerial placement.',estimated_floors=floors,estimated_height_m=height,confidence='approximate; openings and fine profiles schematic'))
 
 # Continuous ground and the actual NW-SE village road / NE-SW lane pattern.
 box([0,-.35,0],[430,.3,430],'ground')
@@ -123,7 +140,7 @@ road_reservation=unary_union([LineString(points(coords)).buffer(width/2+.3,join_
 def render_roads():
  exclusion=unary_union([site_protection,temple_built,*neighbor_envelopes])
  for coords,width in roads:
-  p=LineString(points(coords)).buffer(width/2,join_style=2).difference(exclusion);extr(p,.06,-.14,'road')
+  p=LineString(points(coords)).buffer(width/2,join_style=2).difference(exclusion);extr(p,.06,-.14,'road');road_surfaces.append(p)
   features.append(dict(label='道路／巷道',type='road',source='NLSC PHOTO2 2023; widths visually estimated',source_pixels=coords,estimated_width_m=width,built_footprint_xz=mapping(p)))
   for side in [-1,1]:
    line=LineString(points(coords)).parallel_offset(width/2,side='left' if side==1 else 'right')
@@ -167,7 +184,8 @@ house('東南側中層住宅',[(570,392),(591,406),(575,430),(554,415)],4,False,
 render_roads()
 
 # South neighbor's low block wall, visible from the vacant site.
-extr(LineString(points([(414,281),(442,293),(429,317)])).buffer(.12),1.55,.05,'slab')
+south_shift=next(f['placement_shift_model_metres'] for f in features if f['label']=='南側白色三層住宅')
+extr(translate(LineString(points([(414,281),(442,293),(429,317)])).buffer(.12),*south_shift).difference(house_envelope.buffer(.3)),1.55,.05,'slab')
 def tree(px,py,r=2.2,h=5,leafcount=110):
  c=xy(px,py);rod([c[0],0,c[1]],[c[0],h*.8,c[1]],.12 if h<7 else .38,'wood',10)
  for i in range(7):
@@ -189,11 +207,30 @@ for xmin,ymin,xmax,ymax in [(285,322,335,410),(296,386,372,477),(268,101,354,173
   for y in range(ymin,ymax,17):tree(x+rng.uniform(-2,2),y+rng.uniform(-2,2),2,4.4,65)
 features.append(dict(label='果園與道路樹木',type='vegetation',source='NLSC PHOTO2 2023 and June 2026 Street View',confidence='approximate canopy distribution; species and individual tree positions not surveyed'))
 # Poles and sagging utility cables observed on the lane.
-poles=[]
+poles=[];pole_records=[]
+road_union=unary_union(road_surfaces)
+edge_path=road_union.buffer(.28).boundary
+pole_forbidden=unary_union([house_envelope.buffer(.3),temple_built.buffer(.15),*neighbor_envelopes])
 for px,py in [(411,277),(402,307),(427,243),(444,218)]:
- c=xy(px,py);poles.append(c);rod([c[0],0,c[1]],[c[0],7.5,c[1]],.10,'slab',14)
- rod([c[0],6,c[1]],[c[0]+1.4,6.65,c[1]],.045,'metal')
- box([c[0]+1.5,6.6,c[1]],[.6,.08,.25],'metal')
+ reference=Point(xy(px,py));edges=list(edge_path.geoms) if hasattr(edge_path,'geoms') else [edge_path]
+ candidates=[]
+ for edge in edges:
+  start=edge.project(reference)
+  for offset in np.arange(-12,12.01,.25):
+   point=edge.interpolate(max(0,min(edge.length,start+offset)))
+   if not point.buffer(.12).intersects(pole_forbidden) and point.distance(road_union)>=.15:
+    candidates.append((point.distance(reference),point))
+ if not candidates:raise ValueError('No clear road-edge pole position')
+ point=min(candidates,key=lambda q:q[0])[1];c=np.array(point.coords[0]);poles.append(c)
+ rod([c[0],0,c[1]],[c[0],7.5,c[1]],.10,'slab',14)
+ inward=np.array(nearest_points(point,road_union)[1].coords[0])-c;inward/=np.linalg.norm(inward)
+ arm=c+inward*1.4;light=c+inward*1.5
+ rod([c[0],6,c[1]],[arm[0],6.65,arm[1]],.045,'metal')
+ box([light[0],6.6,light[1]],[.6,.08,.25],'metal')
+ pole_records.append(dict(center_model_xz=c.tolist(),radius_m=.10,road_edge_distance_m=point.distance(road_union),source_pixel=[px,py]))
+# Keep cable spans in road order rather than jumping backwards across the site.
+lane_axis=LineString(points(roads[1][0]))
+poles.sort(key=lambda c:lane_axis.project(Point(c)))
 for a,b in zip(poles,poles[1:]):
  for offset in [-.16,.16,.35]:
   last=None
@@ -201,7 +238,7 @@ for a,b in zip(poles,poles[1:]):
    c=a*(1-t)+b*t;now=[c[0]+offset,7.1-.5*math.sin(t*math.pi),c[1]]
    if last is not None:rod(last,now,.012,'metal',5)
    last=now
-features.append(dict(label='路燈電桿與架空線',type='utilities',source='June 2026 Street View',confidence='approximate; not utility survey'))
+features.append(dict(label='路燈電桿與架空線',type='utilities',poles=pole_records,source='June 2026 Street View; user confirms poles at road edge',confidence='pole centers snapped 0.28 m outside rendered asphalt edge, clear of buildings; approximate, not utility survey'))
 scene=tm.Scene(base_frame='CONTEXT_WORLD');scene.graph.update(frame_to='SURROUNDINGS',frame_from='CONTEXT_WORLD',metadata={'kind':'context','approximate':True})
 for mat,meshes in parts.items():
  m=tm.util.concatenate(meshes);m.visual=tm.visual.TextureVisuals(material=mats[mat]);scene.add_geometry(m,node_name='CONTEXT_'+mat,geom_name='CONTEXT_'+mat,parent_node_name='SURROUNDINGS',metadata={'kind':'context','approximate':True})

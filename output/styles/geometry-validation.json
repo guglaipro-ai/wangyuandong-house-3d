@@ -5,7 +5,7 @@
     "geometryMismatches": [],
     "nodeMismatches": [],
     "addedMeshBatches": 53,
-    "sha256": "d1717b5ac4efbb60a31bfb0da8444004b75b10a5bab041048f08e3c68b7c134c"
+    "sha256": "e1cf9c9f19e17bc8363e1e4dc5734f011571c621e2a13a20a9e40d669b364b21"
   },
   "industrial": {
     "originalGeometryUnchanged": true,
@@ -13,7 +13,7 @@
     "geometryMismatches": [],
     "nodeMismatches": [],
     "addedMeshBatches": 53,
-    "sha256": "ead2011126871dde9ab29f4b0120696278e7256d5fa524e34e2e3e5675246147"
+    "sha256": "64b608656095318c191f90d5ea2b4b157171019d7134927b3b9607153b961942"
   },
   "eclectic": {
     "originalGeometryUnchanged": true,
@@ -21,7 +21,7 @@
     "geometryMismatches": [],
     "nodeMismatches": [],
     "addedMeshBatches": 56,
-    "sha256": "085c711d3fd28c5ce84ed38f196a5ee3daddd67c25f8698f02b151d06c28422b"
+    "sha256": "f29d9d064007a2818b0f560d55063ed1974f169c461b10c00823f7aa477b1c73"
   },
   "wabisabi": {
     "originalGeometryUnchanged": true,
@@ -29,6 +29,6 @@
     "geometryMismatches": [],
     "nodeMismatches": [],
     "addedMeshBatches": 42,
-    "sha256": "d134ca203ad83c2dbcbae9e3155944df5ba4208550cb4d95d404349335e8ef2f"
+    "sha256": "d3eda6eee8fde422174507b6a0b92b9557f192d95bf1892c513fc4eea3c32c2d"
   }
 }

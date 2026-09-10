@@ -412,6 +412,9 @@ function buildUI() {
   const updatesLink=el('a',{href:'corrections/index.html?v='+MODEL_REVISION,text:'查看本次 11 項用途與配置修正'});
   updatesLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
   styleSection.appendChild(updatesLink);
+  const accessLink=el('a',{href:'corrections/access.html?v='+MODEL_REVISION,text:'最新：鄰近配置、路緣電桿與門口淨空'});
+  accessLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
+  styleSection.appendChild(accessLink);
   controlsEl.appendChild(styleSection);
 
   const visual=el('div',{class:'hv-section'},[el('h3',{text:'光線與周邊'})]);

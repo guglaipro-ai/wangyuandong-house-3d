@@ -164,7 +164,7 @@ class Scheme:
    self.box(.45,py,z1,.55,.55,1.02,'metal' if i%2 else 'wood','furniture',rounded=.03)
    self.vase(.725,py+.275,z1+1.02)
    self.item('展示台座',.45,py,.55,.55)
-  self.art(.35,.2,1.6,.9);self.art(2.95,.2,1.6,.9);self.art(.35,15.9,1.6,.9)
+  self.art(.35,.2,1.6,.9);self.art(2.3,.2,1.6,.9);self.art(.35,15.9,1.6,.9)
   self.track(.6,.45,2.4);self.track(3.2,.45,2.4)
   # Teaching tables + chairs, two rows, central aisle x~2.3 kept clear (>1 m).
   for ty in [9.4,12.0]:
@@ -175,17 +175,17 @@ class Scheme:
   self.plant(5.7,15.4)
   # East room -> lobby: reception counter + compact waiting seating.
   self.floor=1;self.room='Lobby 大廳（東側）'
-  self.box(9.0,11.2,z1,2.6,.6,1.05,'wood','furniture',rounded=.04)
-  self.item('接待櫃台',9.0,11.2,2.6,.6)
-  self.cyl(10.3,10.85,z1,.19,.44,'metal');self.item('櫃台高椅',10.11,10.66,.38,.38,False)
+  self.box(8.3,11.2,z1,2.6,.6,1.05,'wood','furniture',rounded=.04)
+  self.item('接待櫃台',8.3,11.2,2.6,.6)
+  self.cyl(9.6,10.85,z1,.19,.44,'metal');self.item('櫃台高椅',9.41,10.66,.38,.38,False)
   self.sofa(7.0,8.0,2.0,.82)
   self.table(7.55,8.95,.8,.55,.4,name='候客茶几')
   # ===================== 2F =====================
   self.lounge(2,8.6,6.4,True)
   self.floor=2;self.room='客廳兼餐廳／創作角';self.desk(6.95,7.4,1.35,.6)
   # Combined living/dining: dining set on the east side, passage y10.3..11.9 kept clear.
-  self.room='客廳兼餐廳／用餐區';self.table(12.0,7.8,1.5,.9,.74,name='餐桌')
-  for xx in [12.15,13.0]:self.chair(xx,7.0);self.chair(xx,8.85,True)
+  self.room='客廳兼餐廳／用餐區';self.table(12.0,8.05,1.5,.9,.74,name='餐桌')
+  for xx in [12.15,13.0]:self.chair(xx,7.25);self.chair(xx,9.1,True)
   # Narrow 2F dining -> kitchen (real counter / sink / hob / fridge).
   self.floor=2;self.room='廚房';zk=BASE[2]+.03
   self.box(12.05,.18,zk,2.1,.6,.70,'wood','furniture',rounded=.02)
@@ -216,14 +216,14 @@ class Scheme:
   self.room='臥室二';self.bed(1,8.3);self.art(1,8.18,1,.55)
   # 臥室三 -> worship hall (no bed; no invented deity).
   self.room='佛廳／祭祀空間';za=BASE[3]+.03
-  self.box(.9,14.15,za,2.9,.7,.9,'wood','furniture',rounded=.03);self.item('神桌／供奉檯',.9,14.15,2.9,.7)
-  self.box(1.35,14.4,za+.9,2.0,.35,.55,'wood','furniture',rounded=.03);self.item('佛龕（無造像）',1.35,14.4,2.0,.35,False)
-  self.table(1.5,13.15,1.7,.6,.5,name='供桌')
-  self.cyl(2.3,13.45,za+.5,.12,.14,'metal','decor');self.cyl(2.3,13.45,za+.64,.09,.05,'metal','decor');self.item('香爐',2.15,13.3,.3,.3,False)
-  for vx in [1.75,2.9]:self.vase(vx,13.45,za+.5)
-  self.item('供品（水果／花）',1.6,13.2,1.5,.5,False)
+  self.box(.6,14.15,za,2.9,.7,.9,'wood','furniture',rounded=.03);self.item('神桌／供奉檯',.6,14.15,2.9,.7)
+  self.box(1.05,14.4,za+.9,2.0,.35,.55,'wood','furniture',rounded=.03);self.item('佛龕（無造像）',1.05,14.4,2.0,.35,False)
+  self.table(1.2,13.15,1.7,.6,.5,name='供桌')
+  self.cyl(2.0,13.45,za+.5,.12,.14,'metal','decor');self.cyl(2.0,13.45,za+.64,.09,.05,'metal','decor');self.item('香爐',1.85,13.3,.3,.3,False)
+  for vx in [1.45,2.6]:self.vase(vx,13.45,za+.5)
+  self.item('供品（水果／花）',1.3,13.2,1.5,.5,False)
   for i in range(2):
-   self.soft(1.35+i*1.15,12.25,za,.6,.55,.12,'fabric',rounding=.5);self.item('拜墊',1.35+i*1.15,12.25,.6,.55,False)
+   self.soft(1.05+i*1.15,12.25,za,.6,.55,.12,'fabric',rounding=.5);self.item('拜墊',1.05+i*1.15,12.25,.6,.55,False)
   # ===================== 4F =====================
   # Bedroom -> storage room (shelving + boxes; entry strip from y=4.4 kept clear).
   self.floor=4;self.room='儲藏間';zs=BASE[4]+.03
@@ -240,7 +240,7 @@ class Scheme:
   self.room='露台';self.table(1.8,7.5,.9,.9,.65,True,name='露台圓桌');self.chair(1.9,6.5);self.chair(1.9,8.6,True)
   self.plant(.9,7,self.key=='wabisabi')
   if self.key!='wabisabi':
-   self.plant(4.6,9.5);self.floor=2;self.room='客廳／餐廳';self.plant(13.65,9.6)
+   self.plant(4.6,9.5)
  def export(self):
   scene=tm.load(ROOT/'output/house.glb',force='scene',process=False)
   for name,g in scene.geometry.items():

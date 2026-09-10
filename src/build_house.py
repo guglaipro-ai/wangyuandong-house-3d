@@ -20,7 +20,7 @@ for name,color in {'wall':[224,223,215,255], 'slab':[197,194,181,255],
  'metal':[48,53,54,255], 'glass':[128,176,186,88], 'door':[159,136,111,255],
  'tile':[210,204,189,255], 'wet':[177,199,195,255], 'terrace':[173,178,170,255],
  'porch':[193,191,180,255], 'white':[240,239,228,255], 'grass':[124,145,112,255],
- 'ground':[196,192,177,255], 'road':[105,113,117,255], 'ceramic':[244,245,242,255]}.items():
+ 'ground':[225,212,183,255], 'road':[105,113,117,255], 'ceramic':[244,245,242,255]}.items():
  materials[name]=trimesh.visual.material.PBRMaterial(name=name,baseColorFactor=color,
   metallicFactor=.35 if name=='metal' else 0,roughnessFactor=.28 if name=='glass' else .78,
   alphaMode='BLEND' if name=='glass' else 'OPAQUE',doubleSided=name=='glass')

@@ -1,51 +1,8 @@
 {
+  "date": "2026-09-10 UTC+8",
   "models": {
-    "wabisabi": {
-      "bytes": 9398548,
-      "errors": 0,
-      "warnings": 0,
-      "messages": [
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
-          "severity": 2,
-          "pointer": "/meshes/78/primitives/0/indices"
-        }
-      ]
-    },
-    "eclectic": {
-      "bytes": 10021648,
-      "errors": 0,
-      "warnings": 0,
-      "messages": [
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
-          "severity": 2,
-          "pointer": "/meshes/81/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
-          "severity": 2,
-          "pointer": "/meshes/116/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
-          "severity": 2,
-          "pointer": "/meshes/99/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
-          "severity": 2,
-          "pointer": "/meshes/124/primitives/0/indices"
-        }
-      ]
-    },
     "bohemian": {
-      "bytes": 10650256,
+      "bytes": 10603920,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -54,6 +11,12 @@
           "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
           "pointer": "/meshes/81/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/96/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
@@ -65,18 +28,12 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
           "severity": 2,
-          "pointer": "/meshes/96/primitives/0/indices"
-        },
-        {
-          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
-          "severity": 2,
           "pointer": "/meshes/121/primitives/0/indices"
         }
       ]
     },
     "industrial": {
-      "bytes": 10195512,
+      "bytes": 10149176,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -90,13 +47,13 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
-          "pointer": "/meshes/113/primitives/0/indices"
+          "pointer": "/meshes/97/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
-          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
           "severity": 2,
-          "pointer": "/meshes/97/primitives/0/indices"
+          "pointer": "/meshes/113/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
@@ -105,11 +62,52 @@
           "pointer": "/meshes/121/primitives/0/indices"
         }
       ]
+    },
+    "eclectic": {
+      "bytes": 9969960,
+      "errors": 0,
+      "warnings": 0,
+      "messages": [
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/81/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/99/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/116/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
+          "severity": 2,
+          "pointer": "/meshes/124/primitives/0/indices"
+        }
+      ]
+    },
+    "wabisabi": {
+      "bytes": 9399716,
+      "errors": 0,
+      "warnings": 0,
+      "messages": [
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 108 degenerate triangles (out of 864).",
+          "severity": 2,
+          "pointer": "/meshes/78/primitives/0/indices"
+        }
+      ]
     }
   },
-  "date": "2026-09-10 UTC+8",
-  "passed": true,
-  "physicalAndroidTested": false,
   "views": [
     {
       "style": "bohemian",
@@ -125,7 +123,7 @@
       "ambientOcclusion": true,
       "shadows": true,
       "drawCalls": 303,
-      "triangles": 1983591
+      "triangles": 1976415
     },
     {
       "style": "industrial",
@@ -141,7 +139,7 @@
       "ambientOcclusion": true,
       "shadows": true,
       "drawCalls": 303,
-      "triangles": 1971423
+      "triangles": 1964247
     },
     {
       "style": "eclectic",
@@ -157,7 +155,7 @@
       "ambientOcclusion": true,
       "shadows": true,
       "drawCalls": 309,
-      "triangles": 1968687
+      "triangles": 1961511
     },
     {
       "style": "wabisabi",
@@ -173,7 +171,9 @@
       "ambientOcclusion": true,
       "shadows": true,
       "drawCalls": 283,
-      "triangles": 1930335
+      "triangles": 1931511
     }
-  ]
+  ],
+  "passed": true,
+  "physicalAndroidTested": false
 }
