@@ -7,6 +7,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { installRealism } from './realistic_render.js';
+import { createWalk, STARTS } from './walk_mode.js';
+import { LITE, asset, fetchBuffer, mb } from './device.js';
 
 // ---------------------------------------------------------------------------
 // 常數
@@ -14,7 +16,7 @@ import { installRealism } from './realistic_render.js';
 const GROUP_NAMES = ['SITE', 'FLOOR_1', 'FLOOR_2', 'FLOOR_3', 'FLOOR_4', 'ROOF'];
 const FLOOR_GROUPS = ['FLOOR_1', 'FLOOR_2', 'FLOOR_3', 'FLOOR_4'];
 // 會被剖面 (cutaway) 裁切的 mesh 種類 — 依 userData.kind 判斷
-const CLIPPABLE_KINDS = new Set(['wall', 'door', 'window', 'column']);
+const CLIPPABLE_KINDS = new Set(['wall', 'door', 'window', 'column', 'wallmount']);
 const CUTAWAY_OFFSET = 1.25; // 樓層底部往上 1.25 公尺
 const PIXEL_RATIO_CAP = 1.5;
 const MODEL_REVISION = __MODEL_REVISION__;
@@ -40,6 +42,13 @@ function setStatus(msg, isError) {
 
 function fatal(msg, err) {
   setStatus(msg, true);
+  if (statusEl) {
+    statusEl.style.pointerEvents = 'auto';
+    const a = document.createElement('a');
+    a.href = '?q=lite&r=' + Date.now(); a.textContent = ' 重新載入（手機輕量版）';
+    a.style.cssText = 'color:#9d2c2c;font-weight:700;margin-left:6px';
+    statusEl.appendChild(a);
+  }
   if(styleSelect){styleSelect.disabled=false;styleSelect.value=activeStyle;}
   if (err) console.error(err);
 }
@@ -74,7 +83,8 @@ function webglAvailable() {
 // ---------------------------------------------------------------------------
 // 主要狀態
 // ---------------------------------------------------------------------------
-let renderer, scene, camera, controls, gltf, realism;
+let renderer, scene, camera, controls, gltf, realism, walk;
+let lastFrame = performance.now();
 let lastMotion=0, finalFramePending=false;
 let rootModel = null;
 let interiorPreview=null;
@@ -147,7 +157,7 @@ function init() {
 
   renderer.domElement.addEventListener('webglcontextlost', (ev) => {
     ev.preventDefault();
-    fatal('WebGL 繪圖環境已中斷 (context lost)，請重新整理頁面。');
+    fatal('手機繪圖記憶體不足，畫面已中斷。');
   });
 
   scene = new THREE.Scene();
@@ -172,6 +182,10 @@ function init() {
   controls.addEventListener('change', ()=>{lastMotion=performance.now();finalFramePending=true;requestRender();});
 
   realism=installRealism(renderer,scene,camera,requestRender,MODEL_REVISION);
+  walk=createWalk({camera,controls,canvas:canvasEl,stage:getContainer(),requestRender,
+    getRoots:()=>[rootModel,realism.surroundings?.visible?realism.surroundings:null],lights:realism.roomLights,lite:LITE,
+    getRooms:()=>roomLabelDefs.map(d=>({floor:d.object.userData.floor,label:d.label,polygon:d.object.userData.polygon})),
+    onEnter:()=>{prepareWalkView();realism.setInterior(true);document.querySelector('.hint')?.style.setProperty('display','none');if(!statusEl.classList.contains('error'))statusEl.style.display='none';},onExit:()=>{realism.setInterior(false);statusEl.style.display='';document.querySelector('.hint')?.style.removeProperty('display');updateCeilings();frameModel();}});
 
   buildUI();
   buildLabelLayer();
@@ -191,7 +205,7 @@ function init() {
   onResize();
   animate();
 
-  window.houseViewer = { scene, camera, controls, gltf: null, render: renderOnce, realism };
+  window.houseViewer = { scene, camera, controls, gltf: null, render: renderOnce, realism, walk };
 }
 
 function getContainer() {
@@ -217,9 +231,8 @@ async function loadModel(style='original') {
   try {
     if(dataEl?.textContent?.trim())buffer=base64ToArrayBuffer(dataEl.textContent);
     else{
-      const response=await fetch('styles/'+style+'.glb?v='+MODEL_REVISION);
-      if(!response.ok)throw new Error('HTTP '+response.status);
-      buffer=await response.arrayBuffer();
+      const url=asset(style==='original'?'house.glb':'styles/'+style+'.glb')+'?v='+MODEL_REVISION;
+      buffer=await fetchBuffer(url,(got,total)=>setStatus('正在下載'+STYLE_NAMES[style]+(LITE?'（手機輕量版）':'')+' '+mb(got)+(total?' / '+mb(total):'')+' MB…'));
     }
   } catch (e) {
     fatal('方案載入失敗，請確認網路後重新選取。', e);
@@ -311,12 +324,15 @@ function onModelLoaded(result) {
   // 套用初始剖面/裁面狀態
   applyClipping();
 
-  setStatus(STYLE_NAMES[activeStyle]+' · '+(activeStyle==='original'?'原建築配置':'家具與材質配置提案'));
-  window.houseViewer = { scene, camera, controls, gltf, render: renderOnce, style:activeStyle, realism };
+  setStatus(STYLE_NAMES[activeStyle]+' · '+(activeStyle==='original'?'原建築配置':'家具與材質配置提案')+(LITE?' · 手機輕量版':''));
+  realism.startContext();
+  window.houseViewer = { scene, camera, controls, gltf, render: renderOnce, style:activeStyle, realism, walk };
   const link=document.getElementById('download');
-  if(link){const embed=document.getElementById(activeStyle==='original'?'model-data':'model-'+activeStyle);link.href=embed?'data:model/gltf-binary;base64,'+embed.textContent.trim():'styles/'+activeStyle+'.glb?v='+MODEL_REVISION;link.download=activeStyle==='original'?'house.glb':'house-'+activeStyle+'.glb';}
-  if(replacement && activeStyle!=='original')soloFloor('FLOOR_2');
+  if(link){const embed=document.getElementById(activeStyle==='original'?'model-data':'model-'+activeStyle);link.href=embed?'data:model/gltf-binary;base64,'+embed.textContent.trim():(activeStyle==='original'?'house.glb':'styles/'+activeStyle+'.glb')+'?v='+MODEL_REVISION;link.download=activeStyle==='original'?'house.glb':'house-'+activeStyle+'.glb';}
+  if(walk?.active){prepareWalkView();walk.rebuild();}
+  else if(replacement && activeStyle!=='original')soloFloor('FLOOR_2');
   else if(replacement)showAll();
+  updateCeilings();
   requestRender();
 }
 
@@ -399,13 +415,10 @@ function buildUI() {
   Object.entries(STYLE_NAMES).forEach(([value,text])=>styleSelect.appendChild(el('option',{value,text})));
   styleSelect.addEventListener('change',()=>loadModel(styleSelect.value));
   styleSection.appendChild(styleSelect);
-  styleSection.appendChild(makeButton('二樓室內視角',()=>{
-    soloFloor('FLOOR_2');
-    cutawayEnabled=false;sectionEnabled=false;cutawayToggle.checked=false;sectionToggle.checked=false;applyClipping();
-    showRoomLabels=false;labelToggle.checked=false;updateLabels();
-    camera.position.set(.27,6.4,2.5);controls.target.set(3.12,5.85,-.8);controls.update();requestRender();
-    showInteriorCeiling();
-  }));
+  styleSection.appendChild(makeButton('二樓室內視角',()=>walk.enter('f2')));
+  for(const [href,text] of [['styles/design.html','四套風格細部規劃（地坪／天花／燈具／家具）'],['realism/references.html','真實構造與尺寸依據（二丁掛、欄杆、樓梯…）']]){
+    const a=el('a',{href:href+'?v='+MODEL_REVISION,text});a.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0;font-weight:600';styleSection.appendChild(a);
+  }
   const auditLink=el('a',{href:'audit/index.html?v='+MODEL_REVISION,text:'查看 101 處圖面修正清單'});
   auditLink.style.cssText='display:block;text-align:center;font-size:12px;color:#31594e;padding:7px 0';
   styleSection.appendChild(auditLink);
@@ -417,6 +430,16 @@ function buildUI() {
   styleSection.appendChild(accessLink);
   controlsEl.appendChild(styleSection);
 
+  // --- 170 cm 沉浸式漫遊 ---
+  const walkSection=el('div',{class:'hv-section hv-walk'},[el('h3',{text:'走進建築 · 身高 170 cm'})]);
+  const startSelect=el('select',{id:'hv-walk-start','aria-label':'漫遊起點'});
+  Object.entries(STARTS).forEach(([value,s])=>startSelect.appendChild(el('option',{value,text:s.label})));
+  walkSection.appendChild(startSelect);
+  const walkBtn=makeButton('開始第一人稱漫遊',()=>walk.enter(startSelect.value));walkBtn.id='hv-walk';walkBtn.classList.add('hv-primary');
+  walkSection.appendChild(walkBtn);
+  walkSection.appendChild(el('p',{class:'hv-note',text:'眼高 158 cm（身高×0.93）。電腦：WASD 移動、拖曳轉頭；手機：左下搖桿移動、拖曳畫面轉頭，雙擊地面可前往。可沿樓梯上下樓。'}));
+  controlsEl.insertBefore(walkSection,styleSection);
+
   const visual=el('div',{class:'hv-section'},[el('h3',{text:'光線與周邊'})]);
   const quality=el('select',{id:'hv-quality','aria-label':'畫面品質'});
   [['high','細緻光影'],['balanced','手機流暢']].forEach(([value,text])=>quality.appendChild(el('option',{value,text})));
@@ -424,6 +447,8 @@ function buildUI() {
   const context=el('input',{type:'checkbox',id:'hv-context'});context.checked=true;
   context.addEventListener('change',()=>realism.setContext(context.checked));
   visual.appendChild(el('label',{class:'hv-row'},[context,el('span',{text:'顯示基地周邊（近似重建）'})]));
+  const tier=el('a',{href:'?q='+(LITE?'hq':'lite'),text:LITE?'目前：手機輕量版（貼圖 512px）→ 改用高畫質':'目前：高畫質 → 手機若載入失敗請改用輕量版'});
+  tier.style.cssText='display:block;color:#31594e;font-size:12px;padding:4px 0';visual.appendChild(tier);
   const daylight=el('select',{id:'hv-daylight','aria-label':'日光情境'});
   [['sun','晴日日光'],['soft','柔和日光'],['warm','暖色日光']].forEach(([value,text])=>daylight.appendChild(el('option',{value,text})));
   daylight.addEventListener('change',()=>realism.daylight(daylight.value));visual.appendChild(daylight);
@@ -449,7 +474,7 @@ function buildUI() {
       clearInteriorPreview();
       const obj = groupObjects[name];
       if (obj) obj.visible = cb.checked;
-      updateLabels();
+      updateLabels();updateCeilings();
       requestRender();
     });
     groupCheckboxes[name] = cb;
@@ -552,6 +577,7 @@ function makeButton(label, onClick) {
 // 檢視操作
 // ---------------------------------------------------------------------------
 function showAll() {
+  if(walk?.active)walk.exit();
   clearInteriorPreview();
   cutawayEnabled=false;sectionEnabled=false;cutawayToggle.checked=false;sectionToggle.checked=false;
   applyClipping();frameModel();
@@ -566,6 +592,7 @@ function showAll() {
 }
 
 function soloFloor(floorName) {
+  if(walk?.active)walk.exit();
   clearInteriorPreview();
   soloFloorForLabels = null;
   GROUP_NAMES.forEach((name) => {
@@ -574,6 +601,7 @@ function soloFloor(floorName) {
     if (obj) obj.visible = visible;
     if (groupCheckboxes[name]) groupCheckboxes[name].checked = visible;
   });
+  updateCeilings();
   cutawayFloor=floorName;cutawayFloorSelect.value=floorName;
   cutawayEnabled=true;cutawayToggle.checked=true;sectionEnabled=false;sectionToggle.checked=false;
   showRoomLabels=true;labelToggle.checked=true;applyClipping();
@@ -585,8 +613,26 @@ function soloFloor(floorName) {
 // ---------------------------------------------------------------------------
 // 剖面 / 裁切
 // ---------------------------------------------------------------------------
+function prepareWalkView(){
+  clearInteriorPreview();
+  cutawayEnabled=false;sectionEnabled=false;if(cutawayToggle)cutawayToggle.checked=false;if(sectionToggle)sectionToggle.checked=false;
+  GROUP_NAMES.forEach(n=>{if(groupObjects[n])groupObjects[n].visible=true;if(groupCheckboxes[n])groupCheckboxes[n].checked=true;});
+  showRoomLabels=false;if(labelToggle)labelToggle.checked=false;updateLabels();
+  applyClipping();
+}
+
+// 天花板只在完整外觀或漫遊時顯示；剖切／單層俯視時隱藏，避免遮住室內。
+function updateCeilings(){
+  if(!rootModel)return;
+  const floors=FLOOR_GROUPS.filter(n=>groupObjects[n]?.visible).length;
+  const show=walk?.active||(!cutawayEnabled&&!sectionEnabled&&floors>1);
+  rootModel.traverse(o=>{if(o.isMesh&&o.userData.kind==='ceiling')o.visible=show;});
+  requestRender();
+}
+
 function applyClipping() {
   if(cutawayEnabled||sectionEnabled)clearInteriorPreview();
+  updateCeilings();
   if (!rootModel) return;
 
   const base = floorBaseY[cutawayFloor] != null ? floorBaseY[cutawayFloor] : 0;
@@ -758,7 +804,9 @@ function renderOnce() {
 
 function animate() {
   requestAnimationFrame(animate);
-  const changed = controls && controls.update();
+  const now=performance.now(),dt=(now-lastFrame)/1000;lastFrame=now;
+  if(walk?.active){if(walk.update(dt)){lastMotion=now;finalFramePending=true;needsRender=true;}}
+  const changed = !walk?.active && controls && controls.update();
   if(finalFramePending&&performance.now()-lastMotion>=250){needsRender=true;finalFramePending=false;}
   if (needsRender || changed) {
     renderOnce();

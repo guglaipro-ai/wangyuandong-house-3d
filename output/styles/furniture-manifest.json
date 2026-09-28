@@ -1,692 +1,583 @@
 {
   "units": "metres; plan x/y coordinates",
   "purpose": "approximate furniture proposals; not construction or clearance certification",
+  "distinctness": {
+    "item_names_shared_by_all_four": [
+      "供桌",
+      "抽油煙機",
+      "收納層架",
+      "東側廚櫃",
+      "水槽",
+      "爐具"
+    ],
+    "unique_item_names": {
+      "bohemian": 26,
+      "industrial": 33,
+      "eclectic": 33,
+      "wabisabi": 24
+    }
+  },
   "styles": {
     "bohemian": {
       "label": "波西米亞",
-      "bytes": 10603920,
-      "sha256": "e1cf9c9f19e17bc8363e1e4dc5734f011571c621e2a13a20a9e40d669b364b21",
-      "furnitureCount": 48,
-      "itemCount": 80,
+      "design": {
+        "concept": "旅人收藏的溫暖手作：陶磚地、石灰漆牆、木梁與藤編，低座與層疊織品",
+        "floor": "手工陶磚 20×20 cm（8 mm 灰縫）",
+        "walls": "暖杏色石灰漆",
+        "ceiling": "客廳外露木梁＋藤編天花板",
+        "lighting": "藤編吊燈、串燈、摩洛哥風燈",
+        "windows": "竹捲簾（窗）＋番紅花色紗簾（落地門）",
+        "signature": "低座沙發、孔雀藤椅、吊掛蛋椅、黃銅托盤桌、流蘇編織掛毯、大量植栽、帳幔床"
+      },
+      "bytes": 14092892,
+      "sha256": "2c860928704b8cc619b62529ad9b5504d64b37cc94f56c39a6f80803f48dd90e",
+      "addedTriangles": 155208,
+      "removedBaseGeometry": [],
+      "furnitureCount": 32,
+      "itemCount": 75,
       "items": [
         {
-          "name": "展示台座",
+          "name": "幾何紋基里姆地毯",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：手作工作坊",
           "footprint": [
-            0.45,
-            1.35,
             1.0,
-            1.9000000000000001
+            8.2,
+            4.2,
+            10.6
           ],
           "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "展示台座",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            3.55,
-            1.0,
-            4.1
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "展示台座",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            5.75,
-            1.0,
-            6.3
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            0.2,
-            1.9500000000000002,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            2.3,
-            0.2,
-            3.9,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            15.9,
-            1.9500000000000002,
-            15.98
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.6,
-            0.45,
-            3.0,
-            0.61
-          ],
-          "size_m": [
-            2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
             3.2,
-            0.45,
-            5.6,
-            0.61
-          ],
-          "size_m": [
-            2.4,
-            0.16
+            2.4
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "教學桌",
+          "name": "幾何紋基里姆地毯",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：手作工作坊",
           "footprint": [
-            0.4,
-            9.4,
-            1.9,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            8.65,
-            1.4700000000000002,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            10.18,
-            1.4700000000000002,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            9.4,
-            4.949999999999999,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            8.65,
-            4.52,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            10.18,
-            4.52,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.4,
-            12.0,
-            1.9,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            11.25,
-            1.4700000000000002,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            12.78,
-            1.4700000000000002,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            12.0,
-            4.949999999999999,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            11.25,
-            4.52,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            12.78,
-            4.52,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            5.5,
-            15.200000000000001,
-            5.9,
-            15.600000000000001
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "接待櫃台",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            8.3,
+            1.0,
             11.2,
-            10.9,
-            11.799999999999999
+            4.2,
+            13.6
           ],
           "size_m": [
-            2.6,
-            0.6
+            3.2,
+            2.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "低圓工作桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            1.98,
+            8.78,
+            3.22,
+            10.02
+          ],
+          "size_m": [
+            1.24,
+            1.24
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "櫃台高椅",
+          "name": "低圓工作桌",
           "floor": 1,
-          "room": "Lobby 大廳（東側）",
+          "room": "展覽空間／教室（西側）：手作工作坊",
           "footprint": [
-            9.41,
-            10.66,
-            9.790000000000001,
-            11.040000000000001
+            1.98,
+            11.78,
+            3.22,
+            13.02
           ],
           "size_m": [
+            1.24,
+            1.24
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "拉坯機",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            4.65,
+            10.65,
+            5.15,
+            11.15
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "藤編展示台＋手作陶器",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            0.31,
+            3.06,
+            0.79,
+            3.54
+          ],
+          "size_m": [
+            0.48,
+            0.48
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "藤編展示台＋手作陶器",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            0.31,
+            4.56,
+            0.79,
+            5.04
+          ],
+          "size_m": [
+            0.48,
+            0.48
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "藤編展示台＋手作陶器",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            0.31,
+            6.06,
+            0.79,
+            6.54
+          ],
+          "size_m": [
+            0.48,
+            0.48
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "壁掛陶器層板",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            6.2,
+            7.1,
+            6.44,
+            9.9
+          ],
+          "size_m": [
+            0.24,
+            2.8
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
+            5.48,
+            15.58,
+            5.92,
+            16.02
+          ],
+          "size_m": [
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：手作工作坊",
+          "footprint": [
             0.38,
-            0.38
+            15.58,
+            0.82,
+            16.02
+          ],
+          "size_m": [
+            0.44,
+            0.44
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "三人沙發",
+          "name": "靠牆長凳",
           "floor": 1,
-          "room": "Lobby 大廳（東側）",
+          "room": "展覽空間／教室（西側）：手作工作坊",
           "footprint": [
-            7.0,
-            8.0,
-            9.0,
-            8.82
+            5.9,
+            4.6,
+            6.35,
+            6.4
           ],
           "size_m": [
-            2.0,
-            0.82
+            0.45,
+            1.8
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "候客茶几",
+          "name": "藤編接待櫃台",
           "floor": 1,
           "room": "Lobby 大廳（東側）",
           "footprint": [
-            7.55,
-            8.95,
-            8.35,
-            9.5
+            8.25,
+            10.9,
+            10.75,
+            11.6
           ],
           "size_m": [
-            0.8,
-            0.55
+            2.5,
+            0.7
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "地毯",
-          "floor": 2,
-          "room": "客廳兼餐廳",
+          "name": "藤編長椅",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
           "footprint": [
-            8.5,
             6.7,
-            12.0,
-            8.7
+            8.4,
+            7.2,
+            10.3
           ],
           "size_m": [
-            3.5,
-            2.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.6,
-            6.4,
-            10.7,
-            7.25
-          ],
-          "size_m": [
-            2.1,
-            0.85
+            0.5,
+            1.9
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "茶几",
-          "floor": 2,
-          "room": "客廳兼餐廳",
+          "name": "圓形黃麻地毯",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
           "footprint": [
-            9.049999999999999,
-            7.7,
-            9.999999999999998,
-            8.3
-          ],
-          "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.799999999999999,
-            6.16,
-            10.399999999999999,
-            6.24
+            7.4,
+            8.5,
+            9.0,
+            10.1
           ],
           "size_m": [
             1.6,
-            0.08
+            1.6
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "展示軌道燈",
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            11.68,
+            9.28,
+            12.12,
+            9.72
+          ],
+          "size_m": [
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "幾何紋基里姆地毯",
           "floor": 2,
           "room": "客廳兼餐廳",
           "footprint": [
-            8.6,
-            6.62,
-            10.7,
-            6.78
+            7.9,
+            6.9,
+            11.1,
+            9.6
           ],
           "size_m": [
-            2.1,
-            0.16
+            3.2,
+            2.7
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "盆栽",
+          "name": "圓形黃麻地毯",
           "floor": 2,
           "room": "客廳兼餐廳",
           "footprint": [
-            10.95,
-            6.55,
-            11.35,
-            6.95
+            10.0,
+            8.4,
+            11.6,
+            10.0
           ],
           "size_m": [
-            0.4,
-            0.4
+            1.6,
+            1.6
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "創作／書寫桌",
+          "name": "低座沙發（木座＋坐墊）",
           "floor": 2,
-          "room": "客廳兼餐廳／創作角",
+          "room": "客廳兼餐廳",
           "footprint": [
-            6.95,
+            8.1,
+            6.1,
+            10.5,
+            7.02
+          ],
+          "size_m": [
+            2.4,
+            0.92
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "孔雀藤椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            11.05,
             7.4,
-            8.3,
-            8.0
+            11.8,
+            8.2
           ],
           "size_m": [
-            1.35,
-            0.6
+            0.75,
+            0.8
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "黃銅托盤桌",
           "floor": 2,
-          "room": "客廳兼餐廳／創作角",
+          "room": "客廳兼餐廳",
           "footprint": [
-            7.3,
-            8.15,
-            7.95,
-            8.83
+            8.85,
+            7.65,
+            9.75,
+            8.55
           ],
           "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "餐桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.0,
-            8.05,
-            13.5,
-            8.950000000000001
-          ],
-          "size_m": [
-            1.5,
+            0.9,
             0.9
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "皮革坐墩",
           "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
+          "room": "客廳兼餐廳",
           "footprint": [
-            12.15,
-            7.25,
-            12.8,
-            7.93
+            8.05,
+            9.05,
+            8.55,
+            9.55
           ],
           "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.15,
-            9.1,
-            12.8,
-            9.78
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            7.25,
-            13.65,
-            7.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            9.1,
-            13.65,
-            9.78
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "廚房檯面（L形）",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.23,
-            4.68
-          ],
-          "size_m": [
-            2.18,
-            4.5
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "吊櫃",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.05,
+            0.5,
             0.5
           ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "皮革坐墩",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            9.05,
+            9.25,
+            9.55,
+            9.75
+          ],
           "size_m": [
-            2.0,
-            0.32
+            0.5,
+            0.5
           ],
           "major": false,
+          "approximate": true
+        },
+        {
+          "name": "吊掛藤編蛋椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            7.0,
+            8.4,
+            7.9,
+            9.4
+          ],
+          "size_m": [
+            0.9,
+            1.0
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            6.83,
+            6.23,
+            7.27,
+            6.67
+          ],
+          "size_m": [
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "手作實木餐桌（車旋腳）",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.05,
+            8.1,
+            13.75,
+            9.05
+          ],
+          "size_m": [
+            1.7,
+            0.95
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "藤編餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.25,
+            9.2,
+            12.75,
+            9.7
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "藤編餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            13.05,
+            9.2,
+            13.55,
+            9.7
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "藤編餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.25,
+            7.65,
+            12.75,
+            8.15
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "藤編餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            13.05,
+            7.65,
+            13.55,
+            8.15
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "後側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            12.03,
+            0.1,
+            14.26,
+            0.7
+          ],
+          "size_m": [
+            2.23,
+            0.6
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "東側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            13.66,
+            0.7,
+            14.26,
+            3.05
+          ],
+          "size_m": [
+            0.6,
+            2.35
+          ],
+          "major": true,
           "approximate": true
         },
         {
@@ -694,31 +585,31 @@
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.32,
-            0.3,
-            12.84,
-            0.6599999999999999
+            12.62,
+            0.22,
+            13.08,
+            0.58
           ],
           "size_m": [
-            0.52,
+            0.46,
             0.36
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "爐具（四口爐）",
+          "name": "爐具",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            13.68,
-            0.9,
-            14.23,
-            1.65
+            13.7,
+            1.0,
+            14.22,
+            1.56
           ],
           "size_m": [
-            0.55,
-            0.75
+            0.52,
+            0.56
           ],
           "major": false,
           "approximate": true
@@ -729,26 +620,26 @@
           "room": "廚房",
           "footprint": [
             13.66,
-            0.66,
-            14.21,
-            1.21
+            0.96,
+            14.26,
+            1.6
           ],
           "size_m": [
-            0.55,
-            0.55
+            0.6,
+            0.64
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "冰箱",
+          "name": "冰箱（約 500 L）",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.05,
-            1.08,
-            12.770000000000001,
-            1.78
+            11.99,
+            1.0,
+            12.71,
+            1.7
           ],
           "size_m": [
             0.72,
@@ -758,408 +649,492 @@
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "帳幔床（低平台）",
           "floor": 2,
           "room": "臥室一",
           "footprint": [
-            1,
-            3.65,
-            2.6,
-            5.65
+            0.69,
+            3.84,
+            2.31,
+            5.82
           ],
           "size_m": [
-            1.6,
-            2
+            1.62,
+            1.98
           ],
           "major": true,
           "approximate": true,
+          "category": "bed",
           "head_side": "+y",
-          "headboard_y": 5.5600000000000005,
-          "head_direction": "+plan_y (toward 廁所 B)",
-          "head_target": "廁所 B 隔牆 y≈5.9"
+          "mattress_cm": [
+            152,
+            188
+          ]
         },
         {
-          "name": "床邊桌",
+          "name": "藤編床邊几",
           "floor": 2,
           "room": "臥室一",
           "footprint": [
-            2.72,
-            5.130000000000001,
-            3.1,
-            5.530000000000001
+            2.38,
+            5.31,
+            2.8,
+            5.73
           ],
           "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.9,
-            2,
-            0.98
-          ],
-          "size_m": [
-            1,
-            0.08
+            0.42,
+            0.42
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "藤編床邊几",
+          "floor": 2,
+          "room": "臥室一",
+          "footprint": [
+            0.2,
+            5.31,
+            0.62,
+            5.73
+          ],
+          "size_m": [
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "皮革坐墩",
+          "floor": 2,
+          "room": "臥室一",
+          "footprint": [
+            2.75,
+            0.95,
+            3.25,
+            1.45
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "帳幔床（低平台）",
           "floor": 2,
           "room": "臥室二",
           "footprint": [
-            1,
-            8.6,
-            2.5,
-            10.6
+            0.91,
+            8.3,
+            2.53,
+            10.28
           ],
           "size_m": [
-            1.5,
-            2
+            1.62,
+            1.98
           ],
           "major": true,
           "approximate": true,
+          "category": "bed",
           "head_side": "-y",
-          "headboard_y": 8.6
+          "mattress_cm": [
+            152,
+            188
+          ]
         },
         {
-          "name": "床邊桌",
+          "name": "藤編床邊几",
           "floor": 2,
           "room": "臥室二",
           "footprint": [
-            2.62,
-            8.719999999999999,
-            3.0,
-            9.12
+            0.42,
+            8.39,
+            0.84,
+            8.81
           ],
           "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.48,
-            2,
-            8.56
-          ],
-          "size_m": [
-            1,
-            0.08
+            0.42,
+            0.42
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "藤編床邊几",
           "floor": 2,
-          "room": "臥室三",
+          "room": "臥室二",
           "footprint": [
-            1.2,
-            12.6,
-            3.0,
-            14.6
+            2.6,
+            8.39,
+            3.02,
+            8.81
+          ],
+          "size_m": [
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "幾何紋基里姆地毯",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            1.525,
+            9.525,
+            3.325,
+            10.725
           ],
           "size_m": [
             1.8,
-            2
+            1.2
           ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 12.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            3.12,
-            12.719999999999999,
-            3.5,
-            13.12
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
+          "major": false,
           "approximate": true
         },
         {
-          "name": "原創幾何畫作",
+          "name": "帳幔床（低平台）",
           "floor": 2,
           "room": "臥室三",
           "footprint": [
             1.2,
-            12.48,
-            2.2,
-            12.56
+            12.28,
+            3.12,
+            14.26
           ],
           "size_m": [
-            1,
-            0.08
+            1.92,
+            1.98
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-y",
+          "mattress_cm": [
+            182,
+            188
+          ]
+        },
+        {
+          "name": "藤編床邊几",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            0.71,
+            12.37,
+            1.13,
+            12.79
+          ],
+          "size_m": [
+            0.42,
+            0.42
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "地毯",
-          "floor": 3,
-          "room": "起居室",
+          "name": "藤編床邊几",
+          "floor": 2,
+          "room": "臥室三",
           "footprint": [
-            8.1,
-            6.6499999999999995,
-            11.6,
-            8.649999999999999
+            3.19,
+            12.37,
+            3.61,
+            12.79
           ],
           "size_m": [
-            3.5,
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "幾何紋基里姆地毯",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            2.36,
+            13.76,
+            4.16,
+            14.96
+          ],
+          "size_m": [
+            1.8,
+            1.2
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "帳幔床（低平台）",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            0.69,
+            1.92,
+            2.31,
+            3.9
+          ],
+          "size_m": [
+            1.62,
+            1.98
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "藤編床邊几",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            2.38,
+            3.39,
+            2.8,
+            3.81
+          ],
+          "size_m": [
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "藤編床邊几",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            0.2,
+            3.39,
+            0.62,
+            3.81
+          ],
+          "size_m": [
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "皮革坐墩",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            2.75,
+            0.95,
+            3.25,
+            1.45
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "帳幔床（低平台）",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            0.91,
+            8.05,
+            2.53,
+            10.03
+          ],
+          "size_m": [
+            1.62,
+            1.98
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "藤編床邊几",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            0.42,
+            8.14,
+            0.84,
+            8.56
+          ],
+          "size_m": [
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "藤編床邊几",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            2.6,
+            8.14,
+            3.02,
+            8.56
+          ],
+          "size_m": [
+            0.42,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "幾何紋基里姆地毯",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            1.52,
+            9.22,
+            3.32,
+            10.42
+          ],
+          "size_m": [
+            1.8,
+            1.2
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "地舖臥榻",
+          "floor": 3,
+          "room": "起居室：閱讀與音樂角",
+          "footprint": [
+            7.0,
+            6.05,
+            9.2,
+            7.0
+          ],
+          "size_m": [
+            2.2,
+            0.95
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "圓形黃麻地毯",
+          "floor": 3,
+          "room": "起居室：閱讀與音樂角",
+          "footprint": [
+            7.25,
+            6.65,
+            9.35,
+            8.75
+          ],
+          "size_m": [
+            2.1,
+            2.1
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "黃銅托盤桌",
+          "floor": 3,
+          "room": "起居室：閱讀與音樂角",
+          "footprint": [
+            7.92,
+            7.32,
+            8.68,
+            8.08
+          ],
+          "size_m": [
+            0.76,
+            0.76
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "皮革坐墩",
+          "floor": 3,
+          "room": "起居室：閱讀與音樂角",
+          "footprint": [
+            9.15,
+            7.25,
+            9.65,
+            7.75
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "矮書櫃",
+          "floor": 3,
+          "room": "起居室：閱讀與音樂角",
+          "footprint": [
+            10.1,
+            6.05,
+            11.4,
+            6.37
+          ],
+          "size_m": [
+            1.3,
+            0.32
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "走廊長凳",
+          "floor": 3,
+          "room": "起居室走廊",
+          "footprint": [
+            0.15,
+            4.5,
+            0.6,
+            6.5
+          ],
+          "size_m": [
+            0.45,
             2.0
           ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.35,
-            10.299999999999999,
-            7.199999999999999
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "茶几",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.649999999999999,
-            7.6499999999999995,
-            9.599999999999998,
-            8.25
-          ],
-          "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.399999999999999,
-            6.109999999999999,
-            9.999999999999998,
-            6.1899999999999995
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.569999999999999,
-            10.299999999999999,
-            6.7299999999999995
-          ],
-          "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            10.549999999999999,
-            6.499999999999999,
-            10.95,
-            6.8999999999999995
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            1.75,
-            2.5,
-            3.75
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "+y",
-          "headboard_y": 3.66,
-          "head_direction": "+plan_y (toward 臥室二)",
-          "head_target": "臥室二 側，床頭近 y≈3.88"
-        },
-        {
-          "name": "床邊桌",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            2.62,
-            3.23,
-            3.0,
-            3.63
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.8,
-            2,
-            0.88
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.3,
-            2.5,
-            10.3
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 8.3
-        },
-        {
-          "name": "床邊桌",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            2.62,
-            8.42,
-            3.0,
-            8.82
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.18,
-            2,
-            8.26
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "神桌／供奉檯",
+          "name": "神桌＋佛龕（無造像）",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            0.6,
-            14.15,
-            3.5,
-            14.85
+            0.15,
+            12.35,
+            0.85,
+            14.55
           ],
           "size_m": [
-            2.9,
-            0.7
+            0.7,
+            2.2
           ],
           "major": true,
-          "approximate": true
-        },
-        {
-          "name": "佛龕（無造像）",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            1.05,
-            14.4,
-            3.05,
-            14.75
-          ],
-          "size_m": [
-            2.0,
-            0.35
-          ],
-          "major": false,
           "approximate": true
         },
         {
@@ -1167,218 +1142,201 @@
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.2,
-            13.15,
-            2.9,
-            13.75
+            1.05,
+            12.95,
+            1.6,
+            13.95
           ],
           "size_m": [
-            1.7,
-            0.6
+            0.55,
+            1.0
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "香爐",
+          "name": "黃銅香爐",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.85,
-            13.3,
-            2.15,
-            13.600000000000001
+            1.2,
+            13.33,
+            1.44,
+            13.57
           ],
           "size_m": [
-            0.3,
-            0.3
+            0.24,
+            0.24
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "供品（水果／花）",
+          "name": "藤編拜墊",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.3,
-            13.2,
-            2.8,
-            13.7
+            2.0,
+            13.0,
+            2.55,
+            13.5
           ],
           "size_m": [
-            1.5,
+            0.55,
             0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "拜墊",
+          "name": "藤編拜墊",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.05,
-            12.25,
-            1.65,
-            12.8
+            2.0,
+            13.75,
+            2.55,
+            14.25
           ],
           "size_m": [
-            0.6,
-            0.55
+            0.55,
+            0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "拜墊",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            2.2,
-            12.25,
-            2.8000000000000003,
-            12.8
-          ],
-          "size_m": [
-            0.6,
-            0.55
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "層架",
+          "name": "收納層架",
           "floor": 4,
           "room": "儲藏間",
           "footprint": [
             10.58,
             0.2,
-            11.0,
-            4.2
+            11.015,
+            4.185
           ],
           "size_m": [
-            0.42,
-            4.0
+            0.435,
+            3.985
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "層架",
+          "name": "收納層架",
           "floor": 4,
           "room": "儲藏間",
           "footprint": [
-            11.88,
+            11.86,
             0.2,
-            12.3,
-            4.2
+            12.295,
+            4.185
           ],
           "size_m": [
-            0.42,
-            4.0
+            0.435,
+            3.985
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "收納紙箱",
+          "name": "戶外編織地毯",
           "floor": 4,
-          "room": "儲藏間",
+          "room": "露台",
           "footprint": [
-            10.58,
-            0.2,
-            12.3,
-            4.2
+            1.2,
+            7.2,
+            4.4,
+            10.0
           ],
           "size_m": [
-            1.72,
-            4.0
+            3.2,
+            2.8
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "露台圓桌",
+          "name": "低圓桌",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.8,
-            7.5,
-            2.7,
-            8.4
+            2.3,
+            8.1,
+            3.3,
+            9.1
           ],
           "size_m": [
-            0.9,
-            0.9
+            1.0,
+            1.0
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "串燈木柱",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.9,
-            6.5,
-            2.55,
-            7.18
+            1.0,
+            7.0,
+            4.7,
+            10.3
           ],
           "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 4,
-          "room": "露台",
-          "footprint": [
-            1.9,
-            8.6,
-            2.55,
-            9.28
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 4,
-          "room": "露台",
-          "footprint": [
-            0.7,
-            6.8,
-            1.1,
-            7.2
-          ],
-          "size_m": [
-            0.4,
-            0.4
+            3.7,
+            3.3
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "盆栽",
+          "name": "大型盆栽（琴葉榕）",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            4.3999999999999995,
-            9.3,
-            4.8,
-            9.700000000000001
+            5.38,
+            6.98,
+            5.82,
+            7.42
           ],
           "size_m": [
-            0.4,
-            0.4
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            5.38,
+            9.38,
+            5.82,
+            9.82
+          ],
+          "size_m": [
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            2.78,
+            10.98,
+            3.22,
+            11.42
+          ],
+          "size_m": [
+            0.44,
+            0.44
           ],
           "major": false,
           "approximate": true
@@ -1387,689 +1345,611 @@
     },
     "industrial": {
       "label": "工業 Loft",
-      "bytes": 10149176,
-      "sha256": "64b608656095318c191f90d5ea2b4b157171019d7134927b3b9607153b961942",
-      "furnitureCount": 48,
-      "itemCount": 80,
+      "design": {
+        "concept": "舊廠房改造：清水模、外露管線與黑鐵，焦糖皮革與回收木",
+        "floor": "拋光混凝土（清水地坪）",
+        "walls": "清水模板牆（12 cm 模板紋＋螺栓孔）",
+        "ceiling": "不做天花：外露樓板、明管線、黑色螺旋風管",
+        "lighting": "鐵籠愛迪生燈泡吊燈、黑色軌道投射燈、搪瓷工作吊燈",
+        "windows": "黑色金屬百葉",
+        "signature": "焦糖皮革沙發＋俱樂部椅、管件書架牆、黑鐵玻璃隔屏、紅磚展示牆、實木厚板長桌＋長凳、畫架與工作台"
+      },
+      "bytes": 10688804,
+      "sha256": "cc0cec4fd806cb5a98a67c43b455bd3ccfbf050d1b4fb385a56fb27e1cfffc7b",
+      "addedTriangles": 102780,
+      "removedBaseGeometry": [
+        "FLOOR_1_ceiling_ceiling",
+        "FLOOR_1_ceiling_plate",
+        "FLOOR_1_ceiling_lamp",
+        "FLOOR_2_ceiling_ceiling",
+        "FLOOR_2_ceiling_plate",
+        "FLOOR_2_ceiling_lamp",
+        "FLOOR_3_ceiling_ceiling",
+        "FLOOR_3_ceiling_plate",
+        "FLOOR_3_ceiling_lamp",
+        "FLOOR_4_ceiling_ceiling",
+        "FLOOR_4_ceiling_plate",
+        "FLOOR_4_ceiling_lamp"
+      ],
+      "furnitureCount": 60,
+      "itemCount": 79,
       "items": [
         {
-          "name": "展示台座",
+          "name": "厚木工作台",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            1.35,
-            1.0,
-            1.9000000000000001
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "展示台座",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            3.55,
-            1.0,
-            4.1
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "展示台座",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            5.75,
-            1.0,
-            6.3
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：創作工坊",
           "footprint": [
             0.35,
-            0.2,
-            1.9500000000000002,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            2.3,
-            0.2,
-            3.9,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            15.9,
-            1.9500000000000002,
-            15.98
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.6,
-            0.45,
-            3.0,
-            0.61
-          ],
-          "size_m": [
-            2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.2,
-            0.45,
-            5.6,
-            0.61
-          ],
-          "size_m": [
-            2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
             0.4,
-            9.4,
-            1.9,
-            10.1
+            3.45,
+            1.3
           ],
           "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            8.65,
-            1.4700000000000002,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            10.18,
-            1.4700000000000002,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            9.4,
-            4.949999999999999,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            8.65,
-            4.52,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            10.18,
-            4.52,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.4,
-            12.0,
-            1.9,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            11.25,
-            1.4700000000000002,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            12.78,
-            1.4700000000000002,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            12.0,
-            4.949999999999999,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            11.25,
-            4.52,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            12.78,
-            4.52,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            5.5,
-            15.200000000000001,
-            5.9,
-            15.600000000000001
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "接待櫃台",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            8.3,
-            11.2,
-            10.9,
-            11.799999999999999
-          ],
-          "size_m": [
-            2.6,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "櫃台高椅",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            9.41,
-            10.66,
-            9.790000000000001,
-            11.040000000000001
-          ],
-          "size_m": [
-            0.38,
-            0.38
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            7.0,
-            8.0,
-            9.0,
-            8.82
-          ],
-          "size_m": [
-            2.0,
-            0.82
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "候客茶几",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            7.55,
-            8.95,
-            8.35,
-            9.5
-          ],
-          "size_m": [
-            0.8,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "地毯",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.5,
-            6.7,
-            12.0,
-            8.7
-          ],
-          "size_m": [
-            3.5,
-            2.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.6,
-            6.4,
-            10.7,
-            7.25
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "茶几",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            9.049999999999999,
-            7.7,
-            9.999999999999998,
-            8.3
-          ],
-          "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.799999999999999,
-            6.16,
-            10.399999999999999,
-            6.24
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.6,
-            6.62,
-            10.7,
-            6.78
-          ],
-          "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            10.95,
-            6.55,
-            11.35,
-            6.95
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "創作／書寫桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／創作角",
-          "footprint": [
-            6.95,
-            7.4,
-            8.3,
-            8.0
-          ],
-          "size_m": [
-            1.35,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／創作角",
-          "footprint": [
-            7.3,
-            8.15,
-            7.95,
-            8.83
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "餐桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.0,
-            8.05,
-            13.5,
-            8.950000000000001
-          ],
-          "size_m": [
-            1.5,
+            3.1,
             0.9
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
+          "name": "黑鐵畫架",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
           "footprint": [
-            12.15,
-            7.25,
-            12.8,
-            7.93
+            1.15,
+            3.8,
+            1.85,
+            4.4
           ],
           "size_m": [
-            0.65,
-            0.68
+            0.7,
+            0.6
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
+          "name": "黑鐵畫架",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
           "footprint": [
-            12.15,
-            9.1,
-            12.8,
-            9.78
+            2.65,
+            3.5,
+            3.35,
+            4.1
           ],
           "size_m": [
-            0.65,
-            0.68
+            0.7,
+            0.6
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
+          "name": "黑鐵畫架",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
           "footprint": [
-            13.0,
-            7.25,
-            13.65,
-            7.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            9.1,
-            13.65,
-            9.78
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "廚房檯面（L形）",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.23,
-            4.68
-          ],
-          "size_m": [
-            2.18,
+            4.15,
+            3.9,
+            4.85,
             4.5
           ],
+          "size_m": [
+            0.7,
+            0.6
+          ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "吊櫃",
-          "floor": 2,
-          "room": "廚房",
+          "name": "工具推車",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
           "footprint": [
-            12.05,
-            0.18,
-            14.05,
-            0.5
+            3.8,
+            2.5,
+            4.3,
+            2.9
+          ],
+          "size_m": [
+            0.5,
+            0.4
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鐵製置物櫃",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            5.98,
+            6.3,
+            6.43,
+            6.74
+          ],
+          "size_m": [
+            0.45,
+            0.44
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鐵製置物櫃",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            5.98,
+            6.76,
+            6.43,
+            7.2
+          ],
+          "size_m": [
+            0.45,
+            0.44
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鐵製置物櫃",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            5.98,
+            7.22,
+            6.43,
+            7.66
+          ],
+          "size_m": [
+            0.45,
+            0.44
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鐵製置物櫃",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            5.98,
+            7.68,
+            6.43,
+            8.12
+          ],
+          "size_m": [
+            0.45,
+            0.44
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "獨立紅磚展示牆",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            6.2,
+            8.5,
+            6.42,
+            10.9
+          ],
+          "size_m": [
+            0.22,
+            2.4
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "教學長桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            0.6,
+            9.5,
+            2.6,
+            10.3
           ],
           "size_m": [
             2.0,
-            0.32
+            0.8
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "教學長桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            3.4,
+            9.5,
+            5.4,
+            10.3
+          ],
+          "size_m": [
+            2.0,
+            0.8
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "教學長桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            0.6,
+            12.2,
+            2.6,
+            13.0
+          ],
+          "size_m": [
+            2.0,
+            0.8
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "教學長桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：創作工坊",
+          "footprint": [
+            3.4,
+            12.2,
+            5.4,
+            13.0
+          ],
+          "size_m": [
+            2.0,
+            0.8
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "清水混凝土接待櫃台",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            8.25,
+            10.9,
+            10.75,
+            11.6
+          ],
+          "size_m": [
+            2.5,
+            0.7
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鐵木長凳",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            6.7,
+            8.4,
+            7.2,
+            10.3
+          ],
+          "size_m": [
+            0.5,
+            1.9
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵管件書架",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            8.0,
+            6.0,
+            10.8,
+            6.36
+          ],
+          "size_m": [
+            2.8,
+            0.36
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "電視",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            8.8,
+            6.0,
+            10.1,
+            6.1
+          ],
+          "size_m": [
+            1.3,
+            0.1
           ],
           "major": false,
+          "approximate": true
+        },
+        {
+          "name": "皮革地毯",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            7.9,
+            7.1,
+            10.9,
+            9.0
+          ],
+          "size_m": [
+            3.0,
+            1.9
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "焦糖皮革三人沙發",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            8.25,
+            8.65,
+            10.55,
+            9.6
+          ],
+          "size_m": [
+            2.3,
+            0.95
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "皮革俱樂部椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            7.2,
+            7.42,
+            8.06,
+            8.28
+          ],
+          "size_m": [
+            0.86,
+            0.86
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "皮革俱樂部椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            10.79,
+            7.42,
+            11.65,
+            8.28
+          ],
+          "size_m": [
+            0.86,
+            0.86
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "回收木鐵件茶几（附輪）",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            8.8,
+            7.55,
+            10.0,
+            8.2
+          ],
+          "size_m": [
+            1.2,
+            0.65
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "三腳落地燈",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            10.7,
+            9.15,
+            11.2,
+            9.65
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵玻璃隔屏",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            11.75,
+            6.3,
+            11.85,
+            8.2
+          ],
+          "size_m": [
+            0.1,
+            1.9
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "獨立紅磚展示牆",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            6.62,
+            6.3,
+            6.8,
+            8.6
+          ],
+          "size_m": [
+            0.18,
+            2.3
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "製圖工作桌",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            6.7,
+            9.0,
+            7.4,
+            10.2
+          ],
+          "size_m": [
+            0.7,
+            1.2
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "厚木板長餐桌",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.05,
+            8.15,
+            13.95,
+            9.05
+          ],
+          "size_m": [
+            1.9,
+            0.9
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "長凳",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.25,
+            7.5,
+            13.75,
+            7.85
+          ],
+          "size_m": [
+            1.5,
+            0.35
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "金屬餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.38,
+            9.14,
+            12.82,
+            9.6
+          ],
+          "size_m": [
+            0.44,
+            0.46
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "金屬餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            13.18,
+            9.14,
+            13.62,
+            9.6
+          ],
+          "size_m": [
+            0.44,
+            0.46
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "後側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            12.03,
+            0.1,
+            14.26,
+            0.7
+          ],
+          "size_m": [
+            2.23,
+            0.6
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "東側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            13.66,
+            0.7,
+            14.26,
+            3.05
+          ],
+          "size_m": [
+            0.6,
+            2.35
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "西側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            11.98,
+            0.7,
+            12.58,
+            2.0
+          ],
+          "size_m": [
+            0.6,
+            1.3
+          ],
+          "major": true,
           "approximate": true
         },
         {
@@ -2077,31 +1957,31 @@
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.32,
-            0.3,
-            12.84,
-            0.6599999999999999
+            12.62,
+            0.22,
+            13.08,
+            0.58
           ],
           "size_m": [
-            0.52,
+            0.46,
             0.36
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "爐具（四口爐）",
+          "name": "爐具",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            13.68,
-            0.9,
-            14.23,
-            1.65
+            13.7,
+            1.0,
+            14.22,
+            1.56
           ],
           "size_m": [
-            0.55,
-            0.75
+            0.52,
+            0.56
           ],
           "major": false,
           "approximate": true
@@ -2112,26 +1992,26 @@
           "room": "廚房",
           "footprint": [
             13.66,
-            0.66,
-            14.21,
-            1.21
+            0.96,
+            14.26,
+            1.6
           ],
           "size_m": [
-            0.55,
-            0.55
+            0.6,
+            0.64
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "冰箱",
+          "name": "冰箱（約 500 L）",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.05,
-            1.08,
-            12.770000000000001,
-            1.78
+            11.99,
+            2.06,
+            12.71,
+            2.76
           ],
           "size_m": [
             0.72,
@@ -2141,408 +2021,492 @@
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "黑鐵管床",
           "floor": 2,
           "room": "臥室一",
           "footprint": [
-            1,
-            3.65,
-            2.6,
-            5.65
-          ],
-          "size_m": [
-            1.6,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "+y",
-          "headboard_y": 5.5600000000000005,
-          "head_direction": "+plan_y (toward 廁所 B)",
-          "head_target": "廁所 B 隔牆 y≈5.9"
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室一",
-          "footprint": [
-            2.72,
-            5.130000000000001,
-            3.1,
-            5.530000000000001
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.9,
-            2,
-            0.98
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.6,
-            2.5,
-            10.6
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 8.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
+            1.0,
+            3.78,
             2.62,
-            8.719999999999999,
-            3.0,
-            9.12
+            5.76
           ],
           "size_m": [
-            0.38,
-            0.4
+            1.62,
+            1.98
           ],
           "major": true,
-          "approximate": true
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            152,
+            188
+          ]
         },
         {
-          "name": "原創幾何畫作",
+          "name": "木箱床邊櫃",
           "floor": 2,
-          "room": "臥室二",
+          "room": "臥室一",
           "footprint": [
-            1,
-            8.48,
-            2,
-            8.56
+            2.67,
+            5.32,
+            3.11,
+            5.7
           ],
           "size_m": [
-            1,
-            0.08
+            0.44,
+            0.38
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "木箱床邊櫃",
+          "floor": 2,
+          "room": "臥室一",
+          "footprint": [
+            0.51,
+            5.32,
+            0.95,
+            5.7
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "鐵製收納櫃",
+          "floor": 2,
+          "room": "臥室一",
+          "footprint": [
+            3.2,
+            0.76,
+            3.65,
+            1.26
+          ],
+          "size_m": [
+            0.45,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵管床",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            1.0,
+            9.92,
+            2.62,
+            11.9
+          ],
+          "size_m": [
+            1.62,
+            1.98
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            2.67,
+            11.46,
+            3.11,
+            11.84
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            0.51,
+            11.46,
+            0.95,
+            11.84
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "鐵製收納櫃",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            3.2,
+            8.37,
+            3.65,
+            8.87
+          ],
+          "size_m": [
+            0.45,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵管床",
           "floor": 2,
           "room": "臥室三",
           "footprint": [
-            1.2,
-            12.6,
-            3.0,
-            14.6
+            0.15,
+            13.2,
+            2.13,
+            15.12
+          ],
+          "size_m": [
+            1.98,
+            1.92
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-x",
+          "mattress_cm": [
+            182,
+            188
+          ]
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            0.21,
+            15.17,
+            0.59,
+            15.61
+          ],
+          "size_m": [
+            0.38,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            0.21,
+            12.71,
+            0.59,
+            13.15
+          ],
+          "size_m": [
+            0.38,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "管件吊衣架",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            3.95,
+            15.75,
+            4.95,
+            16.05
+          ],
+          "size_m": [
+            1.0,
+            0.3
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵管床",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            1.0,
+            1.82,
+            2.62,
+            3.8
+          ],
+          "size_m": [
+            1.62,
+            1.98
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            2.67,
+            3.36,
+            3.11,
+            3.74
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            0.51,
+            3.36,
+            0.95,
+            3.74
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "鐵製收納櫃",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            3.2,
+            0.76,
+            3.65,
+            1.26
+          ],
+          "size_m": [
+            0.45,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵管床",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            1.0,
+            9.57,
+            2.62,
+            11.55
+          ],
+          "size_m": [
+            1.62,
+            1.98
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            2.67,
+            11.11,
+            3.11,
+            11.49
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "木箱床邊櫃",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            0.51,
+            11.11,
+            0.95,
+            11.49
+          ],
+          "size_m": [
+            0.44,
+            0.38
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "鐵製收納櫃",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            3.2,
+            8.12,
+            3.65,
+            8.62
+          ],
+          "size_m": [
+            0.45,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "焦糖皮革三人沙發",
+          "floor": 3,
+          "room": "起居室：唱片與閱讀",
+          "footprint": [
+            7.1,
+            6.05,
+            8.9,
+            6.95
           ],
           "size_m": [
             1.8,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 12.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            3.12,
-            12.719999999999999,
-            3.5,
-            13.12
-          ],
-          "size_m": [
-            0.38,
-            0.4
+            0.9
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            1.2,
-            12.48,
-            2.2,
-            12.56
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "地毯",
+          "name": "鐵木茶几",
           "floor": 3,
-          "room": "起居室",
+          "room": "起居室：唱片與閱讀",
           "footprint": [
-            8.1,
-            6.6499999999999995,
-            11.6,
-            8.649999999999999
+            7.5,
+            7.3,
+            8.5,
+            7.85
           ],
           "size_m": [
-            3.5,
+            1.0,
+            0.55
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "唱片機邊櫃",
+          "floor": 3,
+          "room": "起居室：唱片與閱讀",
+          "footprint": [
+            9.6,
+            6.05,
+            10.9,
+            6.47
+          ],
+          "size_m": [
+            1.3,
+            0.42
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黑鐵管件書架",
+          "floor": 3,
+          "room": "起居室：唱片與閱讀",
+          "footprint": [
+            12.0,
+            6.3,
+            12.34,
+            8.4
+          ],
+          "size_m": [
+            0.34,
+            2.1
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "皮革俱樂部椅",
+          "floor": 3,
+          "room": "起居室：唱片與閱讀",
+          "footprint": [
+            10.44,
+            6.97,
+            11.3,
+            7.83
+          ],
+          "size_m": [
+            0.86,
+            0.86
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鐵木長凳",
+          "floor": 3,
+          "room": "起居室走廊",
+          "footprint": [
+            0.15,
+            4.5,
+            0.6,
+            6.5
+          ],
+          "size_m": [
+            0.45,
             2.0
           ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.35,
-            10.299999999999999,
-            7.199999999999999
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "茶几",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.649999999999999,
-            7.6499999999999995,
-            9.599999999999998,
-            8.25
-          ],
-          "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.399999999999999,
-            6.109999999999999,
-            9.999999999999998,
-            6.1899999999999995
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.569999999999999,
-            10.299999999999999,
-            6.7299999999999995
-          ],
-          "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            10.549999999999999,
-            6.499999999999999,
-            10.95,
-            6.8999999999999995
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            1.75,
-            2.5,
-            3.75
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "+y",
-          "headboard_y": 3.66,
-          "head_direction": "+plan_y (toward 臥室二)",
-          "head_target": "臥室二 側，床頭近 y≈3.88"
-        },
-        {
-          "name": "床邊桌",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            2.62,
-            3.23,
-            3.0,
-            3.63
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.8,
-            2,
-            0.88
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.3,
-            2.5,
-            10.3
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 8.3
-        },
-        {
-          "name": "床邊桌",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            2.62,
-            8.42,
-            3.0,
-            8.82
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.18,
-            2,
-            8.26
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "神桌／供奉檯",
+          "name": "神桌＋佛龕（無造像）",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            0.6,
-            14.15,
-            3.5,
-            14.85
+            0.15,
+            12.35,
+            0.85,
+            14.55
           ],
           "size_m": [
-            2.9,
-            0.7
+            0.7,
+            2.2
           ],
           "major": true,
-          "approximate": true
-        },
-        {
-          "name": "佛龕（無造像）",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            1.05,
-            14.4,
-            3.05,
-            14.75
-          ],
-          "size_m": [
-            2.0,
-            0.35
-          ],
-          "major": false,
           "approximate": true
         },
         {
@@ -2550,47 +2514,47 @@
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.2,
-            13.15,
-            2.9,
-            13.75
+            1.05,
+            12.95,
+            1.6,
+            13.95
           ],
           "size_m": [
-            1.7,
-            0.6
+            0.55,
+            1.0
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "香爐",
+          "name": "鑄鐵香爐",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.85,
-            13.3,
-            2.15,
-            13.600000000000001
+            1.2,
+            13.33,
+            1.44,
+            13.57
           ],
           "size_m": [
-            0.3,
-            0.3
+            0.24,
+            0.24
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "供品（水果／花）",
+          "name": "拜墊",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.3,
-            13.2,
-            2.8,
-            13.7
+            2.0,
+            13.0,
+            2.55,
+            13.5
           ],
           "size_m": [
-            1.5,
+            0.55,
             0.5
           ],
           "major": false,
@@ -2601,95 +2565,112 @@
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.05,
-            12.25,
-            1.65,
-            12.8
+            2.0,
+            13.75,
+            2.55,
+            14.25
           ],
           "size_m": [
-            0.6,
-            0.55
+            0.55,
+            0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "拜墊",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            2.2,
-            12.25,
-            2.8000000000000003,
-            12.8
-          ],
-          "size_m": [
-            0.6,
-            0.55
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "層架",
+          "name": "收納層架",
           "floor": 4,
           "room": "儲藏間",
           "footprint": [
             10.58,
             0.2,
-            11.0,
-            4.2
+            11.015,
+            4.185
           ],
           "size_m": [
-            0.42,
-            4.0
+            0.435,
+            3.985
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "層架",
+          "name": "收納層架",
           "floor": 4,
           "room": "儲藏間",
           "footprint": [
-            11.88,
+            11.86,
             0.2,
-            12.3,
-            4.2
+            12.295,
+            4.185
           ],
           "size_m": [
-            0.42,
-            4.0
+            0.435,
+            3.985
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "收納紙箱",
-          "floor": 4,
-          "room": "儲藏間",
-          "footprint": [
-            10.58,
-            0.2,
-            12.3,
-            4.2
-          ],
-          "size_m": [
-            1.72,
-            4.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "露台圓桌",
+          "name": "鐵製小圓桌",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.8,
+            2.15,
+            8.05,
+            2.85,
+            8.75
+          ],
+          "size_m": [
+            0.7,
+            0.7
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "金屬戶外椅",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            2.28,
             7.5,
-            2.7,
-            8.4
+            2.72,
+            7.96
+          ],
+          "size_m": [
+            0.44,
+            0.46
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "金屬戶外椅",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            2.28,
+            8.84,
+            2.72,
+            9.3
+          ],
+          "size_m": [
+            0.44,
+            0.46
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "電纜捲軸桌",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            3.85,
+            9.15,
+            4.75,
+            10.05
           ],
           "size_m": [
             0.9,
@@ -2699,601 +2680,102 @@
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "耐候鋼花槽",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.9,
-            6.5,
-            2.55,
-            7.18
+            1.0,
+            11.0,
+            2.3,
+            11.45
           ],
           "size_m": [
-            0.65,
-            0.68
+            1.3,
+            0.45
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "耐候鋼花槽",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.9,
-            8.6,
-            2.55,
-            9.28
+            2.6,
+            11.0,
+            3.9,
+            11.45
           ],
           "size_m": [
-            0.65,
-            0.68
+            1.3,
+            0.45
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "盆栽",
+          "name": "耐候鋼花槽",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            0.7,
-            6.8,
-            1.1,
-            7.2
+            4.2,
+            11.0,
+            5.5,
+            11.45
           ],
           "size_m": [
-            0.4,
-            0.4
+            1.3,
+            0.45
           ],
-          "major": false,
+          "major": true,
           "approximate": true
         },
         {
-          "name": "盆栽",
+          "name": "鐵木長凳",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            4.3999999999999995,
-            9.3,
-            4.8,
-            9.700000000000001
+            5.5,
+            6.6,
+            5.95,
+            8.6
           ],
           "size_m": [
-            0.4,
-            0.4
+            0.45,
+            2.0
           ],
-          "major": false,
+          "major": true,
           "approximate": true
         }
       ]
     },
     "eclectic": {
       "label": "折衷混搭",
-      "bytes": 9969960,
-      "sha256": "f29d9d064007a2818b0f560d55063ed1974f169c461b10c00823f7aa477b1c73",
-      "furnitureCount": 48,
-      "itemCount": 80,
+      "design": {
+        "concept": "古典線板 × 大膽色彩：胡桃木人字拼、腰牆板與天花線板，天鵝絨、黃銅與大理石混搭",
+        "floor": "胡桃木人字拼（7×42 cm）",
+        "walls": "奶油色牆＋白色腰牆板（90 cm）＋掛畫線（235 cm）",
+        "ceiling": "天花線板＋圓形燈座飾盤",
+        "lighting": "黃銅放射吊燈（Sputnik 式）、乳白球燈群、百褶燈罩檯燈",
+        "windows": "祖母綠天鵝絨落地簾＋黃銅簾桿與綁帶",
+        "signature": "鈷藍弧形天鵝絨沙發、莓紅殼形單椅、胡桃木溫莎椅、洞石圓几、沙龍式掛畫牆、大理石台座雕塑、軟包高床頭"
+      },
+      "bytes": 15839024,
+      "sha256": "cfc38a253a8bba1b8896469dcf2570d1c6078e9b66694bf9704ac0d6eaa07e66",
+      "addedTriangles": 190923,
+      "removedBaseGeometry": [],
+      "furnitureCount": 47,
+      "itemCount": 85,
       "items": [
         {
-          "name": "展示台座",
+          "name": "大理石台座＋抽象雕塑",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：沙龍展廳",
           "footprint": [
-            0.45,
-            1.35,
-            1.0,
-            1.9000000000000001
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "展示台座",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            3.55,
-            1.0,
-            4.1
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "展示台座",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            5.75,
-            1.0,
-            6.3
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            0.2,
-            1.9500000000000002,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            2.3,
-            0.2,
-            3.9,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            15.9,
-            1.9500000000000002,
-            15.98
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.6,
-            0.45,
-            3.0,
-            0.61
-          ],
-          "size_m": [
-            2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
+            2.2,
             3.2,
-            0.45,
-            5.6,
-            0.61
-          ],
-          "size_m": [
-            2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.4,
-            9.4,
-            1.9,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            8.65,
-            1.4700000000000002,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            10.18,
-            1.4700000000000002,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            9.4,
-            4.949999999999999,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            8.65,
-            4.52,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            10.18,
-            4.52,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.4,
-            12.0,
-            1.9,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            11.25,
-            1.4700000000000002,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            12.78,
-            1.4700000000000002,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            12.0,
-            4.949999999999999,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            11.25,
-            4.52,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            12.78,
-            4.52,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            5.5,
-            15.200000000000001,
-            5.9,
-            15.600000000000001
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "接待櫃台",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            8.3,
-            11.2,
-            10.9,
-            11.799999999999999
-          ],
-          "size_m": [
             2.6,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "櫃台高椅",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            9.41,
-            10.66,
-            9.790000000000001,
-            11.040000000000001
-          ],
-          "size_m": [
-            0.38,
-            0.38
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            7.0,
-            8.0,
-            9.0,
-            8.82
-          ],
-          "size_m": [
-            2.0,
-            0.82
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "候客茶几",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            7.55,
-            8.95,
-            8.35,
-            9.5
-          ],
-          "size_m": [
-            0.8,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "地毯",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.5,
-            6.7,
-            12.0,
-            8.7
-          ],
-          "size_m": [
-            3.5,
-            2.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.6,
-            6.4,
-            10.7,
-            7.25
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "茶几",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            9.049999999999999,
-            7.7,
-            9.999999999999998,
-            8.3
-          ],
-          "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.799999999999999,
-            6.16,
-            10.399999999999999,
-            6.24
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.6,
-            6.62,
-            10.7,
-            6.78
-          ],
-          "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            10.95,
-            6.55,
-            11.35,
-            6.95
+            3.6
           ],
           "size_m": [
             0.4,
@@ -3303,156 +2785,649 @@
           "approximate": true
         },
         {
-          "name": "創作／書寫桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／創作角",
+          "name": "大理石台座＋抽象雕塑",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
           "footprint": [
-            6.95,
-            7.4,
-            8.3,
+            3.4,
+            4.5,
+            3.8,
+            4.9
+          ],
+          "size_m": [
+            0.4,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大理石台座＋抽象雕塑",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            2.2,
+            5.8,
+            2.6,
+            6.2
+          ],
+          "size_m": [
+            0.4,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大理石台座＋抽象雕塑",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            3.4,
+            7.1,
+            3.8,
+            7.5
+          ],
+          "size_m": [
+            0.4,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "黃銅紅絨欄柱",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            0.9,
+            2.75,
+            1.2,
+            7.55
+          ],
+          "size_m": [
+            0.3,
+            4.8
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "圓形軟墊凳",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            2.4,
+            8.6,
+            3.7,
+            9.9
+          ],
+          "size_m": [
+            1.3,
+            1.3
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "圖騰地毯",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            1.8,
+            2.2,
+            4.3,
             8.0
           ],
           "size_m": [
+            2.5,
+            5.8
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木圓桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
             1.35,
+            11.05,
+            2.45,
+            12.15
+          ],
+          "size_m": [
+            1.1,
+            1.1
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            2.35,
+            11.35,
+            2.85,
+            11.85
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            1.65,
+            12.05,
+            2.15,
+            12.55
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            0.95,
+            11.35,
+            1.45,
+            11.85
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            1.65,
+            10.65,
+            2.15,
+            11.15
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木圓桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            3.75,
+            11.05,
+            4.85,
+            12.15
+          ],
+          "size_m": [
+            1.1,
+            1.1
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            4.75,
+            11.35,
+            5.25,
+            11.85
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            4.05,
+            12.05,
+            4.55,
+            12.55
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            3.35,
+            11.35,
+            3.85,
+            11.85
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            4.05,
+            10.65,
+            4.55,
+            11.15
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：沙龍展廳",
+          "footprint": [
+            5.58,
+            15.58,
+            6.02,
+            16.02
+          ],
+          "size_m": [
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木大理石接待台",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            8.25,
+            10.9,
+            10.75,
+            11.6
+          ],
+          "size_m": [
+            2.5,
+            0.7
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "天鵝絨扶手椅",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            6.72,
+            8.02,
+            7.47,
+            8.78
+          ],
+          "size_m": [
+            0.75,
+            0.76
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "天鵝絨扶手椅",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            6.72,
+            9.52,
+            7.47,
+            10.28
+          ],
+          "size_m": [
+            0.75,
+            0.76
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "洞石小圓几",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            6.8,
+            8.85,
+            7.4,
+            9.45
+          ],
+          "size_m": [
+            0.6,
             0.6
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／創作角",
+          "name": "幾何圓毯",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
           "footprint": [
-            7.3,
-            8.15,
-            7.95,
-            8.83
+            6.6,
+            8.25,
+            8.4,
+            10.05
           ],
           "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "餐桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.0,
-            8.05,
-            13.5,
-            8.950000000000001
-          ],
-          "size_m": [
-            1.5,
-            0.9
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.15,
-            7.25,
-            12.8,
-            7.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.15,
-            9.1,
-            12.8,
-            9.78
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            7.25,
-            13.65,
-            7.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            9.1,
-            13.65,
-            9.78
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "廚房檯面（L形）",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.23,
-            4.68
-          ],
-          "size_m": [
-            2.18,
-            4.5
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "吊櫃",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.05,
-            0.5
-          ],
-          "size_m": [
-            2.0,
-            0.32
+            1.8,
+            1.8
           ],
           "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大型盆栽（琴葉榕）",
+          "floor": 1,
+          "room": "Lobby 大廳（東側）",
+          "footprint": [
+            11.68,
+            9.08,
+            12.12,
+            9.52
+          ],
+          "size_m": [
+            0.44,
+            0.44
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "幾何圓毯",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            7.85,
+            6.45,
+            10.95,
+            9.55
+          ],
+          "size_m": [
+            3.1,
+            3.1
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "鈷藍弧形天鵝絨沙發",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            7.624,
+            6.102,
+            11.176,
+            7.65
+          ],
+          "size_m": [
+            3.551,
+            1.548
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "洞石圓几",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            8.9,
+            7.5,
+            9.9,
+            8.5
+          ],
+          "size_m": [
+            1.0,
+            1.0
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "莓紅殼形單椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            8.1,
+            9.15,
+            8.9,
+            9.95
+          ],
+          "size_m": [
+            0.8,
+            0.8
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            10.15,
+            9.45,
+            10.65,
+            9.95
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "復古胡桃木餐邊櫃",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            6.62,
+            7.2,
+            7.07,
+            9.2
+          ],
+          "size_m": [
+            0.45,
+            2.0
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "黃銅酒車",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            7.05,
+            9.45,
+            7.65,
+            9.83
+          ],
+          "size_m": [
+            0.6,
+            0.38
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "大理石台座＋抽象雕塑",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            11.4,
+            6.25,
+            11.8,
+            6.65
+          ],
+          "size_m": [
+            0.4,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "大理石圓餐桌",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.4,
+            8.1,
+            13.6,
+            9.3
+          ],
+          "size_m": [
+            1.2,
+            1.2
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.75,
+            7.55,
+            13.25,
+            8.05
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "天鵝絨餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.76,
+            9.35,
+            13.24,
+            9.85
+          ],
+          "size_m": [
+            0.48,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "鈷藍漆餐椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            11.85,
+            8.47,
+            12.31,
+            8.93
+          ],
+          "size_m": [
+            0.46,
+            0.46
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木溫莎椅",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            13.65,
+            8.45,
+            14.15,
+            8.95
+          ],
+          "size_m": [
+            0.5,
+            0.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "後側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            12.03,
+            0.1,
+            14.26,
+            0.7
+          ],
+          "size_m": [
+            2.23,
+            0.6
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "東側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            13.66,
+            0.7,
+            14.26,
+            3.05
+          ],
+          "size_m": [
+            0.6,
+            2.35
+          ],
+          "major": true,
           "approximate": true
         },
         {
@@ -3460,31 +3435,31 @@
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.32,
-            0.3,
-            12.84,
-            0.6599999999999999
+            12.62,
+            0.22,
+            13.08,
+            0.58
           ],
           "size_m": [
-            0.52,
+            0.46,
             0.36
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "爐具（四口爐）",
+          "name": "爐具",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            13.68,
-            0.9,
-            14.23,
-            1.65
+            13.7,
+            1.0,
+            14.22,
+            1.56
           ],
           "size_m": [
-            0.55,
-            0.75
+            0.52,
+            0.56
           ],
           "major": false,
           "approximate": true
@@ -3495,26 +3470,26 @@
           "room": "廚房",
           "footprint": [
             13.66,
-            0.66,
-            14.21,
-            1.21
+            0.96,
+            14.26,
+            1.6
           ],
           "size_m": [
-            0.55,
-            0.55
+            0.6,
+            0.64
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "冰箱",
+          "name": "冰箱（約 500 L）",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.05,
-            1.08,
-            12.770000000000001,
-            1.78
+            11.99,
+            1.0,
+            12.71,
+            1.7
           ],
           "size_m": [
             0.72,
@@ -3524,408 +3499,492 @@
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "軟包高床頭床組",
           "floor": 2,
           "room": "臥室一",
           "footprint": [
-            1,
-            3.65,
-            2.6,
-            5.65
+            1.17,
+            3.82,
+            2.83,
+            5.82
           ],
           "size_m": [
-            1.6,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "+y",
-          "headboard_y": 5.5600000000000005,
-          "head_direction": "+plan_y (toward 廁所 B)",
-          "head_target": "廁所 B 隔牆 y≈5.9"
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室一",
-          "footprint": [
-            2.72,
-            5.130000000000001,
-            3.1,
-            5.530000000000001
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.9,
-            2,
-            0.98
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.6,
-            2.5,
-            10.6
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 8.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            2.62,
-            8.719999999999999,
-            3.0,
-            9.12
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.48,
-            2,
-            8.56
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            1.2,
-            12.6,
-            3.0,
-            14.6
-          ],
-          "size_m": [
-            1.8,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 12.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            3.12,
-            12.719999999999999,
-            3.5,
-            13.12
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            1.2,
-            12.48,
-            2.2,
-            12.56
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "地毯",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.1,
-            6.6499999999999995,
-            11.6,
-            8.649999999999999
-          ],
-          "size_m": [
-            3.5,
+            1.66,
             2.0
           ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "三人沙發",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.35,
-            10.299999999999999,
-            7.199999999999999
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "茶几",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.649999999999999,
-            7.6499999999999995,
-            9.599999999999998,
-            8.25
-          ],
-          "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.399999999999999,
-            6.109999999999999,
-            9.999999999999998,
-            6.1899999999999995
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.569999999999999,
-            10.299999999999999,
-            6.7299999999999995
-          ],
-          "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            10.549999999999999,
-            6.499999999999999,
-            10.95,
-            6.8999999999999995
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            1.75,
-            2.5,
-            3.75
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
           "major": true,
           "approximate": true,
+          "category": "bed",
           "head_side": "+y",
-          "headboard_y": 3.66,
-          "head_direction": "+plan_y (toward 臥室二)",
-          "head_target": "臥室二 側，床頭近 y≈3.88"
+          "mattress_cm": [
+            152,
+            188
+          ]
         },
         {
-          "name": "床邊桌",
-          "floor": 3,
+          "name": "床尾凳",
+          "floor": 2,
           "room": "臥室一",
           "footprint": [
-            2.62,
-            3.23,
-            3.0,
-            3.63
+            1.34,
+            3.35,
+            2.66,
+            3.77
           ],
           "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.8,
-            2,
-            0.88
-          ],
-          "size_m": [
-            1,
-            0.08
+            1.32,
+            0.42
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "床組",
-          "floor": 3,
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 2,
+          "room": "臥室一",
+          "footprint": [
+            2.87,
+            5.34,
+            3.33,
+            5.74
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 2,
+          "room": "臥室一",
+          "footprint": [
+            0.67,
+            5.34,
+            1.13,
+            5.74
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "軟包高床頭床組",
+          "floor": 2,
           "room": "臥室二",
           "footprint": [
-            1,
+            1.47,
             8.3,
-            2.5,
+            3.13,
             10.3
           ],
           "size_m": [
-            1.5,
-            2
+            1.66,
+            2.0
           ],
           "major": true,
           "approximate": true,
+          "category": "bed",
           "head_side": "-y",
-          "headboard_y": 8.3
+          "mattress_cm": [
+            152,
+            188
+          ]
         },
         {
-          "name": "床邊桌",
-          "floor": 3,
+          "name": "床尾凳",
+          "floor": 2,
           "room": "臥室二",
           "footprint": [
-            2.62,
-            8.42,
-            3.0,
-            8.82
+            1.64,
+            10.35,
+            2.96,
+            10.77
           ],
           "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.18,
-            2,
-            8.26
-          ],
-          "size_m": [
-            1,
-            0.08
+            1.32,
+            0.42
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "神桌／供奉檯",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 2,
+          "room": "臥室二",
           "footprint": [
-            0.6,
-            14.15,
-            3.5,
-            14.85
+            0.97,
+            8.38,
+            1.43,
+            8.78
           ],
           "size_m": [
-            2.9,
-            0.7
+            0.46,
+            0.4
           ],
-          "major": true,
+          "major": false,
           "approximate": true
         },
         {
-          "name": "佛龕（無造像）",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 2,
+          "room": "臥室二",
           "footprint": [
-            1.05,
-            14.4,
-            3.05,
+            3.17,
+            8.38,
+            3.63,
+            8.78
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "軟包高床頭床組",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            1.98,
+            12.28,
+            3.94,
+            14.28
+          ],
+          "size_m": [
+            1.96,
+            2.0
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-y",
+          "mattress_cm": [
+            182,
+            188
+          ]
+        },
+        {
+          "name": "床尾凳",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            2.15,
+            14.33,
+            3.77,
             14.75
           ],
           "size_m": [
-            2.0,
-            0.35
+            1.62,
+            0.42
           ],
           "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            1.48,
+            12.36,
+            1.94,
+            12.76
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            3.98,
+            12.36,
+            4.44,
+            12.76
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "軟包高床頭床組",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            1.405,
+            1.9,
+            2.595,
+            3.9
+          ],
+          "size_m": [
+            1.19,
+            2.0
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            105,
+            188
+          ]
+        },
+        {
+          "name": "床尾凳",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            1.575,
+            1.43,
+            2.425,
+            1.85
+          ],
+          "size_m": [
+            0.85,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            2.635,
+            3.42,
+            3.095,
+            3.82
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            0.905,
+            3.42,
+            1.365,
+            3.82
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "軟包高床頭床組",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            1.47,
+            8.05,
+            3.13,
+            10.05
+          ],
+          "size_m": [
+            1.66,
+            2.0
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "床尾凳",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            1.64,
+            10.1,
+            2.96,
+            10.52
+          ],
+          "size_m": [
+            1.32,
+            0.42
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            0.97,
+            8.13,
+            1.43,
+            8.53
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木床邊櫃＋檯燈",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            3.17,
+            8.13,
+            3.63,
+            8.53
+          ],
+          "size_m": [
+            0.46,
+            0.4
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "幾何圓毯",
+          "floor": 3,
+          "room": "起居室：私人書房",
+          "footprint": [
+            7.2,
+            6.5,
+            9.4,
+            8.7
+          ],
+          "size_m": [
+            2.2,
+            2.2
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "祖母綠捲手沙發",
+          "floor": 3,
+          "room": "起居室：私人書房",
+          "footprint": [
+            7.2,
+            6.05,
+            9.2,
+            6.95
+          ],
+          "size_m": [
+            2.0,
+            0.9
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "洞石茶几",
+          "floor": 3,
+          "room": "起居室：私人書房",
+          "footprint": [
+            7.92,
+            7.12,
+            8.68,
+            7.88
+          ],
+          "size_m": [
+            0.76,
+            0.76
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "芥末黃高背單椅",
+          "floor": 3,
+          "room": "起居室：私人書房",
+          "footprint": [
+            9.5,
+            7.2,
+            10.3,
+            8.0
+          ],
+          "size_m": [
+            0.8,
+            0.8
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "胡桃木書牆",
+          "floor": 3,
+          "room": "起居室：私人書房",
+          "footprint": [
+            11.95,
+            6.2,
+            12.31,
+            9.4
+          ],
+          "size_m": [
+            0.36,
+            3.2
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "大理石玄關桌",
+          "floor": 3,
+          "room": "起居室走廊",
+          "footprint": [
+            0.15,
+            4.6,
+            0.53,
+            6.0
+          ],
+          "size_m": [
+            0.38,
+            1.4
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "朱漆神桌＋佛龕（無造像）",
+          "floor": 3,
+          "room": "佛廳／祭祀空間",
+          "footprint": [
+            0.15,
+            12.35,
+            0.85,
+            14.55
+          ],
+          "size_m": [
+            0.7,
+            2.2
+          ],
+          "major": true,
           "approximate": true
         },
         {
@@ -3933,146 +3992,112 @@
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.2,
-            13.15,
-            2.9,
-            13.75
+            1.05,
+            12.95,
+            1.6,
+            13.95
           ],
           "size_m": [
-            1.7,
-            0.6
+            0.55,
+            1.0
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "香爐",
+          "name": "黃銅香爐＋燭台",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.85,
-            13.3,
-            2.15,
-            13.600000000000001
+            1.2,
+            13.0,
+            1.44,
+            14.0
           ],
           "size_m": [
-            0.3,
-            0.3
+            0.24,
+            1.0
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "供品（水果／花）",
+          "name": "天鵝絨拜墊",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.3,
-            13.2,
-            2.8,
-            13.7
+            2.0,
+            13.0,
+            2.55,
+            13.5
           ],
           "size_m": [
-            1.5,
+            0.55,
             0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "拜墊",
+          "name": "天鵝絨拜墊",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.05,
-            12.25,
-            1.65,
-            12.8
+            2.0,
+            13.75,
+            2.55,
+            14.25
           ],
           "size_m": [
-            0.6,
-            0.55
+            0.55,
+            0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "拜墊",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            2.2,
-            12.25,
-            2.8000000000000003,
-            12.8
-          ],
-          "size_m": [
-            0.6,
-            0.55
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "層架",
+          "name": "收納層架",
           "floor": 4,
           "room": "儲藏間",
           "footprint": [
             10.58,
             0.2,
-            11.0,
-            4.2
+            11.015,
+            4.185
           ],
           "size_m": [
-            0.42,
-            4.0
+            0.435,
+            3.985
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "層架",
+          "name": "收納層架",
           "floor": 4,
           "room": "儲藏間",
           "footprint": [
-            11.88,
+            11.86,
             0.2,
-            12.3,
-            4.2
+            12.295,
+            4.185
           ],
           "size_m": [
-            0.42,
-            4.0
+            0.435,
+            3.985
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "收納紙箱",
-          "floor": 4,
-          "room": "儲藏間",
-          "footprint": [
-            10.58,
-            0.2,
-            12.3,
-            4.2
-          ],
-          "size_m": [
-            1.72,
-            4.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "露台圓桌",
+          "name": "馬賽克小圓桌",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.8,
-            7.5,
-            2.7,
-            8.4
+            2.55,
+            8.15,
+            3.45,
+            9.05
           ],
           "size_m": [
             0.9,
@@ -4082,69 +4107,137 @@
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "鑄鐵椅",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.9,
-            6.5,
-            2.55,
-            7.18
+            3.34,
+            8.38,
+            3.8,
+            8.82
           ],
           "size_m": [
-            0.65,
-            0.68
+            0.46,
+            0.44
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "鑄鐵椅",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.9,
-            8.6,
-            2.55,
-            9.28
+            2.406,
+            8.782,
+            3.018,
+            9.402
           ],
           "size_m": [
-            0.65,
-            0.68
+            0.612,
+            0.619
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "盆栽",
+          "name": "鑄鐵椅",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            0.7,
+            2.416,
+            7.795,
+            3.025,
+            8.412
+          ],
+          "size_m": [
+            0.609,
+            0.617
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "條紋遮陽傘",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            3.1,
             6.8,
-            1.1,
-            7.2
+            5.5,
+            9.2
           ],
           "size_m": [
-            0.4,
-            0.4
+            2.4,
+            2.4
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "盆栽",
+          "name": "彩釉花盆＋球形灌木",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            4.3999999999999995,
-            9.3,
-            4.8,
-            9.700000000000001
+            0.73,
+            10.93,
+            1.27,
+            11.47
           ],
           "size_m": [
-            0.4,
-            0.4
+            0.54,
+            0.54
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "彩釉花盆＋球形灌木",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            2.13,
+            10.93,
+            2.67,
+            11.47
+          ],
+          "size_m": [
+            0.54,
+            0.54
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "彩釉花盆＋球形灌木",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            4.13,
+            10.93,
+            4.67,
+            11.47
+          ],
+          "size_m": [
+            0.54,
+            0.54
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "彩釉花盆＋球形灌木",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            5.33,
+            10.93,
+            5.87,
+            11.47
+          ],
+          "size_m": [
+            0.54,
+            0.54
           ],
           "major": false,
           "approximate": true
@@ -4153,672 +4246,377 @@
     },
     "wabisabi": {
       "label": "侘寂",
-      "bytes": 9399716,
-      "sha256": "d3eda6eee8fde422174507b6a0b92b9557f192d95bf1892c513fc4eea3c32c2d",
-      "furnitureCount": 48,
-      "itemCount": 77,
+      "design": {
+        "concept": "留白與不完美：寬版橡木、珪藻土、和紙與石材，低矮家具與少量器物",
+        "floor": "寬版橡木實木地板（18 cm 寬）",
+        "walls": "暖灰珪藻土",
+        "ceiling": "客廳木格柵天花＋一道原木梁",
+        "lighting": "和紙球燈、和紙落地燈（間接低照度）",
+        "windows": "障子紙門（窗）＋亞麻紗簾（落地門）",
+        "signature": "低平台亞麻沙發、不規則原木茶几、床之間（壁龕）、榻榻米平台床、低書法桌與座布團、枯山水碎石庭"
+      },
+      "bytes": 10062568,
+      "sha256": "3c632bcc87bdd1299f6a584bb41b35d639debf7dfc2172598771e2a234e32493",
+      "addedTriangles": 76552,
+      "removedBaseGeometry": [],
+      "furnitureCount": 29,
+      "itemCount": 47,
       "items": [
         {
-          "name": "展示台座",
+          "name": "原木長凳",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：書法與水墨",
           "footprint": [
-            0.45,
-            1.35,
-            1.0,
-            1.9000000000000001
+            2.6,
+            7.55,
+            5.0,
+            7.97
           ],
           "size_m": [
-            0.55,
-            0.55
+            2.4,
+            0.42
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "展示台座",
+          "name": "石台座＋陶器",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：書法與水墨",
           "footprint": [
-            0.45,
-            3.55,
-            1.0,
-            4.1
+            4.6,
+            3.8,
+            5.05,
+            4.25
           ],
           "size_m": [
-            0.55,
-            0.55
+            0.45,
+            0.45
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "石台座＋陶器",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：書法與水墨",
+          "footprint": [
+            4.6,
+            5.4,
+            5.05,
+            5.85
+          ],
+          "size_m": [
+            0.45,
+            0.45
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "碎石展示床",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：書法與水墨",
+          "footprint": [
+            1.6,
+            15.35,
+            5.2,
+            16.3
+          ],
+          "size_m": [
+            3.6,
+            0.95
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "展示台座",
+          "name": "書法矮桌",
           "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.45,
-            5.75,
-            1.0,
-            6.3
-          ],
-          "size_m": [
-            0.55,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            0.2,
-            1.9500000000000002,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            2.3,
-            0.2,
-            3.9,
-            0.28
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.35,
-            15.9,
-            1.9500000000000002,
-            15.98
-          ],
-          "size_m": [
-            1.6,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
+          "room": "展覽空間／教室（西側）：書法與水墨",
           "footprint": [
             0.6,
-            0.45,
-            3.0,
-            0.61
-          ],
-          "size_m": [
+            9.6,
             2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.2,
-            0.45,
-            5.6,
-            0.61
+            10.2
           ],
           "size_m": [
-            2.4,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.4,
-            9.4,
-            1.9,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            8.65,
-            1.4700000000000002,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            10.18,
-            1.4700000000000002,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            9.4,
-            4.949999999999999,
-            10.1
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            8.65,
-            4.52,
-            9.33
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            10.18,
-            4.52,
-            10.86
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.4,
-            12.0,
-            1.9,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            11.25,
-            1.4700000000000002,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            0.8200000000000001,
-            12.78,
-            1.4700000000000002,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "教學桌",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.4499999999999997,
-            12.0,
-            4.949999999999999,
-            12.7
-          ],
-          "size_m": [
-            1.5,
-            0.7
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            11.25,
-            4.52,
-            11.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            3.8699999999999997,
-            12.78,
-            4.52,
-            13.459999999999999
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "盆栽",
-          "floor": 1,
-          "room": "展覽空間／教室（西側）",
-          "footprint": [
-            5.5,
-            15.200000000000001,
-            5.9,
-            15.600000000000001
-          ],
-          "size_m": [
-            0.4,
-            0.4
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "接待櫃台",
-          "floor": 1,
-          "room": "Lobby 大廳（東側）",
-          "footprint": [
-            8.3,
-            11.2,
-            10.9,
-            11.799999999999999
-          ],
-          "size_m": [
-            2.6,
+            1.8,
             0.6
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "櫃台高椅",
+          "name": "書法矮桌",
           "floor": 1,
-          "room": "Lobby 大廳（東側）",
+          "room": "展覽空間／教室（西側）：書法與水墨",
           "footprint": [
-            9.41,
-            10.66,
-            9.790000000000001,
-            11.040000000000001
+            3.3,
+            9.6,
+            5.1,
+            10.2
           ],
           "size_m": [
-            0.38,
-            0.38
+            1.8,
+            0.6
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "書法矮桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：書法與水墨",
+          "footprint": [
+            0.6,
+            11.8,
+            2.4,
+            12.4
+          ],
+          "size_m": [
+            1.8,
+            0.6
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "書法矮桌",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：書法與水墨",
+          "footprint": [
+            3.3,
+            11.8,
+            5.1,
+            12.4
+          ],
+          "size_m": [
+            1.8,
+            0.6
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "和紙落地燈",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：書法與水墨",
+          "footprint": [
+            0.36,
+            15.76,
+            0.64,
+            16.04
+          ],
+          "size_m": [
+            0.28,
+            0.28
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "低座沙發",
+          "name": "和紙落地燈",
+          "floor": 1,
+          "room": "展覽空間／教室（西側）：書法與水墨",
+          "footprint": [
+            5.76,
+            8.46,
+            6.04,
+            8.74
+          ],
+          "size_m": [
+            0.28,
+            0.28
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "珪藻土接待台",
           "floor": 1,
           "room": "Lobby 大廳（東側）",
           "footprint": [
-            7.0,
-            8.0,
-            9.0,
-            8.82
+            8.25,
+            10.9,
+            10.75,
+            11.6
           ],
           "size_m": [
-            2.0,
-            0.82
+            2.5,
+            0.7
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "候客茶几",
+          "name": "石材長凳",
           "floor": 1,
           "room": "Lobby 大廳（東側）",
           "footprint": [
-            7.55,
-            8.95,
-            8.35,
-            9.5
-          ],
-          "size_m": [
-            0.8,
-            0.55
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "地毯",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.5,
             6.7,
-            12.0,
-            8.7
+            8.4,
+            7.2,
+            10.4
           ],
           "size_m": [
-            3.5,
+            0.5,
             2.0
           ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "低座沙發",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.6,
-            6.4,
-            10.7,
-            7.25
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "茶几",
+          "name": "沙色手織地毯",
           "floor": 2,
           "room": "客廳兼餐廳",
           "footprint": [
-            9.049999999999999,
-            7.7,
-            9.999999999999998,
-            8.3
+            8.1,
+            7.15,
+            10.8,
+            9.35
           ],
           "size_m": [
-            0.95,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "客廳兼餐廳",
-          "footprint": [
-            8.799999999999999,
-            6.16,
-            9.85,
-            6.24
-          ],
-          "size_m": [
-            1.05,
-            0.08
+            2.7,
+            2.2
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "展示軌道燈",
+          "name": "低平台亞麻沙發",
           "floor": 2,
           "room": "客廳兼餐廳",
           "footprint": [
-            8.6,
-            6.62,
-            10.7,
-            6.78
+            8.25,
+            6.1,
+            10.55,
+            7.0
           ],
           "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "創作／書寫桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／創作角",
-          "footprint": [
-            6.95,
-            7.4,
-            8.3,
-            8.0
-          ],
-          "size_m": [
-            1.35,
-            0.6
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／創作角",
-          "footprint": [
-            7.3,
-            8.15,
-            7.95,
-            8.83
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "餐桌",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            12.0,
-            8.05,
-            13.5,
-            8.950000000000001
-          ],
-          "size_m": [
-            1.5,
+            2.3,
             0.9
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "不規則原木茶几",
           "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
+          "room": "客廳兼餐廳",
           "footprint": [
-            12.15,
-            7.25,
-            12.8,
-            7.93
+            8.72,
+            7.6,
+            10.05,
+            8.36
           ],
           "size_m": [
-            0.65,
-            0.68
+            1.33,
+            0.76
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "和紙落地燈",
           "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
+          "room": "客廳兼餐廳",
           "footprint": [
-            12.15,
-            9.1,
-            12.8,
-            9.78
+            7.51,
+            6.26,
+            7.79,
+            6.54
           ],
           "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            7.25,
-            13.65,
-            7.93
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 2,
-          "room": "客廳兼餐廳／用餐區",
-          "footprint": [
-            13.0,
-            9.1,
-            13.65,
-            9.78
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "廚房檯面（L形）",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.23,
-            4.68
-          ],
-          "size_m": [
-            2.18,
-            4.5
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "吊櫃",
-          "floor": 2,
-          "room": "廚房",
-          "footprint": [
-            12.05,
-            0.18,
-            14.05,
-            0.5
-          ],
-          "size_m": [
-            2.0,
-            0.32
+            0.28,
+            0.28
           ],
           "major": false,
+          "approximate": true
+        },
+        {
+          "name": "床之間（壁龕平台）",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            6.62,
+            7.55,
+            7.12,
+            9.05
+          ],
+          "size_m": [
+            0.5,
+            1.5
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "橡木餐桌",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.1,
+            8.2,
+            13.9,
+            9.05
+          ],
+          "size_m": [
+            1.8,
+            0.85
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "橡木長凳",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.3,
+            7.6,
+            13.7,
+            7.94
+          ],
+          "size_m": [
+            1.4,
+            0.34
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "橡木長凳",
+          "floor": 2,
+          "room": "客廳兼餐廳",
+          "footprint": [
+            12.3,
+            9.25,
+            13.7,
+            9.59
+          ],
+          "size_m": [
+            1.4,
+            0.34
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "東側廚櫃",
+          "floor": 2,
+          "room": "廚房",
+          "footprint": [
+            13.66,
+            0.1,
+            14.26,
+            3.05
+          ],
+          "size_m": [
+            0.6,
+            2.95
+          ],
+          "major": true,
           "approximate": true
         },
         {
@@ -4826,31 +4624,31 @@
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.32,
-            0.3,
-            12.84,
-            0.6599999999999999
+            13.78,
+            2.22,
+            14.14,
+            2.72
           ],
           "size_m": [
-            0.52,
-            0.36
+            0.36,
+            0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "爐具（四口爐）",
+          "name": "爐具",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            13.68,
-            0.9,
-            14.23,
-            1.65
+            13.7,
+            0.45,
+            14.22,
+            1.01
           ],
           "size_m": [
-            0.55,
-            0.75
+            0.52,
+            0.56
           ],
           "major": false,
           "approximate": true
@@ -4861,420 +4659,283 @@
           "room": "廚房",
           "footprint": [
             13.66,
-            0.66,
-            14.21,
-            1.21
+            0.41,
+            14.26,
+            1.05
           ],
           "size_m": [
-            0.55,
-            0.55
+            0.6,
+            0.64
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "冰箱",
+          "name": "高櫃（內嵌冰箱）",
           "floor": 2,
           "room": "廚房",
           "footprint": [
-            12.05,
-            1.08,
-            12.770000000000001,
-            1.78
+            11.99,
+            0.18,
+            12.61,
+            2.98
           ],
           "size_m": [
-            0.72,
-            0.7
+            0.62,
+            2.8
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "床組",
+          "name": "榻榻米平台床＋床墊",
           "floor": 2,
           "room": "臥室一",
           "footprint": [
-            1,
-            3.65,
-            2.6,
-            5.65
+            0.69,
+            3.64,
+            2.51,
+            5.82
           ],
           "size_m": [
-            1.6,
-            2
+            1.82,
+            2.18
           ],
           "major": true,
           "approximate": true,
+          "category": "bed",
           "head_side": "+y",
-          "headboard_y": 5.5600000000000005,
-          "head_direction": "+plan_y (toward 廁所 B)",
-          "head_target": "廁所 B 隔牆 y≈5.9"
+          "mattress_cm": [
+            152,
+            188
+          ]
         },
         {
-          "name": "床邊桌",
+          "name": "和紙落地燈",
           "floor": 2,
           "room": "臥室一",
           "footprint": [
-            2.72,
-            5.130000000000001,
-            3.1,
-            5.530000000000001
+            2.67,
+            5.38,
+            2.95,
+            5.66
           ],
           "size_m": [
-            0.38,
-            0.4
+            0.28,
+            0.28
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "榻榻米平台床＋床墊",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            0.15,
+            9.09,
+            2.33,
+            10.91
+          ],
+          "size_m": [
+            2.18,
+            1.82
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-x",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "和紙落地燈",
+          "floor": 2,
+          "room": "臥室二",
+          "footprint": [
+            0.31,
+            11.07,
+            0.59,
+            11.35
+          ],
+          "size_m": [
+            0.28,
+            0.28
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "榻榻米平台床＋床墊",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            0.15,
+            14.26,
+            2.27,
+            16.44
+          ],
+          "size_m": [
+            2.12,
+            2.18
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            182,
+            188
+          ]
+        },
+        {
+          "name": "和紙落地燈",
+          "floor": 2,
+          "room": "臥室三",
+          "footprint": [
+            2.43,
+            16.0,
+            2.71,
+            16.28
+          ],
+          "size_m": [
+            0.28,
+            0.28
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "榻榻米平台床＋床墊",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            0.69,
+            1.72,
+            2.51,
+            3.9
+          ],
+          "size_m": [
+            1.82,
+            2.18
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "+y",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "和紙落地燈",
+          "floor": 3,
+          "room": "臥室一",
+          "footprint": [
+            2.67,
+            3.46,
+            2.95,
+            3.74
+          ],
+          "size_m": [
+            0.28,
+            0.28
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "榻榻米平台床＋床墊",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            0.15,
+            9.09,
+            2.33,
+            10.91
+          ],
+          "size_m": [
+            2.18,
+            1.82
+          ],
+          "major": true,
+          "approximate": true,
+          "category": "bed",
+          "head_side": "-x",
+          "mattress_cm": [
+            152,
+            188
+          ]
+        },
+        {
+          "name": "和紙落地燈",
+          "floor": 3,
+          "room": "臥室二",
+          "footprint": [
+            0.31,
+            11.07,
+            0.59,
+            11.35
+          ],
+          "size_m": [
+            0.28,
+            0.28
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "榻榻米平台",
+          "floor": 3,
+          "room": "起居室：榻榻米茶室",
+          "footprint": [
+            7.0,
+            6.1,
+            9.7,
+            8.3
+          ],
+          "size_m": [
+            2.7,
+            2.2
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室一",
+          "name": "茶几（矮桌）",
+          "floor": 3,
+          "room": "起居室：榻榻米茶室",
           "footprint": [
-            1,
+            7.95,
+            6.95,
+            8.85,
+            7.55
+          ],
+          "size_m": [
             0.9,
-            2,
-            0.98
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.6,
-            2.5,
-            10.6
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 8.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            2.62,
-            8.719999999999999,
-            3.0,
-            9.12
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.48,
-            2,
-            8.56
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            1.2,
-            12.6,
-            3.0,
-            14.6
-          ],
-          "size_m": [
-            1.8,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 12.6
-        },
-        {
-          "name": "床邊桌",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            3.12,
-            12.719999999999999,
-            3.5,
-            13.12
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 2,
-          "room": "臥室三",
-          "footprint": [
-            1.2,
-            12.48,
-            2.2,
-            12.56
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "地毯",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.1,
-            6.6499999999999995,
-            11.6,
-            8.649999999999999
-          ],
-          "size_m": [
-            3.5,
-            2.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "低座沙發",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.35,
-            10.299999999999999,
-            7.199999999999999
-          ],
-          "size_m": [
-            2.1,
-            0.85
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "茶几",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.649999999999999,
-            7.6499999999999995,
-            9.599999999999998,
-            8.25
-          ],
-          "size_m": [
-            0.95,
             0.6
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.399999999999999,
-            6.109999999999999,
-            9.45,
-            6.1899999999999995
-          ],
-          "size_m": [
-            1.05,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "展示軌道燈",
-          "floor": 3,
-          "room": "起居室",
-          "footprint": [
-            8.2,
-            6.569999999999999,
-            10.299999999999999,
-            6.7299999999999995
-          ],
-          "size_m": [
-            2.1,
-            0.16
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            1.75,
-            2.5,
-            3.75
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "+y",
-          "headboard_y": 3.66,
-          "head_direction": "+plan_y (toward 臥室二)",
-          "head_target": "臥室二 側，床頭近 y≈3.88"
-        },
-        {
-          "name": "床邊桌",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            2.62,
-            3.23,
-            3.0,
-            3.63
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室一",
-          "footprint": [
-            1,
-            0.8,
-            2,
-            0.88
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "床組",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.3,
-            2.5,
-            10.3
-          ],
-          "size_m": [
-            1.5,
-            2
-          ],
-          "major": true,
-          "approximate": true,
-          "head_side": "-y",
-          "headboard_y": 8.3
-        },
-        {
-          "name": "床邊桌",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            2.62,
-            8.42,
-            3.0,
-            8.82
-          ],
-          "size_m": [
-            0.38,
-            0.4
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "原創幾何畫作",
-          "floor": 3,
-          "room": "臥室二",
-          "footprint": [
-            1,
-            8.18,
-            2,
-            8.26
-          ],
-          "size_m": [
-            1,
-            0.08
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "神桌／供奉檯",
+          "name": "原木神桌＋佛龕（無造像）",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            0.6,
-            14.15,
-            3.5,
-            14.85
+            0.15,
+            12.35,
+            0.85,
+            14.55
           ],
           "size_m": [
-            2.9,
-            0.7
+            0.7,
+            2.2
           ],
           "major": true,
-          "approximate": true
-        },
-        {
-          "name": "佛龕（無造像）",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            1.05,
-            14.4,
-            3.05,
-            14.75
-          ],
-          "size_m": [
-            2.0,
-            0.35
-          ],
-          "major": false,
           "approximate": true
         },
         {
@@ -5282,203 +4943,152 @@
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.2,
-            13.15,
-            2.9,
-            13.75
+            1.05,
+            12.95,
+            1.6,
+            13.95
           ],
           "size_m": [
-            1.7,
-            0.6
+            0.55,
+            1.0
           ],
           "major": true,
           "approximate": true
         },
         {
-          "name": "香爐",
+          "name": "石香爐",
           "floor": 3,
           "room": "佛廳／祭祀空間",
           "footprint": [
-            1.85,
-            13.3,
-            2.15,
-            13.600000000000001
+            1.2,
+            13.33,
+            1.44,
+            13.57
           ],
           "size_m": [
-            0.3,
-            0.3
+            0.24,
+            0.24
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "供品（水果／花）",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
+          "name": "收納層架",
+          "floor": 4,
+          "room": "儲藏間",
           "footprint": [
-            1.3,
-            13.2,
-            2.8,
-            13.7
+            10.58,
+            0.2,
+            11.015,
+            4.185
           ],
           "size_m": [
-            1.5,
+            0.435,
+            3.985
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "收納層架",
+          "floor": 4,
+          "room": "儲藏間",
+          "footprint": [
+            11.86,
+            0.2,
+            12.295,
+            4.185
+          ],
+          "size_m": [
+            0.435,
+            3.985
+          ],
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "碎石庭",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            1.0,
+            8.6,
+            5.2,
+            11.3
+          ],
+          "size_m": [
+            4.2,
+            2.7
+          ],
+          "major": false,
+          "approximate": true
+        },
+        {
+          "name": "石燈籠",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            4.35,
+            10.5,
+            4.85,
+            11.0
+          ],
+          "size_m": [
+            0.5,
             0.5
           ],
           "major": false,
           "approximate": true
         },
         {
-          "name": "拜墊",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            1.05,
-            12.25,
-            1.65,
-            12.8
-          ],
-          "size_m": [
-            0.6,
-            0.55
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "拜墊",
-          "floor": 3,
-          "room": "佛廳／祭祀空間",
-          "footprint": [
-            2.2,
-            12.25,
-            2.8000000000000003,
-            12.8
-          ],
-          "size_m": [
-            0.6,
-            0.55
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "層架",
-          "floor": 4,
-          "room": "儲藏間",
-          "footprint": [
-            10.58,
-            0.2,
-            11.0,
-            4.2
-          ],
-          "size_m": [
-            0.42,
-            4.0
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "層架",
-          "floor": 4,
-          "room": "儲藏間",
-          "footprint": [
-            11.88,
-            0.2,
-            12.3,
-            4.2
-          ],
-          "size_m": [
-            0.42,
-            4.0
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "收納紙箱",
-          "floor": 4,
-          "room": "儲藏間",
-          "footprint": [
-            10.58,
-            0.2,
-            12.3,
-            4.2
-          ],
-          "size_m": [
-            1.72,
-            4.0
-          ],
-          "major": false,
-          "approximate": true
-        },
-        {
-          "name": "露台圓桌",
+          "name": "楓樹",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.8,
-            7.5,
-            2.7,
-            8.4
+            1.2,
+            9.9,
+            2.5,
+            10.8
           ],
           "size_m": [
-            0.9,
+            1.3,
             0.9
           ],
-          "major": true,
+          "major": false,
           "approximate": true
         },
         {
-          "name": "休閒單椅",
+          "name": "杉木長凳",
           "floor": 4,
           "room": "露台",
           "footprint": [
-            1.9,
-            6.5,
-            2.55,
-            7.18
+            1.2,
+            7.1,
+            3.2,
+            7.5
           ],
           "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "休閒單椅",
-          "floor": 4,
-          "room": "露台",
-          "footprint": [
-            1.9,
-            8.6,
-            2.55,
-            9.28
-          ],
-          "size_m": [
-            0.65,
-            0.68
-          ],
-          "major": true,
-          "approximate": true
-        },
-        {
-          "name": "枯枝陶器",
-          "floor": 4,
-          "room": "露台",
-          "footprint": [
-            0.7,
-            6.8,
-            1.1,
-            7.2
-          ],
-          "size_m": [
-            0.4,
+            2.0,
             0.4
           ],
-          "major": false,
+          "major": true,
+          "approximate": true
+        },
+        {
+          "name": "竹子花槽",
+          "floor": 4,
+          "room": "露台",
+          "footprint": [
+            5.4,
+            6.6,
+            5.85,
+            10.1
+          ],
+          "size_m": [
+            0.45,
+            3.5
+          ],
+          "major": true,
           "approximate": true
         }
       ]

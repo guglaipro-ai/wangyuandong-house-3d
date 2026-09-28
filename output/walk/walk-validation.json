@@ -1,0 +1,95 @@
+{
+  "date": "2026-09-28 UTC+8",
+  "stature_m": 1.7,
+  "eye_m": 1.58,
+  "tests": {
+    "enter": {
+      "active": true,
+      "eye": 1.58,
+      "room": "戶外基地"
+    },
+    "entrySteps": {
+      "feet": 0.550000011920929,
+      "plan": [
+        8.35,
+        12.669269999968995
+      ],
+      "room": "一樓 · 門廊",
+      "pass": true
+    },
+    "wallCollision": {
+      "plan": [
+        10.6,
+        6.212000057220459
+      ],
+      "pass": true
+    },
+    "stairClimb1to2": {
+      "feet": 4.810999870300293,
+      "room": "二樓 · 樓梯間",
+      "pass": true
+    },
+    "ceilingsVisible": {
+      "count": 12,
+      "pass": true
+    },
+    "styles": {
+      "bohemian": {
+        "walkStillActive": true,
+        "collisionTriangles": 213403,
+        "sofaBlocksWalk": {
+          "plan": [
+            9.278527485908622,
+            9.859743942779847
+          ],
+          "pass": true
+        }
+      },
+      "industrial": {
+        "walkStillActive": true,
+        "collisionTriangles": 175123,
+        "sofaBlocksWalk": {
+          "plan": [
+            9.313103606578935,
+            9.801459879808819
+          ],
+          "pass": true
+        }
+      },
+      "eclectic": {
+        "walkStillActive": true,
+        "collisionTriangles": 247150,
+        "sofaBlocksWalk": {
+          "plan": [
+            9.260772467076382,
+            8.720040693195996
+          ],
+          "pass": true
+        }
+      },
+      "wabisabi": {
+        "walkStillActive": true,
+        "collisionTriangles": 160847,
+        "sofaBlocksWalk": {
+          "plan": [
+            9.32152547688566,
+            8.533114271218658
+          ],
+          "pass": true
+        }
+      }
+    },
+    "escapeExits": {
+      "pass": true
+    },
+    "mobileJoystick": {
+      "moved": 4.195042623406342,
+      "turned": 0.32999999999999996,
+      "scrollWidth": 412,
+      "pass": true
+    }
+  },
+  "errors": [],
+  "physicalAndroidTested": false,
+  "passed": true
+}

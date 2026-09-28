@@ -7,7 +7,7 @@ import {saveScreenshot} from './save_screenshot.mjs';
 const require=createRequire(import.meta.url);
 const {chromium}=require('C:/Users/t88510/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const styles=['bohemian','industrial','eclectic','wabisabi'];
-const report={date:'2026-09-10 UTC+8',models:{},views:[],errors:[],physicalAndroidTested:false};
+const report={date:'2026-09-28 UTC+8',models:{},views:[],errors:[],physicalAndroidTested:false};
 for(const file of ['house.glb','surroundings.glb',...styles.map(s=>`styles/${s}.glb`)]){
  const b=fs.readFileSync('output/'+file);const r=await validator.validateBytes(new Uint8Array(b),{maxIssues:10000});
  report.models[file]={bytes:b.length,errors:r.issues.numErrors,warnings:r.issues.numWarnings,messages:r.issues.messages};
@@ -33,7 +33,7 @@ try{
  for(const style of styles){
   await page.locator('#hv-style').selectOption(style);await page.waitForFunction(s=>window.houseViewer?.style===s,style,{timeout:90000});
   await page.getByRole('button',{name:'二樓室內視角',exact:true}).click();await page.waitForTimeout(900);
-  if(!await page.evaluate(()=>!!window.houseViewer.scene.getObjectByName('INTERIOR_CEILING_PREVIEW')))report.errors.push('Missing interior ceiling preview');
+  if(!await page.evaluate(()=>{let c=0;window.houseViewer.gltf.scene.traverse(o=>{if(o.isMesh&&o.userData.kind==='ceiling'&&o.visible)c++});return window.houseViewer.walk.active&&(c>0||window.houseViewer.style==='industrial');}))report.errors.push('Interior walk view without ceilings');
   await saveScreenshot(page,`output/realism/${style}-interior.png`);
   const state=await page.evaluate(()=>{let maps=0,normals=0,shadowed=0;window.houseViewer.gltf.scene.traverse(o=>{if(o.isMesh){if(o.material.map)maps++;if(o.material.normalMap)normals++;if(o.receiveShadow)shadowed++;}});return {style:window.houseViewer.style,maps,normals,shadowed,...window.houseViewer.realism.stats()};});report.views.push(state);
  }
@@ -41,7 +41,7 @@ try{
   await page.getByRole('button',{name:`只看${word}樓`,exact:true}).click();
   const visible=await page.evaluate(()=>['FLOOR_1','FLOOR_2','FLOOR_3','FLOOR_4','ROOF'].filter(n=>window.houseViewer.gltf.scene.getObjectByName(n).visible));
   if(visible.join()!==`FLOOR_${i+1}`)report.errors.push('Floor isolation failed '+word);
-  if(await page.evaluate(()=>!!window.houseViewer.scene.getObjectByName('INTERIOR_CEILING_PREVIEW')))report.errors.push('Interior ceiling did not clear');
+  if(await page.evaluate(()=>{let c=0;window.houseViewer.gltf.scene.traverse(o=>{if(o.isMesh&&o.userData.kind==='ceiling'&&o.visible)c++});return window.houseViewer.walk.active||c>0;}))report.errors.push('Ceilings/walk did not clear in floor view');
  }
  await page.getByRole('button',{name:'顯示全部',exact:true}).click();await page.locator('#hv-grp-ROOF').uncheck();
  report.roofHidden=await page.evaluate(()=>!window.houseViewer.gltf.scene.getObjectByName('ROOF').visible);
@@ -52,11 +52,11 @@ try{
  await page.getByRole('button',{name:'二樓室內視角',exact:true}).click();await page.waitForTimeout(400);await saveScreenshot(page,'output/realism/mobile.png');
  report.mobile=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,quality:window.houseViewer.realism.quality,selectorEnabled:!document.querySelector('#hv-style').disabled,assets:window.houseViewer.realism.assetStatus}));
  const cdp=await page.context().newCDPSession(page);await cdp.send('Emulation.setTouchEmulationEnabled',{enabled:true});
- const touchBefore=await page.evaluate(()=>window.houseViewer.camera.position.toArray());
+ const touchBefore=await page.evaluate(()=>[...window.houseViewer.camera.position.toArray(),...window.houseViewer.camera.quaternion.toArray()]);
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:150,y:230}]});
  await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:220,y:260}]});
  await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForTimeout(200);
- const touchAfter=await page.evaluate(()=>window.houseViewer.camera.position.toArray());report.touchRotation=JSON.stringify(touchBefore)!==JSON.stringify(touchAfter);
+ const touchAfter=await page.evaluate(()=>[...window.houseViewer.camera.position.toArray(),...window.houseViewer.camera.quaternion.toArray()]);report.touchRotation=JSON.stringify(touchBefore)!==JSON.stringify(touchAfter);
  await page.close();
  // Offline single-file deliverable must not depend on external assets.
  const offline=await browser.newPage({viewport:{width:412,height:915}});const external=[];

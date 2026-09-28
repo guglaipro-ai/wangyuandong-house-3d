@@ -15,25 +15,25 @@
         "labels": true,
         "bed_count": 5,
         "two_bed_headboards_positive_plan_y": true,
-        "furniture_count": 48
+        "furniture_count": 32
       },
       "industrial": {
         "labels": true,
         "bed_count": 5,
         "two_bed_headboards_positive_plan_y": true,
-        "furniture_count": 48
+        "furniture_count": 60
       },
       "eclectic": {
         "labels": true,
         "bed_count": 5,
         "two_bed_headboards_positive_plan_y": true,
-        "furniture_count": 48
+        "furniture_count": 47
       },
       "wabisabi": {
         "labels": true,
         "bed_count": 5,
         "two_bed_headboards_positive_plan_y": true,
-        "furniture_count": 48
+        "furniture_count": 29
       }
     }
   },
@@ -77,11 +77,11 @@
   ],
   "basis": "Eleven explicit user changes take precedence over old PDF room names and the former near-door toilet. Context adjustments are approximate, not newly measured positions.",
   "sha256": {
-    "house.glb": "e5d49a11d3df7818f831551ddd0c46b308631f7fbebba1ca27d00a19305325d3",
-    "surroundings.glb": "9a35bb0edd1585ffc9e0e795699ddc47f25ed6c7d83e0ceb5b1ff0ae0b5da585",
-    "styles/bohemian.glb": "e1cf9c9f19e17bc8363e1e4dc5734f011571c621e2a13a20a9e40d669b364b21",
-    "styles/industrial.glb": "64b608656095318c191f90d5ea2b4b157171019d7134927b3b9607153b961942",
-    "styles/eclectic.glb": "f29d9d064007a2818b0f560d55063ed1974f169c461b10c00823f7aa477b1c73",
-    "styles/wabisabi.glb": "d3eda6eee8fde422174507b6a0b92b9557f192d95bf1892c513fc4eea3c32c2d"
+    "house.glb": "9b86ffbc9201c9e47d981923b81b2870041fd4b2d351399bda76881b3b170cf9",
+    "surroundings.glb": "317e0400809232857947006f86c28a51d6b34c51432c3493696c54da663cbee3",
+    "styles/bohemian.glb": "2c860928704b8cc619b62529ad9b5504d64b37cc94f56c39a6f80803f48dd90e",
+    "styles/industrial.glb": "cc0cec4fd806cb5a98a67c43b455bd3ccfbf050d1b4fb385a56fb27e1cfffc7b",
+    "styles/eclectic.glb": "cfc38a253a8bba1b8896469dcf2570d1c6078e9b66694bf9704ac0d6eaa07e66",
+    "styles/wabisabi.glb": "3c632bcc87bdd1299f6a584bb41b35d639debf7dfc2172598771e2a234e32493"
   }
 }

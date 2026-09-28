@@ -60,7 +60,7 @@
   ],
   "assumption": "Three-sided adjacency confirmed by user; roughly 1 m conceptual separation, not surveyed distance. Pole centers lie just outside actual road edge.",
   "sha256": {
-    "house.glb": "e5d49a11d3df7818f831551ddd0c46b308631f7fbebba1ca27d00a19305325d3",
-    "surroundings.glb": "9a35bb0edd1585ffc9e0e795699ddc47f25ed6c7d83e0ceb5b1ff0ae0b5da585"
+    "house.glb": "9b86ffbc9201c9e47d981923b81b2870041fd4b2d351399bda76881b3b170cf9",
+    "surroundings.glb": "317e0400809232857947006f86c28a51d6b34c51432c3493696c54da663cbee3"
   }
 }

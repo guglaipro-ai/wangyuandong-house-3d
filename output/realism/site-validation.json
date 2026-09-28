@@ -85,7 +85,7 @@
   "coordinate_round_trip": true,
   "floors": {
     "1": {
-      "projected_outline_area_m2": 204.15180413044425,
+      "projected_outline_area_m2": 205.4260483788372,
       "outside_clicked_polygon_m2": 0.0,
       "within_clicked_polygon": true
     },
@@ -100,7 +100,7 @@
       "within_clicked_polygon": true
     },
     "4": {
-      "projected_outline_area_m2": 206.38758799925486,
+      "projected_outline_area_m2": 207.97225001979822,
       "outside_clicked_polygon_m2": 0.0,
       "within_clicked_polygon": true
     }

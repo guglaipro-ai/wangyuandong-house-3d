@@ -11,7 +11,9 @@ from shapely.geometry import Polygon, box as rect, LineString
 from shapely.ops import unary_union
 from audit_details import Audit, opening_detail, WALL_ZH
 from audit_fixtures import add_fixtures
+from real_details import add_real_details, split_wall_faces
 audit=Audit(ROOT)
+WALLS=[];ROOMS=[]
 
 OUT=ROOT/'output'; OUT.mkdir(exist_ok=True)
 scene=trimesh.Scene(base_frame='WORLD')
@@ -20,9 +22,15 @@ for name,color in {'wall':[224,223,215,255], 'slab':[197,194,181,255],
  'metal':[48,53,54,255], 'glass':[128,176,186,88], 'door':[159,136,111,255],
  'tile':[210,204,189,255], 'wet':[177,199,195,255], 'terrace':[173,178,170,255],
  'porch':[193,191,180,255], 'white':[240,239,228,255], 'grass':[124,145,112,255],
- 'ground':[225,212,183,255], 'road':[105,113,117,255], 'ceramic':[244,245,242,255]}.items():
+ 'ground':[225,212,183,255], 'road':[105,113,117,255], 'ceramic':[244,245,242,255],
+ # Real-finish materials (PDF p8 註1 二丁掛; p20 W038) and common Taiwan fit-out.
+ 'facade':[246,244,240,255],'paint':[238,235,228,255],'wetwall':[250,250,248,255],'ceiling':[247,246,242,255],
+ 'skirting':[226,221,210,255],'stone':[222,219,212,255],'plate':[243,242,238,255],'stainless':[196,199,201,255],
+ 'pvc':[208,206,198,255],'mirror':[214,222,226,255],'lamp':[255,244,222,255]}.items():
+ metal=name in ('metal','stainless','mirror')
  materials[name]=trimesh.visual.material.PBRMaterial(name=name,baseColorFactor=color,
-  metallicFactor=.35 if name=='metal' else 0,roughnessFactor=.28 if name=='glass' else .78,
+  metallicFactor={'metal':.35,'stainless':.85,'mirror':1.0}.get(name,0),roughnessFactor={'glass':.28,'stainless':.3,'mirror':.04,'plate':.4,'stone':.35}.get(name,.78),
+  emissiveFactor=[1.0,.93,.8] if name=='lamp' else None,
   alphaMode='BLEND' if name=='glass' else 'OPAQUE',doubleSided=name=='glass')
 T=np.array([[1,0,0,-7.18],[0,0,1,0],[0,1,0,-8.3],[0,0,0,1]],float)
 manifest={'source':'王源東住宅新建工程(請照) (1).pdf','units':'metres',
@@ -100,6 +108,7 @@ def wall(f,a,b,opens=(),t=.18,h=None,name='wall'):
   if sill+oh>h+.01:raise ValueError(('height',f,code))
   cuts.append((max(0,lo),min(L,hi),sill,oh,code))
  cuts.sort();cursor=0
+ WALLS.append(dict(floor=f,name=name,a=a.tolist(),b=b.tolist(),t=t,h=h,z=z,cuts=[list(c) for c in cuts]))
  for lo,hi,sill,oh,code in cuts:
   if lo<cursor-.01:raise ValueError(('overlap',f,code))
   piece(cursor,lo,z,h);piece(lo,hi,z,sill);piece(lo,hi,z+sill+oh,h-sill-oh)
@@ -136,7 +145,10 @@ def room(f,key,label,poly,wet=False,raise_by=0):
  if raise_by:audit.begin(f'wet_level_{f}_{key}','標高',f'{f}F {label}地坪',[7],'與一般樓面齊平',f'依平面標高升高{raise_by*100:.0f} cm','明確標高')
  extr(p,BASE[f]+.003,.008+raise_by,key+'_floor',par,'wet' if wet else 'tile','floor_finish')
  if raise_by:audit.end()
- c=p.representative_point();group(f'ROOM_{f}_{key}',par,{'label':label,'floor':f,'kind':'room'},(c.x,c.y,BASE[f]+.05))
+ c=p.representative_point()
+ ring=[[round(x,3),round(y,3)] for x,y in p.exterior.coords[:-1]]
+ ROOMS.append(dict(floor=f,key=key,label=label,polygon=ring,wet=wet,raise_by=raise_by))
+ group(f'ROOM_{f}_{key}',par,{'label':label,'floor':f,'kind':'room','polygon':ring,'wet':wet},(c.x,c.y,BASE[f]+.05))
  manifest['floors'][str(f)]['rooms'].append(label)
 
 # Calibrated outlines: p6 and p7 dimension strings. Positive plan Y points to front.
@@ -262,6 +274,9 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
    if dx:xx=x+dx*j*.24-.24;yy=y;w=.24;d=1.13
    else:xx=x;yy=y+dy*j*.24-(.24 if dy<0 else 0);w=1.13;d=.24
    box(xx,yy,top-rise,w,d,rise,'stair_tread',par,'tile','stair')
+   # Anti-slip nosing strip (止滑條) 4 cm from the leading edge of every tread.
+   if dx:nx=xx+.24-.07 if dx<0 else xx+.03;box(nx,yy+.05,top,.04,d-.10,.004,'stair_nosing',par,'metal','stair')
+   else:ny=yy+.24-.07 if dy<0 else yy+.03;box(xx+.05,ny,top,w-.10,.04,.004,'stair_nosing',par,'metal','stair')
   # flight handrail follows approximate stair profile; posts at tread edges.
   for j in range(0,count,2):
    top=base+(n-count+j+1)*rise
@@ -283,6 +298,7 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
 
 # Visible columns at grid intersections; no hidden reinforcement.
 add_fixtures(globals())
+REAL_DETAILS=add_real_details(globals())
 for f in range(1,5):
  z=BASE[f];par=f'FLOOR_{f}'
  points=[(.12,.65),(6.65,.12),(11.88,.12),(.12,5.90),(6.65,5.90),(12.20,5.90),(.12,12.0),(6.65,12.0),(.12,15.95),(6.65,15.95)]
@@ -295,6 +311,9 @@ def rail_path(points,z,parent,solid=.4,total=1.2):
  for a,b in zip(points,points[1:]):
   if solid:bar(a,b,z,solid,.15,'balcony_upstand',parent,'wall','parapet')
   bar(a,b,z+total-.05,.05,.05,'handrail',parent,'metal','railing')
+  # PDF p8 註2: balusters < 10 cm apart, backed by tempered glass (背襯強化玻璃).
+  d=np.subtract(b,a);n=np.array([-d[1],d[0]])/max(np.linalg.norm(d),1e-9)*.028
+  if total-solid>.2:bar(np.add(a,n),np.add(b,n),z+solid+.02,total-solid-.09,.010,'railing_tempered_glass',parent,'glass','railing')
   L=math.dist(a,b);count=max(1,math.ceil(L/.115))
   for j in range(count):
    k=(j+.5)/count;x=a[0]+(b[0]-a[0])*k;y=a[1]+(b[1]-a[1])*k
@@ -384,11 +403,15 @@ for n in sorted(keep,key=lambda n:n.startswith('ROOM_')):
  clean.graph.update(frame_to=n,frame_from=par,matrix=matrix,metadata=meta)
 scene=clean
 for (par,mat,kind),parts in batches.items():
- m=trimesh.util.concatenate(parts);m.visual=trimesh.visual.TextureVisuals(material=materials[mat])
- scene.add_geometry(m,node_name=f'{par}_{kind}_{mat}',geom_name=f'{par}_{kind}_{mat}',parent_node_name=par,metadata={'kind':kind})
+ m=trimesh.util.concatenate(parts)
+ pieces=split_wall_faces(m,par,kind,ROOMS) if mat=='wall' and kind in ('wall','column','parapet') else {mat:m}
+ for mat2,piece in pieces.items():
+  piece.visual=trimesh.visual.TextureVisuals(material=materials[mat2])
+  scene.add_geometry(piece,node_name=f'{par}_{kind}_{mat2}',geom_name=f'{par}_{kind}_{mat2}',parent_node_name=par,metadata={'kind':kind})
 manifest['nodes']=len(scene.graph.nodes);manifest['meshes']=len(scene.geometry)
 manifest['triangles']=sum(len(m.faces) for m in scene.geometry.values())
 manifest['bounds']=scene.bounds.tolist()
+manifest['walls']=WALLS;manifest['rooms']=ROOMS;manifest['real_details']=REAL_DETAILS
 blob=scene.export(file_type='glb')
 # Supply optional GPU buffer targets so independent validator also has no hints.
 jl=struct.unpack_from('<I',blob,12)[0];tree=json.loads(blob[20:20+jl]);binary=blob[20+jl:]

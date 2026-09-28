@@ -33,24 +33,30 @@ for key,data in manifest['styles'].items():
   assert scene.graph.transforms.edge_data[(par,node)]['metadata']['label']==label,(key,node)
  items=data['items']
  # Reject residential beds in the newly designated exhibition, worship and storage rooms.
- beds=[i for i in items if i['name']=='床組']
+ beds=[i for i in items if i.get('category')=='bed']
  assert len(beds)==5 and all(i['floor'] in (2,3) for i in beds),(key,beds)
  assert not any(i['floor']==3 and i['footprint'][1]>11.75 for i in beds)
- def has(f,name):return any(i['floor']==f and name in i['name'] for i in items)
- assert all(has(f,n) for f,n in [(1,'展示台座'),(1,'教學桌'),(1,'接待櫃台'),(2,'餐桌'),(2,'廚房檯面'),(2,'水槽'),(2,'爐具'),(2,'冰箱'),(3,'神桌'),(3,'香爐'),(4,'層架')]),key
+ # Four schemes name their pieces differently; check each required function by keyword set.
+ def has(f,words):return any(i['floor']==f and any(w in i['name'] for w in words) for i in items)
+ required=[(1,('展示','台座','畫架')),(1,('工作桌','教學','圓桌','書法矮桌')),(1,('接待',)),(2,('餐桌',)),(2,('廚櫃',)),(2,('水槽',)),(2,('爐具',)),(2,('冰箱',)),(3,('神桌',)),(3,('香爐',)),(4,('層架',))]
+ missing=[w for f,w in required if not has(f,w)]
+ assert not missing,(key,missing)
  # Physically rendered furniture exists inside the newly furnished room regions.
  for f,bounds in [(1,(.12,.15,6.4,16.45)),(1,(6.65,7.68,12.32,11.92)),(2,(12.01,.14,14.23,5.77)),(3,(.12,11.88,4.72,14.95)),(4,(10.54,.13,12.3,5.77))]:
   vv=np.concatenate([gg.vertices for n,gg in scene.geometry.items() if n.startswith(f'STYLE_{key}_{f}_furniture_')]);x,y,x2,y2=bounds
   assert np.count_nonzero((vv[:,0]>x-7.18)&(vv[:,0]<x2-7.18)&(vv[:,2]>y-8.3)&(vv[:,2]<y2-8.3))>100,(key,f,bounds)
- for f,head_y in [(2,5.65),(3,3.75)]:
+ for f in (2,3):
   bed=next(i for i in beds if i['floor']==f and i['room']=='臥室一')
   x,y,x2,y2=bed['footprint']
-  # Independent vertex test: tall headboard must be at positive Y end, not foot end.
-  verts=np.concatenate([gg.vertices for n,gg in scene.geometry.items() if n.startswith(f'STYLE_{key}_{f}_')])
-  z0={2:4.8,3:8.4}[f]
-  mask=(verts[:,0]>x-7.18+.01)&(verts[:,0]<x2-7.18-.01)&(verts[:,1]>z0+.72)&(verts[:,1]<z0+.92)&(verts[:,2]>y-8.3-.01)&(verts[:,2]<y2-8.3+.01)
-  tall=verts[mask,2]+8.3
-  assert len(tall)>0 and tall.min()>y2-.15,(key,f,tall.min() if len(tall) else None,bed)
+  assert bed['head_side']=='+y',(key,f,bed)
+  # Independent geometry test: the area of everything between the mattress and
+  # 1.5 m above the duvet (headboard, pillows, posts) must sit in the +Y (head) half.
+  tris=np.concatenate([gg.triangles for n,gg in scene.geometry.items() if n.startswith(f'STYLE_{key}_{f}_')])
+  z0={2:4.8,3:8.4}[f];c=tris.mean(axis=1)
+  area=np.linalg.norm(np.cross(tris[:,1]-tris[:,0],tris[:,2]-tris[:,0]),axis=1)/2
+  m=(c[:,0]>x-7.18+.02)&(c[:,0]<x2-7.18-.02)&(c[:,2]>y-8.3+.02)&(c[:,2]<y2-8.3-.02)&(c[:,1]>z0+.62)&(c[:,1]<z0+1.5)
+  cy=(c[m,2]*area[m]).sum()/area[m].sum()+8.3
+  assert cy>(y+y2)/2,(key,f,cy,bed)
  style_checks[key]={'labels':True,'bed_count':len(beds),'two_bed_headboards_positive_plan_y':True,'furniture_count':data['furnitureCount']}
 checks['styles']=style_checks
 report={'date':'2026-09-10 UTC+8','passed':True,'checks':checks,'neighbor_adjustments':[{'label':f['label'],'distance_m':f['placement_shift_distance_m']} for f in neighbors if f['placement_shift_distance_m']>0],
@@ -65,7 +71,7 @@ lines+=['','檢查：北側鄰房／住宅零投影重疊、道路／建物零�
 (dest/'模型檢查清單.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 body=''.join(f'<tr><td>{i}</td><td>{html.escape(w)}</td><td>{html.escape(c)}</td></tr>' for i,(w,c) in enumerate(rows,1))
 page='''<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>11 項用途與配置修正</title><style>body{font:16px/1.7 system-ui;margin:auto;max-width:1000px;padding:22px;background:#f5f3ec;color:#263d36}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ccd2ca;padding:10px;text-align:left}a{color:#245943}img{max-width:100%}</style><a href="../">← 返回住宅模型</a><h1>11 項用途與配置修正</h1><p>四套家具風格均已更新；原版建築同步更新名稱及衛浴。請選取家具風格查看配置。</p><p>依使用者最新指示優先於 PDF 舊用途；建築尺寸保留。鄰房避讓調整仍屬近似位置，不是測量成果。</p><table><tr><th>項次</th><th>位置</th><th>修正</th></tr>'''+body+'''</table><h2>模型檢查</h2><p>北側鄰房／住宅、道路／建物投影重疊均為零。床头方向以匯出模型頂點檢查；四套風格各有五張床。另檢查模型格式、樓層與屋頂切換及手機觸控模擬；實體安卓驗收尚未進行。</p><p><a href="validation.json">幾何檢查結果及鄰房移位紀錄</a> · <a href="模型檢查清單.md" download>下載檢查清單</a> · <a href="../realism/index.html">實景來源與限制</a></p><img src="site-layout.svg" alt="住宅、鄰房與道路投影檢查"></html>'''
-page=page.replace('<h2>模型檢查</h2>','<p><a href="access.html">最新：鄰近配置、路緣電桿與門口淨空修正</a></p><h2>四樓層配置預覽</h2><p>以下為波西米亞版的實際模型截圖；其餘三套採相同用途與家具位置。</p>'+''.join(f'<details><summary>{i} 樓配置</summary><a href="floor-{i}.png"><img loading="lazy" src="floor-{i}.png" alt="{i} 樓配置"></a></details>' for i in range(1,5))+'<h2>模型檢查</h2>')
+page=page.replace('<h2>模型檢查</h2>','<p><a href="access.html">最新：鄰近配置、路緣電桿與門口淨空修正</a></p><h2>四樓層配置預覽</h2><p>以下為波西米亞版的實際模型截圖；四套用途相同，但家具形式、材質與配置各自獨立規劃。</p>'+''.join(f'<details><summary>{i} 樓配置</summary><a href="floor-{i}.png"><img loading="lazy" src="floor-{i}.png" alt="{i} 樓配置"></a></details>' for i in range(1,5))+'<h2>模型檢查</h2>')
 (dest/'index.html').write_text(page,encoding='utf-8')
 # Inspectable plan view made from the actual exported road and generated envelopes.
 shapes=[(road,'#bfc5c3'),(main,'#287c66')]+[(shape(f['built_envelope_xz']),'#b78765') for f in buildings]

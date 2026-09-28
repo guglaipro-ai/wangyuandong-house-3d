@@ -1,0 +1,32 @@
+{
+  "house.glb": {
+    "desktop_bytes": 4466960,
+    "phone_bytes": 2919912,
+    "sha256": "2e46da7e228d41c3cc49ba52734d21fe595e54ced7f0d196b066308220a8a190"
+  },
+  "surroundings.glb": {
+    "desktop_bytes": 15857312,
+    "phone_bytes": 12083132,
+    "sha256": "2993b13a7894473272fc961c1f7c02329b80dc0a980e568e3529b5ed5ddac354"
+  },
+  "styles/bohemian.glb": {
+    "desktop_bytes": 14092892,
+    "phone_bytes": 9960876,
+    "sha256": "fe9e2ec534bdb1b7ae969aca1c8ab3a27418d95e8508cf9af30bd49be742405b"
+  },
+  "styles/industrial.glb": {
+    "desktop_bytes": 10688804,
+    "phone_bytes": 7209080,
+    "sha256": "0f0d2d64607554e5716db56c8bda4b29495a7253339fe0dc4a60e5d3e9d52fa5"
+  },
+  "styles/eclectic.glb": {
+    "desktop_bytes": 15839024,
+    "phone_bytes": 11885624,
+    "sha256": "f84c394dad3f9ee03001c9e09947b073f22b3784d350f2412cc690bd080245c2"
+  },
+  "styles/wabisabi.glb": {
+    "desktop_bytes": 10062568,
+    "phone_bytes": 6683944,
+    "sha256": "4cbdc1676d5b40b05890dbad7bf07b6d7a4e1751e8fc397cfb2167de793605f0"
+  }
+}

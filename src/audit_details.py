@@ -81,8 +81,8 @@ def opening_detail(a,u,lo,hi,z,oh,code,parent,piece,bar,box,mesh_add,materials):
   # p18 usable 800 x 2000 entrance with two telescopic panels and jamb surrounds.
   for i in range(2):strip(lo+fw+i*(w-2*fw)/2,lo+fw+(i+1)*(w-2*fw)/2-.004,z+.02,oh-.04,'metal',.035,i*.018,'telescopic_panel')
  else:
-  # Door leaf local axis follows the existing 55-degree display pose.
-  ang=np.deg2rad(55);rot=np.array([[np.cos(ang),-np.sin(ang)],[np.sin(ang),np.cos(ang)]])
+  # Door leaves stand fully open at 90 degrees so a 170 cm visitor can walk through.
+  ang=np.deg2rad(90);rot=np.array([[np.cos(ang),-np.sin(ang)],[np.sin(ang),np.cos(ang)]])
   def leaf(start,width,reverse=False):
    hinge=p(start);v=rot@u*(-1 if reverse else 1);nv=np.array([-v[1],v[0]])
    def lstrip(s,e,zz,hh,mat='door',th=.04,offset=0,label='leaf'):

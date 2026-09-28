@@ -1,13 +1,26 @@
 {
   "mimeType": "model/gltf-binary",
   "validatorVersion": "2.0.0-dev.3.10",
-  "validatedAt": "2026-09-10T05:58:38.760Z",
+  "validatedAt": "2026-09-28T09:37:01.444Z",
   "issues": {
     "numErrors": 0,
     "numWarnings": 0,
-    "numInfos": 0,
+    "numInfos": 2,
     "numHints": 0,
-    "messages": [],
+    "messages": [
+      {
+        "code": "IMAGE_NPOT_DIMENSIONS",
+        "message": "Image has non-power-of-two dimensions: 1024x1148.",
+        "severity": 2,
+        "pointer": "/images/3"
+      },
+      {
+        "code": "IMAGE_NPOT_DIMENSIONS",
+        "message": "Image has non-power-of-two dimensions: 1024x1148.",
+        "severity": 2,
+        "pointer": "/images/4"
+      }
+    ],
     "truncated": false
   },
   "info": {
@@ -18,7 +31,7 @@
         "pointer": "/buffers/0",
         "mimeType": "application/gltf-buffer",
         "storage": "glb",
-        "byteLength": 2569352
+        "byteLength": 4304024
       },
       {
         "pointer": "/images/0",
@@ -61,7 +74,7 @@
         "storage": "buffer-view",
         "image": {
           "width": 1024,
-          "height": 1024,
+          "height": 1148,
           "format": "rgb",
           "bits": 8
         }
@@ -71,8 +84,8 @@
         "mimeType": "image/jpeg",
         "storage": "buffer-view",
         "image": {
-          "width": 512,
-          "height": 512,
+          "width": 1024,
+          "height": 1148,
           "format": "rgb",
           "bits": 8
         }
@@ -106,8 +119,8 @@
         "mimeType": "image/jpeg",
         "storage": "buffer-view",
         "image": {
-          "width": 512,
-          "height": 512,
+          "width": 1024,
+          "height": 1024,
           "format": "rgb",
           "bits": 8
         }
@@ -176,8 +189,8 @@
         "mimeType": "image/jpeg",
         "storage": "buffer-view",
         "image": {
-          "width": 512,
-          "height": 512,
+          "width": 1024,
+          "height": 1024,
           "format": "rgb",
           "bits": 8
         }
@@ -211,8 +224,8 @@
         "mimeType": "image/jpeg",
         "storage": "buffer-view",
         "image": {
-          "width": 512,
-          "height": 512,
+          "width": 1024,
+          "height": 1024,
           "format": "rgb",
           "bits": 8
         }
@@ -299,52 +312,17 @@
           "transfer": "srgb",
           "bits": 8
         }
-      },
-      {
-        "pointer": "/images/24",
-        "mimeType": "image/jpeg",
-        "storage": "buffer-view",
-        "image": {
-          "width": 1024,
-          "height": 1024,
-          "format": "rgb",
-          "bits": 8
-        }
-      },
-      {
-        "pointer": "/images/25",
-        "mimeType": "image/jpeg",
-        "storage": "buffer-view",
-        "image": {
-          "width": 512,
-          "height": 512,
-          "format": "rgb",
-          "bits": 8
-        }
-      },
-      {
-        "pointer": "/images/26",
-        "mimeType": "image/png",
-        "storage": "buffer-view",
-        "image": {
-          "width": 256,
-          "height": 256,
-          "format": "rgb",
-          "primaries": "srgb",
-          "transfer": "srgb",
-          "bits": 8
-        }
       }
     ],
     "animationCount": 0,
-    "materialCount": 12,
+    "materialCount": 23,
     "hasMorphTargets": false,
     "hasSkins": false,
     "hasTextures": true,
     "hasDefaultScene": true,
-    "drawCallCount": 69,
-    "totalVertexCount": 28421,
-    "totalTriangleCount": 28476,
+    "drawCallCount": 139,
+    "totalVertexCount": 73052,
+    "totalTriangleCount": 45912,
     "maxUVs": 1,
     "maxInfluences": 0,
     "maxAttributes": 4
