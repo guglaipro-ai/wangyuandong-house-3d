@@ -59,7 +59,7 @@ for key,data in manifest['styles'].items():
   assert cy>(y+y2)/2,(key,f,cy,bed)
  style_checks[key]={'labels':True,'bed_count':len(beds),'two_bed_headboards_positive_plan_y':True,'furniture_count':data['furnitureCount']}
 checks['styles']=style_checks
-report={'date':'2026-09-10 UTC+8','passed':True,'checks':checks,'neighbor_adjustments':[{'label':f['label'],'distance_m':f['placement_shift_distance_m']} for f in neighbors if f['placement_shift_distance_m']>0],
+report={'date':'2026-09-10 UTC+8','passed':True,'checks':checks,'neighbor_placement':'e-map footprints used in place; no relocation (2026-10-05)','neighbor_count':len(neighbors),
  'basis':'Eleven explicit user changes take precedence over old PDF room names and the former near-door toilet. Context adjustments are approximate, not newly measured positions.',
  'sha256':{p.relative_to(OUT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in [OUT/'house.glb',OUT/'surroundings.glb',*[OUT/f'styles/{k}.glb' for k in manifest['styles']]]}}
 (dest/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')

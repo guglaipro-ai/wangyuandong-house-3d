@@ -377,6 +377,7 @@ export function createWalk({ camera, controls, canvas, stage, requestRender, get
     state() { const [x, y] = PLAN(pos.x, pos.z); return { active, plan: [x, y], feet, eye: feet + EYE, yaw, pitch, room: lastRoom, triangles: grid?.count || 0 }; },
     press(k, on) { on ? keys.add(k) : keys.delete(k); requestRender(); },
     look(y, p = pitch) { yaw = y; pitch = p; requestRender(); },
+    ground(px, py, top = 30) { const [x, z] = WORLD(px, py); return grid ? grid.ground(x, z, top) : null; },
     place(px, py, f, y = yaw, p = pitch) { const [x, z] = WORLD(px, py); pos.set(x, 0, z); feet = f; yaw = y; pitch = p; vy = 0; vel.set(0, 0); apply(true); requestRender(); },
   };
 }

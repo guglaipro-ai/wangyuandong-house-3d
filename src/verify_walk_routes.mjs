@@ -12,7 +12,7 @@ const OUTDOOR={'正門 D2a':[[8.35,17.6],[8.35,15.6],[7.6,14.0],[5.6,14.0]],
  '後門 D5a':[[8.35,17.6],[-.9,17.0],[-.9,-.5],[3.0,-.5],[4.7,-.45],[4.7,.9]]};
 const BASE={1:.6,2:4.8,3:8.4,4:11.7};
 const only=process.argv.slice(2);
-const report={date:new Date().toISOString(),method:'Steer toward each waypoint at walking speed (W key); a leg fails if no 5 cm progress in 4 s.',styles:{},errors:[]};
+const report={date:new Date().toISOString(),method:'Steer toward each waypoint at walking speed (W key); a leg fails if no 5 cm progress in 4 s (12 s on the first leg, which may wait for software-GL shader compilation).',styles:{},errors:[]};
 const browser=await chromium.launch({headless:true,channel:'msedge',args:['--enable-unsafe-swiftshader']});
 try{
  const page=await (await browser.newContext({viewport:{width:960,height:640}})).newPage();
@@ -28,6 +28,9 @@ try{
    await page.waitForFunction(k=>window.houseViewer?.style===k,key,{timeout:240000});
    await page.waitForTimeout(800);
   }
+  // wait until the collision grid has been rebuilt for this variant (triangle count stable)
+  let prev=-1,same=0;
+  for(let i=0;i<60&&same<3;i++){const n=await page.evaluate(()=>window.houseViewer.walk.state().triangles);same=n===prev&&n>0?same+1:0;prev=n;await page.waitForTimeout(500);}
   const rows=[];
   const outdoor=Object.fromEntries(Object.entries(OUTDOOR).map(([k,v])=>[k,{room:k,route:v}]));
   for(const [f,rooms] of [['0',Object.values(outdoor)],...Object.entries(data[style])]){
@@ -46,7 +49,7 @@ try{
         // plan (dx,dy) -> world (dx,dz); forward = (-sin yaw, -cos yaw)
         w.look(Math.atan2(-dx,-dy),-.05);
         if(d<best-.05){best=d;last=performance.now();}
-        if(performance.now()-last>4000){stuck={leg:i,at:s.plan,feet:s.feet,target:[tx,ty],dist:d};break;}
+        if(performance.now()-last>(i===1?12000:4000)){stuck={leg:i,at:s.plan,feet:s.feet,target:[tx,ty],dist:d};break;}
         await new Promise(r=>setTimeout(r,40));
        }
        if(stuck)break;legs++;

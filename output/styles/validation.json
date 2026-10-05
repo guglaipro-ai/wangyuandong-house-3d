@@ -2,7 +2,7 @@
   "date": "2026-09-28 UTC+8",
   "models": {
     "bohemian": {
-      "bytes": 14165172,
+      "bytes": 14175836,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -52,30 +52,30 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 312 degenerate triangles (out of 2496).",
           "severity": 2,
-          "pointer": "/meshes/176/primitives/0/indices"
+          "pointer": "/meshes/177/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 34 degenerate triangles (out of 9570).",
           "severity": 2,
-          "pointer": "/meshes/186/primitives/0/indices"
+          "pointer": "/meshes/187/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 104 degenerate triangles (out of 832).",
           "severity": 2,
-          "pointer": "/meshes/197/primitives/0/indices"
+          "pointer": "/meshes/198/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 312 degenerate triangles (out of 2496).",
           "severity": 2,
-          "pointer": "/meshes/272/primitives/0/indices"
+          "pointer": "/meshes/273/primitives/0/indices"
         }
       ]
     },
     "industrial": {
-      "bytes": 10761068,
+      "bytes": 10771724,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -125,24 +125,24 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 60 degenerate triangles (out of 16572).",
           "severity": 2,
-          "pointer": "/meshes/171/primitives/0/indices"
+          "pointer": "/meshes/172/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 44 degenerate triangles (out of 11490).",
           "severity": 2,
-          "pointer": "/meshes/193/primitives/0/indices"
+          "pointer": "/meshes/194/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 216 degenerate triangles (out of 1728).",
           "severity": 2,
-          "pointer": "/meshes/208/primitives/0/indices"
+          "pointer": "/meshes/209/primitives/0/indices"
         }
       ]
     },
     "eclectic": {
-      "bytes": 15911304,
+      "bytes": 15921968,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -192,48 +192,48 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 208 degenerate triangles (out of 1664).",
           "severity": 2,
-          "pointer": "/meshes/172/primitives/0/indices"
+          "pointer": "/meshes/173/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 10 degenerate triangles (out of 4080).",
           "severity": 2,
-          "pointer": "/meshes/173/primitives/0/indices"
+          "pointer": "/meshes/174/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 62 degenerate triangles (out of 5626).",
           "severity": 2,
-          "pointer": "/meshes/179/primitives/0/indices"
+          "pointer": "/meshes/180/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 82 degenerate triangles (out of 10057).",
           "severity": 2,
-          "pointer": "/meshes/181/primitives/0/indices"
+          "pointer": "/meshes/182/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 8 degenerate triangles (out of 6988).",
           "severity": 2,
-          "pointer": "/meshes/216/primitives/0/indices"
+          "pointer": "/meshes/217/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 58 degenerate triangles (out of 7600).",
           "severity": 2,
-          "pointer": "/meshes/220/primitives/0/indices"
+          "pointer": "/meshes/221/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 8 degenerate triangles (out of 5600).",
           "severity": 2,
-          "pointer": "/meshes/221/primitives/0/indices"
+          "pointer": "/meshes/222/primitives/0/indices"
         }
       ]
     },
     "wabisabi": {
-      "bytes": 10134848,
+      "bytes": 10145504,
       "errors": 0,
       "warnings": 0,
       "messages": [
@@ -283,43 +283,43 @@
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 60 degenerate triangles (out of 7936).",
           "severity": 2,
-          "pointer": "/meshes/159/primitives/0/indices"
+          "pointer": "/meshes/160/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 32 degenerate triangles (out of 3968).",
           "severity": 2,
-          "pointer": "/meshes/160/primitives/0/indices"
+          "pointer": "/meshes/161/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 18 degenerate triangles (out of 13028).",
           "severity": 2,
-          "pointer": "/meshes/169/primitives/0/indices"
+          "pointer": "/meshes/170/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 8 degenerate triangles (out of 1740).",
           "severity": 2,
-          "pointer": "/meshes/170/primitives/0/indices"
+          "pointer": "/meshes/171/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 18 degenerate triangles (out of 9980).",
           "severity": 2,
-          "pointer": "/meshes/192/primitives/0/indices"
+          "pointer": "/meshes/193/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 8 degenerate triangles (out of 992).",
           "severity": 2,
-          "pointer": "/meshes/201/primitives/0/indices"
+          "pointer": "/meshes/202/primitives/0/indices"
         },
         {
           "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
           "message": "Indices accessor contains 240 degenerate triangles (out of 1920).",
           "severity": 2,
-          "pointer": "/meshes/215/primitives/0/indices"
+          "pointer": "/meshes/216/primitives/0/indices"
         }
       ]
     }
@@ -327,9 +327,9 @@
   "views": [
     {
       "style": "bohemian",
-      "maps": 163,
-      "normals": 163,
-      "shadowed": 275,
+      "maps": 164,
+      "normals": 164,
+      "shadowed": 276,
       "quality": "high",
       "lite": false,
       "assets": {
@@ -339,16 +339,16 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 1023,
-      "triangles": 1722269,
+      "drawCalls": 1029,
+      "triangles": 2069405,
       "textures": 70,
-      "geometries": 299
+      "geometries": 302
     },
     {
       "style": "industrial",
-      "maps": 102,
-      "normals": 102,
-      "shadowed": 209,
+      "maps": 103,
+      "normals": 103,
+      "shadowed": 210,
       "quality": "high",
       "lite": false,
       "assets": {
@@ -358,16 +358,16 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 822,
-      "triangles": 1513481,
+      "drawCalls": 828,
+      "triangles": 1860617,
       "textures": 74,
-      "geometries": 239
+      "geometries": 242
     },
     {
       "style": "eclectic",
-      "maps": 131,
-      "normals": 131,
-      "shadowed": 262,
+      "maps": 132,
+      "normals": 132,
+      "shadowed": 263,
       "quality": "high",
       "lite": false,
       "assets": {
@@ -377,16 +377,16 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 975,
-      "triangles": 1874169,
+      "drawCalls": 981,
+      "triangles": 2221305,
       "textures": 68,
-      "geometries": 285
+      "geometries": 288
     },
     {
       "style": "wabisabi",
-      "maps": 117,
-      "normals": 117,
-      "shadowed": 216,
+      "maps": 118,
+      "normals": 118,
+      "shadowed": 217,
       "quality": "high",
       "lite": false,
       "assets": {
@@ -396,10 +396,10 @@
       "contextVisible": true,
       "ambientOcclusion": true,
       "shadows": true,
-      "drawCalls": 801,
-      "triangles": 1432153,
+      "drawCalls": 807,
+      "triangles": 1779289,
       "textures": 68,
-      "geometries": 241
+      "geometries": 244
     }
   ],
   "passed": true,

@@ -376,8 +376,15 @@ for op in manifest['openings']:
 
 # Ground/porch only; no survey-grade terrain or neighboring buildings.
 group('SITE',extra={'kind':'site'})
-site=Polygon([(-1.7,-1),(17,-2.2),(17.2,17.3),(-1.9,20)])
+# Lot 318 exactly as drawn on the permit site plan (配置圖 1:500), placed by the site-plan
+# registration in site_location.py: frontage on the 8 m road, L-shaped leg to the private road.
+from site_location import PARCEL_PLAN
+site=Polygon(PARCEL_PLAN)
 extr(site,-.18,.18,'site_ground','SITE','ground','site')
+# Parking stall drawn on the site plan (2.5 x 6.0 m, front yard by the lane): paved pad + white lines.
+STALL=[(5.75,20.46),(0.05,22.45),(-0.78,20.08),(4.92,18.09)]
+extr(Polygon(STALL).intersection(site),0,.012,'parking_pad','SITE','porch','site')
+for a,b in zip(STALL,STALL[1:]+STALL[:1]):extr(LineString([a,b]).buffer(.05,cap_style=2).intersection(site),.012,.004,'parking_line','SITE','white','site')
 # The original symbolic road patch is superseded by georeferenced surroundings.
 # Keeping both roads caused the old patch to cut through neighboring houses.
 extr(rect(-1.4,.5,-.55,16.5),0,.02,'planting_strip','SITE','grass','site')

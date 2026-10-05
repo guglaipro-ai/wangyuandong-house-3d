@@ -1,22 +1,44 @@
-"""Rigid georeferencing from four user-clicked NLSC WGS84 points; no scale change."""
-import numpy as np,math
-LON0=120.25725453748464;LAT0=23.178193459074407
-CORNERS_DMS=[['120-15-26.1','23-10-42.0'],['120-15-26.7','23-10-41.5'],['120-15-26.3','23-10-41.0'],['120-15-25.8','23-10-41.4']]
+"""Georeference of the house, from the permit site plan registered to the NLSC e-map.
+
+1. Permit p1 配置圖 (1:500) was registered to NLSC Taiwan e-Map road edges and the No.21
+   wall (rotation 0.4 deg, residual 0.25 m RMS); see output/realism/site-registration.json.
+2. The model's building projection (1F + porch + covered SW strip) was fitted to the
+   drawing's footprint (IoU 0.94), then refined against the 13 lot-line distances of the
+   permit light-and-ventilation table (0.08 m RMS).
+EN = local east/north metres about the original GPS pin (LON0, LAT0).
+Model x/z = plan x/y - (7.18, 8.3); plan is mirror-handed to EN, so ROT is a reflection.
+The user's four map-click corners (2026-09-10, ~3 m resolution) are kept for comparison.
+"""
+import json, math
+from pathlib import Path
+import numpy as np
+LON0 = 120.25725453748464; LAT0 = 23.178193459074407
+K = 111319.49079327358
+CORNERS_DMS = [['120-15-26.1', '23-10-42.0'], ['120-15-26.7', '23-10-41.5'], ['120-15-26.3', '23-10-41.0'], ['120-15-25.8', '23-10-41.4']]
 def degrees(s):
- d,m,sec=map(float,s.split('-'));return d+m/60+sec/3600
-CORNERS=np.array([[degrees(lon),degrees(lat)] for lon,lat in CORNERS_DMS])
-def eastnorth(lon,lat):return np.array([(lon-LON0)*111319.49079327358*math.cos(math.radians(LAT0)),(lat-LAT0)*111319.49079327358])
-EN=np.array([eastnorth(lon,lat) for lon,lat in CORNERS])
-# Existing approximate site-ground boundary, in the same model x/z frame.
-MODEL=np.array([[-1.7,-1],[17,-2.2],[17.2,17.3],[-1.9,20]])-[7.18,8.3]
-# Plan rear-left maps to geographic east; proceed around the plot.
-TARGET=EN[[1,2,3,0]]
-a=MODEL-MODEL.mean(axis=0);b=TARGET-TARGET.mean(axis=0)
-u,s,vt=np.linalg.svd(a.T@b);ROT=u@vt
-# Geographic E/N has opposite handedness to right-handed model X/Z on the ground.
-OFFSET=TARGET.mean(axis=0)-MODEL.mean(axis=0)@ROT
-FITTED=MODEL@ROT+OFFSET
-RESIDUAL=np.linalg.norm(FITTED-TARGET,axis=1)
-def to_model(en):return (np.asarray(en)-OFFSET)@ROT.T
+    d, m, sec = map(float, s.split('-')); return d + m / 60 + sec / 3600
+CORNERS = np.array([[degrees(lon), degrees(lat)] for lon, lat in CORNERS_DMS])
+def eastnorth(lon, lat): return np.array([(lon - LON0) * K * math.cos(math.radians(LAT0)), (lat - LAT0) * K])
+EN = np.array([eastnorth(lon, lat) for lon, lat in CORNERS])     # user clicks (reference only)
+
+REG = json.loads((Path(__file__).resolve().parents[1] / 'output/realism/site-registration.json').read_text(encoding='utf-8'))
+_phi = math.radians(REG['house_plan_to_en']['phi_deg']); _t = np.array(REG['house_plan_to_en']['t'])
+_A = np.array([[math.cos(_phi), math.sin(_phi)], [math.sin(_phi), -math.cos(_phi)]])   # plan -> EN (reflection)
+# row-vector form used across the project: en = xz @ ROT + OFFSET, xz = plan - (7.18, 8.3)
+ROT = _A.T
+OFFSET = np.array([7.18, 8.3]) @ ROT + _t
+PARCEL_EN = np.array(REG['parcel_en'])
+def to_model(en): return (np.asarray(en) - OFFSET) @ ROT.T
+PARCEL_MODEL = to_model(PARCEL_EN)
+PARCEL_PLAN = PARCEL_MODEL + [7.18, 8.3]
+MODEL = PARCEL_MODEL                                            # site ground = permit lot 318
+
 def metadata():
- return dict(source='User-provided four NLSC map-click coordinates, 2026-09-10',datum='WGS84',input_dms=CORNERS_DMS,corners_lon_lat=CORNERS.tolist(),corners_model_xz=to_model(EN).tolist(),method='Least-squares rigid alignment to existing approximate site outline. Rotation and translation only; building not scaled or deformed.',model_xz_to_east_north_matrix=ROT.tolist(),origin_east_north_metres=OFFSET.tolist(),corner_residual_metres=RESIDUAL.tolist(),rms_residual_metres=float(np.sqrt(np.mean(RESIDUAL**2))),coordinate_resolution='0.1 arcsecond (~3 m); map-click positions, NOT survey measurements',limitation='The four clicked corners and existing approximate site outline do not exactly coincide. Preserve the PDF house dimensions; residual mismatch is reported rather than deforming the house.')
+    clicked = to_model(EN)
+    return dict(source='Permit p1 site plan (lot 318) registered to NLSC e-map; house fitted to the drawn footprint and permit lot-line distances',
+                datum='WGS84 local east/north about the site pin', site_pin_lon_lat=[LON0, LAT0],
+                model_xz_to_east_north_matrix=ROT.tolist(), origin_east_north_metres=OFFSET.tolist(),
+                house_registration=REG['house_plan_to_en'], site_plan_registration=REG['site_plan_to_en'],
+                parcel_area_m2=REG['parcel_area_m2_extracted'], parcel_area_m2_permit=REG['parcel_area_m2_permit'],
+                user_clicked_corners_lon_lat=CORNERS.tolist(), user_clicked_corners_model_xz=clicked.tolist(),
+                limitation='Site plan and e-map are not survey data; expect about 0.3-1 m absolute error. Building dimensions are untouched (rigid placement only).')

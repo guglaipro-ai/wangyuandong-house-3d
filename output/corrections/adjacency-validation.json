@@ -1,66 +1,84 @@
 {
   "passed": true,
-  "date": "2026-09-10 UTC+8",
+  "date": "2026-10-05 UTC+8",
   "checks": {
-    "北側紅瓦平房": {
-      "gap_m": 1.1388508446597343,
-      "correct_geographic_side": true,
-      "road_between_neighbors_m": 0.0
-    },
-    "東側白色舊住宅": {
-      "gap_m": 1.1019945250407133,
-      "correct_geographic_side": true,
-      "road_between_neighbors_m": 0.0
-    },
-    "南側白色三層住宅": {
-      "gap_m": 1.10199149259286,
-      "correct_geographic_side": true,
-      "road_between_neighbors_m": 0.0
-    },
     "house_on_road_m2": 0.0,
-    "private_apron_on_road_m2": 0.0
+    "lot_on_road_m2": 0.1131737843909605,
+    "neighbour_inside_house_m2": 0.0,
+    "nearest_neighbour_by_side": {
+      "NE (plan left)": {
+        "label": "北側紅瓦平房",
+        "gap_m": 1.15
+      },
+      "rear SE": {
+        "label": "東側白色舊住宅",
+        "gap_m": 1.07
+      },
+      "SW (plan right)": {
+        "label": "南側白色三層住宅",
+        "gap_m": 2.67
+      }
+    },
+    "permit_lot_line_distance_rms_m": 0.07715702569903377,
+    "site_plan_registration_rms_m": {
+      "lane_frontage": [
+        9,
+        0.252
+      ],
+      "private_road_edge1": [
+        9,
+        0.26
+      ],
+      "private_road_edge2": [
+        9,
+        0.267
+      ],
+      "NE_boundary": [
+        9,
+        0.818
+      ]
+    }
   },
   "poles": [
     {
-      "center_model_xz": [
-        11.566160660039372,
-        4.175239670928222
-      ],
-      "edge_distance_m": 0.2800000850164117,
-      "actual_base_radius_m": 0.10000035027451273,
-      "base_in_asphalt_m2": 0.0
+      "id": "B",
+      "type": "streetlight",
+      "edge_distance_m": 0.28,
+      "base_in_asphalt_m2": 0.0,
+      "shift_from_street_view_estimate_m": 1.18
     },
     {
-      "center_model_xz": [
-        27.902648271787342,
-        -0.9844679761122199
-      ],
-      "edge_distance_m": 0.27999990704276945,
-      "actual_base_radius_m": 0.10000066233648644,
-      "base_in_asphalt_m2": 0.0
+      "id": "L2",
+      "type": "streetlight",
+      "edge_distance_m": 0.28,
+      "base_in_asphalt_m2": 0.0,
+      "shift_from_street_view_estimate_m": 0.2
     },
     {
-      "center_model_xz": [
-        -9.773142824988271,
-        9.805916581733172
-      ],
-      "edge_distance_m": 0.27999979361464616,
-      "actual_base_radius_m": 0.10000042417151624,
-      "base_in_asphalt_m2": 0.0
+      "id": "A",
+      "type": "utility_lamp",
+      "edge_distance_m": 0.28,
+      "base_in_asphalt_m2": 0.0,
+      "shift_from_street_view_estimate_m": 0.14
     },
     {
-      "center_model_xz": [
-        -24.743285235708253,
-        13.668119212158375
-      ],
-      "edge_distance_m": 0.28000025919167204,
-      "actual_base_radius_m": 0.10000067639877186,
-      "base_in_asphalt_m2": 0.0
+      "id": "C",
+      "type": "utility",
+      "edge_distance_m": 0.28,
+      "base_in_asphalt_m2": 0.0,
+      "shift_from_street_view_estimate_m": 2.06
+    },
+    {
+      "id": "D",
+      "type": "utility_lamp",
+      "edge_distance_m": 0.28,
+      "base_in_asphalt_m2": 0.0,
+      "shift_from_street_view_estimate_m": 1.06
     }
   ],
-  "assumption": "Three-sided adjacency confirmed by user; roughly 1 m conceptual separation, not surveyed distance. Pole centers lie just outside actual road edge.",
+  "basis": "Lot 318 and house placement from the permit site plan registered to the NLSC e-map; neighbours and roads are e-map outlines; poles from Street View June 2026.",
   "sha256": {
-    "house.glb": "f840b1809d94722b64d4d8648f170047de714843fb444c55f4b7a5ccff953f19",
-    "surroundings.glb": "f7a8f44c1732342a927a09d9b76c252318686447730ed6298582b86194acc62d"
+    "house.glb": "9e52f4b8f05c580aab0d20c0b2175dbffebb4532eba9f468df5d4d4d65ee61cd",
+    "surroundings.glb": "f5935a3da800b133fc130ea0ccdf46fd2b1f2e9dec7d7f43731d12bfd22064db"
   }
 }

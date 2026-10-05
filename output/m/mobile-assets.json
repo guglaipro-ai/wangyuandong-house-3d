@@ -1,32 +1,32 @@
 {
   "house.glb": {
-    "desktop_bytes": 4539240,
-    "phone_bytes": 2971684,
-    "sha256": "0f1e2f2ad652b0d15cdca1ce7b74cd2a6eeb080f5901dc3f2646fb8033136b41"
+    "desktop_bytes": 4549892,
+    "phone_bytes": 2979568,
+    "sha256": "17eefa3ef1c54f1f3a84718aba48218a0bb37299f2767ad3a47ba4f89088d60a"
   },
   "surroundings.glb": {
-    "desktop_bytes": 18060980,
-    "phone_bytes": 15037184,
-    "sha256": "3949c099a93f772f481e4c93af967b5c8872a8bd110578e8ae703a56ce372d7b"
+    "desktop_bytes": 22856756,
+    "phone_bytes": 19406868,
+    "sha256": "db16b18793ae253c2929270fdce8409b7cc37f7009bc33902d01795d2e8f08f1"
   },
   "styles/bohemian.glb": {
-    "desktop_bytes": 14165172,
-    "phone_bytes": 10012652,
-    "sha256": "995ec77e85abe0d221b74034defdafaf479beb1a0e1efcf951a93670222f6bcb"
+    "desktop_bytes": 14175836,
+    "phone_bytes": 10020532,
+    "sha256": "618d7b3d170892d9e9f6083e42911e38862ddba5f54436f2857441b69e431426"
   },
   "styles/industrial.glb": {
-    "desktop_bytes": 10761068,
-    "phone_bytes": 7260832,
-    "sha256": "8da4cb7764c49b5d9e6cdb248ce7fe1a0b475689df941c57b3985d8b6907b01d"
+    "desktop_bytes": 10771724,
+    "phone_bytes": 7268716,
+    "sha256": "0aedd02ed682d334eba76457efd47838f1d0b0b6c70b81553129a4eb53ce18de"
   },
   "styles/eclectic.glb": {
-    "desktop_bytes": 15911304,
-    "phone_bytes": 11937400,
-    "sha256": "bfb85bf232625051a13a92409cc033d97c32770fb4d36e92a1eb4e7fab86d506"
+    "desktop_bytes": 15921968,
+    "phone_bytes": 11945284,
+    "sha256": "27e794cb031ccb18f4b6dd3492a432fc52593185775efb2993f794c440c9ecd3"
   },
   "styles/wabisabi.glb": {
-    "desktop_bytes": 10134848,
-    "phone_bytes": 6735720,
-    "sha256": "78b184742e901debab30d4639de93e08b3ea32cc42e4949948b4d0952f9c516f"
+    "desktop_bytes": 10145504,
+    "phone_bytes": 6743604,
+    "sha256": "0478796299ab8d24a33592bfe78cff83b4a220b002fecdb61760fe52c7c4fb84"
   }
 }

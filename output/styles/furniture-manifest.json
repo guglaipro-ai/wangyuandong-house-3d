@@ -29,8 +29,8 @@
         "windows": "竹捲簾（窗）＋番紅花色紗簾（落地門）",
         "signature": "低座沙發、孔雀藤椅、吊掛蛋椅、黃銅托盤桌、流蘇編織掛毯、大量植栽、帳幔床"
       },
-      "bytes": 14165172,
-      "sha256": "5a8a6f1109667ed606a5ff26ee723bdb669b2d4c6982738599171ce2b0a17f69",
+      "bytes": 14175836,
+      "sha256": "ca61da2d24cf5c9882c77397002d3756cf341af26d40b8d5efe8cd6a63ac411c",
       "addedTriangles": 155208,
       "removedBaseGeometry": [],
       "furnitureCount": 32,
@@ -1354,8 +1354,8 @@
         "windows": "黑色金屬百葉",
         "signature": "焦糖皮革沙發＋俱樂部椅、管件書架牆、黑鐵玻璃隔屏、紅磚展示牆、實木厚板長桌＋長凳、畫架與工作台"
       },
-      "bytes": 10761068,
-      "sha256": "4ea71b2c875051d3151df756778eb04f9bff4c7d62765cba2f453808d5071073",
+      "bytes": 10771724,
+      "sha256": "2ecc68ef94eaa79f8fc2207ebdaca5d387e8b594d130c4d88a689aedaa0a357c",
       "addedTriangles": 102780,
       "removedBaseGeometry": [
         "FLOOR_1_ceiling_ceiling",
@@ -2760,8 +2760,8 @@
         "windows": "祖母綠天鵝絨落地簾＋黃銅簾桿與綁帶",
         "signature": "鈷藍弧形天鵝絨沙發、莓紅殼形單椅、胡桃木溫莎椅、洞石圓几、沙龍式掛畫牆、大理石台座雕塑、軟包高床頭"
       },
-      "bytes": 15911304,
-      "sha256": "645fe798ed1c463cb6f201d1d15397007f433bd5a71770696140108d162f60d6",
+      "bytes": 15921968,
+      "sha256": "8614c6862bba64c4e8bb3c946863e7e615386f5eee583308d2341383b15d3b26",
       "addedTriangles": 190923,
       "removedBaseGeometry": [],
       "furnitureCount": 47,
@@ -4255,8 +4255,8 @@
         "windows": "障子紙門（窗）＋亞麻紗簾（落地門）",
         "signature": "低平台亞麻沙發、不規則原木茶几、床之間（壁龕）、榻榻米平台床、低書法桌與座布團、枯山水碎石庭"
       },
-      "bytes": 10134848,
-      "sha256": "52870926b04f3e5e7f6f296087acc1c55175ea40b8390a19e2655de1d8aa14b9",
+      "bytes": 10145504,
+      "sha256": "a7b218647d0b094ead0086350e463af9672d5446fa42b9c290de6478ce2fa15f",
       "addedTriangles": 76552,
       "removedBaseGeometry": [],
       "furnitureCount": 29,

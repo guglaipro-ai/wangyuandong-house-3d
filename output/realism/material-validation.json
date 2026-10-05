@@ -4,12 +4,12 @@
   "files": [
     {
       "file": "house.glb",
-      "input_sha256": "f7f244aeab9ecf2bdd98d12d265bbe1fffa6c85e486245d2da54437b347ff672",
-      "sha256": "f840b1809d94722b64d4d8648f170047de714843fb444c55f4b7a5ccff953f19",
-      "bytes": 4539240,
-      "texturedMeshBatches": 70,
-      "duplicateImagesRemoved": 15,
-      "tangentMeshBatches": 70,
+      "input_sha256": "55a0ed1a3bb09afabdbf44b817adf79c8593991dca43000233cd32b6ddbf30b5",
+      "sha256": "9e52f4b8f05c580aab0d20c0b2175dbffebb4532eba9f468df5d4d4d65ee61cd",
+      "bytes": 4549892,
+      "texturedMeshBatches": 71,
+      "duplicateImagesRemoved": 18,
+      "tangentMeshBatches": 71,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -314,7 +314,7 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_plate",
-          "triangle_sha256": "b71d0156b933225d3807cfa024451d6052b317f2cd18cbd1f17cabb7e9c31bf6"
+          "triangle_sha256": "fae632a624c0d48099c14e9ab66a8bc602c077bb8666caa5c8575bfa9559c9a6"
         },
         {
           "mesh": "FLOOR_1_window_stone",
@@ -330,7 +330,7 @@
         },
         {
           "mesh": "FLOOR_2_wallmount_plate",
-          "triangle_sha256": "67b92c3cf5ef15dbb578040857193e23ed8ed11ce0547196e77c92fffd1f26ad"
+          "triangle_sha256": "9602a9088e9eeacc457fd262ffe7cbd544f3373db7e39cca3e0557ae887447be"
         },
         {
           "mesh": "FLOOR_3_window_stone",
@@ -342,7 +342,7 @@
         },
         {
           "mesh": "FLOOR_3_wallmount_plate",
-          "triangle_sha256": "e0b3035d391676653677c9a0c6907263d7817de598a81a9107fa354ca7d1e3c9"
+          "triangle_sha256": "5e6fe10a69f4d4d774eca280e65d588aec68bc62d870e80a96ddd5eecd9ecb97"
         },
         {
           "mesh": "FLOOR_4_window_stone",
@@ -358,15 +358,15 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_metal",
-          "triangle_sha256": "ffff4a18e34bfc8a94b5f2321bfec2e5db757aa5e68085afcb53fb3bedec7ab7"
+          "triangle_sha256": "551b050c5f38b1bd005c70c06354ebf50c8264c84226efa378bab62255eb6af1"
         },
         {
           "mesh": "FLOOR_2_wallmount_metal",
-          "triangle_sha256": "db293d1e69d17fb35ca58eb8332c82fb46555cef25c54ad58930dc75a0053231"
+          "triangle_sha256": "ebb4b09330abc72e475853c915f5ea03c0cf04bcf1bf534e1922bed0651af872"
         },
         {
           "mesh": "FLOOR_3_wallmount_metal",
-          "triangle_sha256": "4090c0b71bf1069f353df313b138de8921c990c877ed86b166041ff7ea009cde"
+          "triangle_sha256": "ffde18f4e6bc91e3a482de1faf6d3734c52ccf68153bf8dd4c7236ab69e8ff84"
         },
         {
           "mesh": "FLOOR_4_fixture_slab",
@@ -558,26 +558,30 @@
         },
         {
           "mesh": "SITE_site_ground",
-          "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
+          "triangle_sha256": "46cdeeb31cbfde355ffc989adac758e587d020f89f387e26a0a5401b5a87704c"
+        },
+        {
+          "mesh": "SITE_site_porch",
+          "triangle_sha256": "c333fbb21ac4bcdbd75f6041ccd1567e63e6147e5df5c43ee8027c888c574d0f"
+        },
+        {
+          "mesh": "SITE_site_white",
+          "triangle_sha256": "f578d96933ef00bfaab54602b958439396ad068653a20216e98b48e11f32085c"
         },
         {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
-        },
-        {
-          "mesh": "SITE_site_porch",
-          "triangle_sha256": "a270e00cc89ba84e97b623694045f79083c7ed5094fbdce837a89dfbe46daf4d"
         }
       ]
     },
     {
       "file": "styles/bohemian.glb",
-      "input_sha256": "f7e641b8a013a7f1e26b799ef6b9d90080392e967db73e840db58135be6a5906",
-      "sha256": "5a8a6f1109667ed606a5ff26ee723bdb669b2d4c6982738599171ce2b0a17f69",
-      "bytes": 14165172,
-      "texturedMeshBatches": 163,
-      "duplicateImagesRemoved": 51,
-      "tangentMeshBatches": 163,
+      "input_sha256": "044ff7124e792289abf8afbe72535a2674cad2920074db4883478892b918b383",
+      "sha256": "ca61da2d24cf5c9882c77397002d3756cf341af26d40b8d5efe8cd6a63ac411c",
+      "bytes": 14175836,
+      "texturedMeshBatches": 164,
+      "duplicateImagesRemoved": 54,
+      "tangentMeshBatches": 164,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -882,7 +886,7 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_plate",
-          "triangle_sha256": "b71d0156b933225d3807cfa024451d6052b317f2cd18cbd1f17cabb7e9c31bf6"
+          "triangle_sha256": "fae632a624c0d48099c14e9ab66a8bc602c077bb8666caa5c8575bfa9559c9a6"
         },
         {
           "mesh": "FLOOR_1_window_stone",
@@ -898,7 +902,7 @@
         },
         {
           "mesh": "FLOOR_2_wallmount_plate",
-          "triangle_sha256": "67b92c3cf5ef15dbb578040857193e23ed8ed11ce0547196e77c92fffd1f26ad"
+          "triangle_sha256": "9602a9088e9eeacc457fd262ffe7cbd544f3373db7e39cca3e0557ae887447be"
         },
         {
           "mesh": "FLOOR_3_window_stone",
@@ -910,7 +914,7 @@
         },
         {
           "mesh": "FLOOR_3_wallmount_plate",
-          "triangle_sha256": "e0b3035d391676653677c9a0c6907263d7817de598a81a9107fa354ca7d1e3c9"
+          "triangle_sha256": "5e6fe10a69f4d4d774eca280e65d588aec68bc62d870e80a96ddd5eecd9ecb97"
         },
         {
           "mesh": "FLOOR_4_window_stone",
@@ -926,15 +930,15 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_metal",
-          "triangle_sha256": "ffff4a18e34bfc8a94b5f2321bfec2e5db757aa5e68085afcb53fb3bedec7ab7"
+          "triangle_sha256": "551b050c5f38b1bd005c70c06354ebf50c8264c84226efa378bab62255eb6af1"
         },
         {
           "mesh": "FLOOR_2_wallmount_metal",
-          "triangle_sha256": "db293d1e69d17fb35ca58eb8332c82fb46555cef25c54ad58930dc75a0053231"
+          "triangle_sha256": "ebb4b09330abc72e475853c915f5ea03c0cf04bcf1bf534e1922bed0651af872"
         },
         {
           "mesh": "FLOOR_3_wallmount_metal",
-          "triangle_sha256": "4090c0b71bf1069f353df313b138de8921c990c877ed86b166041ff7ea009cde"
+          "triangle_sha256": "ffde18f4e6bc91e3a482de1faf6d3734c52ccf68153bf8dd4c7236ab69e8ff84"
         },
         {
           "mesh": "FLOOR_4_fixture_slab",
@@ -1126,15 +1130,19 @@
         },
         {
           "mesh": "SITE_site_ground",
-          "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
+          "triangle_sha256": "46cdeeb31cbfde355ffc989adac758e587d020f89f387e26a0a5401b5a87704c"
+        },
+        {
+          "mesh": "SITE_site_porch",
+          "triangle_sha256": "c333fbb21ac4bcdbd75f6041ccd1567e63e6147e5df5c43ee8027c888c574d0f"
+        },
+        {
+          "mesh": "SITE_site_white",
+          "triangle_sha256": "f578d96933ef00bfaab54602b958439396ad068653a20216e98b48e11f32085c"
         },
         {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
-        },
-        {
-          "mesh": "SITE_site_porch",
-          "triangle_sha256": "a270e00cc89ba84e97b623694045f79083c7ed5094fbdce837a89dfbe46daf4d"
         },
         {
           "mesh": "STYLE_bohemian_2_ceiling_wood2",
@@ -1684,12 +1692,12 @@
     },
     {
       "file": "styles/industrial.glb",
-      "input_sha256": "8305a3ff4d5794716d7becb5888052482300dbb6b6863234664561586d53dd44",
-      "sha256": "4ea71b2c875051d3151df756778eb04f9bff4c7d62765cba2f453808d5071073",
-      "bytes": 10761068,
-      "texturedMeshBatches": 102,
-      "duplicateImagesRemoved": 33,
-      "tangentMeshBatches": 102,
+      "input_sha256": "ac0f664163593183c81488af83c5e705068c297c134eee589c8ed95532de6467",
+      "sha256": "2ecc68ef94eaa79f8fc2207ebdaca5d387e8b594d130c4d88a689aedaa0a357c",
+      "bytes": 10771724,
+      "texturedMeshBatches": 103,
+      "duplicateImagesRemoved": 36,
+      "tangentMeshBatches": 103,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -1946,7 +1954,7 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_plate",
-          "triangle_sha256": "b71d0156b933225d3807cfa024451d6052b317f2cd18cbd1f17cabb7e9c31bf6"
+          "triangle_sha256": "fae632a624c0d48099c14e9ab66a8bc602c077bb8666caa5c8575bfa9559c9a6"
         },
         {
           "mesh": "FLOOR_1_window_stone",
@@ -1962,7 +1970,7 @@
         },
         {
           "mesh": "FLOOR_2_wallmount_plate",
-          "triangle_sha256": "67b92c3cf5ef15dbb578040857193e23ed8ed11ce0547196e77c92fffd1f26ad"
+          "triangle_sha256": "9602a9088e9eeacc457fd262ffe7cbd544f3373db7e39cca3e0557ae887447be"
         },
         {
           "mesh": "FLOOR_3_window_stone",
@@ -1974,7 +1982,7 @@
         },
         {
           "mesh": "FLOOR_3_wallmount_plate",
-          "triangle_sha256": "e0b3035d391676653677c9a0c6907263d7817de598a81a9107fa354ca7d1e3c9"
+          "triangle_sha256": "5e6fe10a69f4d4d774eca280e65d588aec68bc62d870e80a96ddd5eecd9ecb97"
         },
         {
           "mesh": "FLOOR_4_window_stone",
@@ -1990,15 +1998,15 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_metal",
-          "triangle_sha256": "ffff4a18e34bfc8a94b5f2321bfec2e5db757aa5e68085afcb53fb3bedec7ab7"
+          "triangle_sha256": "551b050c5f38b1bd005c70c06354ebf50c8264c84226efa378bab62255eb6af1"
         },
         {
           "mesh": "FLOOR_2_wallmount_metal",
-          "triangle_sha256": "db293d1e69d17fb35ca58eb8332c82fb46555cef25c54ad58930dc75a0053231"
+          "triangle_sha256": "ebb4b09330abc72e475853c915f5ea03c0cf04bcf1bf534e1922bed0651af872"
         },
         {
           "mesh": "FLOOR_3_wallmount_metal",
-          "triangle_sha256": "4090c0b71bf1069f353df313b138de8921c990c877ed86b166041ff7ea009cde"
+          "triangle_sha256": "ffde18f4e6bc91e3a482de1faf6d3734c52ccf68153bf8dd4c7236ab69e8ff84"
         },
         {
           "mesh": "FLOOR_4_fixture_slab",
@@ -2190,15 +2198,19 @@
         },
         {
           "mesh": "SITE_site_ground",
-          "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
+          "triangle_sha256": "46cdeeb31cbfde355ffc989adac758e587d020f89f387e26a0a5401b5a87704c"
+        },
+        {
+          "mesh": "SITE_site_porch",
+          "triangle_sha256": "c333fbb21ac4bcdbd75f6041ccd1567e63e6147e5df5c43ee8027c888c574d0f"
+        },
+        {
+          "mesh": "SITE_site_white",
+          "triangle_sha256": "f578d96933ef00bfaab54602b958439396ad068653a20216e98b48e11f32085c"
         },
         {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
-        },
-        {
-          "mesh": "SITE_site_porch",
-          "triangle_sha256": "a270e00cc89ba84e97b623694045f79083c7ed5094fbdce837a89dfbe46daf4d"
         },
         {
           "mesh": "STYLE_industrial_1_ceiling_conduit",
@@ -2532,12 +2544,12 @@
     },
     {
       "file": "styles/eclectic.glb",
-      "input_sha256": "a7179d6514435b959abd856362271699194e1504616326297bd371720c0ce9ac",
-      "sha256": "645fe798ed1c463cb6f201d1d15397007f433bd5a71770696140108d162f60d6",
-      "bytes": 15911304,
-      "texturedMeshBatches": 131,
-      "duplicateImagesRemoved": 48,
-      "tangentMeshBatches": 131,
+      "input_sha256": "f0facc76d61c0e18675a0125cddbab66334fad3641a15acfacb60714ea5ed8cd",
+      "sha256": "8614c6862bba64c4e8bb3c946863e7e615386f5eee583308d2341383b15d3b26",
+      "bytes": 15921968,
+      "texturedMeshBatches": 132,
+      "duplicateImagesRemoved": 51,
+      "tangentMeshBatches": 132,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -2842,7 +2854,7 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_plate",
-          "triangle_sha256": "b71d0156b933225d3807cfa024451d6052b317f2cd18cbd1f17cabb7e9c31bf6"
+          "triangle_sha256": "fae632a624c0d48099c14e9ab66a8bc602c077bb8666caa5c8575bfa9559c9a6"
         },
         {
           "mesh": "FLOOR_1_window_stone",
@@ -2858,7 +2870,7 @@
         },
         {
           "mesh": "FLOOR_2_wallmount_plate",
-          "triangle_sha256": "67b92c3cf5ef15dbb578040857193e23ed8ed11ce0547196e77c92fffd1f26ad"
+          "triangle_sha256": "9602a9088e9eeacc457fd262ffe7cbd544f3373db7e39cca3e0557ae887447be"
         },
         {
           "mesh": "FLOOR_3_window_stone",
@@ -2870,7 +2882,7 @@
         },
         {
           "mesh": "FLOOR_3_wallmount_plate",
-          "triangle_sha256": "e0b3035d391676653677c9a0c6907263d7817de598a81a9107fa354ca7d1e3c9"
+          "triangle_sha256": "5e6fe10a69f4d4d774eca280e65d588aec68bc62d870e80a96ddd5eecd9ecb97"
         },
         {
           "mesh": "FLOOR_4_window_stone",
@@ -2886,15 +2898,15 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_metal",
-          "triangle_sha256": "ffff4a18e34bfc8a94b5f2321bfec2e5db757aa5e68085afcb53fb3bedec7ab7"
+          "triangle_sha256": "551b050c5f38b1bd005c70c06354ebf50c8264c84226efa378bab62255eb6af1"
         },
         {
           "mesh": "FLOOR_2_wallmount_metal",
-          "triangle_sha256": "db293d1e69d17fb35ca58eb8332c82fb46555cef25c54ad58930dc75a0053231"
+          "triangle_sha256": "ebb4b09330abc72e475853c915f5ea03c0cf04bcf1bf534e1922bed0651af872"
         },
         {
           "mesh": "FLOOR_3_wallmount_metal",
-          "triangle_sha256": "4090c0b71bf1069f353df313b138de8921c990c877ed86b166041ff7ea009cde"
+          "triangle_sha256": "ffde18f4e6bc91e3a482de1faf6d3734c52ccf68153bf8dd4c7236ab69e8ff84"
         },
         {
           "mesh": "FLOOR_4_fixture_slab",
@@ -3086,15 +3098,19 @@
         },
         {
           "mesh": "SITE_site_ground",
-          "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
+          "triangle_sha256": "46cdeeb31cbfde355ffc989adac758e587d020f89f387e26a0a5401b5a87704c"
+        },
+        {
+          "mesh": "SITE_site_porch",
+          "triangle_sha256": "c333fbb21ac4bcdbd75f6041ccd1567e63e6147e5df5c43ee8027c888c574d0f"
+        },
+        {
+          "mesh": "SITE_site_white",
+          "triangle_sha256": "f578d96933ef00bfaab54602b958439396ad068653a20216e98b48e11f32085c"
         },
         {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
-        },
-        {
-          "mesh": "SITE_site_porch",
-          "triangle_sha256": "a270e00cc89ba84e97b623694045f79083c7ed5094fbdce837a89dfbe46daf4d"
         },
         {
           "mesh": "STYLE_eclectic_1_wallmount_trim",
@@ -3592,12 +3608,12 @@
     },
     {
       "file": "styles/wabisabi.glb",
-      "input_sha256": "d150c931ac26039828383ee59c4ead25fd561375e818e40367a697269c87185d",
-      "sha256": "52870926b04f3e5e7f6f296087acc1c55175ea40b8390a19e2655de1d8aa14b9",
-      "bytes": 10134848,
-      "texturedMeshBatches": 117,
-      "duplicateImagesRemoved": 42,
-      "tangentMeshBatches": 117,
+      "input_sha256": "35f1ca3b7b57fc113f339f30c403fe84f5963ada64764b6d704c9b5edeb95039",
+      "sha256": "a7b218647d0b094ead0086350e463af9672d5446fa42b9c290de6478ce2fa15f",
+      "bytes": 10145504,
+      "texturedMeshBatches": 118,
+      "duplicateImagesRemoved": 45,
+      "tangentMeshBatches": 118,
       "trianglePositionsUnchanged": true,
       "proof": [
         {
@@ -3902,7 +3918,7 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_plate",
-          "triangle_sha256": "b71d0156b933225d3807cfa024451d6052b317f2cd18cbd1f17cabb7e9c31bf6"
+          "triangle_sha256": "fae632a624c0d48099c14e9ab66a8bc602c077bb8666caa5c8575bfa9559c9a6"
         },
         {
           "mesh": "FLOOR_1_window_stone",
@@ -3918,7 +3934,7 @@
         },
         {
           "mesh": "FLOOR_2_wallmount_plate",
-          "triangle_sha256": "67b92c3cf5ef15dbb578040857193e23ed8ed11ce0547196e77c92fffd1f26ad"
+          "triangle_sha256": "9602a9088e9eeacc457fd262ffe7cbd544f3373db7e39cca3e0557ae887447be"
         },
         {
           "mesh": "FLOOR_3_window_stone",
@@ -3930,7 +3946,7 @@
         },
         {
           "mesh": "FLOOR_3_wallmount_plate",
-          "triangle_sha256": "e0b3035d391676653677c9a0c6907263d7817de598a81a9107fa354ca7d1e3c9"
+          "triangle_sha256": "5e6fe10a69f4d4d774eca280e65d588aec68bc62d870e80a96ddd5eecd9ecb97"
         },
         {
           "mesh": "FLOOR_4_window_stone",
@@ -3946,15 +3962,15 @@
         },
         {
           "mesh": "FLOOR_1_wallmount_metal",
-          "triangle_sha256": "ffff4a18e34bfc8a94b5f2321bfec2e5db757aa5e68085afcb53fb3bedec7ab7"
+          "triangle_sha256": "551b050c5f38b1bd005c70c06354ebf50c8264c84226efa378bab62255eb6af1"
         },
         {
           "mesh": "FLOOR_2_wallmount_metal",
-          "triangle_sha256": "db293d1e69d17fb35ca58eb8332c82fb46555cef25c54ad58930dc75a0053231"
+          "triangle_sha256": "ebb4b09330abc72e475853c915f5ea03c0cf04bcf1bf534e1922bed0651af872"
         },
         {
           "mesh": "FLOOR_3_wallmount_metal",
-          "triangle_sha256": "4090c0b71bf1069f353df313b138de8921c990c877ed86b166041ff7ea009cde"
+          "triangle_sha256": "ffde18f4e6bc91e3a482de1faf6d3734c52ccf68153bf8dd4c7236ab69e8ff84"
         },
         {
           "mesh": "FLOOR_4_fixture_slab",
@@ -4146,15 +4162,19 @@
         },
         {
           "mesh": "SITE_site_ground",
-          "triangle_sha256": "5ddae70d36c30a29214561ef16f308542c3083f31e9e45e8efaeb8381c8af5b8"
+          "triangle_sha256": "46cdeeb31cbfde355ffc989adac758e587d020f89f387e26a0a5401b5a87704c"
+        },
+        {
+          "mesh": "SITE_site_porch",
+          "triangle_sha256": "c333fbb21ac4bcdbd75f6041ccd1567e63e6147e5df5c43ee8027c888c574d0f"
+        },
+        {
+          "mesh": "SITE_site_white",
+          "triangle_sha256": "f578d96933ef00bfaab54602b958439396ad068653a20216e98b48e11f32085c"
         },
         {
           "mesh": "SITE_site_grass",
           "triangle_sha256": "dc688ee34acc37acc54ff62aeb2a49613ea28cdfa174e47186df8245e595f320"
-        },
-        {
-          "mesh": "SITE_site_porch",
-          "triangle_sha256": "a270e00cc89ba84e97b623694045f79083c7ed5094fbdce837a89dfbe46daf4d"
         },
         {
           "mesh": "STYLE_wabisabi_2_ceiling_ash",

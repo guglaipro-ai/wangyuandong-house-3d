@@ -3,7 +3,7 @@
   "passed": true,
   "checks": {
     "north_house_overlap_m2": 0.0,
-    "road_building_overlap_m2": 0.0,
+    "road_building_overlap_m2": 4.023581663307376e-05,
     "legacy_symbolic_road_removed": true,
     "near_door_urinal_components": [
       "urinal_back",
@@ -37,51 +37,15 @@
       }
     }
   },
-  "neighbor_adjustments": [
-    {
-      "label": "北側紅瓦平房",
-      "distance_m": 3.7500000000003095
-    },
-    {
-      "label": "東側白色舊住宅",
-      "distance_m": 5.499999999999822
-    },
-    {
-      "label": "南側白色三層住宅",
-      "distance_m": 1.8999999999997712
-    },
-    {
-      "label": "北巷白色住宅",
-      "distance_m": 2.0
-    },
-    {
-      "label": "東南側低層住宅",
-      "distance_m": 4.0
-    },
-    {
-      "label": "東南側住宅群一",
-      "distance_m": 4.0
-    },
-    {
-      "label": "東南側住宅群二",
-      "distance_m": 4.25
-    },
-    {
-      "label": "東北住宅一",
-      "distance_m": 6.500000000000001
-    },
-    {
-      "label": "東北住宅二",
-      "distance_m": 4.0
-    }
-  ],
+  "neighbor_placement": "e-map footprints used in place; no relocation (2026-10-05)",
+  "neighbor_count": 77,
   "basis": "Eleven explicit user changes take precedence over old PDF room names and the former near-door toilet. Context adjustments are approximate, not newly measured positions.",
   "sha256": {
-    "house.glb": "f840b1809d94722b64d4d8648f170047de714843fb444c55f4b7a5ccff953f19",
-    "surroundings.glb": "f7a8f44c1732342a927a09d9b76c252318686447730ed6298582b86194acc62d",
-    "styles/bohemian.glb": "5a8a6f1109667ed606a5ff26ee723bdb669b2d4c6982738599171ce2b0a17f69",
-    "styles/industrial.glb": "4ea71b2c875051d3151df756778eb04f9bff4c7d62765cba2f453808d5071073",
-    "styles/eclectic.glb": "645fe798ed1c463cb6f201d1d15397007f433bd5a71770696140108d162f60d6",
-    "styles/wabisabi.glb": "52870926b04f3e5e7f6f296087acc1c55175ea40b8390a19e2655de1d8aa14b9"
+    "house.glb": "9e52f4b8f05c580aab0d20c0b2175dbffebb4532eba9f468df5d4d4d65ee61cd",
+    "surroundings.glb": "f5935a3da800b133fc130ea0ccdf46fd2b1f2e9dec7d7f43731d12bfd22064db",
+    "styles/bohemian.glb": "ca61da2d24cf5c9882c77397002d3756cf341af26d40b8d5efe8cd6a63ac411c",
+    "styles/industrial.glb": "2ecc68ef94eaa79f8fc2207ebdaca5d387e8b594d130c4d88a689aedaa0a357c",
+    "styles/eclectic.glb": "8614c6862bba64c4e8bb3c946863e7e615386f5eee583308d2341383b15d3b26",
+    "styles/wabisabi.glb": "a7b218647d0b094ead0086350e463af9672d5446fa42b9c290de6478ce2fa15f"
   }
 }

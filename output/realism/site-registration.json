@@ -1,0 +1,91 @@
+{
+ "source": "Permit PDF p1 配置圖 1:500 (rendered 8x, 45.35 px/m), lot 318 boundary and building footprint extracted by colour",
+ "site_plan_to_en": {
+  "theta_deg": 0.3921270796469638,
+  "tx": -65.95985477976086,
+  "ty": 32.84502737204664,
+  "method": "least squares on matched lines: lot frontage vs e-map lane edge, private-road edges vs e-map lane edges, NE lot line vs No.21 wall",
+  "residual_rms_m": {
+   "lane_frontage": [
+    9,
+    0.252
+   ],
+   "private_road_edge1": [
+    9,
+    0.26
+   ],
+   "private_road_edge2": [
+    9,
+    0.267
+   ],
+   "NE_boundary": [
+    9,
+    0.818
+   ]
+  }
+ },
+ "house_plan_to_en": {
+  "matrix": "EN = [[cos p, sin p],[sin p, -cos p]] . (plan x, plan y) + t (plan is mirror-handed to EN)",
+  "phi_deg": 231.6026242298584,
+  "t": [
+   15.091288964393044,
+   -1.915472735737445
+  ],
+  "footprint_iou": 0.9357148188401792,
+  "permit_lot_line_distance_rms_m": 0.07715702569903377,
+  "permit_lot_line_distance_rms_before_refine_m": 0.15779266886927074,
+  "distance_source": "Permit A1-3 有效採光範圍檢討表 D values (13 windows/doors)"
+ },
+ "parcel_en": [
+  [
+   -8.299,
+   -2.833
+  ],
+  [
+   -7.142,
+   -4.412
+  ],
+  [
+   6.624,
+   -15.455
+  ],
+  [
+   6.654,
+   -16.343
+  ],
+  [
+   2.858,
+   -22.159
+  ],
+  [
+   10.663,
+   -28.721
+  ],
+  [
+   16.94,
+   -18.095
+  ],
+  [
+   9.644,
+   -11.797
+  ],
+  [
+   16.472,
+   -1.164
+  ],
+  [
+   -1.628,
+   14.675
+  ],
+  [
+   -7.452,
+   -2.297
+  ],
+  [
+   -8.299,
+   -2.833
+  ]
+ ],
+ "parcel_area_m2_extracted": 505.2,
+ "parcel_area_m2_permit": 503.71
+}
