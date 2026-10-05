@@ -162,8 +162,9 @@ const FLOOR_H = [4.2, 3.6, 3.3, 3.1];
 
 export function createWalk({ camera, controls, canvas, stage, requestRender, getRoots, getRooms, onEnter, onExit, lights = [], lite = false }) {
   let lightKey = '', lightPos = new THREE.Vector3(1e9, 0, 0);
-  let active = false, grid = null, feet = 0, vy = 0, yaw = 0, pitch = -0.05, saved = null;
+  let active = false, grid = null, feet = 0, vy = 0, yaw = 0, pitch = -0.05, saved = null, eyeY = 0;
   const pos = new THREE.Vector3();
+  const vel = new THREE.Vector2();   // 水平速度 (world x, z)，加減速使起步與停步自然
   const keys = new Set();
   const joy = { id: null, x: 0, y: 0, ox: 0, oy: 0 };
   let look = null, running = false, lastRoom = '';
@@ -198,12 +199,16 @@ export function createWalk({ camera, controls, canvas, stage, requestRender, get
   function teleport(key) {
     const s = STARTS[key];
     const [x, z] = WORLD(...s.plan);
-    pos.set(x, 0, z); feet = s.feet; vy = 0; yaw = s.yaw; pitch = -0.06;
+    pos.set(x, 0, z); feet = s.feet; vy = 0; yaw = s.yaw; pitch = -0.06; vel.set(0, 0);
     if (grid) { const g = grid.ground(x, z, feet + STEP); if (g > -Infinity) feet = g; }
-    apply(); requestRender();
+    apply(true); requestRender();
   }
-  function apply() {
-    camera.position.set(pos.x, feet + EYE, pos.z);
+  // 眼高平滑：上下樓梯時視線不隨每一階跳動（真人步行時頭部高度變化遠小於踏階）。
+  function apply(snap = false, dt = 0) {
+    const target = feet + EYE;
+    if (snap || Math.abs(target - eyeY) > 0.6) eyeY = target;
+    else eyeY += (target - eyeY) * (1 - Math.exp(-dt * 12));
+    camera.position.set(pos.x, eyeY, pos.z);
     camera.rotation.set(pitch, yaw, 0, 'YXZ');
     camera.updateMatrixWorld();
     updateRoom();
@@ -292,12 +297,12 @@ export function createWalk({ camera, controls, canvas, stage, requestRender, get
   canvas.addEventListener('dblclick', e => {
     if (!active) return;
     const r = canvas.getBoundingClientRect();
-    const ray = new THREE.Raycaster(); ray.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1), camera);
+    const ray = new THREE.Raycaster(); vel.set(0, 0); ray.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1), camera);
     const hit = ray.intersectObjects(getRoots().filter(Boolean), true).find(h => h.object.visible && h.face && h.face.normal.clone().transformDirection(h.object.matrixWorld).y > 0.7);
     if (!hit || hit.distance > 18) return;
     const g = grid.ground(hit.point.x, hit.point.z, hit.point.y + 0.05);
     if (g === -Infinity) return;
-    pos.x = hit.point.x; pos.z = hit.point.z; feet = g; grid.push(pos, feet); apply(); requestRender();
+    pos.x = hit.point.x; pos.z = hit.point.z; feet = g; grid.push(pos, feet); apply(true); requestRender();
   });
   joyEl.addEventListener('pointerdown', e => {
     e.stopPropagation(); joy.id = e.pointerId; const r = joyEl.getBoundingClientRect();
@@ -327,15 +332,28 @@ export function createWalk({ camera, controls, canvas, stage, requestRender, get
     running = keys.has('shift') || Math.hypot(joy.x, joy.y) > 0.95;
     const mag = Math.hypot(f, s);
     let moving = keys.has('arrowleft') || keys.has('arrowright');
+    let tx = 0, tz = 0;
     if (mag > 0.05) {
-      const sp = (running ? RUN : WALK) * Math.min(1, mag) * dt / Math.max(1, mag);
+      const sp = (running ? RUN : WALK) * Math.min(1, mag) / Math.max(1, mag);
       const sin = Math.sin(yaw), cos = Math.cos(yaw);
-      const ox = pos.x, oz = pos.z;
       // 前進方向 = 相機 -Z
-      pos.x += (-sin * f + cos * s) * sp; pos.z += (-cos * f - sin * s) * sp;
+      tx = (-sin * f + cos * s) * sp; tz = (-cos * f - sin * s) * sp;
+    }
+    // 約 0.15 s 達到步行速度、0.1 s 停下
+    const k = 1 - Math.exp(-dt * (mag > 0.05 ? 14 : 20));
+    vel.x += (tx - vel.x) * k; vel.y += (tz - vel.y) * k;
+    if (mag <= 0.05 && vel.lengthSq() < 1e-4) vel.set(0, 0);
+    if (vel.x || vel.y) {
+      const ox = pos.x, oz = pos.z;
+      pos.x += vel.x * dt; pos.z += vel.y * dt;
       grid.push(pos, feet);
       const g = grid.ground(pos.x, pos.z, feet + STEP);
-      if (g === -Infinity || g < feet - 2.5) { pos.x = ox; pos.z = oz; }  // 不走出模型或掉落
+      if (g === -Infinity || g < feet - 2.5) { pos.x = ox; pos.z = oz; vel.set(0, 0); }  // 不走出模型或掉落
+      else if (dt > 0) {
+        // 貼牆時只保留沿牆分量，避免持續頂牆造成抖動
+        const ax = (pos.x - ox) / dt, az = (pos.z - oz) / dt;
+        if (ax * ax + az * az < vel.lengthSq()) vel.set(ax, az);
+      }
       moving = true;
     }
     const g = grid.ground(pos.x, pos.z, feet + STEP);
@@ -345,9 +363,11 @@ export function createWalk({ camera, controls, canvas, stage, requestRender, get
         feet = g > feet ? Math.min(g, feet + dt * 3.2 + 0.02) : g;  // 平順上階
         vy = 0; if (Math.abs(feet - before) > 0.002 || g > feet) moving = true;
       }
+      else if (vy === 0 && feet - g <= STEP + 0.02) { feet = Math.max(g, feet - dt * 3.2 - 0.02); moving = true; }  // 平順下階
       else { vy -= 9.8 * dt; feet = Math.max(g, feet + vy * dt); if (feet === g) vy = 0; moving = true; }
     }
-    apply();
+    if (Math.abs(feet + EYE - eyeY) > 0.002) moving = true;
+    apply(false, dt);
     return moving;
   }
 
@@ -356,6 +376,7 @@ export function createWalk({ camera, controls, canvas, stage, requestRender, get
     get active() { return active; },
     state() { const [x, y] = PLAN(pos.x, pos.z); return { active, plan: [x, y], feet, eye: feet + EYE, yaw, pitch, room: lastRoom, triangles: grid?.count || 0 }; },
     press(k, on) { on ? keys.add(k) : keys.delete(k); requestRender(); },
-    place(px, py, f, y = yaw, p = pitch) { const [x, z] = WORLD(px, py); pos.set(x, 0, z); feet = f; yaw = y; pitch = p; vy = 0; apply(); requestRender(); },
+    look(y, p = pitch) { yaw = y; pitch = p; requestRender(); },
+    place(px, py, f, y = yaw, p = pitch) { const [x, z] = WORLD(px, py); pos.set(x, 0, z); feet = f; yaw = y; pitch = p; vy = 0; vel.set(0, 0); apply(true); requestRender(); },
   };
 }

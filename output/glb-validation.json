@@ -1,11 +1,11 @@
 {
   "mimeType": "model/gltf-binary",
   "validatorVersion": "2.0.0-dev.3.10",
-  "validatedAt": "2026-09-28T09:37:01.444Z",
+  "validatedAt": "2026-10-05T01:00:11.178Z",
   "issues": {
     "numErrors": 0,
     "numWarnings": 0,
-    "numInfos": 2,
+    "numInfos": 7,
     "numHints": 0,
     "messages": [
       {
@@ -19,6 +19,36 @@
         "message": "Image has non-power-of-two dimensions: 1024x1148.",
         "severity": 2,
         "pointer": "/images/4"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 4 degenerate triangles (out of 364).",
+        "severity": 2,
+        "pointer": "/meshes/13/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 12 degenerate triangles (out of 906).",
+        "severity": 2,
+        "pointer": "/meshes/15/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 4 degenerate triangles (out of 314).",
+        "severity": 2,
+        "pointer": "/meshes/23/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 2 degenerate triangles (out of 676).",
+        "severity": 2,
+        "pointer": "/meshes/25/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 6 degenerate triangles (out of 290).",
+        "severity": 2,
+        "pointer": "/meshes/34/primitives/0/indices"
       }
     ],
     "truncated": false
@@ -31,7 +61,7 @@
         "pointer": "/buffers/0",
         "mimeType": "application/gltf-buffer",
         "storage": "glb",
-        "byteLength": 4304024
+        "byteLength": 4376192
       },
       {
         "pointer": "/images/0",
@@ -321,8 +351,8 @@
     "hasTextures": true,
     "hasDefaultScene": true,
     "drawCallCount": 139,
-    "totalVertexCount": 73052,
-    "totalTriangleCount": 45912,
+    "totalVertexCount": 74340,
+    "totalTriangleCount": 46786,
     "maxUVs": 1,
     "maxInfluences": 0,
     "maxAttributes": 4

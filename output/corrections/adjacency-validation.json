@@ -3,17 +3,17 @@
   "date": "2026-09-10 UTC+8",
   "checks": {
     "北側紅瓦平房": {
-      "gap_m": 1.1403529344534715,
+      "gap_m": 1.1388508446597343,
       "correct_geographic_side": true,
       "road_between_neighbors_m": 0.0
     },
     "東側白色舊住宅": {
-      "gap_m": 1.1019929748425665,
+      "gap_m": 1.1019945250407133,
       "correct_geographic_side": true,
       "road_between_neighbors_m": 0.0
     },
     "南側白色三層住宅": {
-      "gap_m": 1.0995041812292932,
+      "gap_m": 1.10199149259286,
       "correct_geographic_side": true,
       "road_between_neighbors_m": 0.0
     },
@@ -26,7 +26,7 @@
         11.566160660039372,
         4.175239670928222
       ],
-      "edge_distance_m": 0.28000008501641166,
+      "edge_distance_m": 0.2800000850164117,
       "actual_base_radius_m": 0.10000035027451273,
       "base_in_asphalt_m2": 0.0
     },
@@ -35,7 +35,7 @@
         27.902648271787342,
         -0.9844679761122199
       ],
-      "edge_distance_m": 0.2799999070427687,
+      "edge_distance_m": 0.27999990704276945,
       "actual_base_radius_m": 0.10000066233648644,
       "base_in_asphalt_m2": 0.0
     },
@@ -44,7 +44,7 @@
         -9.773142824988271,
         9.805916581733172
       ],
-      "edge_distance_m": 0.28000026219804636,
+      "edge_distance_m": 0.27999979361464616,
       "actual_base_radius_m": 0.10000042417151624,
       "base_in_asphalt_m2": 0.0
     },
@@ -60,7 +60,7 @@
   ],
   "assumption": "Three-sided adjacency confirmed by user; roughly 1 m conceptual separation, not surveyed distance. Pole centers lie just outside actual road edge.",
   "sha256": {
-    "house.glb": "9b86ffbc9201c9e47d981923b81b2870041fd4b2d351399bda76881b3b170cf9",
-    "surroundings.glb": "317e0400809232857947006f86c28a51d6b34c51432c3493696c54da663cbee3"
+    "house.glb": "f840b1809d94722b64d4d8648f170047de714843fb444c55f4b7a5ccff953f19",
+    "surroundings.glb": "f7a8f44c1732342a927a09d9b76c252318686447730ed6298582b86194acc62d"
   }
 }

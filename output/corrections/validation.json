@@ -44,11 +44,11 @@
     },
     {
       "label": "東側白色舊住宅",
-      "distance_m": 5.499999999999823
+      "distance_m": 5.499999999999822
     },
     {
       "label": "南側白色三層住宅",
-      "distance_m": 1.899999999999771
+      "distance_m": 1.8999999999997712
     },
     {
       "label": "北巷白色住宅",
@@ -77,11 +77,11 @@
   ],
   "basis": "Eleven explicit user changes take precedence over old PDF room names and the former near-door toilet. Context adjustments are approximate, not newly measured positions.",
   "sha256": {
-    "house.glb": "9b86ffbc9201c9e47d981923b81b2870041fd4b2d351399bda76881b3b170cf9",
-    "surroundings.glb": "317e0400809232857947006f86c28a51d6b34c51432c3493696c54da663cbee3",
-    "styles/bohemian.glb": "2c860928704b8cc619b62529ad9b5504d64b37cc94f56c39a6f80803f48dd90e",
-    "styles/industrial.glb": "cc0cec4fd806cb5a98a67c43b455bd3ccfbf050d1b4fb385a56fb27e1cfffc7b",
-    "styles/eclectic.glb": "cfc38a253a8bba1b8896469dcf2570d1c6078e9b66694bf9704ac0d6eaa07e66",
-    "styles/wabisabi.glb": "3c632bcc87bdd1299f6a584bb41b35d639debf7dfc2172598771e2a234e32493"
+    "house.glb": "f840b1809d94722b64d4d8648f170047de714843fb444c55f4b7a5ccff953f19",
+    "surroundings.glb": "f7a8f44c1732342a927a09d9b76c252318686447730ed6298582b86194acc62d",
+    "styles/bohemian.glb": "5a8a6f1109667ed606a5ff26ee723bdb669b2d4c6982738599171ce2b0a17f69",
+    "styles/industrial.glb": "4ea71b2c875051d3151df756778eb04f9bff4c7d62765cba2f453808d5071073",
+    "styles/eclectic.glb": "645fe798ed1c463cb6f201d1d15397007f433bd5a71770696140108d162f60d6",
+    "styles/wabisabi.glb": "52870926b04f3e5e7f6f296087acc1c55175ea40b8390a19e2655de1d8aa14b9"
   }
 }

@@ -510,8 +510,9 @@ class Industrial(Kit):
             for z in (1.45, 1.52, 1.59):
                 self.box(5.975, 6.36 + i * .46, z, .005, .3, .02, 'steel', 'decor')
         self.brick_panel(6.2, 8.5, .22, 2.4, 2.4)
-        for ty in (9.5, 12.2):
-            for tx in (.6, 3.4):
+        # Classroom: >= 1.1 m between table groups and >= 0.9 m to the brick wall / lockers.
+        for ty in (9.3, 12.3):
+            for tx in (.45, 3.25):
                 self.box(tx, ty, .72, 2.0, .8, .05, 'wood'); self.legs(tx, ty, 0, 2.0, .8, .72, 'steel', .02); self.item('教學長桌', tx, ty, 2.0, .8)
                 for k in range(3):
                     for yy, dy in ((ty - .45, 0), (ty + .95, 0)):
@@ -551,7 +552,8 @@ class Industrial(Kit):
         for a in (0, 2.1, 4.2):
             self.rod([10.95 + math.cos(a) * .25, 9.4 + math.sin(a) * .25, 0], [10.95, 9.4, 1.5], .012, 'steel')
         self.lathe(10.95, 9.4, 1.45, [(.2, 0), (.18, .05), (.08, .2), (0, .22)], 'steel', 'furniture', 20); self.item('三腳落地燈', 10.7, 9.15, .5, .5, False)
-        self.glass_screen(11.8, 6.3, 8.2)
+        # Screen starts 1.4 m in front of the kitchen door so the kitchen-to-living route stays open.
+        self.glass_screen(11.8, 7.35, 9.3)
         self.brick_panel(6.62, 6.3, .18, 2.3, 2.3)
         self.box(6.7, 9.0, .9, .7, 1.2, .04, 'wood'); self.legs(6.7, 9.0, 0, .7, 1.2, .9, 'steel', .018); self.item('製圖工作桌', 6.7, 9.0, .7, 1.2)
         self.lathe(7.35, 9.6, 0, [(0, 0), (.18, 0), (.12, .6), (.17, .62), (.17, .66), (0, .66)], 'steel', 'furniture', 12)
@@ -593,7 +595,9 @@ class Industrial(Kit):
                     self.rod([xx, 15.9, 0], [xx, 15.9, 1.7], .016, 'steel')
                 self.rod([4.0, 15.9, 1.7], [4.9, 15.9, 1.7], .016, 'steel'); self.item('管件吊衣架', 3.95, 15.75, 1.0, .3)
             else:
-                self.box(3.2, p.bounds[1] + .1, 0, .45, .5, 1.3, 'wool'); self.item('鐵製收納櫃', 3.2, p.bounds[1] + .1, .45, .5)
+                # 2F bedroom 2 is entered from its back-right corner; keep that corner clear.
+                cy = p.bounds[3] - .6 if (f, room) == (2, 'BED2') else p.bounds[1] + .1
+                self.box(3.2, cy, 0, .45, .5, 1.3, 'wool'); self.item('鐵製收納櫃', 3.2, cy, .45, .5)
 
     def living3(self):
         self.at(3, '起居室：唱片與閱讀')
@@ -859,7 +863,7 @@ class Eclectic(Kit):
             self.lathe(12.2 + i * .14, .3, .85, [(0, 0), (.05, 0), (.05, .22), (.02, .26), (0, .28)], ['clay', 'mosaic', 'marble'][i], 'decor', 12)
 
     def bedrooms(self):
-        for f, room, x, y, facing, size, st in ((2, 'BED1', 2.0, 5.82, '-y', '5', (-1, 1)), (2, 'BED2', 2.3, 8.3, '+y', '5', (-1, 1)), (2, 'BED3', 2.96, 12.28, '+y', '6', (-1, 1)),
+        for f, room, x, y, facing, size, st in ((2, 'BED1', 2.0, 5.82, '-y', '5', (-1, 1)), (2, 'BED2', 2.3, 11.98, '-y', '5', (-1, 1)), (2, 'BED3', 2.96, 12.28, '+y', '6', (-1, 1)),
                                                 (3, 'BED1', 2.0, 3.9, '-y', '3.5', (-1, 1)), (3, 'BED2', 2.3, 8.05, '+y', '5', (-1, 1))):
             self.at(f, {'BED1': '臥室一', 'BED2': '臥室二', 'BED3': '臥室三'}[room])
             n0 = len(self.items)

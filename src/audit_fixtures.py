@@ -1,6 +1,6 @@
 """Visible sanitary fixtures shown on PDF floor plans; product shape approximate."""
 import math
-from shapely.geometry import Polygon,box as rect
+from shapely.geometry import Polygon,LineString,box as rect
 from shapely.affinity import rotate
 
 def add_fixtures(ns):
@@ -11,9 +11,21 @@ def add_fixtures(ns):
   (2,'廁所A','坐式便器',6.32,2.38,.1,90),(2,'廁所A','洗手盆',6.32,3.65,.1,90),
   (2,'廁所B','洗手盆',1.84,7.88,0,180),(2,'廁所B','小便斗',.83,7.88,0,180),(2,'廁所B','小便斗',2.84,7.88,0,180),
   (3,'廁所','坐式便器',6.32,2.30,.1,90),(3,'廁所','洗手盆',6.30,3.45,.1,90),(3,'廁所','小便斗',5.11,3.28,.1,-90)]
+ # Plan symbols were traced at their centre, leaving products 10-20 cm off the wall and
+ # the 3F urinal/basin only 39 cm apart. Hang each product on the wall face behind it.
+ BACK={'坐式便器':.05,'洗手盆':.105,'小便斗':.05}
+ walls=[LineString([w['a'],w['b']]).buffer(w['t']/2,cap_style=2) for w in ns['WALLS']]
+ def snap(f,x,y,angle,typ):
+  a=math.radians(angle);bx,by=math.sin(a),-math.cos(a)        # rotated local -y (product back)
+  ray=LineString([(x,y),(x+bx*.6,y+by*.6)])
+  hits=[ray.intersection(w) for w,wd in zip(walls,ns['WALLS']) if wd['floor']==f and ray.intersects(w)]
+  if not hits:return x,y
+  d=min(math.dist((x,y),c) for h in hits for c in (h.coords if h.geom_type=='LineString' else [p for g in h.geoms for p in g.coords]))
+  k=d-BACK[typ];return x+bx*k,y+by*k
  for f,room,typ,x,y,up,angle in items:
-  par=f'FLOOR_{f}';z=BASE[f]+up+.012
   override=f==2 and room=='廁所B' and x==2.84
+  x,y=snap(f,x,y,angle,typ);x,y=round(x,3),round(y,3)
+  par=f'FLOOR_{f}';z=BASE[f]+up+.012
   audit.begin(f'fixture_{f}_{room}_{typ}_{x}','衛浴設備',f'{f}F {room} {typ}',[6 if f==1 else 7,20],'靠門設備原為坐式便器' if override else '原模型缺少圖示衛浴設備',f'補建{typ}可見三維外形，位於約({x:.2f},{y:.2f})m', '2026-09-10 使用者明確指定靠門處改為小便斗；優先於原圖示' if override else '平面符號及配置；產品尺寸／曲面為概念近似')
   def ex(p,zz,h,name):extr(rotate(p,angle,origin=(x,y)),zz,h,name,par,'ceramic','fixture')
   def rotate_point(p):

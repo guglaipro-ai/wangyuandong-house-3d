@@ -70,12 +70,12 @@ def rod3(a,b,r,name,parent,mat='metal',kind='railing'):
  a=np.asarray(a);b=np.asarray(b);m=trimesh.creation.cylinder(r,np.linalg.norm(b-a),sections=10)
  m.apply_transform(trimesh.geometry.align_vectors([0,0,1],b-a));m.apply_translation((a+b)/2);mesh_add(m,name,parent,mat,kind)
 
-def stair_waist(x,y,dx,dy,count,rise,zz,parent):
+def stair_waist(x,y,dx,dy,count,rise,zz,parent,width=1.13):
  # Vertical-thickness sloping prism beneath the treads; nominal 12 cm per p23.
  if dx:
   start=np.array([x,y,zz]);end=np.array([x-count*.24,y,zz+count*rise]);cross=np.array([0,1.13,0])
  else:
-  start=np.array([x,y,zz]);end=np.array([x,y+dy*count*.24,zz+count*rise]);cross=np.array([1.13,0,0])
+  start=np.array([x,y,zz]);end=np.array([x,y+dy*count*.24,zz+count*rise]);cross=np.array([width,0,0])
  corners=[start,end,end+cross,start+cross];verts=np.array(corners+[v+[0,0,-.12] for v in corners])
  faces=[[0,1,2],[0,2,3],[4,6,5],[4,7,6],[0,4,5],[0,5,1],[1,5,6],[1,6,2],[2,6,7],[2,7,3],[3,7,4],[3,4,0]]
  m=trimesh.Trimesh(vertices=verts,faces=faces,process=False)
@@ -93,6 +93,12 @@ WIN={
  'D3c':(.9,2.1,.1),'D3d':(1.1,2.1,0),'D4a':(1.1,2.1,0),'D4b':(1.1,2.3,0),'D4c':(1.1,2.35,0),
  'D5a':(.9,2.1,.1),'D5b':(1,2.1,.1),'D6':(.9,2.1,0),
  'DW1':(1.56,2.1,.1),'DW2':(2,2.1,.1),'DW3':(2.6,2.1,.1),'DW4':(3.6,2.1,.1),'SD1':(1.8,3.4,0),'LIFT':(.8,2,0)}
+# Door leaf swing (hinge end along a->b, side +1 = left of a->b). Room doors open into
+# the room, hinge beside the nearer corner, so open leaves never cut a corridor or lift lobby.
+DOOR_SWING={(1,'right_living_side','D2b'):('hi',1),(1,'wc_a_side','D3a'):('hi',-1),
+ (2,'bed1_front','D4a'):('hi',-1),(2,'bed2_east','D4a'):('hi',1),(2,'hall_living','D4a'):('hi',-1),(2,'dining_front','D4a'):('hi',1),
+ (3,'bed1_front','D4a'):('hi',-1),(3,'stair_west','D4a'):('hi',1),(3,'bed2_back','D4a'):('hi',1),
+ (4,'bed_partition','D4a'):('hi',-1)}
 def wall(f,a,b,opens=(),t=.18,h=None,name='wall'):
  parent=f'FLOOR_{f}';z=BASE[f];h=h or HEIGHT[f]-.20
  a=np.array(a,float);b=np.array(b,float);L=np.linalg.norm(b-a);u=(b-a)/L
@@ -132,11 +138,13 @@ def wall(f,a,b,opens=(),t=.18,h=None,name='wall'):
    after+=f'；門底依衛浴完成面抬高{sill*100:.0f} cm，避免門片穿入地坪'
   before=audit.opening_before(f,name,code,a+u*center,before)
   row=audit.begin(f'opening_{f}_{name}_{center:.3f}','門窗／入口',f'{f}F {WALL_ZH.get(name,name)} {code}（沿牆{center:.2f}m）',[18] if code=='LIFT' else [6 if f==1 else 7,19],before,after)
-  opening_detail(a,u,lo,hi,z+sill,oh,code,parent,piece,bar,box,mesh_add,materials)
+  swing=DOOR_SWING.get((f,name,code),('lo',1))
+  opening_detail(a,u,lo,hi,z+sill,oh,code,parent,piece,bar,box,mesh_add,materials,swing)
   audit.end()
   manifest['openings'].append({'floor':f,'code':code,'wall':name,'width':round(hi-lo,4),'height':oh,'sill':sill,
     'center':[round(v,3) for v in (a+u*(lo+hi)/2)],'source_pages':[18] if code=='LIFT' else [6 if f==1 else 7,19],
-    'position_basis':'calibrated plan tracing; see model notes','audit_id':row['id'],'construction':after})
+    'position_basis':'calibrated plan tracing; see model notes','audit_id':row['id'],'construction':after,
+    'leaf':{'hinge':swing[0],'side':swing[1]}})
   cursor=hi
  piece(cursor,L,z,h)
 
@@ -272,7 +280,8 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
   for j in range(count):
    n+=1;top=base+n*rise
    if dx:xx=x+dx*j*.24-.24;yy=y;w=.24;d=1.13
-   else:xx=x;yy=y+dy*j*.24-(.24 if dy<0 else 0);w=1.13;d=.24
+   # The first run spans shaft wall to east wall (no 29 cm void slot beside the treads).
+   else:xx=x;yy=y+dy*j*.24-(.24 if dy<0 else 0);w=11.79-10.37 if k==0 else 1.13;d=.24
    box(xx,yy,top-rise,w,d,rise,'stair_tread',par,'tile','stair')
    # Anti-slip nosing strip (止滑條) 4 cm from the leading edge of every tread.
    if dx:nx=xx+.24-.07 if dx<0 else xx+.03;box(nx,yy+.05,top,.04,d-.10,.004,'stair_nosing',par,'metal','stair')
@@ -287,14 +296,16 @@ for f,counts in [(1,(8,8,11)),(2,(7,7,9)),(3,(6,7,8))]:
   rod3(rail_point(0),rail_point(count-1),.025,'stair_continuous_handrail',par)
   audit.end()
   audit.begin(f'stair_waist_{f}_{k}','樓梯斜板',f'{f}→{f+1}F 第{k+1}梯段底板',[13,15,23],'只有逐階塊體、未建斜底板','補建連續斜向梯板底面','剖面構造；斜板厚度12 cm概念採用，未含配筋')
-  stair_waist(x,y,dx,dy,count,rise,base+start_n*rise,par)
+  stair_waist(x,y,dx,dy,count,rise,base+start_n*rise,par,11.79-10.37 if k==0 else 1.13)
   audit.end()
  # clear turning landings and upper access, assigned to this stair group.
- box(10.37,.12,base+counts[0]*rise-.14,1.13,1.13,.14,'stair_landing',par,'tile','stair')
+ # Landings run to the east wall face (11.79): the stair-hall DW1 sliding doors on 2F/3F open
+ # onto them, and a 29 cm open slot between landing and wall is not buildable.
+ box(10.37,.12,base+counts[0]*rise-.14,11.79-10.37,1.13,.14,'stair_landing',par,'tile','stair')
  box(6.88,.12,base+sum(counts[:2])*rise-.14,10.37-counts[1]*.24-6.88,1.13,.14,'stair_landing',par,'tile','stair')
  endy=1.25+counts[2]*.24
  box(6.88,endy,base+HEIGHT[f]-.20,1.30,4.36-endy,.20,'stair_top_landing',par,'tile','stair')
- box(10.37,1.25+counts[0]*.24,base-.14,1.13,4.10-(1.25+counts[0]*.24),.14,'stair_bottom_landing',par,'tile','stair')
+ box(10.37,1.25+counts[0]*.24,base-.14,11.79-10.37,4.10-(1.25+counts[0]*.24),.14,'stair_bottom_landing',par,'tile','stair')
 
 # Visible columns at grid intersections; no hidden reinforcement.
 add_fixtures(globals())
@@ -373,6 +384,15 @@ extr(rect(-1.4,.5,-.55,16.5),0,.02,'planting_strip','SITE','grass','site')
 porch=Polygon([(6.53,12.05),(12.45,12.05),(12.45,13.1),*arc(10.45,13.1,2,0,90)[1:],(6.53,15.1)])
 extr(porch,0,.55,'curved_entrance_porch','SITE','porch','site')
 for j in range(3):box(7.05,15.1+j*.32,0,2.6,.32,.55-(j+1)*.14,'entrance_step','SITE','porch','site')
+# Side and back doors sit 60 cm above grade: each gets a landing (top 58 cm, 2 cm below the
+# sill) and four 14.5 cm risers. The back door lies ~1 m from the rear neighbour, so its
+# flight runs along the wall instead of away from it.
+for (x0,y0,x1,y1),steps in [((11.88,3.6,13.08,5.75),[(13.08+j*.3,3.6,.3,2.15) for j in range(3)]),
+                            ((12.45,9.95,13.45,11.65),[(13.45+j*.3,9.95,.3,1.7) for j in range(3)])]:
+ box(x0,y0,0,x1-x0,y1-y0,.58,'door_landing','SITE','porch','site')
+ for j,(sx,sy,sw,sd) in enumerate(steps):box(sx,sy,0,sw,sd,.58-(j+1)*.145,'door_step','SITE','porch','site')
+box(4.15,-.95,0,1.1,.95,.58,'door_landing','SITE','porch','site')
+for j in range(3):box(4.15-(j+1)*.3,-.95,0,.3,.95,.58-(j+1)*.145,'door_step','SITE','porch','site')
 
 # Remove the symbolic open leaf at the elevator and parapet segments through 4F room.
 for node in list(scene.graph.nodes_geometry):

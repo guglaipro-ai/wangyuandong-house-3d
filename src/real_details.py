@@ -22,6 +22,58 @@ def _polys(rooms, f, pred=lambda r: True):
     return [(r, Polygon(r['polygon'])) for r in rooms if r['floor'] == f and pred(r)]
 
 
+def _slice_on_boundaries(m, areas, label):
+    """Re-triangulate axis-aligned vertical faces so no triangle crosses a boundary
+    line of `areas` (plan x or y). Each wall plane is merged into 2D polygons, cut into
+    strips with shapely and triangulated again; the covered surface is unchanged."""
+    import trimesh as tm
+    from collections import defaultdict
+    xs, ys = set(), set()
+    for a in areas:
+        for g in getattr(a, 'geoms', [a]):
+            for ring in [g.exterior, *g.interiors]:
+                for x, y in ring.coords:
+                    xs.add(round(x - 7.18, 4)); ys.add(round(y - 8.3, 4))
+    n = m.face_normals
+    groups = defaultdict(list); keep = np.ones(len(m.faces), bool)
+    for i in np.nonzero((np.abs(n[:, 1]) < 1e-6) & ((np.abs(n[:, 0]) > 1 - 1e-6) | (np.abs(n[:, 2]) > 1 - 1e-6)))[0]:
+        ax = 0 if abs(n[i, 0]) > .5 else 2                 # normal axis
+        d = round(float(m.vertices[m.faces[i][0], ax]), 4)
+        groups[(ax, int(np.sign(n[i, ax])), d)].append(i); keep[i] = False
+    out = [tm.Trimesh(m.vertices, m.faces[keep], process=False)]
+    for (ax, sg, d), idx in groups.items():
+        along = 2 if ax == 0 else 0                          # horizontal axis lying in the face
+        cuts = sorted(ys if along == 2 else xs)
+        tri = m.vertices[m.faces[idx]][:, :, [along, 1]]
+        shape = unary_union([Polygon(t) for t in tri if Polygon(t).area > 1e-10])
+        lo, _, hi, _ = shape.bounds
+        edges = [lo - 1] + [c for c in cuts if lo + 1e-4 < c < hi - 1e-4] + [hi + 1]
+        # finish of each strip (probe 0.3 m in front of the face, mid-height); merge runs
+        normal = np.eye(3)[ax] * sg
+        strips = []
+        for e0, e1 in zip(edges, edges[1:]):
+            mid = (max(e0, lo) + min(e1, hi)) / 2; q = np.zeros(3); q[along] = mid; q[ax] = d; q += normal * .3
+            k = label(q[0] + 7.18, q[2] + 8.3)
+            if strips and strips[-1][2] == k:
+                strips[-1][1] = e1
+            else:
+                strips.append([e0, e1, k])
+        if len(strips) == 1:
+            out.append(tm.Trimesh(m.vertices, m.faces[idx], process=False)); continue
+        for e0, e1, _ in strips:
+            piece = shape.intersection(rect(e0, -1e3, e1, 1e3))
+            for g in getattr(piece, 'geoms', [piece]):
+                if g.geom_type != 'Polygon' or g.area < 1e-8:
+                    continue
+                v2, f2 = tm.creation.triangulate_polygon(g, engine='earcut')
+                v3 = np.zeros((len(v2), 3)); v3[:, along] = v2[:, 0]; v3[:, 1] = v2[:, 1]; v3[:, ax] = d
+                tri3 = v3[f2]; cr = np.cross(tri3[:, 1] - tri3[:, 0], tri3[:, 2] - tri3[:, 0])
+                if np.dot(cr.sum(0), normal) < 0:
+                    f2 = f2[:, ::-1]          # flip winding (Trimesh.invert keeps stale normals here)
+                out.append(tm.Trimesh(v3, f2, process=False))
+    return tm.util.concatenate(out)
+
+
 def split_wall_faces(m, par, kind, rooms):
     """Assign exterior faces to 二丁掛 facade tile, wet-room faces to wall tile,
     remaining interior faces to paint. Triangle positions are untouched."""
@@ -35,11 +87,27 @@ def split_wall_faces(m, par, kind, rooms):
         wet = np.zeros(len(n), bool)
     else:
         f = int(par.split('_')[1])
-        interior = unary_union([p for r, p in _polys(rooms, f, lambda r: r['key'] not in NOT_INTERIOR)]).buffer(.05)
+        # Enclosed but unnamed spaces (stair/lift core, 2F inner lobbies, 1F WC passage) are
+        # interior too; a 0.3 m closing then fills wall thickness and column gaps between
+        # adjacent rooms so only faces that look outdoors receive the 二丁掛 facade tile.
+        enclosed = {1: [rect(6.6, 0, 11.95, 5.95), rect(6.53, 5.9, 8.62, 7.68)],
+                    2: [rect(6.6, 0, 11.95, 5.95), rect(4.85, 4.2, 6.65, 5.9), rect(3.5, 5.9, 4.85, 8.2)],
+                    3: [rect(6.6, 0, 11.95, 5.95)], 4: [rect(6.6, 0, 10.45, 5.95)]}.get(f, [])
+        interior = unary_union([p for r, p in _polys(rooms, f, lambda r: r['key'] not in NOT_INTERIOR)] + enclosed)
+        interior = interior.buffer(.3, join_style=2).buffer(-.3, join_style=2).buffer(.05)
         wets = [p for r, p in _polys(rooms, f, lambda r: r['wet'])]
+        wet_area = unary_union(wets).buffer(.05) if wets else None
+        # A long wall face can run past several spaces (e.g. a WC and the pipe void behind
+        # it); classifying its two big triangles would leave a diagonal tile/brick seam.
+        # Cut the mesh on every boundary line first so each triangle lies in one space.
+        def label(x, y):
+            return 0 if not interior.contains(Point(x, y)) else 2 if wet_area is not None and wet_area.contains(Point(x, y)) else 1
+        m = _slice_on_boundaries(m, [interior] + ([wet_area] if wet_area else []), label)
+        n = m.face_normals; c = m.triangles_center; vertical = np.abs(n[:, 1]) < .5
+        px = c[:, 0] + 7.18 + n[:, 0] * .3; py = c[:, 2] + 8.3 + n[:, 2] * .3
         inside = shapely.contains_xy(interior, px, py)
         facade = vertical & ~inside
-        wet = vertical & inside & (shapely.contains_xy(unary_union(wets).buffer(.05), px, py) if wets else False)
+        wet = vertical & inside & (shapely.contains_xy(wet_area, px, py) if wets else False)
     paint = ~(facade | wet)
     out = {}
     for name, mask in [('facade', facade), ('wetwall', wet), ('paint', paint)]:

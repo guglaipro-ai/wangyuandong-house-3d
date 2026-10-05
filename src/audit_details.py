@@ -44,7 +44,7 @@ class Audit:
 
 def xstr(a):return '('+','.join(f'{v:.3f}' for v in a)+')m'
 
-def opening_detail(a,u,lo,hi,z,oh,code,parent,piece,bar,box,mesh_add,materials):
+def opening_detail(a,u,lo,hi,z,oh,code,parent,piece,bar,box,mesh_add,materials,swing=None):
  """Draw real individual leaves/sashes in plan coordinates; no symbolic arrows."""
  w=hi-lo;fw=.05;kind='door' if code.startswith(('D','S','LIFT')) else 'window'
  normal=np.array([-u[1],u[0]])
@@ -62,7 +62,11 @@ def opening_detail(a,u,lo,hi,z,oh,code,parent,piece,bar,box,mesh_add,materials):
   elif code in ('DW3','DW4'):fractions=[0,.25,.5,.75,1]
   else:fractions=[0,1]
   depth=.010 if code in ('W3b','DW2','DW4') else .016 if code=='W5' else .008 if code.startswith(('W2','W3','W6')) or code in ('W4c','W4f','DW1','DW3') else .006
+  # Sliding doors are shown half open (a walk-through needs a gap): 2-panel DW slides
+  # panel 1 behind panel 2; 4-panel DW stacks the two centre panels behind the fixed outer ones.
+  slide={'DW1':{0:1},'DW2':{0:1},'DW3':{1:0,2:3},'DW4':{1:0,2:3}}.get(code,{})
   for i,(l,r) in enumerate(zip(fractions,fractions[1:])):
+   j=slide.get(i,i);l,r=fractions[j],fractions[j+1]
    s=lo+fw+(w-2*fw)*l;e=lo+fw+(w-2*fw)*r;off=(i%2-.5)*.027 if len(fractions)>2 else 0
    frame(s,e,z+fw,oh-2*fw,off,label=f'sash{i+1}')
    strip(s+.027,e-.027,z+fw+.027,oh-2*fw-.054,'glass',depth,off,f'pane{i+1}')
@@ -82,9 +86,11 @@ def opening_detail(a,u,lo,hi,z,oh,code,parent,piece,bar,box,mesh_add,materials):
   for i in range(2):strip(lo+fw+i*(w-2*fw)/2,lo+fw+(i+1)*(w-2*fw)/2-.004,z+.02,oh-.04,'metal',.035,i*.018,'telescopic_panel')
  else:
   # Door leaves stand fully open at 90 degrees so a 170 cm visitor can walk through.
+  # swing=(hinge end 'lo'|'hi', side +1 = wall-normal side / -1): room doors open into the
+  # room with the hinge beside the nearer corner so the open leaf never blocks a corridor.
   ang=np.deg2rad(90);rot=np.array([[np.cos(ang),-np.sin(ang)],[np.sin(ang),np.cos(ang)]])
-  def leaf(start,width,reverse=False):
-   hinge=p(start);v=rot@u*(-1 if reverse else 1);nv=np.array([-v[1],v[0]])
+  def leaf(start,width,reverse=False,side=1):
+   hinge=p(start);v=rot@u*(-1 if reverse else 1)*side;nv=np.array([-v[1],v[0]])
    def lstrip(s,e,zz,hh,mat='door',th=.04,offset=0,label='leaf'):
     bar(hinge+v*s+nv*offset,hinge+v*e+nv*offset,zz,hh,th,code+'_'+label,parent,mat,kind)
    if code.startswith('D4') or code=='D6':
@@ -111,4 +117,6 @@ def opening_detail(a,u,lo,hi,z,oh,code,parent,piece,bar,box,mesh_add,materials):
   if code=='D1':
    # p19 nominal leaves 45 + 120 cm; frame clearance apportioned to each leaf.
    leaf(lo+fw,.45-fw);leaf(hi-fw,1.20-fw,True)
-  else:leaf(lo+fw,w-2*fw)
+  else:
+   hinge,side=swing or ('lo',1)
+   leaf(lo+fw if hinge=='lo' else hi-fw,w-2*fw,False,side)

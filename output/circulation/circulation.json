@@ -1,0 +1,3961 @@
+{
+ "method": "Walk-through circulation check on the exported GLBs (empty house + four schemes).\n\nMirrors walk_mode.js: body = three spheres r 0.22 m at feet+0.45/0.95/1.45 m, so any\nnon-decor triangle between feet+0.23 m and feet+1.67 m blocks; lower surfaces are steps.\nPer floor, free cells (5 cm grid) are flood-filled from the stair hall. A room is\n\"comfortable\" when most of its floor is reachable with a 0.40 m body radius\n(80 cm clear aisle, the usual residential circulation width); the 0.22 m result is\nwhat the walk engine physically allows. Writes output/circulation/*.json|png.\n",
+ "cell_m": 0.05,
+ "radii_m": {
+  "engine": 0.22,
+  "aisle60": 0.3,
+  "aisle80": 0.4
+ },
+ "results": {
+  "empty": {
+   "1": [
+    {
+     "room": "展覽空間／教室（西側）",
+     "key": "LIVING_W",
+     "floor_m2": 102.24,
+     "engine": 93.16,
+     "aisle60": 90.81,
+     "aisle80": 84.79,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.775,
+       4.925
+      ]
+     ]
+    },
+    {
+     "room": "儲藏室（樓梯下方）",
+     "key": "STORAGE",
+     "floor_m2": 4.27,
+     "engine": 2.81,
+     "aisle60": 2.42,
+     "aisle80": 1.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.875,
+       4.025
+      ],
+      [
+       7.775,
+       3.775
+      ],
+      [
+       7.525,
+       1.225
+      ]
+     ]
+    },
+    {
+     "room": "Lobby 大廳（東側）",
+     "key": "LIVING_E",
+     "floor_m2": 23.61,
+     "engine": 20.29,
+     "aisle60": 19.34,
+     "aisle80": 17.13,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.625,
+       8.325
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 4.33,
+     "engine": 2.08,
+     "aisle60": 1.58,
+     "aisle80": 0.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.625,
+       6.475
+      ],
+      [
+       7.825,
+       6.675
+      ],
+      [
+       9.425,
+       6.825
+      ],
+      [
+       9.875,
+       6.825
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間／電梯",
+     "key": "LOBBY",
+     "floor_m2": 8.04,
+     "engine": 7.23,
+     "aisle60": 7.03,
+     "aisle80": 6.46,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "2": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 23.53,
+     "engine": 19.81,
+     "aisle60": 18.9,
+     "aisle80": 16.55,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       3.825,
+       5.025
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 17.2,
+     "engine": 13.87,
+     "aisle60": 13.05,
+     "aisle80": 10.92,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       3.675,
+       8.725
+      ],
+      [
+       3.125,
+       9.275
+      ]
+     ]
+    },
+    {
+     "room": "臥室三",
+     "key": "BED3",
+     "floor_m2": 26.27,
+     "engine": 21.97,
+     "aisle60": 20.99,
+     "aisle80": 18.5,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.275,
+       12.875
+      ]
+     ]
+    },
+    {
+     "room": "廁所 A",
+     "key": "WC_A",
+     "floor_m2": 2.97,
+     "engine": 1.51,
+     "aisle60": 1.22,
+     "aisle80": 0.69,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       4.425,
+       3.925
+      ],
+      [
+       4.675,
+       3.675
+      ],
+      [
+       5.575,
+       3.025
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 5.8,
+     "engine": 3.6,
+     "aisle60": 3.05,
+     "aisle80": 2.17,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       3.675,
+       6.875
+      ],
+      [
+       3.525,
+       6.825
+      ],
+      [
+       1.225,
+       6.875
+      ]
+     ]
+    },
+    {
+     "room": "客廳兼餐廳",
+     "key": "LIVING",
+     "floor_m2": 44.49,
+     "engine": 39.56,
+     "aisle60": 38.32,
+     "aisle80": 35.6,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.025,
+       3.625
+      ],
+      [
+       12.125,
+       3.725
+      ],
+      [
+       12.875,
+       5.875
+      ],
+      [
+       12.725,
+       7.025
+      ]
+     ]
+    },
+    {
+     "room": "廚房",
+     "key": "DINING",
+     "floor_m2": 12.47,
+     "engine": 9.77,
+     "aisle60": 9.17,
+     "aisle80": 7.7,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.625,
+       3.625
+      ]
+     ]
+    },
+    {
+     "room": "走道",
+     "key": "HALL",
+     "floor_m2": 8.33,
+     "engine": 6.49,
+     "aisle60": 6.0,
+     "aisle80": 4.51,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.575,
+       8.225
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 7.99,
+     "engine": 6.92,
+     "aisle60": 6.62,
+     "aisle80": 5.76,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "3": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 14.87,
+     "engine": 12.06,
+     "aisle60": 11.4,
+     "aisle80": 9.61,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.225,
+       5.125
+      ],
+      [
+       4.975,
+       4.875
+      ],
+      [
+       4.425,
+       4.075
+      ],
+      [
+       3.775,
+       3.125
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 16.32,
+     "engine": 13.43,
+     "aisle60": 12.67,
+     "aisle80": 10.71,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       3.775,
+       8.775
+      ]
+     ]
+    },
+    {
+     "room": "佛廳／祭祀空間",
+     "key": "BED3",
+     "floor_m2": 13.99,
+     "engine": 11.47,
+     "aisle60": 10.88,
+     "aisle80": 9.29,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       4.425,
+       7.875
+      ],
+      [
+       3.725,
+       10.025
+      ],
+      [
+       3.725,
+       10.225
+      ],
+      [
+       3.925,
+       10.425
+      ],
+      [
+       4.975,
+       10.625
+      ],
+      [
+       5.075,
+       10.725
+      ],
+      [
+       5.225,
+       11.025
+      ],
+      [
+       5.225,
+       12.475
+      ],
+      [
+       4.925,
+       12.725
+      ],
+      [
+       4.075,
+       12.725
+      ]
+     ]
+    },
+    {
+     "room": "廁所",
+     "key": "WC",
+     "floor_m2": 2.34,
+     "engine": 0.97,
+     "aisle60": 0.68,
+     "aisle80": 0.15,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.525,
+       4.975
+      ],
+      [
+       6.225,
+       4.625
+      ],
+      [
+       5.875,
+       4.075
+      ],
+      [
+       5.775,
+       3.675
+      ],
+      [
+       5.675,
+       2.875
+      ]
+     ]
+    },
+    {
+     "room": "起居室",
+     "key": "LIVING",
+     "floor_m2": 47.09,
+     "engine": 40.52,
+     "aisle60": 38.85,
+     "aisle80": 34.69,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       4.925,
+       5.425
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 8.4,
+     "engine": 7.09,
+     "aisle60": 6.85,
+     "aisle80": 6.09,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "4": [
+    {
+     "room": "儲藏間",
+     "key": "BED",
+     "floor_m2": 9.63,
+     "engine": 7.04,
+     "aisle60": 6.41,
+     "aisle80": 4.83,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.225,
+       4.675
+      ],
+      [
+       11.325,
+       4.575
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 5.68,
+     "engine": 4.74,
+     "aisle60": 4.53,
+     "aisle80": 3.98,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       9.175,
+       4.875
+      ]
+     ]
+    },
+    {
+     "room": "露台",
+     "key": "TERRACE",
+     "floor_m2": 68.35,
+     "engine": 65.06,
+     "aisle60": 63.69,
+     "aisle80": 60.24,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.125,
+       5.725
+      ],
+      [
+       5.925,
+       6.775
+      ]
+     ]
+    }
+   ]
+  },
+  "bohemian": {
+   "1": [
+    {
+     "room": "展覽空間／教室（西側）",
+     "key": "LIVING_W",
+     "floor_m2": 96.77,
+     "engine": 83.93,
+     "aisle60": 80.14,
+     "aisle80": 72.08,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.725,
+       3.775
+      ]
+     ]
+    },
+    {
+     "room": "儲藏室（樓梯下方）",
+     "key": "STORAGE",
+     "floor_m2": 4.27,
+     "engine": 2.81,
+     "aisle60": 2.42,
+     "aisle80": 1.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.875,
+       4.025
+      ],
+      [
+       7.775,
+       3.775
+      ],
+      [
+       7.525,
+       1.225
+      ]
+     ]
+    },
+    {
+     "room": "Lobby 大廳（東側）",
+     "key": "LIVING_E",
+     "floor_m2": 20.76,
+     "engine": 16.0,
+     "aisle60": 14.86,
+     "aisle80": 12.42,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.925,
+       8.175
+      ],
+      [
+       8.075,
+       8.325
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 4.33,
+     "engine": 2.08,
+     "aisle60": 1.58,
+     "aisle80": 0.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.625,
+       6.475
+      ],
+      [
+       7.825,
+       6.675
+      ],
+      [
+       9.425,
+       6.825
+      ],
+      [
+       9.875,
+       6.825
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間／電梯",
+     "key": "LOBBY",
+     "floor_m2": 8.04,
+     "engine": 7.23,
+     "aisle60": 7.03,
+     "aisle80": 6.46,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "2": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 19.64,
+     "engine": 14.78,
+     "aisle60": 13.54,
+     "aisle80": 11.13,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       3.825,
+       5.025
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 13.5,
+     "engine": 9.16,
+     "aisle60": 8.16,
+     "aisle80": 5.84,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       3.775,
+       8.675
+      ],
+      [
+       3.575,
+       8.875
+      ],
+      [
+       3.425,
+       9.575
+      ]
+     ]
+    },
+    {
+     "room": "臥室三",
+     "key": "BED3",
+     "floor_m2": 21.82,
+     "engine": 16.46,
+     "aisle60": 15.27,
+     "aisle80": 12.44,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.275,
+       12.875
+      ]
+     ]
+    },
+    {
+     "room": "廁所 A",
+     "key": "WC_A",
+     "floor_m2": 2.97,
+     "engine": 1.51,
+     "aisle60": 1.22,
+     "aisle80": 0.69,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       4.425,
+       3.925
+      ],
+      [
+       4.675,
+       3.675
+      ],
+      [
+       5.575,
+       3.025
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 5.8,
+     "engine": 3.6,
+     "aisle60": 3.05,
+     "aisle80": 2.17,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       3.675,
+       6.875
+      ],
+      [
+       3.525,
+       6.825
+      ],
+      [
+       1.225,
+       6.875
+      ]
+     ]
+    },
+    {
+     "room": "客廳兼餐廳",
+     "key": "LIVING",
+     "floor_m2": 37.16,
+     "engine": 26.31,
+     "aisle60": 23.49,
+     "aisle80": 16.76,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       6.125,
+       5.975
+      ],
+      [
+       6.125,
+       10.725
+      ],
+      [
+       6.425,
+       10.975
+      ],
+      [
+       7.325,
+       10.875
+      ],
+      [
+       7.425,
+       10.775
+      ]
+     ]
+    },
+    {
+     "room": "廚房",
+     "key": "DINING",
+     "floor_m2": 9.57,
+     "engine": 6.5,
+     "aisle60": 5.99,
+     "aisle80": 4.75,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.625,
+       3.625
+      ]
+     ]
+    },
+    {
+     "room": "走道",
+     "key": "HALL",
+     "floor_m2": 8.33,
+     "engine": 6.49,
+     "aisle60": 6.0,
+     "aisle80": 4.51,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.575,
+       8.225
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 7.99,
+     "engine": 6.92,
+     "aisle60": 6.62,
+     "aisle80": 5.76,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "3": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 10.88,
+     "engine": 6.94,
+     "aisle60": 6.01,
+     "aisle80": 3.37,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.225,
+       5.125
+      ],
+      [
+       4.975,
+       4.875
+      ],
+      [
+       4.425,
+       4.075
+      ],
+      [
+       3.775,
+       3.125
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 12.61,
+     "engine": 8.78,
+     "aisle60": 7.86,
+     "aisle80": 5.67,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       3.775,
+       8.775
+      ]
+     ]
+    },
+    {
+     "room": "佛廳／祭祀空間",
+     "key": "BED3",
+     "floor_m2": 11.47,
+     "engine": 8.33,
+     "aisle60": 7.69,
+     "aisle80": 6.21,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       4.425,
+       7.875
+      ],
+      [
+       3.725,
+       10.025
+      ],
+      [
+       3.725,
+       10.225
+      ],
+      [
+       3.925,
+       10.425
+      ],
+      [
+       4.975,
+       10.625
+      ],
+      [
+       5.075,
+       10.725
+      ],
+      [
+       5.225,
+       11.025
+      ],
+      [
+       5.225,
+       12.475
+      ],
+      [
+       4.925,
+       12.725
+      ],
+      [
+       4.075,
+       12.725
+      ]
+     ]
+    },
+    {
+     "room": "廁所",
+     "key": "WC",
+     "floor_m2": 2.34,
+     "engine": 0.97,
+     "aisle60": 0.68,
+     "aisle80": 0.15,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.525,
+       4.975
+      ],
+      [
+       6.225,
+       4.625
+      ],
+      [
+       5.875,
+       4.075
+      ],
+      [
+       5.775,
+       3.675
+      ],
+      [
+       5.675,
+       2.875
+      ]
+     ]
+    },
+    {
+     "room": "起居室",
+     "key": "LIVING",
+     "floor_m2": 42.51,
+     "engine": 34.37,
+     "aisle60": 32.34,
+     "aisle80": 27.83,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       4.925,
+       5.425
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 8.4,
+     "engine": 7.09,
+     "aisle60": 6.85,
+     "aisle80": 6.09,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "4": [
+    {
+     "room": "儲藏間",
+     "key": "BED",
+     "floor_m2": 5.81,
+     "engine": 2.99,
+     "aisle60": 2.35,
+     "aisle80": 0.91,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.425,
+       4.675
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 5.68,
+     "engine": 4.74,
+     "aisle60": 4.53,
+     "aisle80": 3.98,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       9.175,
+       4.875
+      ]
+     ]
+    },
+    {
+     "room": "露台",
+     "key": "TERRACE",
+     "floor_m2": 67.17,
+     "engine": 61.73,
+     "aisle60": 59.39,
+     "aisle80": 54.28,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.125,
+       5.725
+      ],
+      [
+       5.925,
+       6.775
+      ]
+     ]
+    }
+   ]
+  },
+  "industrial": {
+   "1": [
+    {
+     "room": "展覽空間／教室（西側）",
+     "key": "LIVING_W",
+     "floor_m2": 87.89,
+     "engine": 65.59,
+     "aisle60": 60.25,
+     "aisle80": 37.45,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.775,
+       4.925
+      ]
+     ]
+    },
+    {
+     "room": "儲藏室（樓梯下方）",
+     "key": "STORAGE",
+     "floor_m2": 4.27,
+     "engine": 2.81,
+     "aisle60": 2.42,
+     "aisle80": 1.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.875,
+       4.025
+      ],
+      [
+       7.775,
+       3.775
+      ],
+      [
+       7.525,
+       1.225
+      ]
+     ]
+    },
+    {
+     "room": "Lobby 大廳（東側）",
+     "key": "LIVING_E",
+     "floor_m2": 20.46,
+     "engine": 15.36,
+     "aisle60": 14.15,
+     "aisle80": 11.61,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.925,
+       8.175
+      ],
+      [
+       8.075,
+       8.325
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 4.33,
+     "engine": 2.08,
+     "aisle60": 1.58,
+     "aisle80": 0.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.625,
+       6.475
+      ],
+      [
+       7.825,
+       6.675
+      ],
+      [
+       9.425,
+       6.825
+      ],
+      [
+       9.875,
+       6.825
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間／電梯",
+     "key": "LOBBY",
+     "floor_m2": 8.04,
+     "engine": 7.23,
+     "aisle60": 7.03,
+     "aisle80": 6.46,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "2": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 19.5,
+     "engine": 14.63,
+     "aisle60": 13.46,
+     "aisle80": 10.67,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       3.825,
+       5.025
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 13.22,
+     "engine": 8.78,
+     "aisle60": 7.78,
+     "aisle80": 5.29,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       3.675,
+       8.725
+      ],
+      [
+       3.125,
+       9.275
+      ]
+     ]
+    },
+    {
+     "room": "臥室三",
+     "key": "BED3",
+     "floor_m2": 21.98,
+     "engine": 16.47,
+     "aisle60": 15.15,
+     "aisle80": 12.22,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.275,
+       12.875
+      ]
+     ]
+    },
+    {
+     "room": "廁所 A",
+     "key": "WC_A",
+     "floor_m2": 2.97,
+     "engine": 1.51,
+     "aisle60": 1.22,
+     "aisle80": 0.69,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       4.425,
+       3.925
+      ],
+      [
+       4.675,
+       3.675
+      ],
+      [
+       5.575,
+       3.025
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 5.8,
+     "engine": 3.6,
+     "aisle60": 3.05,
+     "aisle80": 2.17,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       3.675,
+       6.875
+      ],
+      [
+       3.525,
+       6.825
+      ],
+      [
+       1.225,
+       6.875
+      ]
+     ]
+    },
+    {
+     "room": "客廳兼餐廳",
+     "key": "LIVING",
+     "floor_m2": 34.33,
+     "engine": 21.99,
+     "aisle60": 19.35,
+     "aisle80": 14.53,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       6.125,
+       5.975
+      ],
+      [
+       6.125,
+       10.725
+      ],
+      [
+       6.425,
+       10.975
+      ],
+      [
+       7.725,
+       10.875
+      ]
+     ]
+    },
+    {
+     "room": "廚房",
+     "key": "DINING",
+     "floor_m2": 8.76,
+     "engine": 5.8,
+     "aisle60": 5.28,
+     "aisle80": 4.03,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.675,
+       3.675
+      ]
+     ]
+    },
+    {
+     "room": "走道",
+     "key": "HALL",
+     "floor_m2": 8.33,
+     "engine": 6.49,
+     "aisle60": 6.0,
+     "aisle80": 4.51,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.575,
+       8.225
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 7.99,
+     "engine": 6.92,
+     "aisle60": 6.62,
+     "aisle80": 5.76,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "3": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 10.88,
+     "engine": 6.66,
+     "aisle60": 5.74,
+     "aisle80": 2.59,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.225,
+       5.125
+      ],
+      [
+       4.975,
+       4.875
+      ],
+      [
+       4.425,
+       4.075
+      ],
+      [
+       3.775,
+       3.025
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 12.34,
+     "engine": 8.04,
+     "aisle60": 7.04,
+     "aisle80": 4.61,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       3.625,
+       9.475
+      ],
+      [
+       3.575,
+       9.525
+      ]
+     ]
+    },
+    {
+     "room": "佛廳／祭祀空間",
+     "key": "BED3",
+     "floor_m2": 11.53,
+     "engine": 8.48,
+     "aisle60": 7.82,
+     "aisle80": 6.31,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       4.425,
+       7.875
+      ],
+      [
+       3.725,
+       10.025
+      ],
+      [
+       3.725,
+       10.225
+      ],
+      [
+       3.925,
+       10.425
+      ],
+      [
+       4.975,
+       10.625
+      ],
+      [
+       5.075,
+       10.725
+      ],
+      [
+       5.225,
+       11.025
+      ],
+      [
+       5.225,
+       12.475
+      ],
+      [
+       4.925,
+       12.725
+      ],
+      [
+       4.075,
+       12.725
+      ]
+     ]
+    },
+    {
+     "room": "廁所",
+     "key": "WC",
+     "floor_m2": 2.34,
+     "engine": 0.97,
+     "aisle60": 0.68,
+     "aisle80": 0.15,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.525,
+       4.975
+      ],
+      [
+       6.225,
+       4.625
+      ],
+      [
+       5.875,
+       4.075
+      ],
+      [
+       5.775,
+       3.675
+      ],
+      [
+       5.675,
+       2.875
+      ]
+     ]
+    },
+    {
+     "room": "起居室",
+     "key": "LIVING",
+     "floor_m2": 41.66,
+     "engine": 32.91,
+     "aisle60": 30.78,
+     "aisle80": 25.98,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       4.925,
+       5.425
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 8.4,
+     "engine": 7.09,
+     "aisle60": 6.85,
+     "aisle80": 6.09,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "4": [
+    {
+     "room": "儲藏間",
+     "key": "BED",
+     "floor_m2": 5.81,
+     "engine": 2.99,
+     "aisle60": 2.35,
+     "aisle80": 0.91,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.425,
+       4.675
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 5.68,
+     "engine": 4.74,
+     "aisle60": 4.53,
+     "aisle80": 3.98,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       9.175,
+       4.875
+      ]
+     ]
+    },
+    {
+     "room": "露台",
+     "key": "TERRACE",
+     "floor_m2": 63.82,
+     "engine": 55.13,
+     "aisle60": 52.03,
+     "aisle80": 44.74,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.125,
+       5.725
+      ],
+      [
+       6.125,
+       6.375
+      ],
+      [
+       6.825,
+       7.175
+      ]
+     ]
+    }
+   ]
+  },
+  "eclectic": {
+   "1": [
+    {
+     "room": "展覽空間／教室（西側）",
+     "key": "LIVING_W",
+     "floor_m2": 94.21,
+     "engine": 76.65,
+     "aisle60": 71.45,
+     "aisle80": 60.0,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.775,
+       4.925
+      ]
+     ]
+    },
+    {
+     "room": "儲藏室（樓梯下方）",
+     "key": "STORAGE",
+     "floor_m2": 4.27,
+     "engine": 2.81,
+     "aisle60": 2.42,
+     "aisle80": 1.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.875,
+       4.025
+      ],
+      [
+       7.775,
+       3.775
+      ],
+      [
+       7.525,
+       1.225
+      ]
+     ]
+    },
+    {
+     "room": "Lobby 大廳（東側）",
+     "key": "LIVING_E",
+     "floor_m2": 19.75,
+     "engine": 14.46,
+     "aisle60": 13.37,
+     "aisle80": 11.02,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.875,
+       7.925
+      ],
+      [
+       8.375,
+       8.425
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 4.33,
+     "engine": 2.08,
+     "aisle60": 1.58,
+     "aisle80": 0.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.625,
+       6.475
+      ],
+      [
+       7.825,
+       6.675
+      ],
+      [
+       9.425,
+       6.825
+      ],
+      [
+       9.875,
+       6.825
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間／電梯",
+     "key": "LOBBY",
+     "floor_m2": 8.04,
+     "engine": 7.23,
+     "aisle60": 7.03,
+     "aisle80": 6.46,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "2": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 18.66,
+     "engine": 13.82,
+     "aisle60": 12.62,
+     "aisle80": 9.95,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       3.825,
+       4.825
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 12.09,
+     "engine": 7.83,
+     "aisle60": 6.74,
+     "aisle80": 0.36,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       3.525,
+       8.575
+      ],
+      [
+       1.125,
+       9.125
+      ]
+     ]
+    },
+    {
+     "room": "臥室三",
+     "key": "BED3",
+     "floor_m2": 20.51,
+     "engine": 15.03,
+     "aisle60": 13.75,
+     "aisle80": 10.84,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.325,
+       12.925
+      ]
+     ]
+    },
+    {
+     "room": "廁所 A",
+     "key": "WC_A",
+     "floor_m2": 2.97,
+     "engine": 1.51,
+     "aisle60": 1.22,
+     "aisle80": 0.69,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       4.425,
+       3.925
+      ],
+      [
+       4.675,
+       3.675
+      ],
+      [
+       5.575,
+       3.025
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 5.8,
+     "engine": 3.6,
+     "aisle60": 3.05,
+     "aisle80": 2.17,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       3.675,
+       6.875
+      ],
+      [
+       3.525,
+       6.825
+      ],
+      [
+       1.225,
+       6.875
+      ]
+     ]
+    },
+    {
+     "room": "客廳兼餐廳",
+     "key": "LIVING",
+     "floor_m2": 34.89,
+     "engine": 23.47,
+     "aisle60": 20.58,
+     "aisle80": 15.21,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.025,
+       3.625
+      ],
+      [
+       12.125,
+       3.725
+      ],
+      [
+       12.875,
+       5.875
+      ],
+      [
+       12.675,
+       6.675
+      ],
+      [
+       11.025,
+       8.325
+      ]
+     ]
+    },
+    {
+     "room": "廚房",
+     "key": "DINING",
+     "floor_m2": 9.57,
+     "engine": 6.5,
+     "aisle60": 5.99,
+     "aisle80": 4.75,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.625,
+       3.625
+      ]
+     ]
+    },
+    {
+     "room": "走道",
+     "key": "HALL",
+     "floor_m2": 8.33,
+     "engine": 6.49,
+     "aisle60": 6.0,
+     "aisle80": 4.51,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.575,
+       8.225
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 7.99,
+     "engine": 6.92,
+     "aisle60": 6.62,
+     "aisle80": 5.76,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "3": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 11.18,
+     "engine": 7.27,
+     "aisle60": 6.3,
+     "aisle80": 3.26,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.225,
+       5.125
+      ],
+      [
+       4.975,
+       4.875
+      ],
+      [
+       4.425,
+       4.075
+      ],
+      [
+       3.775,
+       3.075
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 11.43,
+     "engine": 7.31,
+     "aisle60": 6.28,
+     "aisle80": 3.9,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       4.425,
+       7.875
+      ],
+      [
+       3.725,
+       10.025
+      ],
+      [
+       3.675,
+       10.725
+      ]
+     ]
+    },
+    {
+     "room": "佛廳／祭祀空間",
+     "key": "BED3",
+     "floor_m2": 11.53,
+     "engine": 8.48,
+     "aisle60": 7.82,
+     "aisle80": 6.31,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       4.425,
+       7.875
+      ],
+      [
+       3.725,
+       10.025
+      ],
+      [
+       3.725,
+       10.225
+      ],
+      [
+       3.925,
+       10.425
+      ],
+      [
+       4.975,
+       10.625
+      ],
+      [
+       5.075,
+       10.725
+      ],
+      [
+       5.225,
+       11.025
+      ],
+      [
+       5.225,
+       12.475
+      ],
+      [
+       4.925,
+       12.725
+      ],
+      [
+       4.075,
+       12.725
+      ]
+     ]
+    },
+    {
+     "room": "廁所",
+     "key": "WC",
+     "floor_m2": 2.34,
+     "engine": 0.97,
+     "aisle60": 0.68,
+     "aisle80": 0.15,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.525,
+       4.975
+      ],
+      [
+       6.225,
+       4.625
+      ],
+      [
+       5.875,
+       4.075
+      ],
+      [
+       5.775,
+       3.675
+      ],
+      [
+       5.675,
+       2.875
+      ]
+     ]
+    },
+    {
+     "room": "起居室",
+     "key": "LIVING",
+     "floor_m2": 41.2,
+     "engine": 32.36,
+     "aisle60": 30.24,
+     "aisle80": 25.52,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       4.925,
+       5.425
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 8.4,
+     "engine": 7.09,
+     "aisle60": 6.85,
+     "aisle80": 6.09,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "4": [
+    {
+     "room": "儲藏間",
+     "key": "BED",
+     "floor_m2": 5.81,
+     "engine": 2.99,
+     "aisle60": 2.35,
+     "aisle80": 0.91,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.425,
+       4.675
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 5.68,
+     "engine": 4.74,
+     "aisle60": 4.53,
+     "aisle80": 3.98,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       9.175,
+       4.875
+      ]
+     ]
+    },
+    {
+     "room": "露台",
+     "key": "TERRACE",
+     "floor_m2": 66.01,
+     "engine": 59.29,
+     "aisle60": 56.34,
+     "aisle80": 50.59,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.125,
+       5.725
+      ],
+      [
+       5.925,
+       6.775
+      ]
+     ]
+    }
+   ]
+  },
+  "wabisabi": {
+   "1": [
+    {
+     "room": "展覽空間／教室（西側）",
+     "key": "LIVING_W",
+     "floor_m2": 95.65,
+     "engine": 79.79,
+     "aisle60": 75.22,
+     "aisle80": 64.2,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.775,
+       4.925
+      ]
+     ]
+    },
+    {
+     "room": "儲藏室（樓梯下方）",
+     "key": "STORAGE",
+     "floor_m2": 4.27,
+     "engine": 2.81,
+     "aisle60": 2.42,
+     "aisle80": 1.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.875,
+       4.025
+      ],
+      [
+       7.775,
+       3.775
+      ],
+      [
+       7.525,
+       1.225
+      ]
+     ]
+    },
+    {
+     "room": "Lobby 大廳（東側）",
+     "key": "LIVING_E",
+     "floor_m2": 20.66,
+     "engine": 15.95,
+     "aisle60": 14.84,
+     "aisle80": 12.43,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.925,
+       8.175
+      ],
+      [
+       8.075,
+       8.325
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 4.33,
+     "engine": 2.08,
+     "aisle60": 1.58,
+     "aisle80": 0.54,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       7.925,
+       5.425
+      ],
+      [
+       7.875,
+       5.475
+      ],
+      [
+       7.775,
+       5.725
+      ],
+      [
+       7.625,
+       6.325
+      ],
+      [
+       7.625,
+       6.475
+      ],
+      [
+       7.825,
+       6.675
+      ],
+      [
+       9.425,
+       6.825
+      ],
+      [
+       9.875,
+       6.825
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間／電梯",
+     "key": "LOBBY",
+     "floor_m2": 8.04,
+     "engine": 7.23,
+     "aisle60": 7.03,
+     "aisle80": 6.46,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "2": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 20.15,
+     "engine": 15.45,
+     "aisle60": 14.3,
+     "aisle80": 11.73,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       3.825,
+       5.025
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 13.8,
+     "engine": 9.59,
+     "aisle60": 8.58,
+     "aisle80": 6.04,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       3.675,
+       8.725
+      ],
+      [
+       3.125,
+       9.275
+      ]
+     ]
+    },
+    {
+     "room": "臥室三",
+     "key": "BED3",
+     "floor_m2": 22.25,
+     "engine": 17.71,
+     "aisle60": 16.74,
+     "aisle80": 14.32,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.275,
+       12.875
+      ]
+     ]
+    },
+    {
+     "room": "廁所 A",
+     "key": "WC_A",
+     "floor_m2": 2.97,
+     "engine": 1.51,
+     "aisle60": 1.22,
+     "aisle80": 0.69,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       4.475,
+       7.875
+      ],
+      [
+       4.425,
+       3.925
+      ],
+      [
+       4.675,
+       3.675
+      ],
+      [
+       5.575,
+       3.025
+      ]
+     ]
+    },
+    {
+     "room": "廁所 B",
+     "key": "WC_B",
+     "floor_m2": 5.8,
+     "engine": 3.6,
+     "aisle60": 3.05,
+     "aisle80": 2.17,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       5.125,
+       8.125
+      ],
+      [
+       5.075,
+       8.175
+      ],
+      [
+       4.925,
+       8.225
+      ],
+      [
+       4.675,
+       8.225
+      ],
+      [
+       4.575,
+       8.125
+      ],
+      [
+       3.675,
+       6.875
+      ],
+      [
+       3.525,
+       6.825
+      ],
+      [
+       1.225,
+       6.875
+      ]
+     ]
+    },
+    {
+     "room": "客廳兼餐廳",
+     "key": "LIVING",
+     "floor_m2": 38.38,
+     "engine": 29.88,
+     "aisle60": 27.78,
+     "aisle80": 24.01,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.025,
+       3.625
+      ],
+      [
+       12.125,
+       3.725
+      ],
+      [
+       12.875,
+       5.875
+      ],
+      [
+       12.775,
+       6.325
+      ],
+      [
+       12.525,
+       6.575
+      ],
+      [
+       11.775,
+       7.125
+      ]
+     ]
+    },
+    {
+     "room": "廚房",
+     "key": "DINING",
+     "floor_m2": 10.33,
+     "engine": 6.02,
+     "aisle60": 5.43,
+     "aisle80": 4.0,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.825,
+       3.625
+      ],
+      [
+       12.725,
+       3.775
+      ],
+      [
+       12.775,
+       3.825
+      ]
+     ]
+    },
+    {
+     "room": "走道",
+     "key": "HALL",
+     "floor_m2": 8.33,
+     "engine": 6.49,
+     "aisle60": 6.0,
+     "aisle80": 4.51,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.175,
+       5.525
+      ],
+      [
+       5.575,
+       8.225
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 7.99,
+     "engine": 6.92,
+     "aisle60": 6.62,
+     "aisle80": 5.76,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "3": [
+    {
+     "room": "臥室一",
+     "key": "BED1",
+     "floor_m2": 11.37,
+     "engine": 7.65,
+     "aisle60": 6.75,
+     "aisle80": 4.73,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.225,
+       5.125
+      ],
+      [
+       4.975,
+       4.875
+      ],
+      [
+       4.425,
+       4.075
+      ],
+      [
+       3.775,
+       3.125
+      ]
+     ]
+    },
+    {
+     "room": "臥室二",
+     "key": "BED2",
+     "floor_m2": 12.92,
+     "engine": 9.16,
+     "aisle60": 8.22,
+     "aisle80": 5.91,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       3.775,
+       8.775
+      ]
+     ]
+    },
+    {
+     "room": "佛廳／祭祀空間",
+     "key": "BED3",
+     "floor_m2": 11.4,
+     "engine": 8.25,
+     "aisle60": 7.6,
+     "aisle80": 6.14,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       5.575,
+       5.375
+      ],
+      [
+       5.375,
+       5.575
+      ],
+      [
+       4.425,
+       7.875
+      ],
+      [
+       3.725,
+       10.025
+      ],
+      [
+       3.725,
+       10.225
+      ],
+      [
+       3.925,
+       10.425
+      ],
+      [
+       4.975,
+       10.625
+      ],
+      [
+       5.075,
+       10.725
+      ],
+      [
+       5.225,
+       11.025
+      ],
+      [
+       5.225,
+       12.475
+      ],
+      [
+       4.925,
+       12.725
+      ],
+      [
+       4.075,
+       12.725
+      ]
+     ]
+    },
+    {
+     "room": "廁所",
+     "key": "WC",
+     "floor_m2": 2.34,
+     "engine": 0.97,
+     "aisle60": 0.68,
+     "aisle80": 0.15,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.525,
+       4.975
+      ],
+      [
+       6.225,
+       4.625
+      ],
+      [
+       5.875,
+       4.075
+      ],
+      [
+       5.775,
+       3.675
+      ],
+      [
+       5.675,
+       2.875
+      ]
+     ]
+    },
+    {
+     "room": "起居室",
+     "key": "LIVING",
+     "floor_m2": 45.05,
+     "engine": 36.65,
+     "aisle60": 34.52,
+     "aisle80": 29.58,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       4.925,
+       5.425
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 8.4,
+     "engine": 7.09,
+     "aisle60": 6.85,
+     "aisle80": 6.09,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ]
+     ]
+    }
+   ],
+   "4": [
+    {
+     "room": "儲藏間",
+     "key": "BED",
+     "floor_m2": 5.81,
+     "engine": 2.99,
+     "aisle60": 2.35,
+     "aisle80": 0.91,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       11.425,
+       4.675
+      ]
+     ]
+    },
+    {
+     "room": "樓梯間",
+     "key": "STAIR",
+     "floor_m2": 5.68,
+     "engine": 4.74,
+     "aisle60": 4.53,
+     "aisle80": 3.98,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       9.175,
+       4.875
+      ]
+     ]
+    },
+    {
+     "room": "露台",
+     "key": "TERRACE",
+     "floor_m2": 65.54,
+     "engine": 58.88,
+     "aisle60": 56.42,
+     "aisle80": 50.24,
+     "reachable_engine": true,
+     "reachable_aisle80": true,
+     "route": [
+      [
+       9.175,
+       4.925
+      ],
+      [
+       6.325,
+       5.325
+      ],
+      [
+       6.225,
+       5.425
+      ],
+      [
+       6.125,
+       5.725
+      ],
+      [
+       6.125,
+       6.575
+      ],
+      [
+       6.725,
+       7.175
+      ]
+     ]
+    }
+   ]
+  }
+ }
+}

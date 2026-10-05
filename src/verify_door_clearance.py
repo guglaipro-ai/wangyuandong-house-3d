@@ -26,10 +26,11 @@ def door_zones():
   approach=Polygon([center+u*s+normal*t for s,t in [(-w/2+.025,-1.2),(w/2-.025,-1.2),(w/2-.025,1.2),(-w/2+.025,1.2)]])
   zones=[approach]
   if code.startswith('D') and not code.startswith('DW'):
-   leaves=[(center-u*(w/2-.05),w-.10,u)]
-   if code=='D1':leaves=[(center-u*(w/2-.05),.4,u),(center+u*(w/2-.05),1.15,-u)]
-   for hinge,r,axis in leaves:
-    side=np.array([-axis[1],axis[0]])
+   lf=o.get('leaf',{'hinge':'lo','side':1});sgn=lf['side']
+   # Leaf sweep from closed (along the wall, toward the far jamb) to open (wall normal * side).
+   leaves=[(center-u*(w/2-.05),w-.10,u,normal*sgn)] if lf['hinge']=='lo' else [(center+u*(w/2-.05),w-.10,-u,normal*sgn)]
+   if code=='D1':leaves=[(center-u*(w/2-.05),.4,u,normal),(center+u*(w/2-.05),1.15,-u,-normal)]
+   for hinge,r,axis,side in leaves:
     zones.append(Polygon([hinge,*[hinge+r*(axis*math.cos(t)+side*math.sin(t)) for t in np.linspace(0,math.pi/2,37)],hinge]))
   result.append(dict(floor=f,code=code,wall=o['wall'],center=center.tolist(),zone=unary_union(zones)))
  return result

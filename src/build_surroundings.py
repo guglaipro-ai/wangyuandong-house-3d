@@ -21,8 +21,8 @@ def xy(px,py):
  e=(px-ORIGIN[0])*M;n=(ORIGIN[1]-py)*M
  return to_model([e,n])
 def points(p):return [xy(*v) for v in p]
-PAL={'wall':[217,211,197],'white':[225,225,219],'slab':[151,148,137],'brick':[135,69,47],'roof':[154,89,65],'roofdark':[88,87,75],'gold':[174,133,55],'metal':[61,68,67],'glass':[80,109,116],'wood':[102,80,57],'ground':[107,119,78],'road':[104,105,101],'porch':[174,169,155],'green':[72,93,44],'green2':[91,111,55],'green3':[58,80,40],'line':[224,222,196]}
-mats={k:tm.visual.material.PBRMaterial(name=k,baseColorFactor=v+[255],roughnessFactor=.8,metallicFactor=.5 if k in ['metal','gold'] else 0,doubleSided=k.startswith('green')) for k,v in PAL.items()}
+PAL={'steel':[200,203,205],'wall':[217,211,197],'white':[225,225,219],'slab':[151,148,137],'brick':[135,69,47],'roof':[154,89,65],'roofdark':[88,87,75],'gold':[174,133,55],'metal':[61,68,67],'glass':[80,109,116],'wood':[102,80,57],'ground':[107,119,78],'road':[104,105,101],'porch':[174,169,155],'green':[72,93,44],'green2':[91,111,55],'green3':[58,80,40],'line':[224,222,196]}
+mats={k:tm.visual.material.PBRMaterial(name=k,baseColorFactor=v+[255],roughnessFactor=.35 if k=='steel' else .8,metallicFactor=.85 if k=='steel' else .5 if k in ['metal','gold'] else 0,doubleSided=k.startswith('green')) for k,v in PAL.items()}
 parts=defaultdict(list);features=[];rng=np.random.default_rng(20260910)
 site_protection=unary_union([Polygon(to_model(EN)),Polygon(MODEL)]).buffer(.35)
 neighbor_envelopes=[]
@@ -64,7 +64,7 @@ def roof_rect(center,u,v,w,d,base,rise,temple=False):
    last=None
    for t in np.linspace(0,1,segments+1):
     p=origin+u*xx+v*(side*d/2*t);now=[p[0],h(t)+.04,p[1]]
-    if last is not None:rod(last,now,.045,'roofdark',6)
+    if last is not None:rod(last,now,.045,'roofdark',4)   # 4-sided ribs: same silhouette at viewing distance
     last=now
  if temple:
   for x in [-w/2,w/2]:
@@ -112,15 +112,68 @@ def house(label,pixels,floors=2,roof=False,color='wall',tower=False):
  extr(p,3.05*floors,mat=color)
  coords=np.array(p.exterior.coords)[:-1];height=3.05*floors
  # Generic openings represent the observed building type; their exact layout is unmeasured.
+ # Typological Taiwanese village-house details (not individually observed): framed
+ # aluminium windows with reflective glass, iron grilles (鐵窗) on the ground floor, an
+ # entrance (roller shutter + side door on long road-facing walls), plinth and downpipes.
+ # Everything stays within 0.17 m of the wall so the clearance envelope above still holds.
+ poly=Polygon(coords)
+ # Full typological detail only where it is seen from the site (within ~30 m); far houses
+ # keep framed windows so the delivery archive stays under the 100 MiB hosting limit.
+ near=poly.distance(house_envelope)<30
+ road_lines=[LineString(points(c)) for c,_ in roads]
+ edges=[]
  for i in range(len(coords)):
   a=coords[i];b=coords[(i+1)%len(coords)];L=np.linalg.norm(b-a);u=(b-a)/L;v=np.array([-u[1],u[0]])
+  out=-v if poly.contains(Point(*(a+u*L/2+v*.05))) else v      # outward wall normal
+  edges.append((a,b,L,u,out,min(l.distance(Point(*(a+u*L/2))) for l in road_lines)))
+ front=min(range(len(edges)),key=lambda i:edges[i][5]-edges[i][2]*.15)
+ def face(a,u,out,s,y,w,h,d,off,mat):
+  # local box on a wall face: s along wall, y up, off outward from the wall line
+  q=a+u*s+out*(off);m=tm.creation.box([w,h,d]);x=u if u[0]*out[1]-out[0]*u[1]>0 else -u   # keep a proper rotation
+  m.apply_transform(np.array([[x[0],0,out[0],q[0]],[0,1,0,y],[x[1],0,out[1],q[1]],[0,0,0,1]]));add(m,mat)
+ for i,(a,b,L,u,out,_) in enumerate(edges):
+  doors=[]
+  if i==front:
+   if L>5.5 and floors>=2:doors=[(L*.42,2.9,2.6,'shutter'),(L*.42+2.25,.95,2.15,'door')]
+   else:doors=[(L/2,1.5,2.2,'door')]
+  if near:face(a,u,out,L/2,.25,L,.5,.04,.02,'slab')              # plinth 50 cm
+  for s0,w,h,typ in doors:
+   face(a,u,out,s0,h/2,w+.16,h+.08,.06,.03,'metal')
+   if typ=='shutter':
+    face(a,u,out,s0,h/2,w,h,.02,.065,'white')
+    for z in np.arange(.12,h,.24 if near else .6):face(a,u,out,s0,z,w,.018,.012,.08,'slab')
+    face(a,u,out,s0,h+.22,w+.16,.36,.14,.07,'white')            # shutter box
+   else:
+    face(a,u,out,s0,h/2,w,h,.03,.06,'wood')
+    face(a,u,out,s0+w*.3,1.0,.04,.25,.04,.09,'metal')
   for level in range(floors):
-   for j in range(max(1,int(L/3.2))):
-    c=(j+.5)*L/max(1,int(L/3.2))
-    localbox(a,u,v,[c,level*3.05+1.7,0],[min(1.35,L*.4),1.3,.09],'metal')
-    localbox(a,u,v,[c,level*3.05+1.7,-.07],[min(1.2,L*.36),1.15,.055],'glass')
-    localbox(a,u,v,[c,level*3.05+1.7,-.11],[.05,1.18,.07],'metal')
-   localbox(a,u,v,[L/2,level*3.05+2.95,0],[L,.10,.13],'slab')
+   n=max(1,int(L/3.2))
+   for j in range(n):
+    c=(j+.5)*L/n;z=level*3.05+1.7;ww=min(1.35,L*.4)
+    if level==0 and any(abs(c-s0)<(w+ww)/2+.2 for s0,w,_,_ in doors):continue
+    face(a,u,out,c,z,ww,1.3,.03,.015,'glass')
+    if not near:
+     face(a,u,out,c,z,.05,1.3,.06,.03,'metal');continue
+    for dz in (-.625,.625):face(a,u,out,c,z+dz,ww,.05,.06,.03,'metal')
+    for ds in (-ww/2+.025,0,ww/2-.025):face(a,u,out,c+ds,z,.05,1.3,.06,.03,'metal')
+    face(a,u,out,c,z-.7,ww+.12,.06,.12,.06,'slab')                # sill
+    if level==0 or (level==1 and floors>=3):
+     # 鐵窗: box grille standing 12 cm proud of the facade
+     for ds in np.arange(-ww/2,ww/2+.01,.15):face(a,u,out,c+ds,z,.02,1.4,.02,.13,'metal')
+     for dz in (-.7,-.25,.25,.7):face(a,u,out,c,z+dz,ww+.04,.025,.025,.13,'metal')
+     for side in (-1,1):face(a,u,out,c+side*(ww/2+.02),z,.02,1.4,.12,.075,'metal')
+   face(a,u,out,L/2,level*3.05+2.95,L,.10,.13,0,'slab')
+ if not roof and near:
+  # downpipes at two opposite corners, rooftop stainless tank on a steel stand
+  for k in (0,2):
+   a,b,L,u,out,_=edges[k%len(edges)];q=a+u*.25+out*.09
+   rod([q[0],0,q[1]],[q[0],3.05*floors+.7,q[1]],.05,'white',8)
+  if not tower:
+   c=np.array(p.centroid.coords[0])+edges[1][3]*min(1.2,edges[1][2]*.2);h0=3.05*floors
+   for dx,dz in ((-.45,-.45),(.45,-.45),(.45,.45),(-.45,.45)):rod([c[0]+dx,h0,c[1]+dz],[c[0]+dx,h0+.6,c[1]+dz],.03,'metal',6)
+   box([c[0],h0+.62,c[1]],[1.1,.05,1.1],'metal')
+   rod([c[0],h0+.65,c[1]],[c[0],h0+1.95,c[1]],.55,'steel',20)
+   rod([c[0],h0+1.95,c[1]],[c[0],h0+2.05,c[1]],.3,'steel',16)
  if roof:
   a=coords[0];u=(coords[1]-a);w=np.linalg.norm(u);u/=w;v=np.array([-u[1],u[0]]);d=p.area/w
   roof_rect(np.array(p.centroid.coords[0]),u,v,w+.6,d+.6,height,1.3)

@@ -12,7 +12,7 @@
       "feet": 0.550000011920929,
       "plan": [
         8.35,
-        12.669269999968995
+        12.361999914169314
       ],
       "room": "一樓 · 門廊",
       "pass": true
@@ -36,44 +36,44 @@
     "styles": {
       "bohemian": {
         "walkStillActive": true,
-        "collisionTriangles": 213403,
+        "collisionTriangles": 219163,
         "sofaBlocksWalk": {
           "plan": [
-            9.278527485908622,
-            9.859743942779847
+            9.25021278580587,
+            9.858491932816323
           ],
           "pass": true
         }
       },
       "industrial": {
         "walkStillActive": true,
-        "collisionTriangles": 175123,
+        "collisionTriangles": 180883,
         "sofaBlocksWalk": {
           "plan": [
-            9.313103606578935,
-            9.801459879808819
+            9.315565465832588,
+            9.801456652861345
           ],
           "pass": true
         }
       },
       "eclectic": {
         "walkStillActive": true,
-        "collisionTriangles": 247150,
+        "collisionTriangles": 252910,
         "sofaBlocksWalk": {
           "plan": [
-            9.260772467076382,
-            8.720040693195996
+            9.105045717411947,
+            8.673039472320964
           ],
           "pass": true
         }
       },
       "wabisabi": {
         "walkStillActive": true,
-        "collisionTriangles": 160847,
+        "collisionTriangles": 166607,
         "sofaBlocksWalk": {
           "plan": [
-            9.32152547688566,
-            8.533114271218658
+            9.362909523941052,
+            8.531135007979275
           ],
           "pass": true
         }
@@ -83,7 +83,7 @@
       "pass": true
     },
     "mobileJoystick": {
-      "moved": 4.195042623406342,
+      "moved": 3.7405287904838516,
       "turned": 0.32999999999999996,
       "scrollWidth": 412,
       "pass": true

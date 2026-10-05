@@ -1,0 +1,1293 @@
+{
+ "date": "2026-10-05T00:42:37.979Z",
+ "method": "Steer toward each waypoint at walking speed (W key); a leg fails if no 5 cm progress in 4 s.",
+ "styles": {
+  "empty": [
+   {
+    "floor": 0,
+    "room": "正門 D2a",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 4.870699999988079,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "東側大廳門 D2b",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 11.408699999988078,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305114,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "樓梯間門 D1",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 16.47919999998808,
+    "endRoom": "一樓 · 樓梯間／電梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "後門 D5a",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 25.344800000011922,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "展覽空間／教室（西側）",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 2.4879000000357627,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "儲藏室（樓梯下方）",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 3.245699999988079,
+    "endRoom": "一樓→二樓 · 樓梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "Lobby 大廳（東側）",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.1625999999642374,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "廁所 B",
+    "legs": 8,
+    "stuck": null,
+    "seconds": 3.5072000000476837,
+    "endRoom": "一樓 · 廁所 B",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "樓梯間／電梯",
+    "skipped": "no route"
+   },
+   {
+    "floor": 2,
+    "room": "臥室一",
+    "legs": 9,
+    "stuck": null,
+    "seconds": 7.531199999988079,
+    "endRoom": "二樓 · 臥室一",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室二",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 6.455,
+    "endRoom": "二樓 · 臥室二",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室三",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 8.137,
+    "endRoom": "二樓 · 臥室三",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 A",
+    "legs": 11,
+    "stuck": null,
+    "seconds": 9.468100000023842,
+    "endRoom": "二樓 · 廁所 A",
+    "feet": 4.910999774932861,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 B",
+    "legs": 10,
+    "stuck": null,
+    "seconds": 8.202800000011921,
+    "endRoom": "二樓 · 廁所 B",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "客廳兼餐廳",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 5.125199999988079,
+    "endRoom": "二樓 · 客廳兼餐廳",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廚房",
+    "legs": 2,
+    "stuck": null,
+    "seconds": 2.787900000035763,
+    "endRoom": "二樓 · 廚房",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "走道",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.558799999952316,
+    "endRoom": "二樓 · 走道",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 3,
+    "room": "臥室一",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.802199999988079,
+    "endRoom": "三樓 · 臥室一",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "臥室二",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 5.628099999964237,
+    "endRoom": "三樓 · 臥室二",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "佛廳／祭祀空間",
+    "legs": 12,
+    "stuck": null,
+    "seconds": 10.085700000047684,
+    "endRoom": "三樓 · 佛廳／祭祀空間",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "廁所",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.7123999999761583,
+    "endRoom": "三樓 · 廁所",
+    "feet": 8.51099967956543,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "起居室",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 3.1963999999761583,
+    "endRoom": "三樓 · 起居室",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 4,
+    "room": "儲藏間",
+    "legs": 2,
+    "stuck": null,
+    "seconds": 1.5483999999761582,
+    "endRoom": "四樓 · 儲藏間",
+    "feet": 11.711000442504883,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "樓梯間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 0.00010000002384185791,
+    "endRoom": "四樓 · 樓梯間",
+    "feet": 11.712,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "露台",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 3.3445,
+    "endRoom": "四樓 · 露台",
+    "feet": 11.71500015258789,
+    "pass": true
+   }
+  ],
+  "bohemian": [
+   {
+    "floor": 0,
+    "room": "正門 D2a",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 5.612100000023842,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "東側大廳門 D2b",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 11.456399999976158,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "樓梯間門 D1",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 16.532200000047684,
+    "endRoom": "一樓 · 樓梯間／電梯",
+    "feet": 0.6110000014305116,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "後門 D5a",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 25.375300000011922,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "展覽空間／教室（西側）",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 2.670100000023842,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305114,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "儲藏室（樓梯下方）",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 3.2490999999642374,
+    "endRoom": "一樓→二樓 · 樓梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "Lobby 大廳（東側）",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 3.204899999976158,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "廁所 B",
+    "legs": 8,
+    "stuck": null,
+    "seconds": 3.5209000000357626,
+    "endRoom": "一樓 · 廁所 B",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "樓梯間／電梯",
+    "skipped": "no route"
+   },
+   {
+    "floor": 2,
+    "room": "臥室一",
+    "legs": 9,
+    "stuck": null,
+    "seconds": 7.502300000011921,
+    "endRoom": "二樓 · 臥室一",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室二",
+    "legs": 7,
+    "stuck": null,
+    "seconds": 6.555799999952316,
+    "endRoom": "二樓 · 臥室二",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室三",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 8.125800000011921,
+    "endRoom": "二樓 · 臥室三",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 A",
+    "legs": 11,
+    "stuck": null,
+    "seconds": 9.453399999976158,
+    "endRoom": "二樓 · 廁所 A",
+    "feet": 4.910999774932861,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 B",
+    "legs": 10,
+    "stuck": null,
+    "seconds": 8.185800000011922,
+    "endRoom": "二樓 · 廁所 B",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "客廳兼餐廳",
+    "legs": 8,
+    "stuck": null,
+    "seconds": 7.462800000011921,
+    "endRoom": "二樓 · 客廳兼餐廳",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廚房",
+    "legs": 2,
+    "stuck": null,
+    "seconds": 2.745800000011921,
+    "endRoom": "二樓 · 廚房",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "走道",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.497699999988079,
+    "endRoom": "二樓 · 走道",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 3,
+    "room": "臥室一",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.774699999988079,
+    "endRoom": "三樓 · 臥室一",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "臥室二",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 5.622699999988079,
+    "endRoom": "三樓 · 臥室二",
+    "feet": 8.411000251770021,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "佛廳／祭祀空間",
+    "legs": 12,
+    "stuck": null,
+    "seconds": 10.111600000023842,
+    "endRoom": "三樓 · 佛廳／祭祀空間",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "廁所",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.6971000000238416,
+    "endRoom": "三樓 · 廁所",
+    "feet": 8.51099967956543,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "起居室",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 3.189399999976158,
+    "endRoom": "三樓 · 起居室",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 4,
+    "room": "儲藏間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 1.610800000011921,
+    "endRoom": "四樓 · 儲藏間",
+    "feet": 11.711000442504883,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "樓梯間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 0,
+    "endRoom": "四樓 · 樓梯間",
+    "feet": 11.712,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "露台",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 3.3574000000357627,
+    "endRoom": "四樓 · 露台",
+    "feet": 11.71500015258789,
+    "pass": true
+   }
+  ],
+  "industrial": [
+   {
+    "floor": 0,
+    "room": "正門 D2a",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 6.6012999999523165,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "東側大廳門 D2b",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 11.326300000011921,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "樓梯間門 D1",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 16.59619999998808,
+    "endRoom": "一樓 · 樓梯間／電梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "後門 D5a",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 25.3645,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "展覽空間／教室（西側）",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 2.491299999952316,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "儲藏室（樓梯下方）",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 3.268,
+    "endRoom": "一樓→二樓 · 樓梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "Lobby 大廳（東側）",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 3.260399999976158,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "廁所 B",
+    "legs": 8,
+    "stuck": null,
+    "seconds": 3.4887000000476838,
+    "endRoom": "一樓 · 廁所 B",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "樓梯間／電梯",
+    "skipped": "no route"
+   },
+   {
+    "floor": 2,
+    "room": "臥室一",
+    "legs": 9,
+    "stuck": null,
+    "seconds": 7.518199999988079,
+    "endRoom": "二樓 · 臥室一",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室二",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 6.452,
+    "endRoom": "二樓 · 臥室二",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室三",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 8.167299999952316,
+    "endRoom": "二樓 · 臥室三",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 A",
+    "legs": 11,
+    "stuck": null,
+    "seconds": 9.434599999964238,
+    "endRoom": "二樓 · 廁所 A",
+    "feet": 4.910999774932861,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 B",
+    "legs": 10,
+    "stuck": null,
+    "seconds": 8.147700000047683,
+    "endRoom": "二樓 · 廁所 B",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "客廳兼餐廳",
+    "legs": 7,
+    "stuck": null,
+    "seconds": 7.695699999988079,
+    "endRoom": "二樓 · 客廳兼餐廳",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廚房",
+    "legs": 2,
+    "stuck": null,
+    "seconds": 2.8442999999523164,
+    "endRoom": "二樓 · 廚房",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "走道",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.524899999976158,
+    "endRoom": "二樓 · 走道",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 3,
+    "room": "臥室一",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.858100000023842,
+    "endRoom": "三樓 · 臥室一",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "臥室二",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 6.233799999952316,
+    "endRoom": "三樓 · 臥室二",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "佛廳／祭祀空間",
+    "legs": 12,
+    "stuck": null,
+    "seconds": 10.108700000047683,
+    "endRoom": "三樓 · 佛廳／祭祀空間",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "廁所",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.6931000000238416,
+    "endRoom": "三樓 · 廁所",
+    "feet": 8.51099967956543,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "起居室",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 3.193899999976158,
+    "endRoom": "三樓 · 起居室",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 4,
+    "room": "儲藏間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 1.643899999976158,
+    "endRoom": "四樓 · 儲藏間",
+    "feet": 11.711000442504883,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "樓梯間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 0,
+    "endRoom": "四樓 · 樓梯間",
+    "feet": 11.712,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "露台",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.8443000000119207,
+    "endRoom": "四樓 · 露台",
+    "feet": 11.71500015258789,
+    "pass": true
+   }
+  ],
+  "eclectic": [
+   {
+    "floor": 0,
+    "room": "正門 D2a",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 7.0838999999761585,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "東側大廳門 D2b",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 11.38,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "樓梯間門 D1",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 16.61089999997616,
+    "endRoom": "一樓 · 樓梯間／電梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "後門 D5a",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 25.3265,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "展覽空間／教室（西側）",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 2.472699999988079,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "儲藏室（樓梯下方）",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 3.2315999999642373,
+    "endRoom": "一樓→二樓 · 樓梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "Lobby 大廳（東側）",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 3.400199999988079,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305114,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "廁所 B",
+    "legs": 8,
+    "stuck": null,
+    "seconds": 3.5066999999880792,
+    "endRoom": "一樓 · 廁所 B",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "樓梯間／電梯",
+    "skipped": "no route"
+   },
+   {
+    "floor": 2,
+    "room": "臥室一",
+    "legs": 9,
+    "stuck": null,
+    "seconds": 7.735700000047684,
+    "endRoom": "二樓 · 臥室一",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室二",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 7.913199999988079,
+    "endRoom": "二樓 · 臥室二",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室三",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 8.178399999976158,
+    "endRoom": "二樓 · 臥室三",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 A",
+    "legs": 11,
+    "stuck": null,
+    "seconds": 9.473100000023841,
+    "endRoom": "二樓 · 廁所 A",
+    "feet": 4.910999774932861,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 B",
+    "legs": 10,
+    "stuck": null,
+    "seconds": 8.181899999976158,
+    "endRoom": "二樓 · 廁所 B",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "客廳兼餐廳",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 6.691199999988079,
+    "endRoom": "二樓 · 客廳兼餐廳",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廚房",
+    "legs": 2,
+    "stuck": null,
+    "seconds": 2.737699999988079,
+    "endRoom": "二樓 · 廚房",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "走道",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.566199999988079,
+    "endRoom": "二樓 · 走道",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 3,
+    "room": "臥室一",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.816199999988079,
+    "endRoom": "三樓 · 臥室一",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "臥室二",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 7.061800000011921,
+    "endRoom": "三樓 · 臥室二",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "佛廳／祭祀空間",
+    "legs": 12,
+    "stuck": null,
+    "seconds": 10.055100000023842,
+    "endRoom": "三樓 · 佛廳／祭祀空間",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "廁所",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.701199999988079,
+    "endRoom": "三樓 · 廁所",
+    "feet": 8.51099967956543,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "起居室",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 3.2055,
+    "endRoom": "三樓 · 起居室",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 4,
+    "room": "儲藏間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 1.6352999999523163,
+    "endRoom": "四樓 · 儲藏間",
+    "feet": 11.711000442504885,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "樓梯間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 0.00009999996423721313,
+    "endRoom": "四樓 · 樓梯間",
+    "feet": 11.712,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "露台",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 3.359100000023842,
+    "endRoom": "四樓 · 露台",
+    "feet": 11.71500015258789,
+    "pass": true
+   }
+  ],
+  "wabisabi": [
+   {
+    "floor": 0,
+    "room": "正門 D2a",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 6.412,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305116,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "東側大廳門 D2b",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 11.3815,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "樓梯間門 D1",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 16.479900000035762,
+    "endRoom": "一樓 · 樓梯間／電梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 0,
+    "room": "後門 D5a",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 25.4215,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "展覽空間／教室（西側）",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 2.499300000011921,
+    "endRoom": "一樓 · 展覽空間／教室（西側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "儲藏室（樓梯下方）",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 3.257600000023842,
+    "endRoom": "一樓→二樓 · 樓梯",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "Lobby 大廳（東側）",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 3.2083999999761583,
+    "endRoom": "一樓 · Lobby 大廳（東側）",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "廁所 B",
+    "legs": 8,
+    "stuck": null,
+    "seconds": 3.539199999988079,
+    "endRoom": "一樓 · 廁所 B",
+    "feet": 0.6110000014305115,
+    "pass": true
+   },
+   {
+    "floor": 1,
+    "room": "樓梯間／電梯",
+    "skipped": "no route"
+   },
+   {
+    "floor": 2,
+    "room": "臥室一",
+    "legs": 9,
+    "stuck": null,
+    "seconds": 7.588900000035763,
+    "endRoom": "二樓 · 臥室一",
+    "feet": 4.810999870300292,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室二",
+    "legs": 6,
+    "stuck": null,
+    "seconds": 6.452899999976158,
+    "endRoom": "二樓 · 臥室二",
+    "feet": 4.810999870300294,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "臥室三",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 8.091799999952316,
+    "endRoom": "二樓 · 臥室三",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 A",
+    "legs": 11,
+    "stuck": null,
+    "seconds": 9.4565,
+    "endRoom": "二樓 · 廁所 A",
+    "feet": 4.910999774932861,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廁所 B",
+    "legs": 10,
+    "stuck": null,
+    "seconds": 8.1855,
+    "endRoom": "二樓 · 廁所 B",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "客廳兼餐廳",
+    "legs": 7,
+    "stuck": null,
+    "seconds": 5.537899999976158,
+    "endRoom": "二樓 · 客廳兼餐廳",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "廚房",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 2.8910999999642373,
+    "endRoom": "二樓 · 廚房",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "走道",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.523599999964238,
+    "endRoom": "二樓 · 走道",
+    "feet": 4.810999870300293,
+    "pass": true
+   },
+   {
+    "floor": 2,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 3,
+    "room": "臥室一",
+    "legs": 4,
+    "stuck": null,
+    "seconds": 4.772400000035763,
+    "endRoom": "三樓 · 臥室一",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "臥室二",
+    "legs": 3,
+    "stuck": null,
+    "seconds": 5.610399999976158,
+    "endRoom": "三樓 · 臥室二",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "佛廳／祭祀空間",
+    "legs": 12,
+    "stuck": null,
+    "seconds": 10.065099999964238,
+    "endRoom": "三樓 · 佛廳／祭祀空間",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "廁所",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.6859000000357627,
+    "endRoom": "三樓 · 廁所",
+    "feet": 8.51099967956543,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "起居室",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 3.180199999988079,
+    "endRoom": "三樓 · 起居室",
+    "feet": 8.41100025177002,
+    "pass": true
+   },
+   {
+    "floor": 3,
+    "room": "樓梯間",
+    "skipped": "no route"
+   },
+   {
+    "floor": 4,
+    "room": "儲藏間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 1.6313000000119209,
+    "endRoom": "四樓 · 儲藏間",
+    "feet": 11.711000442504883,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "樓梯間",
+    "legs": 1,
+    "stuck": null,
+    "seconds": 0.00009999996423721313,
+    "endRoom": "四樓 · 樓梯間",
+    "feet": 11.712,
+    "pass": true
+   },
+   {
+    "floor": 4,
+    "room": "露台",
+    "legs": 5,
+    "stuck": null,
+    "seconds": 3.7811000000238417,
+    "endRoom": "四樓 · 露台",
+    "feet": 11.71500015258789,
+    "pass": true
+   }
+  ]
+ },
+ "errors": [],
+ "passed": true
+}
